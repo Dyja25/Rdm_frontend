@@ -14,6 +14,7 @@ import {
   handleContactReactSpeechModal,
   setEditContact,
   updateOwnercontactById,
+  deleteContactData
 } from "../../ContactAction";
 import {getAllSalesList,getRecruiterName} from "../../../Opportunity/OpportunityAction"
 import {getDesignations} from "../../../Settings/Designation/DesignationAction";
@@ -21,7 +22,7 @@ import {getDesignations} from "../../../Settings/Designation/DesignationAction";
 import ContactDetailView from "./ContactDetailView.jsx";
 
 import ReactContactSpeechModal from "../ContactDetail/ReactContactSpeechModal.jsx";
-import { EditOutlined, FilterOutlined, PhoneOutlined } from "@ant-design/icons";
+import { DeleteOutlined, EditOutlined, FilterOutlined, PhoneOutlined } from "@ant-design/icons";
 import MicIcon from '@mui/icons-material/Mic';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import SearchIcon from '@mui/icons-material/Search';
@@ -449,6 +450,55 @@ function handleSend (){
         );
       },
     },
+
+
+       {
+              title: "",
+              dataIndex: "id",
+              width: "2%",
+              render: (name, item, i) => {
+                return (
+                  <StyledPopconfirm
+                    title="Do you want to delete?"
+                    onConfirm={() =>
+                      props.deleteContactData(item.contactId,props.viewType
+                     )
+                    }
+                  >
+        
+                  <DeleteOutlined
+          sx={{
+            verticalAlign: "middle",
+            marginLeft: "5px",
+            color: "red",
+            fontSize: "16px",
+            cursor: "pointer",
+          }}
+        />
+                  </StyledPopconfirm>
+                );
+                // <Tooltip title="Delete">
+                //               <FontAwesomeIcon
+                //                 icon={solid("trash")}
+                //                 onClick={() =>
+                //                   props.deleteCandidateData(
+                //                     item.candidateId,
+                //                         {
+                //                           reInStateInd:true,
+                //                           candidateId:item.candidateId
+                //                         },
+                //                       )
+                //                     }
+                //                 size="14px"
+                //                 style={{
+                //                   verticalAlign: "center",
+                //                   marginLeft: "5px",
+                //                   color: "red",
+                //                 }}
+                //               />
+                //             </Tooltip>
+              },
+            },
     
     
     
@@ -564,7 +614,8 @@ const mapDispatchToProps = (dispatch) =>
       updateOwnercontactById,
       getRecruiterName,
       getAllSalesList,
-      handleContactReactSpeechModal
+      handleContactReactSpeechModal,
+      deleteContactData
 
 
     },

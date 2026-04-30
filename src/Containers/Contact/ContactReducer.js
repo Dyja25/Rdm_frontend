@@ -58,6 +58,9 @@ const initialState = {
   fetchingContactInputSearchDataError: false,
   inputData: [],
 
+  deleteContactData:false,
+  deleteContactDataError:false,
+
   fetchingContactPartnerInputSearchData: false,
   fetchingContactPartnerInputSearchDataError: false,
   inputData: [],
@@ -202,6 +205,31 @@ export const contactReducer = (state = initialState, action) => {
         addingDocumentByContactId: false,
         addingDocumentByContactIdError: true,
       };
+
+
+       case types.DELETE_CONTACT_DATA_REQUEST:
+                        return { ...state, deleteContactData: true };
+                      case types.DELETE_CONTACT_DATA_SUCCESS:
+                        return {
+                          ...state,
+                          deleteContactData: false,
+                        
+                        contactByUserId:
+  action.viewType === "dashboard"
+    ? state.contactByUserId.filter(
+        (item) => item.contactId !== action.payload
+      )
+    : state.contactByUserId,
+
+contactPartnerByUserId:
+  action.viewType === "table"
+    ? state.contactPartnerByUserId.filter(
+        (item) => item.contactId !== action.payload
+      )
+    : state.contactPartnerByUserId,
+                        };
+                      case types.DELETE_CONTACT_DATA_FAILURE:
+                        return { ...state, deleteContactData: false, deleteContactDataError: false };
 
     /**
      * get list of documents of a contact

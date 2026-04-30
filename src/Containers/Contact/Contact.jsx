@@ -70,11 +70,15 @@ class Contact extends Component {
         />
         <Suspense fallback={<BundleLoader />}>
           {this.props.viewType === "table" ?  
-          <PartnerTable /> 
+          <PartnerTable 
+          viewType={viewType}
+          /> 
        
           :
             this.props.viewType === "dashboard" ? (
-              <ContactTable />
+              <ContactTable 
+              viewType={viewType}
+              />
             ) : null}
 
         </Suspense>

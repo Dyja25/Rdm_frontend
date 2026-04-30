@@ -6,8 +6,8 @@ import Highlighter from 'react-highlight-words';
 import {getDesignations} from "../../../Settings/Designation/DesignationAction";
 import {getDepartments} from "../../../Settings/Department/DepartmentAction";
 import styled from "styled-components";
-import { StyledTable, StyledPopconfirm } from "../../../../Components/UI/Antd";
-import { Button, Empty, Spin, Tooltip,Input } from "antd";
+import { StyledTable } from "../../../../Components/UI/Antd";
+import { Button, Empty, Spin, Tooltip,Input,Popconfirm, Checkbox } from "antd";
 import {
   MultiAvatar,
   Spacer,
@@ -18,6 +18,7 @@ import {
 import {
   getEmployeelist,
   handleEmployeeDrawerForAdmin,
+  deleteEmployeeData
 } from "../../EmployeeAction";
 
 import { BundleLoader } from "../../../../Components/Placeholder";
@@ -29,8 +30,28 @@ import EmployeeDrawerForAdmin from "./EmployeeDrawer/EmployeeDrawerForAdmin";
 import EmployeeType from "../SuspendEmployee/EmployeeType";
 import SuspendEmployee from "../SuspendEmployee/SuspendEmployee";
 import APIFailed from "../../../../Helpers/ErrorBoundary/APIFailed";
+import { DeleteOutlined } from "@ant-design/icons";
+
+const moduleOptions = [
+  "Bank",
+  "Educational",
+  "Training",
+  "Address",
+  "Contract",
+  "ContractAdress",
+  "EmployeeDocument",
+  "EmployeeId",
+  "EmployeeInfo",
+  "EmployeeNotes",
+  "EmploymentHistory",
+  "Keyskill",
+  "Personaldetails",
+  "Salarydetails",
+];
 function EmployeeTable(props) {
   const [page, setPage] = useState(0);
+   const [selectedMap, setSelectedMap] = useState({});
+   const [openRow, setOpenRow] = useState(null);
 
   useEffect(() => {
     props.getEmployeelist();
@@ -129,6 +150,95 @@ function EmployeeTable(props) {
     setSearchText(selectedKeys[0]);
     setSearchedColumn(dataIndex);
   }
+
+  const handleCheckboxChange = (employeeId, list) => {
+    setSelectedMap((prev) => ({
+      ...prev,
+      [employeeId]: list,
+    }));
+  };
+
+  /* check all */
+  const handleCheckAll = (employeeId, e) => {
+    setSelectedMap((prev) => ({
+      ...prev,
+      [employeeId]: e.target.checked ? [...moduleOptions] : [],
+    }));
+  };
+
+  /* popup open close */
+  const handlePopupChange = (visible, employeeId) => {
+    if (visible) {
+      setOpenRow(employeeId);
+
+      /* reset every time popup opens */
+      setSelectedMap((prev) => ({
+        ...prev,
+        [employeeId]: [],
+      }));
+    } else {
+      setOpenRow(null);
+    }
+  };
+
+  /* confirm delete */
+  const handleDelete = (record) => {
+    console.log({
+      employeeId: record.employeeId,
+      selectedModules:
+        selectedMap[record.employeeId] || [],
+    });
+    props.deleteEmployeeData(record.employeeId)
+
+    setOpenRow(null);
+  };
+
+  const popupContent = (record) => {
+    const checkedValues =
+      selectedMap[record.employeeId] || [];
+
+    const checkAll =
+      checkedValues.length === moduleOptions.length;
+
+    const indeterminate =
+      checkedValues.length > 0 &&
+      checkedValues.length < moduleOptions.length;
+
+    return (
+      <div className="w-[420px]">
+        {/* check all */}
+        <div className="border-b pb-2 mb-3">
+          <Checkbox
+            checked={checkAll}
+            indeterminate={indeterminate}
+            onChange={(e) =>
+              handleCheckAll(record.employeeId, e)
+            }
+          >
+            Check All
+          </Checkbox>
+        </div>
+
+        {/* side by side */}
+        <Checkbox.Group
+          value={checkedValues}
+          onChange={(list) =>
+            handleCheckboxChange(
+              record.employeeId,
+              list
+            )
+          }
+          className="grid grid-cols-2 gap-y-2"
+        >
+          {moduleOptions.map((item) => (
+            <Checkbox key={item} value={item}>
+              {item}
+            </Checkbox>
+          ))}
+        </Checkbox.Group>
+      </div>
+    );
+  };
 
   function handleReset(clearFilters) {
     clearFilters();
@@ -345,6 +455,30 @@ function EmployeeTable(props) {
         );
       },
     },
+       {
+      title: "",
+      render: (_, record) => (
+              <Popconfirm
+          title="Select Delete Modules"
+          description={popupContent(record)}
+          icon={null}
+          okText="OK"
+          cancelText="Cancel"
+          open={openRow === record.employeeId}
+          onOpenChange={(visible) =>
+            handlePopupChange(
+              visible,
+              record.employeeId
+            )
+          }
+          onConfirm={() =>
+            handleDelete(record)
+          }
+        >
+          <DeleteOutlined />
+        </Popconfirm>
+      ),
+    },
   ];
 
   /* if (fetchingEmployeeError) {
@@ -356,7 +490,7 @@ function EmployeeTable(props) {
     <>
       {/* <Spin tip="Loading..." spinning={!fetchingContactsLazyLoading}> */}
       <StyledTable
-        rowKey="candidateId"
+        rowKey="employeeId"
         // rowSelection={rowSelection}
         columns={columns}
         Loading={fetchingEmployee || fetchingEmployeeError}
@@ -394,7 +528,8 @@ const mapDispatchToProps = (dispatch) =>
       getEmployeelist,
       handleEmployeeDrawerForAdmin,
       getDesignations,
-      getDepartments
+      getDepartments,
+      deleteEmployeeData
     },
     dispatch
   );

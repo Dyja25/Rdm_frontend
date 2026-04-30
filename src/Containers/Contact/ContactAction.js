@@ -120,6 +120,35 @@ export const getContactListByUserId = (userId) => (dispatch) => {
     });
 };
 
+
+ export const deleteContactData = ( contactId,viewType ) => (dispatch) => {
+    dispatch({ type: types.DELETE_CONTACT_DATA_REQUEST });
+  
+    axios
+      .delete(`${base_url}/Contact/delete/${contactId} `,  {
+        headers: {
+          Authorization: "Bearer " + sessionStorage.getItem("token") || "",
+        },
+      })
+  
+      .then((res) => {
+        console.log(res);
+        dispatch({
+          type: types.DELETE_CONTACT_DATA_SUCCESS,
+          payload: contactId,
+           viewType: viewType,
+        });
+        // cb && cb("success");
+      })
+      .catch((err) => {
+        console.log(err);
+        dispatch({
+          type: types.DELETE_CONTACT_DATA_FAILURE,
+        });
+        // cb && cb("failure");
+      });
+  };
+
 /**
  * get all the contact of the user
  */

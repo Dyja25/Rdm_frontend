@@ -103,6 +103,9 @@ invoiceByCustomerId:[],
   fetchingCustomerInputSearchDataError: false,
   inputData: [],
 
+  deleteContactData:false,
+  deleteContactDataError:false,
+
   addingNotesByCustomerId:false,
   addingNotesByCustomerIdError:false,
 
@@ -333,6 +336,26 @@ export const customerReducer = (state = initialState, action) => {
         fetchingDocumentsByCustomerId: false,
         fetchingDocumentsByCustomerIdError: true,
       };
+
+
+      case types.DELETE_CONTACT_DATA_REQUEST:
+                              return { ...state, deleteContactData: true };
+                            case types.DELETE_CONTACT_DATA_SUCCESS:
+                              return {
+                                ...state,
+                                deleteContactData: false,
+                              
+                              contactByCustomerId:
+        
+          state.contactByCustomerId.filter(
+              (item) => item.contactId !== action.payload
+            )
+        
+      
+   
+                              };
+                            case types.DELETE_CONTACT_DATA_FAILURE:
+                              return { ...state, deleteContactData: false, deleteContactDataError: false };
 
     /* Get customer opportunity  */
     case types.GET_CUSTOMER_OPPORTUNITY_REQUEST:

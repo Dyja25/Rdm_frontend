@@ -40,6 +40,9 @@ const initialState = {
 
   employeeDrawerVisibleForAdmin: false,
 
+  deleteEmployeeData:false,
+  deleteEmployeeDataError:false,
+
   suspendedEmployee: false,
   suspendedEmployeeError: false,
 
@@ -91,6 +94,21 @@ export const EmployeeReducer = (state = initialState, action) => {
       return { ...state, addingEmployee: false, addEmployeeModal: false };
     case types.ADD_EMPLOYEE_FAILURE:
       return { ...state, addingEmployee: false, addingEmployeeError: true };
+
+
+       case types.DELETE_EMPLOYEE_DATA_REQUEST:
+                  return { ...state, deleteEmployeeData: true };
+                case types.DELETE_EMPLOYEE_DATA_SUCCESS:
+                  return {
+                    ...state,
+                    deleteEmployeeData: false,
+                  
+                    employees: state.employees.filter(
+                      (item) => item.employeeId !== action.payload
+                    ),
+                  };
+                case types.DELETE_EMPLOYEE_DATA_FAILURE:
+                  return { ...state, deleteEmployeeData: false, deleteEmployeeDataError: false };
 
     case types.GET_EMPLOYEE_LIST_REQUEST:
       return { ...state, fetchingEmployee: true };

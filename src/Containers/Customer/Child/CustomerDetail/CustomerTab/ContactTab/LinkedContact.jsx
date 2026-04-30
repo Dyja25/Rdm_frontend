@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl";
 import { bindActionCreators } from "redux";
 import {  Tooltip, Button,Input } from "antd";
 import { BundleLoader } from "../../../../../../Components/Placeholder";
-import { getContactListByCustomerId } from "../../../../CustomerAction";
+import { getContactListByCustomerId,deleteContactData } from "../../../../CustomerAction";
 import { FlexContainer } from "../../../../../../Components/UI/Layout";
 import {
   StyledTable,
@@ -15,7 +15,7 @@ import {
   SubTitle,
 } from "../../../../../../Components/UI/Elements";
 import Highlighter from "react-highlight-words";
-import { SearchOutlined } from "@ant-design/icons";
+import { DeleteOutlined, SearchOutlined } from "@ant-design/icons";
 import { Link } from "../../../../../../Components/Common";
 import { ActionIcon } from "../../../../../../Components/Utils";
 import APIFailed from "../../../../../../Helpers/ErrorBoundary/APIFailed";
@@ -418,6 +418,54 @@ class LinkedContact extends Component {
           );
         },
       },
+
+          {
+                    title: "",
+                    dataIndex: "id",
+                    width: "2%",
+                    render: (name, item, i) => {
+                      return (
+                        <StyledPopconfirm
+                          title="Do you want to delete?"
+                          onConfirm={() =>
+                            this.props.deleteContactData(item.contactId
+                           )
+                          }
+                        >
+              
+                        <DeleteOutlined
+                sx={{
+                  verticalAlign: "middle",
+                  marginLeft: "5px",
+                  color: "red",
+                  fontSize: "16px",
+                  cursor: "pointer",
+                }}
+              />
+                        </StyledPopconfirm>
+                      );
+                      // <Tooltip title="Delete">
+                      //               <FontAwesomeIcon
+                      //                 icon={solid("trash")}
+                      //                 onClick={() =>
+                      //                   props.deleteCandidateData(
+                      //                     item.candidateId,
+                      //                         {
+                      //                           reInStateInd:true,
+                      //                           candidateId:item.candidateId
+                      //                         },
+                      //                       )
+                      //                     }
+                      //                 size="14px"
+                      //                 style={{
+                      //                   verticalAlign: "center",
+                      //                   marginLeft: "5px",
+                      //                   color: "red",
+                      //                 }}
+                      //               />
+                      //             </Tooltip>
+                    },
+                  },
     ];
 
     // if (fetchingCustomerContactError) {
@@ -462,6 +510,7 @@ const mapDispatchToProps = (dispatch) =>
   bindActionCreators(
     {
       getContactListByCustomerId,
+      deleteContactData
     },
     dispatch
   );

@@ -64,6 +64,33 @@ export const addEmployee = (employee) => (dispatch) => {
     });
 };
 
+  export const deleteEmployeeData = ( empId ) => (dispatch) => {
+    dispatch({ type: types.DELETE_EMPLOYEE_DATA_REQUEST });
+  
+    axios
+      .delete(`${base_url}/employee/delete/${empId} `,  {
+        headers: {
+          Authorization: "Bearer " + sessionStorage.getItem("token") || "",
+        },
+      })
+  
+      .then((res) => {
+        console.log(res);
+        dispatch({
+          type: types.DELETE_EMPLOYEE_DATA_SUCCESS,
+          payload: candidateId,
+        });
+        // cb && cb("success");
+      })
+      .catch((err) => {
+        console.log(err);
+        dispatch({
+          type: types.DELETE_EMPLOYEE_DATA_FAILURE,
+        });
+        // cb && cb("failure");
+      });
+  };
+
 /**
  * Fetching all employees of org
  */

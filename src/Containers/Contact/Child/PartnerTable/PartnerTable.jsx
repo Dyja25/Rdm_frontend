@@ -11,7 +11,7 @@ import PartnerDetailView from "./PartnerDetailView";
 import { StyledTable, StyledPopconfirm } from "../../../../Components/UI/Antd";
 import { Button, Empty,  Tooltip,Input } from "antd";
 import { MultiAvatar,SubTitle } from "../../../../Components/UI/Elements";
-import {getContactPartnerListByUserId} from "../../ContactAction";
+import {getContactPartnerListByUserId,deleteContactData} from "../../ContactAction";
 
 
 import {getSectors} from "../../../Settings/Sectors/SectorsAction";
@@ -20,7 +20,7 @@ import ReactPartnerSpeechModal from "../../../Opportunity/Child/OpportunityDetai
 import {
   handlePartnerReactSpeechModal
 } from "../../../Partner/PartnerAction";
-import { FilterOutlined, PhoneOutlined } from "@ant-design/icons";
+import { DeleteOutlined, FilterOutlined, PhoneOutlined } from "@ant-design/icons";
 import SearchIcon from '@mui/icons-material/Search';
 import MicIcon from '@mui/icons-material/Mic';
 function ContactTable(props) {
@@ -349,6 +349,54 @@ function ContactTable(props) {
         );
       },
     },
+
+         {
+                  title: "",
+                  dataIndex: "id",
+                  width: "2%",
+                  render: (name, item, i) => {
+                    return (
+                      <StyledPopconfirm
+                        title="Do you want to delete?"
+                        onConfirm={() =>
+                          props.deleteContactData(item.contactId,props.viewType
+                         )
+                        }
+                      >
+            
+                      <DeleteOutlined
+              sx={{
+                verticalAlign: "middle",
+                marginLeft: "5px",
+                color: "red",
+                fontSize: "16px",
+                cursor: "pointer",
+              }}
+            />
+                      </StyledPopconfirm>
+                    );
+                    // <Tooltip title="Delete">
+                    //               <FontAwesomeIcon
+                    //                 icon={solid("trash")}
+                    //                 onClick={() =>
+                    //                   props.deleteCandidateData(
+                    //                     item.candidateId,
+                    //                         {
+                    //                           reInStateInd:true,
+                    //                           candidateId:item.candidateId
+                    //                         },
+                    //                       )
+                    //                     }
+                    //                 size="14px"
+                    //                 style={{
+                    //                   verticalAlign: "center",
+                    //                   marginLeft: "5px",
+                    //                   color: "red",
+                    //                 }}
+                    //               />
+                    //             </Tooltip>
+                  },
+                },
    
 
      ];
@@ -421,6 +469,7 @@ const mapDispatchToProps = (dispatch) =>
       getDesignations,
       getAllSalesList,
       handlePartnerReactSpeechModal,
+      deleteContactData
     },
     dispatch
   );
