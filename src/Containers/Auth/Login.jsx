@@ -136,16 +136,16 @@ const Login = () => {
 
                 {/* OTP Validate */}
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
-                  <div style={{ width: "63%", marginTop: "2px" }}>
+                  {/* <div style={{ width: "63%", marginTop: "2px" }}>
                     <Field
                       name="otp"
                       placeholder="Enter OTP"
                       component={InputComponent}
                       style={{ height: "40px" }}
                     />
-                  </div>
+                  </div> */}
 
-                  <div style={{ width: "28%", padding: "10px 0" }}>
+                  {/* <div style={{ width: "28%", padding: "10px 0" }}>
                     <Button
                       type="primary"
                       onClick={() =>
@@ -159,7 +159,7 @@ const Login = () => {
                     >
                       Validate
                     </Button>
-                  </div>
+                  </div> */}
                 </div>
 
                 <Spacer />

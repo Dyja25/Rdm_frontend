@@ -183,12 +183,11 @@ function EmployeeTable(props) {
 
   /* confirm delete */
   const handleDelete = (record) => {
-    console.log({
-      employeeId: record.employeeId,
-      selectedModules:
-        selectedMap[record.employeeId] || [],
-    });
-    props.deleteEmployeeData(record.employeeId)
+    console.log(
+      
+      selectedMap[record.employeeId] || [],
+    );
+    props.deleteEmployeeData(record.employeeId,selectedMap[record.employeeId] || [])
 
     setOpenRow(null);
   };

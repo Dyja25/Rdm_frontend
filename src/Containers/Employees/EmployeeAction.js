@@ -64,11 +64,12 @@ export const addEmployee = (employee) => (dispatch) => {
     });
 };
 
-  export const deleteEmployeeData = ( empId ) => (dispatch) => {
+  export const deleteEmployeeData = ( empId,data ) => (dispatch) => {
     dispatch({ type: types.DELETE_EMPLOYEE_DATA_REQUEST });
   
     axios
-      .delete(`${base_url}/employee/delete/${empId} `,  {
+      .delete(`${base_url}/employee/delete/${empId} `, {
+         data: data,
         headers: {
           Authorization: "Bearer " + sessionStorage.getItem("token") || "",
         },
@@ -78,7 +79,7 @@ export const addEmployee = (employee) => (dispatch) => {
         console.log(res);
         dispatch({
           type: types.DELETE_EMPLOYEE_DATA_SUCCESS,
-          payload: candidateId,
+          payload: empId,
         });
         // cb && cb("success");
       })
