@@ -250,7 +250,7 @@ export const addNote = (note, cb) => (dispatch) => {
 export const getEmployeeDocument = (employeeId) => (dispatch) => {
   dispatch({ type: types.GET_EMPLOYEE_DOCUMENTS_REQUEST });
   axios
-    .get(`${base_url}/`, {
+    .get(`${base_url}/employee/document/${employeeId}`, {
       headers: {
         Authorization: "Bearer " + sessionStorage.getItem("token") || "",
       },
@@ -313,22 +313,23 @@ export const handleDocumentUploadModal = (modalProps) => (dispatch) => {
 /**
  * link document to a employee
  */
-export const addEmployeeDocument = (documentId, data, cb) => (dispatch) => {
+export const addEmployeeDocument = (data,cb) => (dispatch) => {
   console.log(data);
   dispatch({ type: types.ADD_EMPLOYEE_DOCUMENT_REQUEST });
   axios
-    // .put(`${base_url}/opportunity/document/${documentId}`, data, {
-    //   headers: {
-    //     Authorization: "Bearer " + sessionStorage.getItem("token") || "",
-    //   },
-    // })
+    .post(`${base_url}/employee/document`, data, {
+      headers: {
+        Authorization: "Bearer " + sessionStorage.getItem("token") || "",
+      },
+    })
     .then((res) => {
       console.log(res);
       dispatch({
         type: types.ADD_EMPLOYEE_DOCUMENT_SUCCESS,
         payload: res.data,
       });
-      cb();
+        cb();
+     
     })
     .catch((err) => {
       console.log(err);

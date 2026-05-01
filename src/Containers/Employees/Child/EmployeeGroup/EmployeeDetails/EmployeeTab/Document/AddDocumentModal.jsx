@@ -18,6 +18,8 @@ import { TextareaComponent } from "../../../../../../../Components/Forms/Formik/
 import * as Yup from "yup";
 import {
   handleDocumentUploadModal,
+  addEmployeeDocument,
+  getEmployeeDocument
 } from "../../../../../EmployeeAction";
 // import { getOppoStages, getLevels } from "../../Settings/SettingsAction";
 import { FlexContainer } from "../../../../../../../Components/UI/Layout";
@@ -78,6 +80,7 @@ class AddDocumentModal extends Component {
       getOpportunityDocument,
       handleDocumentUploadModal,
     } = this.props;
+     this.props.getEmployeeDocument(this.props.employeeId);
     // getOpportunityDocument(opportunity.opportunityId);
     handleDocumentUploadModal(false);
   };
@@ -153,24 +156,24 @@ class AddDocumentModal extends Component {
                 documentId: ""
               }}
               validationSchema={documentSchema}
-            //   onSubmit={(values, { resetForm }) => {
-            //     console.log(values);
-            //     addOpportunityDocument(
-            //       values.documentId,
+              onSubmit={(values, { resetForm }) => {
+                console.log(values);
+                this.props.addEmployeeDocument(
+                  // values.documentId,
 
-            //       {
-            //         ...values,
-            //         type:
-            //           this.state.documentshare === true
-            //             ? "Public"
-            //             : "Confidential",
-            //         levelType:
-            //           this.state.approvalAbove === true ? "Above" : "Specific",
-            //       },
-            //       this.callback
-            //     );
-            //     resetForm();
-            //   }}
+                  {
+                    ...values,
+                    // type:
+                    //   this.state.documentshare === true
+                    //     ? "Public"
+                    //     : "Confidential",
+                    // levelType:
+                    //   this.state.approvalAbove === true ? "Above" : "Specific",
+                  },
+                  this.callback
+                );
+                resetForm();
+              }}
             >
               {({
                 errors,
@@ -403,7 +406,7 @@ class AddDocumentModal extends Component {
                     <Button
                       htmlType="submit"
                       type="primary"
-                    //   Loading={addingDocumentByOpportunityId}
+                 loading={this.props.addingDocumentByEmployeeId}
                     >
                       <FormattedMessage
                         id="app.submit"
@@ -435,6 +438,7 @@ const mapStateToProps = ({ opportunity, settings, auth, employee }) => ({
     auth.userDetails &&
     auth.userDetails.metaData &&
     auth.userDetails.metaData.organization,
+    addingDocumentByEmployeeId:employee.addingDocumentByEmployeeId,
   employeeId: employee.singleEmployee.employeeId,
   //   subscriptionType: auth.userDetails.metaData.organization.subscriptionType,
 });
@@ -443,6 +447,8 @@ const mapDispatchToProps = (dispatch) =>
   bindActionCreators(
     {
       handleDocumentUploadModal,
+      addEmployeeDocument,
+      getEmployeeDocument
       //   addOpportunityDocument,
       //   getOpportunityDocument,
       //   getOppoStages,

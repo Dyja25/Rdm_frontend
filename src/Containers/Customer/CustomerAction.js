@@ -392,7 +392,7 @@ export const updateCustomer = (data, customerId) => (dispatch) => {
 /**
  * add document to a customer
  */
-export const addCustomerDocument = (data, cb) => (dispatch) => {
+export const addCustomerDocument = (data,cb) => (dispatch) => {
   console.log(data);
   dispatch({ type: types.ADD_CUSTOMER_DOCUMENT_REQUEST });
   axios

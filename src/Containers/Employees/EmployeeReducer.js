@@ -229,7 +229,8 @@ export const EmployeeReducer = (state = initialState, action) => {
       return {
         ...state,
         addingDocumentByEmployeeId: false,
-        addingDocumentByEmployeeIdError: false,
+        // documentsByEmployeeId
+       documentsByEmployeeId: [action.payload, ...state.documentsByEmployeeId],
       };
     case types.ADD_EMPLOYEE_DOCUMENT_FAILURE:
       return {

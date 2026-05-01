@@ -25,13 +25,13 @@ import { elipsize } from "../../../../../../../Helpers/Function/Functions";
 import APIFailed from "../../../../../../../Helpers/ErrorBoundary/APIFailed";
 
 class LinkedDocuments extends Component {
-  // componentDidMount() {
-  //   const {
-  //     employee: { employeeId },
-  //     getEmployeeDocument,
-  //   } = this.props;
-  //   getEmployeeDocument(employeeId);
-  // }
+  componentDidMount() {
+    const {
+      
+      getEmployeeDocument,
+    } = this.props;
+    getEmployeeDocument(this.props.employeeId);
+  }
   render() {
     const {
       documentsByEmployeeId,
@@ -92,43 +92,7 @@ class LinkedDocuments extends Component {
         // onFilter: (value, record) => record.taskType.indexOf(value) === 0,
         // sorter: (a, b) => a.taskType.length - b.taskType.length
       },
-      {
-        // title: "Circulation",
-        title: <FormattedMessage
-          id="app.circulation"
-          defaultMessage="Circulation"
-        />,
-        render: (name, item, i) => {
-          debugger;
-
-          if (item.levelType && item.levelType === "Above") {
-            return (
-              <SubTitle style={{ height: "0.3125em", marginBottom: "0.75em" }}>
-                {item.type === "confidential"
-                  ? "Private"
-                  : `${item.type || ""} (${item.department || ""})
-                  (${item.documentLevel[0] || ""}
-                  `}
-                <FileDownloadIcon type="to-top" />)
-              </SubTitle>
-            );
-          } else {
-            debugger;
-            return (
-              <SubTitle style={{ height: "0.3125em", marginBottom: "0.75em" }}>
-                {item.type === "confidential"
-                  ? "Private"
-                  : `${item.type || ""} (${item.department || ""})(${item
-                    .documentLevel[0] || ""})`}{" "}
-                &nbsp;
-              </SubTitle>
-            );
-          }
-        },
-
-        onFilter: (value, record) => record.taskType.indexOf(value) === 0,
-        sorter: (a, b) => a.taskType.length - b.taskType.length,
-      },
+     
       // {
       //     title: 'Stage',
       //     dataIndex: 'documentDescription',
@@ -187,7 +151,7 @@ class LinkedDocuments extends Component {
               //debugger;
               return <p style={{ margin: 0 }}>{record.documentDescription}</p>;
             }}
-            rowKey="EmployeeId"
+            rowKey="employeeId"
             columns={columns}
             dataSource={documentsByEmployeeId}
             Loading={
@@ -204,6 +168,7 @@ class LinkedDocuments extends Component {
 
 const mapStateToProps = ({ employee }) => ({
   employee: employee.employee,
+   employeeId: employee.singleEmployee.employeeId,
   fetchingDocumentsByEmployeeId: employee.fetchingDocumentsByEmployeeId,
   fetchingDocumentsByEmployeeIdError:
     employee.fetchingDocumentsByEmployeeIdError,
