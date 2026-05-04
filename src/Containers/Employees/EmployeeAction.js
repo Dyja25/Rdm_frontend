@@ -279,25 +279,25 @@ export const deleteDocument = (documentId) => (dispatch, getState) => {
     type: types.DELETE_DOCUMENT_REQUEST,
   });
 
-  // axios
-  //   .delete(`${base_url}/opportunity/${opportunityId}/document/${documentId}`, {
-  //     headers: {
-  //       Authorization: "Bearer " + sessionStorage.getItem("token") || "",
-  //     },
-  //   })
-  //   .then((res) => {
-  //     dispatch({
-  //       type: types.DELETE_DOCUMENT_SUCCESS,
-  //       payload: employeeId,
-  //     });
-  //   })
-  //   .catch((err) => {
-  //     console.log(err);
-  //     dispatch({
-  //       type: types.DELETE_DOCUMENT_FAILURE,
-  //       payload: err,
-  //     });
-  //   });
+  axios
+    .delete(`${base_url}/employee/document/${documentId}`, {
+      headers: {
+        Authorization: "Bearer " + sessionStorage.getItem("token") || "",
+      },
+    })
+    .then((res) => {
+      dispatch({
+        type: types.DELETE_DOCUMENT_SUCCESS,
+        payload: employeeId,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      dispatch({
+        type: types.DELETE_DOCUMENT_FAILURE,
+        payload: err,
+      });
+    });
 };
 
 /**

@@ -68,7 +68,7 @@ const initialState = {
   addingContactOpportunity: false,
   addingContactOpportunityError: false,
   addContactOpportunityModal: false,
-  viewType: "table",
+  viewType: "dashboard",
 
   fetchingContactsPartner: false,
   fetchingContactsPartnerError: false,
@@ -129,7 +129,7 @@ export const contactReducer = (state = initialState, action) => {
       return { 
         ...state, 
         addingContact: false, 
-        //addContactModal: false ,
+        addContactModal: false ,
         contactEmail:action.payload
       };
     case types.ADD_CONTACT_FAILURE:

@@ -126,7 +126,7 @@ class LinkedDocuments extends Component {
           return (
             <StyledPopconfirm
               title="Do you want to delete?"
-              onConfirm={() => deleteDocument(item.documentTypeId)}
+              onConfirm={() => deleteDocument(item.documentId)}
             >
               <DeleteIcon type="delete" style={{ cursor: "pointer", color: "red" }} />
             </StyledPopconfirm>

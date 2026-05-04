@@ -19,6 +19,7 @@ import { DatePicker } from "../../../../../../Components/Forms/Formik/DatePicker
 import dayjs from "dayjs";
 import {getDesignations} from "../../../../../Settings/Designation/DesignationAction";
 import {getDepartments} from "../../../../../Settings/Department/DepartmentAction";
+import AddressFieldArray from "../../../../../../Components/Forms/Formik/AddressFieldArray.jsx";
 
 const { Option } = Select;
 /**
@@ -497,112 +498,18 @@ class ContactForm extends Component {
                       isColumn
                       component={TextareaComponent}
                       />
-                    <Spacer style={{ marginBottom: "1.25em" }} />
-                    <Field
-                      name="address[0].address1"
-                      // label="Address"
-                      label={
-                        <FormattedMessage
-                          id="app.address[0].address1"
-                          defaultMessage="Address"
-                        />
-                      }
-                      component={InputComponent}
-                      isColumn
-                      width="100%"
-                    />
-                    <Spacer />
-                    <Field
-                      name="address[0].street"
-                      //label="Street"
-
-                      label={
-                        <FormattedMessage
-                          id="app.street"
-                          defaultMessage="Street"
-                        />
-                      }
-                      component={InputComponent}
-                      isColumn
-                      width="100%"
-                    />
-                    <Spacer />
-                    <FlexContainer justifyContent="space-between">
-                      <div style={{ width: "47%" }}>
-                        <Field
-                          name="address[0].city"
-                          //label="City"
-                          label={
-                            <FormattedMessage
-                              id="app.ddress[0].city"
-                              defaultMessage="City"
-                            />
-                          }
-                          component={InputComponent}
-                          isColumn
-                          width="100%"
-                        />
-                      </div>
-                      <div style={{ width: "47%" }}>
-                        <Field
-                          // name="address[0].country"
-                          name="countryName"
-                          isColumnWithoutNoCreate
-                          // label="Country"
-
-                          label={
-                            <FormattedMessage
-                              id="app.countryName"
-                              defaultMessage="Country"
-                            />
-                          }
-                          component={SearchSelect}
-                          defaultValue={{
-                            value: this.props.user.countryName,
-                          }}
-                          value={values.countryName}
-                          selectType="country"
-                          inlineLabel
-                          isColumn
-                          width="100%"
-                        />
-                      </div>
-                    </FlexContainer>
-                    <Spacer />
-                    <FlexContainer justifyContent="space-between">
-                      <div style={{ width: "47%" }}>
-                        <Field
-                          name="address[0].state"
-                          //label="State"
-
-                          label={
-                            <FormattedMessage
-                              id="app.address[0].State"
-                              defaultMessage="State"
-                            />
-                          }
-                          component={InputComponent}
-                          isColumn
-                          width="100%"
-                        />
-                      </div>
-                      <div style={{ width: "47%" }}>
-                        <Field
-                          name="address[0].postalCode"
-                          //label="Zip Code"
-
-                          label={
-                            <FormattedMessage
-                              id="app.address[0].postalCode"
-                              defaultMessage="Pin Code"
-                            />
-                          }
-                          component={InputComponent}
-                          isColumn
-                          width="100%"
-                        />
-                      </div>
-                    </FlexContainer>
+                     <Spacer style={{marginTop:"1.25em"}}/>   
+                  <FieldArray
+                    name="address"
+                    label="Address"
+                    render={(arrayHelpers) => (
+                      <AddressFieldArray
+                        arrayHelpers={arrayHelpers}
+                        values={values}
+                      />
+                    )}
+                  />
+                   
                   </div>
                 </div>
                 <Spacer style={{ marginTop: "1.25em" }} />
