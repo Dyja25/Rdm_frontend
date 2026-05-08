@@ -40,7 +40,7 @@ const EmployeesActionLeft = (props) => {
 
       <div style={{ marginLeft: "30px" }}>
         <Search
-          placeholder="Search By Name"
+          placeholder="Search By Name ,Email & Mobile No"
           onSearch={(value) => {
              props.inputEmployeeDataSearch(value);
              props.setCurrentData(value);

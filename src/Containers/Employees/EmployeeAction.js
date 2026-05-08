@@ -288,7 +288,7 @@ export const deleteDocument = (documentId) => (dispatch, getState) => {
     .then((res) => {
       dispatch({
         type: types.DELETE_DOCUMENT_SUCCESS,
-        payload: employeeId,
+        payload: documentId,
       });
     })
     .catch((err) => {

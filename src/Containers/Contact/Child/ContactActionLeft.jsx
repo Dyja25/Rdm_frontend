@@ -111,7 +111,7 @@ const suffix = (
 
        <div style={{marginLeft:"26px"}}>
                 <Input
-                  placeholder="Search by Name & Identity ID"
+                  placeholder="Search by Name & Email"
                   // enterButton="Search"
                   width={"100%"}
                   suffix={suffix}

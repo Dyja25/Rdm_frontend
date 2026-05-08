@@ -244,7 +244,7 @@ const CandidateActionLeft = (props) => {
       {user.userType !== "USER" && user.department !== "Vendor" && (
         <div>
           <Input
-            placeholder="Search by Name & Identity ID"
+            placeholder="Search by Name & Email"
             // enterButton="Search"
             width={"100%"}
             suffix={suffix}
