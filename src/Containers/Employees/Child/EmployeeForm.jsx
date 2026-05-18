@@ -438,7 +438,7 @@ class EmployeeForm extends Component {
                     options={["L1", "L2", "L3"]}
                     component={SelectComponent}
                     inlineLabel
-                    className="field"
+                    className="field w-[80px]"
                     isColumn
                     />
                 <Spacer style={{ marginTop: "1.5625em" }} />

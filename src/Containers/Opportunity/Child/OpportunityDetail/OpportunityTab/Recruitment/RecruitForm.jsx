@@ -518,7 +518,7 @@ function RecruitForm(props) {
                   </FlexContainer>  
                   <Spacer />
                       <FlexContainer justifyContent="space-between">
-                  <div style={{ width: "100%" ,}}>
+                 <div style={{ width: "47%" }}>
                   <Field
                     name="recruitersId"
                     //  selectType="contactList"
@@ -532,7 +532,8 @@ function RecruitForm(props) {
                     }
                    mode
                     placeholder="Select"
-                    width={"100%"}
+                   className="w-full"
+    style={{ width: "100%" }}
                    component={SelectComponent}
                     options={Array.isArray(recruiterNameOption) ? recruiterNameOption : []}
                      

@@ -23,7 +23,7 @@ export class DistributorActivityTab extends Component {
     // console.log("...this.props.formProps...", this.props.formProps);
     return (
       <>
-        <TabsWrapper>
+        <TabsWrapper style={{height:"83vh"}}>
           <StyledTabs
             defaultActiveKey="1"
             style={{ overflow: "visible", width: "53vw", padding: "15px" }}

@@ -500,7 +500,7 @@ class CallForm extends Component {
                       />
                     </div>
                   
-                       <div style={{ width: "32%" }}>
+                       <div style={{ width: "34%" }}>
                       <FastField
                         name="modeType"
                         label="Channel"
@@ -514,6 +514,8 @@ class CallForm extends Component {
                         ]}
                         component={SelectComponent}
                         inlineLabel
+                        className="w-full"
+    style={{ width: "100%" }}
                       />
                     </div>
                       <div style={{ width: "40%", }}>
@@ -713,7 +715,8 @@ class CallForm extends Component {
                     // isRequired
                     // width={"100%"}
                     placeholder="Select"
-
+                     className="w-full"
+    style={{ width: "100%" }}
                     component={SelectComponent}
                     options={Array.isArray(employeesData) ? employeesData : []}
                     value={values.ownerIds}
@@ -834,6 +837,8 @@ class CallForm extends Component {
                             defaultValue="30 min"
                             isColumn
                             inlineLabel
+                            className="w-full"
+    style={{ width: "100%" }}
                           />
                         </div>
                       ) : null}

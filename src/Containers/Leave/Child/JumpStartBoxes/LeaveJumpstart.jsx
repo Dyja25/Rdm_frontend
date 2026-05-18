@@ -18,9 +18,11 @@ class LeaveJumpstart extends React.Component {
      console.log(leaveBalance);
     return (
       <FlexContainer flexDirection="column" style={{ width: "100%" }}>
-            <FlexContainer style={{ width: "100%", marginLeft:"20%" }}>
+            <FlexContainer
+  className="w-full flex justify-center gap-6 overflow-x-hidden"
+>
 
-                <div style={{ width: "17%" }}>
+                <div className="w-[17%] min-w-[220px]">
                 <JumpStartBox
                 bgColor="#005075"
                 title="Maximum Leaves"
@@ -30,7 +32,7 @@ class LeaveJumpstart extends React.Component {
                 />
                 </div>
 
-                <div style={{ width: "17%" }}>
+                <div className="w-[17%] min-w-[220px]">
                 <JumpStartBox
                 bgColor="#0073a8"
                 stringValue
@@ -40,7 +42,7 @@ class LeaveJumpstart extends React.Component {
                 />
                 </div>
 
-                <div style={{ width: "17%" }}>
+               <div className="w-[17%] min-w-[220px]">
                 <JumpStartBox
                 bgColor="#0093d7"
                 title="Pending"
@@ -50,7 +52,7 @@ class LeaveJumpstart extends React.Component {
                 />
                 </div>
 
-                <div style={{ width: "17%" }}>
+                <div className="w-[17%] min-w-[220px]">
                 <JumpStartBox   
                 bgColor="#24b9fe"
                 title="Leave Balance"

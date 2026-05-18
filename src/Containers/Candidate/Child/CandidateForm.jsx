@@ -340,7 +340,7 @@ class CandidateForm extends Component {
             setFieldTouched,
           }) => (
             <Form className="form-background">
-              <div style={{ display: "flex", justifyContent: "space-between",height: "70vh", overflow:"scroll",paddingRight: "0.6em" }}>
+   <div className="flex justify-between h-[70vh] overflow-y-scroll overflow-x-hidden pr-[0.6em]">
                 <div
                   style={{
                     height: "100%",
@@ -351,7 +351,7 @@ class CandidateForm extends Component {
                     <FastField name="imageId" component={Upload} />
                     <div style={{marginLeft:"16px"}}>
                       <FlexContainer justifyContent="space-between">
-                        <div style={{ width: "35%" }}>
+                        <div style={{ width: "41%" }}>
                           <FastField
                             name="salutation"
                             type="text"
@@ -365,11 +365,12 @@ class CandidateForm extends Component {
                             options={["Mr.", "Ms.", "None","Dr.","Mevr.","Dhr."]}
                             component={SelectComponent}
                             inlineLabel
-                            className="field"
+                            className="field w-[100px]"
                             isColumn
                           />
                         </div>
-                        <div style={{ width: "63%" }}>
+
+                        <div style={{ width: "54%" }}>
                           <FastField
                             isRequired
                             name="firstName"
@@ -407,7 +408,7 @@ class CandidateForm extends Component {
                             inlineLabel
                           />
                         </div> */}
-                         <div style={{ width: "44%" }}>
+                        <div style={{ width: "46%" }}>
                       <FastField
                         name="gender"
                         type="text"
@@ -421,11 +422,11 @@ class CandidateForm extends Component {
                         options={["Male", "Female", "Others"]}
                         component={SelectComponent}
                         inlineLabel
-                        className="field"
+                        className="field w-full"
                         isColumn
                       />
                     </div>
-                        <div style={{ width: "55%" }}>
+                        <div style={{ width: "50%" }}>
                           <FastField
                             name="lastName"
                             //label="Last Name"
@@ -671,6 +672,8 @@ class CandidateForm extends Component {
 
                         component={SelectComponent}                       
                         inlineLabel
+                        className="w-full"
+    style={{ width: "100%" }}
                       />
                     </div>
                     <div style={{ width: "47%" }}>
@@ -729,6 +732,7 @@ class CandidateForm extends Component {
                     </div> */}
                   </FlexContainer> 
                 <Spacer />
+                <div className="w-full">
                   <FieldArray
                     name="address"
                     label="Address"
@@ -738,7 +742,8 @@ class CandidateForm extends Component {
                         values={values}
                       />
                     )}
-                  />                  
+                  /> 
+                  </div>                 
                   <FlexContainer justifyContent="space-between">
                    
                     <div style={{ width: "47%" }}>
@@ -1144,6 +1149,8 @@ onChange={this.NumericOnly}
                           component={SelectComponent}
                           options={["Hourly", "Weekly", "Monthly"]}
                           inlineLabel
+                          className="w-full"
+    style={{ width: "100%" }}
                         />                       
 
                       </div>
@@ -1209,7 +1216,7 @@ onChange={this.NumericOnly}
                         width="100%"
                       />
                     </div>                    
-                    <div style={{ width: "47%" }}>
+                    <div style={{ width: "47%", marginTop:"0.2rem" }}>
                       <FastField
                         name="noticePeriod"
                         //label="Email"

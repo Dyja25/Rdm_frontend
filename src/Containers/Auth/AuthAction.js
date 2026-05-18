@@ -919,7 +919,7 @@ export const generateOtpByEmail = (data) => (dispatch) => {
   console.log(data);
   dispatch({ type: types.GENERATE_OTP_BY_EMAIL_REQUEST });
   axios
-    .post(`${base_url}/api/otp/generateOTP`, data)
+    .post(`${login_url}/api/otp/generateOTP`, data)
     .then((res) => {
       console.log(res);
       dispatch({

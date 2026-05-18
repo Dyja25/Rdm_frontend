@@ -337,7 +337,7 @@ class CandidateDetailTab extends Component {
                   </span>
                   {activeKey === "8" && (
                     <>
-                  <Tooltip title="Add Bank Details">
+                  <Tooltip title="Add Bank Details" placement="left">
   <PlusOutlined onClick={() => handleCandidateBankModal(true)} />
 </Tooltip>
                     </>

@@ -22,14 +22,19 @@ class ActivityModal extends Component {
           visible={addCandidateActivityModal}
           width={"55vw"}
           bodyStyle={{ padding: 0 }}
-          style={{ top: 40 }}
+          style={{ top: 10 }}
+          bodyStyle={{
+    padding: 0,
+    height: "88vh",
+    
+  }}
           maskClosable={false}
           destroyOnClose
           onCancel={() => handleCandidateActivityModal(false)}
           footer={null}
         >
           <FlexContainer alignItems="center" justifyContent="space-evenly">
-            <ActivityTab />
+            <ActivityTab/>
           </FlexContainer>
         </StyledModal>
       </>

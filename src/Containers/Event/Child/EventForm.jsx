@@ -609,6 +609,8 @@ class EventForm extends Component {
                             defaultValue='30 min'
                             isColumn
                             inlineLabel
+                            className="w-full"
+    style={{ width: "100%" }}
                           />
                         </div>
 

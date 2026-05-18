@@ -187,7 +187,7 @@ class CandidateEmploymentForm extends Component {
                     </FlexContainer>
                     <Spacer />
                     <FlexContainer justifyContent="space-between">
-                      <div style={{ width: "35%" }}>
+                      <div style={{ width: "21%" }}>
                         <Field
                           // isRequired
                           name="salary"
@@ -206,7 +206,7 @@ class CandidateEmploymentForm extends Component {
                         />
                       </div>
                    
-                    <div style={{ width: "27%" }}>
+                    <div style={{ width: "38%" }}>
                         <Field
                           // isRequired
                           name="salaryType"
@@ -223,6 +223,7 @@ class CandidateEmploymentForm extends Component {
                           component={SelectComponent}
                           options={["Daily", "Monthly", "Annual"]}
                           inlineLabel
+                          className="w-full"
                           />
                       </div>
                     

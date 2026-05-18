@@ -208,9 +208,9 @@ class ContactForm extends Component {
                 >
                   <FlexContainer flexWrap="no-wrap">
                     <FastField name="imageId" component={Upload} />
-                    <div style={{marginLeft:"14px"}}>
-                      <FlexContainer justifyContent="space-between">
-                        <div style={{ width: "40%" }}>
+                     <div style={{marginLeft:"16px"}}>
+                     <FlexContainer justifyContent="space-between">
+                       <div style={{ width: "46%" }}>
                           <FastField
                             name="salutation"
                             type="text"
@@ -224,11 +224,11 @@ class ContactForm extends Component {
                             options={["Mr.", "Ms.", "None"]}
                             component={SelectComponent}
                             inlineLabel
-                            className="field"
+                            className="field w-full"
                             isColumn
                             />
                         </div>
-                        <div style={{ width: "55%" }}>
+                        <div style={{ width: "50%" }}>
                           <FastField
                             isRequired
                             name="firstName"

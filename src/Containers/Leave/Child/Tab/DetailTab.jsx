@@ -28,7 +28,7 @@ class DetailTab extends Component {
 
     return (
       <>
-        <TabsWrapper>
+        <TabsWrapper style={{height:"73.4vh"}}>
           <StyledTabs defaultActiveKey="1" onChange={this.handleTabChange}>
             <TabPane
               tab={
