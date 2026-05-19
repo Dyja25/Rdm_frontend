@@ -16,7 +16,7 @@ import {
   validateOtp
 } from "./AuthAction";
 
-import lib from "../../Assets/Images/libaxis.jpeg";
+import lib from "../../Assets/Images/stw-logo_page_1.png";
 import { InputComponent } from "../../Components/Forms/Formik/InputComponent";
 
 
@@ -82,7 +82,7 @@ const Login = () => {
         <img
           className="big-logo"
           src={lib}
-          style={{ width: 200 }}
+          style={{ width: 100 }}
           alt="Libaxix Logo"
         />
         <br />
@@ -202,7 +202,7 @@ const Login = () => {
             bottom: 0,
           }}
         >
-          Copyright © {new Date().getFullYear()} LIBAXIS B.V. All Rights Reserved.
+          Copyright © {new Date().getFullYear()} SELECTION TO WORK All Rights Reserved.
         </div>
       </AuthContainer>
     </FlexContainer>

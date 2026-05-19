@@ -173,7 +173,7 @@ class ChangePassword extends Component {
                         />
                       ) : null}
                     </div>
-                    <Spacer />
+                    {/* <Spacer />
                     <div>
                       <Button
                         type="primary"
@@ -189,8 +189,8 @@ class ChangePassword extends Component {
                         <ArrowRightOutlined />
                       </Button>
                     </div>
-                    <Spacer />
-                    <div style={{ display: "flex", justifyContent: "space-between" }}>
+                    <Spacer /> */}
+                    {/* <div style={{ display: "flex", justifyContent: "space-between" }}>
                       <div style={{ width: "74%", padding: "2px", marginTop: "8px" }}>
                         <Field
                           name="otp"
@@ -215,7 +215,7 @@ class ChangePassword extends Component {
                           Validate
                         </Button>
                       </div>
-                    </div>
+                    </div> */}
 
 
                     <Button

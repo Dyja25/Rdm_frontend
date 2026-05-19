@@ -38,7 +38,7 @@ const DashboardActionLeft = (props) => {
   // }, [props.viewType]);
   return (
     <FlexContainer alignItems="center">
-            { user.department=== "Management" && role === "ADMIN" && ( 
+            {/* { user.department=== "Management" && role === "ADMIN" && ( 
             <>
             <div style={{width:"46%"}}>
               <Tag
@@ -59,12 +59,11 @@ const DashboardActionLeft = (props) => {
                   cursor: "pointer",                  
                   fontWeight: reportViewType === "ALL" ? "bold" : null,
                   textAlign: "center",
-                  // color: "orange",
                   borderColor: "orange",
                 }}
                 onClick={() => setReportViewType("ALL")}
               >
-                {/* Organization */}
+
                 <FormattedMessage
                   id="app.organization"
                   defaultMessage="Organization"
@@ -72,7 +71,7 @@ const DashboardActionLeft = (props) => {
               </Tag>
             </div>
             </>
-           )} 
+           )}  */}
       {/* <Badge
                   count={props.recordData.opportunityDetails}
                   overflowCount={999}

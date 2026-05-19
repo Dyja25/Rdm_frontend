@@ -1,5 +1,5 @@
 import React from 'react'
-import FWLogo1 from "../../assets/Images/Axis_logo_Big.png";
+import FWLogo1 from "../../assets/Images/stw-logo_page_1.png";
 
 const BundleLoader = () => {
   return (

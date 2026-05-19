@@ -101,8 +101,8 @@ class AddressFieldArray extends Component {
                   }}
                 >Address input is only allowed using Location feature</p>
                 <Field
-                  name={`address.${index}.address1`}
-                  label="Address 1"
+                  name={`address.${index}.houseNo`}
+                  label="Extra Input"
                   isColumn
                   component={InputComponent}
                   width={"100%"}
@@ -110,7 +110,7 @@ class AddressFieldArray extends Component {
                 />  
                   <Field
                    label="House No"
-                  name={`address.${index}.houseNo`}
+                  name={`address.${index}.address1`}
                   // placeholder="House No"
                   component={InputComponent}
                   width={"100%"}
