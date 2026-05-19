@@ -31,11 +31,38 @@ class CustomerDetailView extends Component {
 
           value={phoneNumber} />
 
-<CustomerItemRow label="Address" value={addressdata||""} />
-        <CustomerItemRow label="Street" value={addressdata1||""} />
-        <CustomerItemRow label="City" value={addressdata2||""} />
-        <CustomerItemRow label="State" value={addressdata3||""} />
-        <CustomerItemRow label="Pin Code" value={addressdata4||""} />
+      <CustomerItemRow //label="Address" 
+      label={<FormattedMessage
+            id="app.address"
+            defaultMessage="Address"
+          />}
+      value={addressdata||""} 
+      />
+        <CustomerItemRow //Street
+        label={<FormattedMessage 
+            id="app.street"
+            defaultMessage="Street"
+          />}
+           value={addressdata1||""} 
+           />
+        <CustomerItemRow //label="City"
+          label={<FormattedMessage 
+            id="app.city"
+            defaultMessage="City"
+          />}
+         value={addressdata2||""} />
+        <CustomerItemRow  //label="State"
+        label={<FormattedMessage 
+            id="app.state"
+            defaultMessage="State"
+          />}
+         value={addressdata3||""} />
+        <CustomerItemRow // label="Pin Code" 
+          label={<FormattedMessage 
+            id="app.pinCode"
+            defaultMessage="Pin Code"
+          />}
+        value={addressdata4||""} />
       </>
     );
   }

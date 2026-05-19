@@ -104,7 +104,7 @@ function OpportunityTable(props) {
     {
       //title: "Start Date",
       title: (
-        <FormattedMessage id="app.startDate" defaultMessage="Start Date" />
+        <FormattedMessage id="app.startdate" defaultMessage="Start Date" />
       ),
       dataIndex: "startDate",
       width: "20%",
@@ -116,7 +116,7 @@ function OpportunityTable(props) {
     },
     {
       //title: "End Date",
-      title: <FormattedMessage id="app.endDate" defaultMessage="End Date" />,
+      title: <FormattedMessage id="app.enddate" defaultMessage="End Date" />,
       dataIndex: "endDate",
       width: "20%",
       defaultSortOrder: "descend",
@@ -129,7 +129,7 @@ function OpportunityTable(props) {
       //title: "Proposal Amount",
       title: (
         <FormattedMessage
-          id="app.proposalAmount"
+          id="app.proposalamount"
           defaultMessage="Proposal Amount"
         />
       ),

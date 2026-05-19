@@ -59,14 +59,22 @@ function OpportunityDeletedTable(props) {
               size="small"
               style={{ width: 90 }}
             >
-              Search
+              {/* Search */}
+               <FormattedMessage
+        id="app.search"
+        defaultMessage="Search"
+      />
             </Button>
             <Button
               onClick={() => handleReset(clearFilters)}
               size="small"
               style={{ width: 90 }}
             >
-              Reset
+              {/* Reset */}
+              <FormattedMessage
+        id="app.reset"
+        defaultMessage="Reset"
+      />
             </Button>
             <Button
               type="link"
@@ -77,7 +85,11 @@ function OpportunityDeletedTable(props) {
                 setSearchedColumn(dataIndex);
               }}
             >
-              Filter
+              {/* Filter */}
+              <FormattedMessage
+        id="app.filter"
+        defaultMessage="Filter"
+      />
             </Button>
           
         </div>
@@ -216,7 +228,7 @@ function OpportunityDeletedTable(props) {
     {
       //title: "Proposal Amount",
       title: <FormattedMessage
-        id="app.proposalAmount"
+        id="app.proposalamount"
         defaultMessage="Proposal Amount"
       />,
 
@@ -232,7 +244,11 @@ function OpportunityDeletedTable(props) {
       },
     },
     {
-      title: "Reinstate",
+      // title: "Reinstate",
+       title: <FormattedMessage
+        id="app.reinstate"
+        defaultMessage="Reinstate"
+      />,
       margin: "8%",
       render: (name, item, i) => {
         return (

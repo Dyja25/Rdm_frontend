@@ -11,6 +11,7 @@ import { FlexContainer } from "../../../Components/UI/Layout";
 import { StyledSelect } from "../../../Components/UI/Antd";
 
 import { FileExcelOutlined } from "@ant-design/icons";
+import { FormattedMessage } from "react-intl";
 const ContactSharePartnerForm = lazy(()=>import("./ContactSharePartnerForm.jsx"));
 const ContactShareCustomerForm = lazy(()=>import("./ContactShareCustomerForm.jsx"));
 // import { getUsers } from "../../Team/TeamAction";
@@ -69,7 +70,8 @@ class ContactActionRight extends React.Component {
           <Button 
            type="primary"
            ghost onClick={() => handleContactModal(true)}>
-            Add
+            {/* Add */}
+            <FormattedMessage id="app.add" defaultMessage="Add" />
           </Button>
         </Tooltip>
         ): null}

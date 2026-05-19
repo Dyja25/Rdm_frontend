@@ -60,7 +60,11 @@ class OpportunityActionRight extends React.Component {
             // ghost
             onClick={() => handleOpportunityModal(true)}
           >
-            Add
+            {/* Add */}
+            <FormattedMessage
+                                        id="app.add"
+                                        defaultMessage="Add"
+                                      />
           </Button>
             )}  
         </Tooltip>

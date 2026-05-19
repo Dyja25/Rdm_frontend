@@ -9,6 +9,7 @@ import {
   deleteTopicByPartnerId,
 } from "../../../PartnerAction";
 import { PlusOutlined } from "@ant-design/icons";
+import { FormattedMessage } from "react-intl";
 class PartnerTopicOfInterest extends React.Component {
   constructor(props) {
     super(props);
@@ -71,7 +72,11 @@ class PartnerTopicOfInterest extends React.Component {
                 fontSize="0.875em"
                 style={{ fontWeight: 600, marginBottom: "0.2rem" }}
               >
-                Skills of interest{" "}
+                <FormattedMessage
+          id="app.skillsOfInterest"
+          defaultMessage="Skills of interest"
+        />
+                {" "}
               </Title>
               {fetchingTopicsByPartnerId ? (
                 <p>fetching Skills ...</p>
@@ -123,7 +128,11 @@ class PartnerTopicOfInterest extends React.Component {
                   visible={this.props.topicsByPartnerId.length !== 30}
                   style={{ background: "#fff", borderStyle: "dashed" }}
                 >
-                  <PlusOutlined /> Skill
+                  <PlusOutlined />
+                  <FormattedMessage
+          id="app.skills"
+          defaultMessage="Skills"
+        />
                 </Tag>
               )}
             </div>

@@ -280,7 +280,7 @@ function OpportunityForm (props) {
                         //label="Start "
                         label={
                           <FormattedMessage
-                            id="app.startDate"
+                            id="app.startdate"
                             defaultMessage="Start Date"
                           />
                         }
@@ -297,7 +297,7 @@ function OpportunityForm (props) {
                         // label="End Date"
                         label={
                           <FormattedMessage
-                            id="app.endDate"
+                            id="app.enddate"
                             defaultMessage="End Date"
                           />
                         }
@@ -378,7 +378,13 @@ function OpportunityForm (props) {
                          height: "5em",
                       }}
                   /> */}
-                  <StyledLabel>Description</StyledLabel>
+                  <StyledLabel>
+                    {/* Description */}
+                    <FormattedMessage
+                            id="app.description"
+                            defaultMessage="Description"
+                          />
+                  </StyledLabel>
                     <div>
       {/* <p>Microphone:  {listening ? 'on' : 'off'} 
         </p> */}

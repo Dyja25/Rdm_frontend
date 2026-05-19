@@ -172,7 +172,7 @@ class ContactDetailTab extends Component {
                     <span style={{ marginLeft: "0.25em" }}>
                       {/* Contacts */}
                       <FormattedMessage
-                      id="app.contacts"
+                      id="app.contact"
                       defaultMessage="Contacts"
                     />
                       

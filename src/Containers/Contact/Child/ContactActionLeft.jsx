@@ -138,7 +138,9 @@ const suffix = (
     }
   }}
 >
-  Submit
+  {/* Submit */}
+   <FormattedMessage id="app.submit" defaultMessage="Submit" />
+
 </Button>
 
 

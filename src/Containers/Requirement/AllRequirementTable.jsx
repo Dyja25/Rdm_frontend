@@ -133,7 +133,11 @@ const AllRequirementTable = ({
       // },
     },
     {
-      title: "Job ID",
+      // title: "Job ID",
+       title: <FormattedMessage
+        id="app.jobId"
+        defaultMessage="Job ID"
+      />,
       width: "9%",
     //   dataIndex: "jobOrder",
       render: (name, item, i) => {
@@ -187,7 +191,7 @@ const AllRequirementTable = ({
     {
       //title: "Requirement",
       title: <FormattedMessage
-        id="app.requirementName"
+        id="app.requirement"
         defaultMessage="Requirement"
       />,
       dataIndex: "requirementName",
@@ -195,23 +199,33 @@ const AllRequirementTable = ({
     
     },
     {
-      title: "Category",
+      // title: "Category",
+      title: <FormattedMessage
+        id="app.category"
+        defaultMessage="Category"
+      />,
       dataIndex: "category",
       width: "9%",
  
 
     },
     {
-      title: "Customer",
+      // title: "Customer",
+       title: <FormattedMessage
+        id="app.customer"
+        defaultMessage="Customer"
+      />,
       dataIndex: "customerName",
       width: "9%",
- 
-
     },
    
 
     {
-      title:"Created",
+      // title:"Created",
+       title: <FormattedMessage
+        id="app.created"
+        defaultMessage="Created"
+      />,
       width: "7%",
        dataIndex: "recruitOwner",
        render: (text, item) => {
@@ -234,7 +248,11 @@ const AllRequirementTable = ({
        
     },
     {
-      title: "Recruiter",
+      // title: "Recruiter",
+       title: <FormattedMessage
+        id="app.recruiter"
+        defaultMessage="Recruiter"
+      />,
       width: "7%",
       render: (name, item, i) => {
         return {
@@ -281,7 +299,11 @@ const AllRequirementTable = ({
       },
     },
     {
-      title: "On",
+      // title: "On",
+         title: <FormattedMessage
+        id="app.on"
+        defaultMessage="On"
+      />,
       width: "10%",
       dataIndex: "creationDate",
       render: (text, item) => {
@@ -315,7 +337,7 @@ const AllRequirementTable = ({
     {
       //title: "Start",
       title: <FormattedMessage
-        id="app.processName"
+        id="app.start"
         defaultMessage="Start"
       />,
       width: "9%",
@@ -347,7 +369,11 @@ const AllRequirementTable = ({
       },
     },
     {
-      title:"Duration",
+      // title:"Duration",
+       title: <FormattedMessage
+        id="app.duration"
+        defaultMessage="Duration"
+      />,
       width: "8%",
       render: (text, item) => {
         //const getDate = (date) => dayjs(date, 'DD/MM/YYYY').startOf('month')
@@ -393,13 +419,6 @@ const date=diff+1
       
       },
     },
-   
-  
-   
-   
-
-
-
 
 
     {
@@ -482,7 +501,7 @@ const date=diff+1
     {
       //title: "Sponsor",
       title: <FormattedMessage
-        id="app.sponserName"
+        id="app.sponsor"
         defaultMessage="Sponsor"
       />,
       dataIndex: "sponserName",

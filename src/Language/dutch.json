@@ -614,5 +614,21 @@
      "app.both":"Beide",
      "app.extraInput":"Extra invoer",
       "app.houseNo":"Huisnr",
-      "app.pinCode":"Pincode"
+      "app.pinCode":"Pincode",
+      "app.state":"Staat",
+      "app.phone#":"Telefoon #",
+      "app.phoneNumber":"Telefoonnummer",
+      "app.postalCode":"Postcode",
+      "app.skillsOfInterest":"Vaardigheden van belang",
+      "app.accountNo":"Rekeningnr.",
+      "app.taxRegNo":"Belastingreg. Nee",
+      "app.bussinessRegNo":"Bedrijfsregistratienummer",
+      "app.lastUpdatedOn":"Laatst bijgewerkt op",
+      "app.paymentAfter":"Betaling na (aantal dagen)",
+       "app.reinstate":"Herstel",
+       "app.businessreg":"Bedrijfsregistratienr.",
+       "app.taxreg":"Belastingreg#",
+       "app.account":"Rekening",
+       "app.searchByJobID":"Zoeken op taak-ID",
+       "app.created":"Gemaakt"
 }

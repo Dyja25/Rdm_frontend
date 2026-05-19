@@ -210,7 +210,7 @@ class ContactForm extends Component {
                               // label="First Name"
                               label={
                                 <FormattedMessage
-                                  id="app.firstName"
+                                  id="app.firstname"
                                   defaultMessage="First Name"
                                 />
                               }
@@ -247,7 +247,7 @@ class ContactForm extends Component {
                               //label="Last Name"
                               label={
                                 <FormattedMessage
-                                  id="app.lastName"
+                                  id="app.lastname"
                                   defaultMessage="Last Name"
                                 />
                               }
@@ -270,7 +270,7 @@ class ContactForm extends Component {
                           //label="Mobile #"
                           label={
                             <FormattedMessage
-                              id="app.countryDialCode"
+                              id="app.mobile#"
                               defaultMessage="Mobile #"
                             />
                           }
@@ -291,7 +291,7 @@ class ContactForm extends Component {
                           //placeholder="Mobile #"
                           label={
                             <FormattedMessage
-                              id="app.mobileNumber"
+                              id="app.mobile#"
                               defaultMessage="Mobile #"
                             />
                           }
@@ -312,7 +312,7 @@ class ContactForm extends Component {
                           //label="Phone No #"
                           label={
                             <FormattedMessage
-                              id="app.countryDialCode1"
+                              id="app.phoneno#"
                               defaultMessage="Phone No"
                             />
                           }
@@ -332,7 +332,7 @@ class ContactForm extends Component {
                           // placeholder="Phone #"
                           label={
                             <FormattedMessage
-                              id="app.phoneNumber"
+                              id="app.phone#"
                               defaultMessage="Phone #"
                             />
                           }

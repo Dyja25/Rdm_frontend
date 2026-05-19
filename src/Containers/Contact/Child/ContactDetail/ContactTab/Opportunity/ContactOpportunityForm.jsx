@@ -203,7 +203,7 @@ class ContactOpportunityForm extends Component {
                         //label="Start "
                         label={
                           <FormattedMessage
-                            id="app.startDate"
+                            id="app.startdate"
                             defaultMessage="Start Date"
                           />
                         }
@@ -221,7 +221,7 @@ class ContactOpportunityForm extends Component {
                         // label="End Date"
                         label={
                           <FormattedMessage
-                            id="app.endDate"
+                            id="app.enddate"
                             defaultMessage="End Date"
                           />
                         }
@@ -256,7 +256,7 @@ class ContactOpportunityForm extends Component {
 
                         label={
                           <FormattedMessage
-                            id="app.proposalAmount"
+                            id="app.proposalamount"
                             defaultMessage="Proposal Amount"
                           />
                         }
@@ -301,7 +301,7 @@ class ContactOpportunityForm extends Component {
 
                     label={
                       <FormattedMessage
-                        id="app.customerId"
+                        id="app.customer"
                         defaultMessage="Customer"
                       />
                     }
@@ -322,7 +322,7 @@ class ContactOpportunityForm extends Component {
                    
                     label={
                       <FormattedMessage
-                        id="app.contactId"
+                        id="app.contact"
                         defaultMessage="Contact"
                       />
                     }

@@ -235,7 +235,7 @@ class ContactForm extends Component {
                             // label="First Name"
                             label={
                               <FormattedMessage
-                                id="app.firstName"
+                                id="app.firstname"
                                 defaultMessage="First Name"
                               />
                             }
@@ -272,7 +272,7 @@ class ContactForm extends Component {
                             //label="Last Name"
                             label={
                               <FormattedMessage
-                                id="app.lastName"
+                                id="app.lastname"
                                 defaultMessage="Last Name"
                               />
                             }
@@ -317,7 +317,7 @@ class ContactForm extends Component {
                         //label="Mobile #"
                         label={
                           <FormattedMessage
-                            id="app.countryDialCode"
+                            id="app.mobile#"
                             defaultMessage="Mobile #"
                           />
                         }
@@ -459,7 +459,7 @@ class ContactForm extends Component {
                           // label="Tag Company"
                           label={
                             <FormattedMessage
-                              id="app.tagCompany"
+                              id="app.tagcompany"
                               defaultMessage="Tag Company"
                             />
                           }
@@ -667,9 +667,11 @@ class ContactForm extends Component {
                   // icon={<PoweroffOutlined />}
                   loading={addingContact}
                 >
-                 
-                                      
-                    Create
+                    {/* Create */}
+                     <FormattedMessage
+                          id="app.create"
+                          defaultMessage="Create"
+                        />
                 </Button>
           
                 

@@ -75,7 +75,7 @@ class LinkedDocuments extends Component {
       {
         //title: "Uploaded By",
         title: (
-          <FormattedMessage id="app.uploadedBy" defaultMessage="Uploaded By" />
+          <FormattedMessage id="app.uploadedby" defaultMessage="Uploaded By" />
         ),
         dataIndex: "uploadedBy",
         // onFilter: (value, record) => record.taskType.indexOf(value) === 0,

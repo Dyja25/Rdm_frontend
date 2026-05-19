@@ -11,6 +11,7 @@ import {FlexContainer } from "../../../../../../Components/UI/Layout";
 
 import * as Yup from "yup";
 import {getCommercialByOrgId,addCommercialByOrgId} from "../../../../PartnerAction";
+import { FormattedMessage } from "react-intl";
 
 
 
@@ -138,7 +139,10 @@ render() {
                       </div> */}
                       <Spacer/>                     
                 <FlexContainer justifyContent="space-between">
-                <div  style={{ width:"47%"}}><StyledLabel>Payment after (in days)</StyledLabel></div>
+                <div  style={{ width:"47%"}}><StyledLabel>
+                  {/* Payment after (in days) */}
+                   <FormattedMessage id="app.paymentAfter" defaultMessage=" Payment after (in days)" />
+                  </StyledLabel></div>
                   <div  style={{ width:"38%"}}>
                   <Field
                     name="paymentDate"
@@ -156,7 +160,10 @@ render() {
                 <Spacer />
                 
                 <FlexContainer justifyContent="space-between">
-                <div  style={{ width:"47%"}}><StyledLabel>Last Updated On</StyledLabel></div>
+                <div  style={{ width:"47%"}}><StyledLabel>
+                  {/* Last Updated On */}
+                   <FormattedMessage id="app.lastUpdatedOn" defaultMessage="Last Updated On" />
+                  </StyledLabel></div>
                   <div  style={{ width:"47%"}}>
                   <Field
                     name="lastUpdatedOn"

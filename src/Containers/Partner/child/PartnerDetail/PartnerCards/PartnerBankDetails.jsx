@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { FlexContainer } from "../../../../../Components/UI/Layout";
 import { SubTitle } from "../../../../../Components/UI/Elements";
 import { Tooltip} from "antd";
+import { FormattedMessage } from "react-intl";
 
 import { EditOutlined } from "@ant-design/icons";
 class PartnerBankDetails extends Component {
@@ -23,10 +24,26 @@ class PartnerBankDetails extends Component {
             </Tooltip>
              
         </FlexContainer>
-        <PartnerItemRow label="Bussiness Reg. No." value={businessRegistrationNumber} />
-        <PartnerItemRow label= "Tax Reg. No." value={taxRegistrationNumber}/>
-        <PartnerItemRow label="Bank Name" value={bankName} />
-        <PartnerItemRow label="Account No." value={accountNumber}/>
+        <PartnerItemRow //label="Bussiness Reg. No." 
+        label={
+        <FormattedMessage id="app.bussinessRegNo" defaultMessage="Bussiness Reg. No." />
+        }
+        value={businessRegistrationNumber} />
+        <PartnerItemRow //label= "Tax Reg. No." 
+        label={
+        <FormattedMessage id="app.taxRegNo" defaultMessage="Tax Reg. No." />
+        }
+        value={taxRegistrationNumber}/>
+        <PartnerItemRow //label="Bank Name" 
+        label={
+        <FormattedMessage id="app.bankname" defaultMessage="Bank Name" />
+        }
+        value={bankName} />
+        <PartnerItemRow // label="Account No." 
+         label={
+        <FormattedMessage id="app.accountNo" defaultMessage="Account No" />
+        }
+        value={accountNumber}/>
       </>
     );
   }

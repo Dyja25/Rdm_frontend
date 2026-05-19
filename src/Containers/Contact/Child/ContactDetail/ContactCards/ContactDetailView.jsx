@@ -42,7 +42,7 @@ class ContactDetailView extends Component {
           value={emailId} />
         <ContactItemRow //label="Mobile #" 
           label={<FormattedMessage
-            id="app.mobileNumber"
+            id="app.mobile#"
             defaultMessage="Mobile #"
           />}
           value={mobileNumber} />

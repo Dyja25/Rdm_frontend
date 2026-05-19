@@ -173,7 +173,7 @@ function LinkedContact(props) {
       },
       {
         // title: "Designation",
-        title: <FormattedMessage id="app.role2" defaultMessage="Role" />,
+        title: <FormattedMessage id="app.role" defaultMessage="Role" />,
         width: "12%",
         dataIndex: "designation",
         onFilter: (value, record) => record.designation.indexOf(value) === 0,

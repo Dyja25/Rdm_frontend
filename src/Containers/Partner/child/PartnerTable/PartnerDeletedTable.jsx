@@ -281,8 +281,8 @@ function handleSelected (value){
       width: "1%",
     },
     {
-      title: "Name",
-      // title: <FormattedMessage id="app.name" defaultMessage="Name" />,
+      // title: "Name",
+      title: <FormattedMessage id="app.name" defaultMessage="Name" />,
       dataIndex: "partnerName",
       width: "15%",
       ...getColumnSearchProps('partnerName'),
@@ -596,7 +596,11 @@ function handleSelected (value){
   },
 },
 {
-    title: "Reinstate",
+    // title: "Reinstate",
+    title:<FormattedMessage
+        id="app.reinstate"
+        defaultMessage="Reinstate"
+      />,
     margin: "10%",
     render: (name, item, i) => {
       return (

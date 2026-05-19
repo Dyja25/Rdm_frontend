@@ -246,6 +246,23 @@
    "app.both":"Both",
    "app.extraInput":"Extra Input",
    "app.houseNo":"House No",
-   "app.pinCode":"Pin code"
+   "app.pinCode":"Pin code",
+  "app.state":"state",
+  "app.phone#":"Phone #",
+   "app.phoneNumber":"Phone Number",
+   "app.postalCode":"Postal Code",
+   "app.skillsOfInterest":"Skills of interest",
+   "app.accountNo":"Account No",
+   "app.taxRegNo":"Tax Reg. No.",
+   "app.bussinessRegNo":"Bussiness Reg. No.",
+   "app.lastUpdatedOn":"Last Updated On",
+  "app.paymentAfter":"Payment after (in days)",
+  "app.reinstate":"Reinstate",
+  "app.businessreg":"Business Reg#",
+  "app.taxreg":"Tax Reg#",
+  "app.account":"Account",
+  "app.searchByJobID":"Search By Job ID",
+ "app.created":"Created"
+ 
 
 }

@@ -70,8 +70,8 @@ return (
             props.getAllRequirementTable(props.orgId,0);
           }}
         >
-          {/* <FormattedMessage id="app.clear" defaultMessage="Clear" /> */}
-          Clear
+          <FormattedMessage id="app.clear" defaultMessage="Clear" />
+          {/* Clear */}
         </Button>
       
 

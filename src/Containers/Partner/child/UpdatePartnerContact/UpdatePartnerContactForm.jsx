@@ -214,7 +214,7 @@ class UpdatePartnerContactForm extends Component {
                             // label="First Name"
                             label={
                               <FormattedMessage
-                                id="app.firstName"
+                                id="app.firstname"
                                 defaultMessage="First Name"
                               />
                             }
@@ -261,7 +261,7 @@ class UpdatePartnerContactForm extends Component {
                             //label="Last Name"
                             label={
                               <FormattedMessage
-                                id="app.lastName"
+                                id="app.lastname"
                                 defaultMessage="Last Name"
                               />
                             }
@@ -290,7 +290,7 @@ class UpdatePartnerContactForm extends Component {
                         //label="Mobile #"
                         label={
                           <FormattedMessage
-                            id="app.countryDialCode"
+                            id="app.mobile#"
                             defaultMessage="Mobile #"
                           />
                         }
@@ -312,7 +312,7 @@ class UpdatePartnerContactForm extends Component {
                         name="mobileNumber"
                         label={
                           <FormattedMessage
-                            id="app.mobileNo"
+                            id="app.mobile#"
                             defaultMessage="Mobile #"
                           />
                         }
@@ -339,7 +339,7 @@ class UpdatePartnerContactForm extends Component {
                         //label="Phone No #"
                         label={
                           <FormattedMessage
-                            id="app.countryDialCode1"
+                            id="app.phoneNumber"
                             defaultMessage="Phone No"
                           />
                         }
@@ -569,7 +569,7 @@ class UpdatePartnerContactForm extends Component {
                     // label="Address"
                     label={
                       <FormattedMessage
-                        id="app.address[0].address1"
+                        id="app.address"
                         defaultMessage="Address"
                       />
                     }
@@ -614,7 +614,7 @@ class UpdatePartnerContactForm extends Component {
                         //label="City"
                         label={
                           <FormattedMessage
-                            id="app.ddress[0].city"
+                            id="app.city"
                             defaultMessage="City"
                           />
                         }
@@ -631,7 +631,7 @@ class UpdatePartnerContactForm extends Component {
                         isColumnWithoutNoCreate
                         label={
                           <FormattedMessage
-                            id="app.countryName"
+                            id="app.country"
                             defaultMessage="Country"
                           />
                         }
@@ -657,7 +657,7 @@ class UpdatePartnerContactForm extends Component {
 
                         label={
                           <FormattedMessage
-                            id="app.address[0].State"
+                            id="app.state"
                             defaultMessage="State"
                           />
                         }
@@ -673,7 +673,7 @@ class UpdatePartnerContactForm extends Component {
 
                         label={
                           <FormattedMessage
-                            id="app.address[0].postalCode"
+                            id="app.zipcode"
                             defaultMessage="Zip Code"
                           />
                         }
