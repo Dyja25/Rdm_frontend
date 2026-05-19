@@ -1875,5 +1875,34 @@ export const getPublishProcessForRecruit = (orgId) => (dispatch) => {
 };
 
 
+export const deleteSubtableData = (profileId) => (dispatch, getState) => {
+//  const { candidateId } = getState().candidate.candidate;
+  dispatch({
+    type: types.DELETE_SUBTABLE_DATA_REQUEST,
+  });
+
+  axios
+    .delete(`${base_url}/recruitmentCandidate/un-tag/${profileId}`, {
+      headers: {
+        Authorization: "Bearer " + sessionStorage.getItem("token") || "",
+      },
+    })
+    .then((res) => {
+      console.log(res);
+      //dispatch(getCandidateEducationDetails(candidateId));
+      dispatch({
+        type: types.DELETE_SUBTABLE_DATA_SUCCESS,
+        payload: profileId,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      dispatch({
+        type: types.DELETE_SUBTABLE_DATA_FAILURE,
+        payload: err,
+      });
+    });
+};
+
 
 

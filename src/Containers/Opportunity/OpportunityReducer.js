@@ -139,6 +139,8 @@ const initialState = {
   fetchingDeletedOpportunityError: false,
   deletedOpportunity: [],
 
+   deleteSubtableData: false,
+   deleteSubtableDataError: false,
 
   fetchingPermissionsList: false,
   fetchingPermissionsListError: false,
@@ -1419,6 +1421,25 @@ case types.REINSTATE_TOGGLE_FOR_OPPORTUNITY_FAILURE:
                 fetchingPublishProcessForRecruitError: true,
               };
 
+
+                case types.DELETE_SUBTABLE_DATA_REQUEST:
+                    return { ...state, deleteSubtableData: true };
+                  case types.DELETE_SUBTABLE_DATA_SUCCESS:
+                    return {
+                      ...state,
+                      deleteSubtableData: false,
+                      // addCandidateEducationModal: false,
+                      candidateRequirement: state.candidateRequirement.filter(
+                        (item) => item.profileId !== action.payload
+                      ),
+                    };
+              
+                  case types.DELETE_SUBTABLE_DATA_FAILURE:
+                    return {
+                      ...state,
+                      deleteSubtableData: false,
+                      deleteSubtableDataError: false,
+                    };
 
 
           default:

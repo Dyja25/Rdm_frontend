@@ -8,9 +8,10 @@ import {
   handleRecruiterDrawerModal,
   //   getContactDocument,
 } from "../../../../../Candidate/CandidateAction";
-
+import {deleteSubtableData} from "../../../../OpportunityAction.js"
+import LanguageIcon from '@mui/icons-material/Language';
 import { Link } from "../../../../../../Components/Common";
-
+import { DeleteOutlined, EditOutlined  } from "@ant-design/icons";
 import dayjs from "dayjs";
 import AddCandidateDateModal from "../Recruitment/AddCandidateDateModal.jsx"
 
@@ -31,7 +32,7 @@ import {
 } from "antd";
 import { bindActionCreators } from "redux";
 
-import { StyledTable } from "../../../../../../Components/UI/Antd";
+import { StyledPopconfirm, StyledTable } from "../../../../../../Components/UI/Antd";
  import {getCandidateRequirement,LinkStatusRecruit,LinkStageRecruit,handleCandidateDateModal} from "../../../../OpportunityAction"
 import { CheckCircleTwoTone, CompassOutlined, EyeInvisibleTwoTone, EyeOutlined, StopTwoTone } from "@ant-design/icons";
 import AddRecruiterDrawerModal from "./child/AddRecruiterDrawerModal.jsx";
@@ -101,6 +102,23 @@ class SubTableClickCandidate extends Component {
               to={`candidate/${item.candidateId}`}
               title={`${item.candidateName}`}
             /> */}
+          </>
+        );
+      }
+   },
+    { title: "",
+     //  dataIndex:"webSiteInd",
+       width: "4%",
+       render(name, item, ) {
+        return (
+          <>
+           {item.webSiteInd && (
+          <Tooltip title="Website">
+           
+              <LanguageIcon className="!text-blue-600" />
+            
+            </Tooltip>
+            )}
           </>
         );
       }
@@ -497,6 +515,45 @@ class SubTableClickCandidate extends Component {
 
   },
    
+    {
+           title: "",
+           dataIndex: "id",
+           width: "2%",
+           render: (name, item, i) => {
+             return {
+              //  props: {
+              //    style: {
+              //      background:
+              //        this.state.subTableVisible &&
+              //        this.state.recruitmentId === item.recruitmentId
+              //          ? "rgb(158 183 223)"
+              //          : null,
+              //    },
+              //  },
+               children: (
+                
+                 <StyledPopconfirm
+                   title="Do you want to delete?"
+                   onConfirm={() =>
+                     this.props.deleteSubtableData(item.profileId)
+                   }
+                 >
+                  
+                   {/* {this.props.user.userType !== "USER" &&
+                     this.props.user.department !== "Recruiter" && ( */}
+                     {item.onboardInd !== true && (
+                       <DeleteOutlined
+                       type="delete"
+                       style={{ cursor: "pointer", color: "red" }}
+                     />
+                       )}
+                     {/* )} */}
+                 </StyledPopconfirm>
+             
+               ),
+             };
+           },
+         },
    
     // { title: "doc icon" },
     // { title: "employement icon" },
@@ -563,7 +620,8 @@ const mapDispatchToProps = (dispatch) =>
       getCandidateById,
       getTopicsByCandidateId,
       handleCandidateDateModal,
-      handleRecruiterDrawerModal
+      handleRecruiterDrawerModal,
+      deleteSubtableData
       //  getCandidateRequirement
     },
     dispatch
