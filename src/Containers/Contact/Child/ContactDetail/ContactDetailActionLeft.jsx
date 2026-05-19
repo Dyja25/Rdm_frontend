@@ -5,30 +5,25 @@ import { Button, Tooltip } from "antd";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { BackwardOutlined } from "@ant-design/icons";
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { FormattedMessage } from "react-intl";
+import { ActionIcon } from "../../../../Components/Utils";
+
 function ContactDetailActionLeft (props) {
       const navigate = useNavigate();
  
     return (
       <FlexContainer alignItems="center">
-        {/* <ActionIcon
-          style={{ marginRight: "0.3rem",color: "#1890ff" }}
-          iconType="rollback"
-         
-          tooltiptitle={<FormattedMessage
+       <ActionIcon
+        style={{ marginRight: "0.3rem", color: "#1890ff" }}
+        iconType="arrowBack"
+        tooltipTitle={
+          <FormattedMessage
             id="app.back"
             defaultMessage="Back"
-          />}
-
-        
-          handleIconClick={() => this.props.history.goBack()}
-        /> */}
-        <Tooltip title="Back">
-          <ArrowBackIcon style={{cursor:"pointer"}}
-         onClick={() => {navigate(-1)
-        }}
-        />
-        </Tooltip>
+          />
+        }
+        handleIconClick={() => navigate(-1)}
+      />
       </FlexContainer>
     );
 

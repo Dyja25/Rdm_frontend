@@ -412,6 +412,8 @@ function RequirementForm(props) {
                         inlineLabel
                         component={SelectComponent}
                         options={Array.isArray(Sponsor) ? Sponsor : []}
+                        className="w-full"
+    style={{ width: "100%" }}
                       />
                     </div>
                     <div style={{ width: "47%" }}>

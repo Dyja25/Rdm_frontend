@@ -440,7 +440,7 @@ import OpportunityDetailView from "../../Opportunity/Child/OpportunityTable/Oppo
     {
       title: "",
       dataIndex: "id",
-      width: "2%",
+      width: "4%",
       render: (name, item, i) => {
         return (
           <Tooltip>

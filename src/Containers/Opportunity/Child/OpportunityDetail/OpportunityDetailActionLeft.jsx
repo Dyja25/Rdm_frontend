@@ -26,7 +26,7 @@ const OpportunityDetailActionLeft = (props) => {
   return (
     <FlexContainer alignItems="center">
         <ActionIcon
-            style={{ marginRight: "0.3rem", color: "#1890ff", fontSize: "1.5625em" }}
+             style={{ marginRight: "0.3rem", color: "#1890ff" }}
             iconType="arrowBack"
             //tooltipTitle="Back"
             tooltiptitle={<FormattedMessage

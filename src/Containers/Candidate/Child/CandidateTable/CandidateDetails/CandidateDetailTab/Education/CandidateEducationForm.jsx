@@ -279,8 +279,8 @@ class CandidateEducationForm extends Component {
                         component={SelectComponent}
                         options={["%", "Out of 10", "Out of 5"]}
                         isColumn
-                     
-                        width={"100%"}
+                      className="w-full"
+    style={{ width: "100%" }}
                         />
                     </div>
                   </div>

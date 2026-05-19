@@ -108,7 +108,7 @@ class EmployeeForm extends Component {
             values,
             ...rest
           }) => (
-            <Form className="form-background">
+            <Form className="form-background p-2">
               <div
                 style={{
                   display: "flex",
@@ -125,7 +125,7 @@ class EmployeeForm extends Component {
                   <FastField name="imageId" component={Upload} />
 
                   <FlexContainer>
-                    <div style={{ width: "25%" }}>
+                      <div style={{ width: "41%" }}>
                       <Field
                         name="salutation"
                         placeholder="Select"
@@ -137,10 +137,11 @@ class EmployeeForm extends Component {
                           defaultMessage="Salutation"
                         />}
                         isColumn
+                         className="field w-[100px]"
                         />
                     </div>
                     &nbsp;&nbsp;
-                    <div style={{ width: "72%" }}>
+                    <div style={{ width: "54%" }}>
                       <Field
                         isRequired
                         name="firstName"

@@ -1289,7 +1289,7 @@ class RecruitmentClosedTable extends Component {
       {
         title: "",
         dataIndex: "id",
-        width: "2%",
+        width: "4%",
         render: (name, item, i) => {
           return (
             <Tooltip title='Click to Open'>

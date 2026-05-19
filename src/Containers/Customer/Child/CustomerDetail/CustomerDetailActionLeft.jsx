@@ -4,29 +4,42 @@ import { FormattedMessage, IntlProvider } from "react-intl";
 import { FlexContainer } from "../../../../Components/UI/Layout";
 import { Button, Tooltip } from "antd";
 import { connect } from "react-redux";
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { bindActionCreators } from "redux";
+import { ActionIcon } from "../../../../Components/Utils";
 
 function CustomerDetailActionLeft () {
 
 
        const navigate = useNavigate();
     return (
-      <FlexContainer alignItems="center">
-       <Tooltip
-  title={
-    <FormattedMessage
-      id="app.back"
-      defaultMessage="Back"
-    />
-  }
->
-  <ArrowBackIcon
-    onClick={() => {navigate(-1) }}
-  />
-</Tooltip>
+       <FlexContainer alignItems="center">
+            <ActionIcon
+              style={{ marginRight: "0.3rem", color: "#1890ff" }}
+              iconType="arrowBack"
+              tooltipTitle={
+                <FormattedMessage
+                  id="app.back"
+                  defaultMessage="Back"
+                />
+              }
+              handleIconClick={() => navigate(-1)}
+            />
+          </FlexContainer>
+//       <FlexContainer alignItems="center">
+//        <Tooltip
+//   title={
+//     <FormattedMessage
+//       id="app.back"
+//       defaultMessage="Back"
+//     />
+//   }
+// >
+//   <ArrowBackIcon
+//     onClick={() => {navigate(-1) }}
+//   />
+// </Tooltip>
 
-      </FlexContainer>
+//       </FlexContainer>
     );
   }
 

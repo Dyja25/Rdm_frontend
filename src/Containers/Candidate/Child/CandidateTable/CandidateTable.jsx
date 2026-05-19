@@ -447,7 +447,7 @@ const rowSelection = {
     },
     {
       dataIndex: "category",
-      width: "2%",
+      width: "4%",
       render: (name, item, i) => {
         //debugger;
         return (
@@ -1024,7 +1024,6 @@ const rowSelection = {
     next={handleLoadMore}
     hasMore={hasMore}
     loader={fetchingCandidates ? <div className="flex justify-center"><BundleLoader /></div> : null}
-    height={652}
     style={{ scrollbarWidth: "thin" }}
     endMessage={<div className="flex text-center font-poppins font-bold text-xs text-red-500">End of the page</div>}
   >
@@ -1035,6 +1034,8 @@ const rowSelection = {
       pagination={false}
       dataSource={props.candidateByUserId}
       loading={props.fetchingCandidates}
+      sticky
+  scroll={{ y: 550 }}
     />
   </InfiniteScroll>
 

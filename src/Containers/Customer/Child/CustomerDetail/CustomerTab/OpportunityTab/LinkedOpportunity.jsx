@@ -174,7 +174,7 @@ function OpportunityTable(props) {
     {
       title: "",
       dataIndex: "documentId",
-      width:"2%",
+      width:"4%",
       render: (name, item, i) => {
         return (
           <Tooltip title="Edit">

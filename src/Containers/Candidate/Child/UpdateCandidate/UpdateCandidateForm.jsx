@@ -562,6 +562,8 @@ class UpdateCandidateForm extends Component {
                         inlineLabel
                         className="field"
                         isColumn
+                        
+    style={{ width: "120px" }}
                         />
                     </div>
                   </FlexContainer> 

@@ -64,11 +64,18 @@ class OpportunityAboutEdit extends Component {
       <>
         <FlexContainer
           flexDirection="column"
-          style={{ padding: "0.625em 1.25em 0.625em 1.25em" }}
+          style={{
+  padding: "0.625em 1.25em",
+  position: "relative",
+  zIndex: 999,
+  background: "#fff",
+}}
         >
           <FlexContainer
             justifyContent="space-between"
-            style={{ width: "100%" }}
+  alignItems="flex-start"
+  flexWrap="nowrap"
+  style={{ width: "100%", gap: "10px" }}
           >
               <EditableInput
                 isRequired
@@ -90,7 +97,7 @@ class OpportunityAboutEdit extends Component {
   }}
               // width="17.625em"
               />
-            <div style={{ width: "50%" }}>
+            <div style={{ flex: 1, minWidth: 0 }}>
               <EditSearchSelect
                 defaultValue={{
                   value: currency,
@@ -112,7 +119,7 @@ class OpportunityAboutEdit extends Component {
             justifyContent="space-between"
             style={{ width: "100%" }}
           >
-            <div style={{ width: "50%" }}>
+            <div style={{ flex: 1, minWidth: 0 }}>
               <EditableDatePicker
                 // defaultValue={dayjs(endDate).format('ll')}
                 defaultValue={dayjs(endDate)}

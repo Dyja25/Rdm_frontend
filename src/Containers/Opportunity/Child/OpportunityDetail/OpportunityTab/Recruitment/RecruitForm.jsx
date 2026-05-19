@@ -448,6 +448,7 @@ function RecruitForm(props) {
                         
                       component={SelectComponent}
                       options={Array.isArray(Sponsor) ? Sponsor : []}
+    style={{ width: "100%" }}
                       />
                       </div>
                       <div style={{ width: "47%" }}>
@@ -466,7 +467,7 @@ function RecruitForm(props) {
                         width={"100%"}
                          component={SelectComponent}
                         options={Array.isArray(partnerNameOption) ? partnerNameOption : []}
-                      
+    style={{ width: "100%" }}
                       />
                     </div>
                       </FlexContainer>
