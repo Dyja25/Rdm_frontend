@@ -26,7 +26,7 @@ class OpportunityDetailRight extends Component {
           
         />
         </div>
-        <div style={{ width: "20%" ,}}>
+        <div style={{ width: "28%" ,}}>
           <OpportunityAboutCard
           opportunity={opportunity}
           department={this.props.department}

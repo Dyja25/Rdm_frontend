@@ -114,7 +114,7 @@ class ProfileAboutView extends Component {
 
     return (
       <>
-        <FlexContainer justifyContent="flex-end">
+        {/* <FlexContainer justifyContent="flex-end">
           {this.props.partnerLogin === "Yes" &&
             this.props.department === "Partner" ? null : (
               <Tooltip title="Edit">
@@ -126,7 +126,7 @@ class ProfileAboutView extends Component {
                 />
               </Tooltip>
             )}
-        </FlexContainer>
+        </FlexContainer> */}
         {/* <ProfileItemRow
           label="Customer"
           // label={<FormattedMessage
@@ -136,6 +136,21 @@ class ProfileAboutView extends Component {
           value={customer}
         /> */}
         <ProfileItemRow
+  label={
+    <FormattedMessage
+      id="app.proposalvalue"
+      defaultMessage="Proposal Value"
+    />
+  }
+  value={`${proposalAmount || ""} ${currency || ""}`}
+  onEdit={
+    this.props.partnerLogin === "Yes" &&
+    this.props.department === "Partner"
+      ? null
+      : toggleViewType
+  }
+/>
+        {/* <ProfileItemRow
           //label="Proposal value"
           label={<FormattedMessage
             id="app.proposalvalue"
@@ -148,7 +163,7 @@ class ProfileAboutView extends Component {
         //     ? proposalAmount
         //     : CurrencyCompressor(proposalAmount)
         // } ${currency}`}
-        />
+        /> */}
         {/* <div style={{ display: "", marginBottom: "-16px" }}>
           <ProfileItemRow
             style={{ fontSize: "0.8125em", width: "36%" }}
@@ -161,10 +176,10 @@ class ProfileAboutView extends Component {
          
         </div> */}
 
-        <ProfileItemRow
+        {/* <ProfileItemRow
           label=""
         // value={`${dayjs(exchangePrice.date).format("ll")}`}
-        />
+        /> */}
         {/* <ProfileItemRow label="Sales Process" value={processName} /> */}
         {/* <ProfileItemRow
           label="Closure date"
@@ -180,13 +195,13 @@ class ProfileAboutView extends Component {
 
 export default ProfileAboutView;
 
-const ProfileItemRow = ({ label, value, ex }) => {
+const ProfileItemRow = ({ label, value, ex,onEdit  }) => {
   return (
-    <FlexContainer
+   <FlexContainer
       alignItems="center"
+      justifyContent="space-between"
       flexWrap="nowrap"
-      // style={{ margin: "5px" }}
-      // style={{ margin: "0.4rem" ,marginTop:"-5px"}}
+      style={{ width: "100%" }}
     >
       {/* {ex ? (
         <>
@@ -237,9 +252,47 @@ const ProfileItemRow = ({ label, value, ex }) => {
             </div>
           </>
         )} */}
+         <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "6px",
+        minWidth: "40%",
+        whiteSpace: "nowrap",
+      }}
+    >
+      {onEdit && (
+        <Tooltip title="Edit">
+          <EditOutlined
+            onClick={onEdit}
+            style={{
+              cursor: "pointer",
+              fontSize: "14px",
+            }}
+          />
+        </Tooltip>
+      )}
 
-<SubTitle style={{ color: "#444", fontWeight: 600 }}>{label}</SubTitle>
-      <SubTitle style={{ textAlign:"end" }}>{value}</SubTitle>
+   <SubTitle
+        style={{
+          color: "#444",
+          fontWeight: 600,
+          margin: 0,
+        }}
+      >
+        {label}
+      </SubTitle>
+    </div>
+     <SubTitle
+      style={{
+        textAlign: "right",
+        whiteSpace: "nowrap",
+        flex: 1,
+        margin: 0,
+      }}
+    >
+      {value}
+    </SubTitle>
       
     </FlexContainer>
   );

@@ -103,7 +103,7 @@ class OpportunityDetailLeft extends Component {
         </div> */}
         
         
-          <div style={{ width: "87em" }}>
+          <div style={{ width: "97em" }}>
          <OpportunityDetailTab
           />
           </div>
