@@ -7,6 +7,7 @@ import { Button, Tooltip, Popover } from "antd";
 import { FlexContainer } from "../../../Components/UI/Layout";
 import { TextInput } from "../../../Components/UI/Elements";
 import { StyledSelect } from "../../../Components/UI/Antd";
+import { FormattedMessage } from "react-intl";
 const CustomerShareForm=lazy(()=> import("./CustomerShareForm"));
 
 const Option = StyledSelect.Option;
@@ -56,7 +57,8 @@ class CustomerActionRight extends React.Component {
             //ghost
             onClick={() => handleCustomerModal(true)}
           >
-            Add
+            {/* Add */}
+            <FormattedMessage id="app.add" defaultMessage="Add" />
           </Button>
            )} 
         </Tooltip>

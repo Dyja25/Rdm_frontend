@@ -390,14 +390,12 @@ function EmployeeTable(props) {
       }
     },
     {
-      title: "Type",
+      // title: "Type",
+      title: <FormattedMessage id="app.type" defaultMessage="Type" />,
       width: "5%",
-      
-
       render: (name, item, i) => {
         return (
           <>
-        
             <EmployeeType
               // partnerId={item.partnerId}
               // suspendInd={item.suspendInd}
@@ -409,7 +407,8 @@ function EmployeeTable(props) {
       },
     },
     {
-      title: "Suspend",
+      // title: "Suspend",
+       title: <FormattedMessage id="app.suspend" defaultMessage="Suspend" />,
       width: "5%",
       
 

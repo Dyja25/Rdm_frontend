@@ -8,6 +8,7 @@ import { Button, Tooltip} from "antd";
 import { FlexContainer } from "../../../Components/UI/Layout";
 import { StyledSelect } from "../../../Components/UI/Antd";
 import { FileExcelOutlined } from "@ant-design/icons";
+import { FormattedMessage } from "react-intl";
 const PartnerShareForm=lazy(()=>import("./PartnerShareForm.jsx"));
 
 const Option = StyledSelect.Option;
@@ -47,7 +48,8 @@ class PartnerActionRight extends React.Component {
           <Button type="primary"
            ghost 
           onClick={() => handlePartnerModal(true)}>
-            Add
+            {/* Add */}
+            <FormattedMessage id="app.add" defaultMessage="Add" />
           </Button>
         )}
         </Tooltip>

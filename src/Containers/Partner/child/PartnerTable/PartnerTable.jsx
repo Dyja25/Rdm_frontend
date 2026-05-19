@@ -294,7 +294,7 @@ function handleSelected (value){
     },
     {
       title: "Name",
-      // title: <FormattedMessage id="app.name" defaultMessage="Name" />,
+      title: <FormattedMessage id="app.name" defaultMessage="Name" />,
       dataIndex: "partnerName",
       width: "15%",
       ...getColumnSearchProps('partnerName'),

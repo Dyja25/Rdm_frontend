@@ -7,6 +7,7 @@ import { FlexContainer } from "../../../Components/UI/Layout";
 import { Spacer, TextInput } from "../../../Components/UI/Elements";
 import { StyledSelect } from "../../../Components/UI/Antd";
 import DescriptionIcon from '@mui/icons-material/Description';
+import { FormattedMessage } from "react-intl";
 // import { setAccountFilterText, setAccountFilterUser } from "../AccountAction";
 // import { getUsers } from "../../Team/TeamAction";
 // const EmployeeShareForm=lazy(()=>import("./EmployeeShareForm"));
@@ -57,7 +58,8 @@ class EmployeesActionRight extends React.Component {
         <Button type="primary"
          ghost onClick={() => handleEmployeeModal(true)}>
 
-          Add
+          {/* Add */}
+          <FormattedMessage id="app.add" defaultMessage="Add" />
         </Button>
 
         </FlexContainer>

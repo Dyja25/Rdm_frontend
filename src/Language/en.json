@@ -225,5 +225,27 @@
   "app.executives": "Executive",
   "app.intern": "Intern",
   "app.worker": "Worker",
-  "app.contractor": "Contractor"
+  "app.contractor": "Contractor",
+  "app.suspend": "Suspend",
+  "app.skills":"Skills",
+  "app.sector":"Sector",
+  "app.owner":"Owner",
+  "app.reset":"Reset",
+  "app.phone":"Phone",
+  "app.jobId":"Job ID",
+  "app.opportunityName":"Opportunity Name",
+   "app.sponsor": "Sponsor",
+   "app.selected":"Selected",
+   "app.onBoarded":"On Boarded",
+   "app.recruiter":"Recruiter",
+   "app.PinToTheTop":"Pin to the top",
+   "app.middleName":"Middle Name",
+   "app.employee":"Employee",
+   "app.vatNumber":"VAT Number",
+   "app.requirementType":"Requirement Type",
+   "app.both":"Both",
+   "app.extraInput":"Extra Input",
+   "app.houseNo":"House No",
+   "app.pinCode":"Pin code"
+
 }

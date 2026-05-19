@@ -150,7 +150,7 @@ class EmployeeForm extends Component {
                         width={"100%"}
                         // label="First Name"
                         label={<FormattedMessage
-                          id="app.firstName"
+                          id="app.firstname"
                           defaultMessage="First Name"
                         />}
                         component={InputComponent}
@@ -169,7 +169,7 @@ class EmployeeForm extends Component {
                         width={"100%"}
                         //label="Last Name"
                         label={<FormattedMessage
-                          id="app.lastName"
+                          id="app.lastname"
                           defaultMessage="Last Name"
                         />}
                         component={InputComponent}
@@ -263,7 +263,7 @@ class EmployeeForm extends Component {
                         isColumnWithoutNoCreate
                         //label="Mobile #"
                         label={<FormattedMessage
-                          id="app.countryDialCode"
+                          id="app.mobile#"
                           defaultMessage="Mobile #"
                         />}
                         isColumn
@@ -298,7 +298,7 @@ class EmployeeForm extends Component {
                         isColumnWithoutNoCreate
                         //label="Work #"
                         label={<FormattedMessage
-                          id="app.countryDialCode1"
+                          id="app.work#"
                           defaultMessage="Work #"
                         />}
                         isColumn
@@ -501,21 +501,33 @@ class EmployeeForm extends Component {
                         value={"Employee"}
                         onChange={() => this.radioClick("employee")}
                       >
-                        Employee
+                        {/* Employee */}
+                        <FormattedMessage
+                      id="app.employee"
+                      defaultMessage="Employee"
+                    />
                       </Radio>
                       &nbsp;&nbsp;
                       <Radio
                         value={"contractor"}
                         onChange={() => this.radioClick("contractor")}
                       >
-                        Contractor
+                        {/* Contractor */}
+                         <FormattedMessage
+                      id="app.contractor"
+                      defaultMessage="Contractor"
+                    />
                       </Radio>
                       &nbsp;&nbsp;
                       <Radio
                         value={"intern"}
                         onChange={() => this.radioClick("intern")}
                       >
-                        Intern
+                        {/* Intern */}
+                         <FormattedMessage
+                      id="app.intern"
+                      defaultMessage="Intern"
+                    />
                       </Radio>
                       &nbsp;&nbsp;
                       {/* <Radio
@@ -549,7 +561,13 @@ class EmployeeForm extends Component {
                   type="primary"
                   Loading={addingEmployee}
                 >
-                  Submit
+                  {/* Submit */}
+
+                        <FormattedMessage
+                      id="app.submit"
+                      defaultMessage="submit"
+                    />
+
                 </Button>
               </FlexContainer>
             </Form>

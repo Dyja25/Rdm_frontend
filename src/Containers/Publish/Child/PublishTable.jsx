@@ -361,7 +361,11 @@ import OpportunityDetailView from "../../Opportunity/Child/OpportunityTable/Oppo
      //   },
      },
      {
-       title:"Recruiter",
+      //  title:"Recruiter",
+       title: <FormattedMessage
+         id="app.recruiter"
+         defaultMessage="Recruiter"
+       />,
        width: "12%",
         dataIndex: "fullName",
         render: (name, item, i) => {
@@ -416,7 +420,11 @@ import OpportunityDetailView from "../../Opportunity/Child/OpportunityTable/Oppo
      },
 
      {
-      title:"Pin to the top",
+      // title:"Pin to the top",
+       title: <FormattedMessage
+         id="app.PinToTheTop"
+         defaultMessage="Pin to the top"
+       />,
       width:"10%",
       render: (name, item, i) => {
         //console.log(item.thirdPartyAccessInd)

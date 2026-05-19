@@ -275,7 +275,13 @@ class CustomerForm extends Component {
                   <FlexContainer justifyContent="space-between">
                   <div style={{ width: "65%" }}>
                   <FlexContainer justifyContent="space-between">                 
-                 <StyledLabel>Requirement Type</StyledLabel>
+                 <StyledLabel>
+                  {/* Requirement Type */}
+                        <FormattedMessage
+                            id="app.requirementType"
+                            defaultMessage="Requirement Type"
+                          />
+                 </StyledLabel>
                  <Switch                                 
                    checked={this.state.whiteblue}
                     onChange={this.handleWhiteBlue}
@@ -290,7 +296,12 @@ class CustomerForm extends Component {
               checked={this.state.checked}
               onChange={() => this.handleChange()}
               style={{marginLeft:"auto"}}
-            >Both
+            >
+              {/* Both */}
+               <FormattedMessage
+                            id="app.both"
+                            defaultMessage="Both"
+                          />
             </Checkbox>
             </div>
                   </FlexContainer>
