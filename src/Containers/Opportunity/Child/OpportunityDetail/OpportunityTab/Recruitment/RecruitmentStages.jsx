@@ -16,7 +16,11 @@ class RecruitmentStages extends Component {
   };
 
   render() {
-    const { rec } = this.props;
+   const { rec } = this.props;
+
+  if (!rec || !Array.isArray(rec.stageList)) {
+    return null;
+  }
     const index =
       rec.stageList &&
       rec.stageList

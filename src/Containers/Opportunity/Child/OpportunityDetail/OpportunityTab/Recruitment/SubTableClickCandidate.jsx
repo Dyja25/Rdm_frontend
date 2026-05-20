@@ -535,7 +535,7 @@ class SubTableClickCandidate extends Component {
                  <StyledPopconfirm
                    title="Do you want to delete?"
                    onConfirm={() =>
-                     this.props.deleteSubtableData(item.profileId)
+                     this.props.deleteSubtableData(item.profileId,item.opportunityId)
                    }
                  >
                   

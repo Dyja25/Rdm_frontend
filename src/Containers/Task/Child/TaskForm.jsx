@@ -958,7 +958,7 @@ class TaskForm extends Component {
                     inlineLabel
                   />
                   <Spacer />
-                  <Field
+                  {/* <Field
                     disabled="true"
                     isRequired
                     name="candidateId"
@@ -970,7 +970,19 @@ class TaskForm extends Component {
                     component={SearchSelect}
                     inlineLabel
                     isColumn
-                  />
+                  /> */}
+                  <Field
+                                      isRequired
+                                      name="candidateId"
+                                      label="Talent"
+                                      placeholder="Start typing to search..."
+                                      isColumnWithoutNoCreate                    
+                                      component={SearchSelect}
+                                      selectType="candidateList"
+                                      isColumn
+                                      inlineLabel
+                                      style={{ flexBasis: "80%" }}
+                                    />
                   <Spacer style={{ marginTop: "1.25em" }} />
                   <Field
                     name="taskDescription"
