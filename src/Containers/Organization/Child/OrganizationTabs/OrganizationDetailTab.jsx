@@ -12,6 +12,7 @@ import AddWebsiteModal from "../Website/AddWebsiteModal";
 import EmailTable from "../Email/EmailTable";
 import WebsiteTable from "../Website/WebsiteTable"
 import { Tooltip } from "antd";
+import { FormattedMessage } from "react-intl";
 const OrganizationBoost = lazy(() =>
   import("./OrganizationBoost/OrganizationBoost")
 );
@@ -91,8 +92,11 @@ class OrganizationDetailTab extends Component {
               tab={
                 <>
                   <span>
-                   
-                    Website
+                    {/* Website */}
+                     <FormattedMessage
+                        id="app.website"
+                        defaultMessage="Website"
+                      />
                   </span>
                   {activeKey === "3" && (
                     <>

@@ -15,6 +15,7 @@ import { getEmailCredentials } from "./EmailAction";
 import UpdateEmailModal from "./UpdateEmailModal";
 import { handleUpdateEmailModal } from "../../../Settings/SettingsAction";
 import { setEditEmail } from "../../../Settings/SettingsAction";
+import { FormattedMessage } from "react-intl";
 class EmailTable extends Component {
   componentDidMount() {
     const { getEmailCredentials,userId } = this.props;
@@ -38,21 +39,37 @@ class EmailTable extends Component {
     } = this.props;
     const columns = [
       {
-        title: "Email",
+        // title: "Email",
+        title:<FormattedMessage
+                        id="app.email"
+                        defaultMessage="Email"
+                      />,
         dataIndex: "email",
         // width: "35%"
       },
       {
-        title: "Port",
+        // title: "Port",
+         title:<FormattedMessage
+                        id="app.port"
+                        defaultMessage="Port"
+                      />,
         dataIndex: "port",
       },
       {
-        title: "Host Name",
+        // title: "Host Name",
+          title:<FormattedMessage
+                        id="app.hostName"
+                        defaultMessage="Host Name"
+                      />,
         dataIndex: "host",
       },
 
       {
         title: "Make Default",
+         title:<FormattedMessage
+                        id="app.makeDefault"
+                        defaultMessage="Make Default"
+                      />,
          dataIndex: "active",
          width: "12%",
          render: (name, item, i) => {
@@ -65,8 +82,14 @@ class EmailTable extends Component {
                          // checked={props.instockInd || toggle}
                          // disabled={props.thirdPartyAccessInd}
                          isLoading={true}
-                         checkedChildren="Yes"
-                         unCheckedChildren="No"
+                         checkedChildren={<FormattedMessage
+                        id="app.yes"
+                        defaultMessage="Yes"
+                      />}
+                         unCheckedChildren={<FormattedMessage
+                        id="app.no"
+                        defaultMessage="No"
+                      />}
                  
                      />
                      

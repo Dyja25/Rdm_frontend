@@ -93,7 +93,7 @@ class EmploymentDocumentForm extends Component {
                       // label="Organization Name"
                       label={
                         <FormattedMessage
-                          id="app.companyName"
+                          id="app.organizationname"
                           defaultMessage="Organization Name"
                         />
                       }
@@ -148,7 +148,7 @@ class EmploymentDocumentForm extends Component {
                         //label="Start Date"
                         label={
                           <FormattedMessage
-                            id="app.startDate"
+                            id="app.startdate"
                             defaultMessage="Start Date"
                           />
                         }
@@ -172,7 +172,7 @@ class EmploymentDocumentForm extends Component {
                         // label="End Date "
                         label={
                           <FormattedMessage
-                            id="app.endDate"
+                            id="app.enddate"
                             defaultMessage="End Date"
                           />
                         }
@@ -241,7 +241,7 @@ class EmploymentDocumentForm extends Component {
                         //label="Salary Type"
                         label={
                           <FormattedMessage
-                            id="app.salaryType"
+                            id="app.salarytype"
                             defaultMessage="Salary Type"
                           />
                         }
@@ -322,7 +322,7 @@ class EmploymentDocumentForm extends Component {
                     // label="Name of Document"
                     label={
                       <FormattedMessage
-                        id="app.documentTitle"
+                        id="app.nameofdocument"
                         defaultMessage="Name of Document"
                       />
                     }
@@ -358,7 +358,7 @@ class EmploymentDocumentForm extends Component {
                     //label="Description of Document"
                     label={
                       <FormattedMessage
-                        id="app.documentDescription"
+                        id="app.descriptionofdocument"
                         defaultMessage="Description of Document"
                       />
                     }

@@ -9,6 +9,8 @@ import { handleUpdateEmailModal } from "../../../../ProfileAction";
 import { setEditEmail } from "../../../../ProfileAction";
 import EmailStatusToggle from "./EmailStatusToggle";
 import { profileReducer } from "../../../../ProfileReducer";
+import { FormattedMessage } from "react-intl";
+
 class EmailTable extends Component {
   componentDidMount() {
     const { getEmailProfileCredentials } = this.props;
@@ -38,11 +40,13 @@ class EmailTable extends Component {
         // width: "35%"
       },
       {
-        title: "Port",
+        // title: "Port",
+      title: <FormattedMessage id="app.port" defaultMessage="Port" />,
         dataIndex: "port",
       },
       {
-        title: "Host Name",
+        // title: "Host Name",
+        title: <FormattedMessage id="app.hostName" defaultMessage="Host Name" />,
         dataIndex: "host",
       },
 
@@ -65,6 +69,7 @@ class EmailTable extends Component {
       },
       {
        title: "Make Default",
+        title: <FormattedMessage id="app.makeDefault" defaultMessage="Make Default" />,
         dataIndex: "active",
         width: "12%",
         render: (name, item, i) => {

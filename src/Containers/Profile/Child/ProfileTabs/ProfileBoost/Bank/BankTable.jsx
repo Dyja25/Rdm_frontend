@@ -47,7 +47,7 @@ class BankTable extends Component {
       {
         //title: "Bank Name",
         title: (
-          <FormattedMessage id="app.bankName" defaultMessage="Account Holder" />
+          <FormattedMessage id="app.accountHolder" defaultMessage="Account Holder" />
         ),
         dataIndex: "accountHolder",
         // width: "35%"
@@ -55,7 +55,7 @@ class BankTable extends Component {
       {
         //title: "Bank Name",
         title: (
-          <FormattedMessage id="app.bankName" defaultMessage="Bank Name" />
+          <FormattedMessage id="app.bankname" defaultMessage="Bank Name" />
         ),
         dataIndex: "bankName",
         // width: "35%"
@@ -64,7 +64,7 @@ class BankTable extends Component {
       {
         //title: "Branch Name",
         title: (
-          <FormattedMessage id="app.branchName" defaultMessage="Branch Name" />
+          <FormattedMessage id="app.branchname" defaultMessage="Branch Name" />
         ),
         dataIndex: "branchName",
       },
@@ -80,7 +80,7 @@ class BankTable extends Component {
       {
         //title: "IFSC CODE",
         title: (
-          <FormattedMessage id="app.ifscCode" defaultMessage="SWIFT Code" />
+          <FormattedMessage id="app.ifsccode" defaultMessage="SWIFT Code" />
         ),
         dataIndex: "ifscCode",
       },

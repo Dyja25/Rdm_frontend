@@ -11,6 +11,8 @@ import BorderColorIcon from '@mui/icons-material/BorderColor';
 import dayjs from "dayjs";
 import { FlexContainer } from "../../../../Components/UI/Layout";
 import { ActionIcon } from "../../../../Components/Utils";
+import { FormattedMessage } from "react-intl";
+
 class ProfileStatsView extends Component {
   render() {
     const {
@@ -42,22 +44,46 @@ class ProfileStatsView extends Component {
             />
           </Tooltip>
         </FlexContainer>
-        <ProfileItemRow label="Email" value={emailId} />
+        <ProfileItemRow //label="Email"
+        label={<FormattedMessage
+          id="app.email"
+          defaultMessage="Email "
+        />}
+         value={emailId} />
         <ProfileItemRow label="Emp Id" value={employeeId} />
         <ProfileItemRow
-          label="Joining Date"
+          // label="Date Of Joining"
+          label={<FormattedMessage
+          id="app.dateofjoining"
+          defaultMessage="Date Of Joining "
+        />}
           value={
             dateOfJoining ? dayjs(dateOfJoining).format("YYYY-MM-DD") : ""
           }
         />
-        <ProfileItemRow label="Phone #" value={phon} />
+        <ProfileItemRow //label="Phone #" 
+         label={<FormattedMessage
+          id="app.phone#"
+          defaultMessage="Phone #"
+        />}
+        value={phon} />
         {/* <ProfileItemRow label="Phone No" value={phoneNo} /> */}
         {/* <ProfileItemRow label="Mobile No" value={mobileNo} /> */}
-        <ProfileItemRow label="Mobile #" value={mobile} />
+        <ProfileItemRow //label="Mobile #"
+         label={<FormattedMessage
+          id="app.mobile#"
+          defaultMessage="Mobile #"
+        />}
+         value={mobile} />
         <ProfileItemRow label="Linkedin" value={linkedinPublicUrl || ""} />
         <ProfileItemRow label="Twitter" value={twitter || ""} />
         {/* <ProfileItemRow label="Level" value={level || ""} /> */}
-        <ProfileItemRow label="Time Zone" value={timeZone} />
+        <ProfileItemRow //label="Time Zone"
+        label={<FormattedMessage
+          id="app.timezone"
+          defaultMessage="Time Zone"
+        />}
+        value={timeZone} />
       </>
     );
   }

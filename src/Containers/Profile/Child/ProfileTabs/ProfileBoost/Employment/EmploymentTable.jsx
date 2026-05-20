@@ -74,7 +74,7 @@ class EmploymentTable extends Component {
       {
         //title: "Start Date",
         title: (
-          <FormattedMessage id="app.startDate" defaultMessage="Start Date" />
+          <FormattedMessage id="app.startdate" defaultMessage="Start Date" />
         ),
         dataIndex: "startDate",
         render: (name, item, i) => {
@@ -83,7 +83,7 @@ class EmploymentTable extends Component {
       },
       {
         //title: "End Date",
-        title: <FormattedMessage id="app.endDate" defaultMessage="End Date" />,
+        title: <FormattedMessage id="app.enddate" defaultMessage="End Date" />,
         dataIndex: "endDate",
         render: (name, item, i) => {
           return <span>{dayjs(item.endDate).format("LL")}</span>;
@@ -91,7 +91,8 @@ class EmploymentTable extends Component {
       },
       //combine and show salary +curr+type
       {
-        title: "Salary",
+        // title: "Salary",
+        title: <FormattedMessage id="app.salary" defaultMessage="Salary" />,
         render: (name, item, i) => {
           return (
             <span>{`${item.salary} ${item.currency} ${item.salaryType}`}</span>

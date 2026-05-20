@@ -27,6 +27,7 @@ import EmailIcon from '@mui/icons-material/Email';
 
 import{handleEmailProfileModal} from "../../ProfileAction";
 import { Tooltip } from "antd";
+import { FormattedMessage } from "react-intl";
 const BankTable = lazy(() => import("./ProfileBoost/Bank/BankTable"));
 const EducationTable = lazy(() =>
   import("./ProfileBoost/Education/EducationTable")
@@ -118,7 +119,12 @@ class ProfileDetailTab extends Component {
                 <>
                   <span>
                     <i class="fa fa-graduation-cap"></i>
-                    &nbsp; Education
+                    &nbsp; 
+                    {/* Education */}
+                    <FormattedMessage
+          id="app.education"
+          defaultMessage="Education"
+        />
                   </span>
                   {activeKey === "1" && (
                     <>
@@ -152,7 +158,11 @@ class ProfileDetailTab extends Component {
                 <>
                   <span>
                    <SupportAgentIcon className="mr-gap" />
-                    Training
+                    {/* Training */}
+                    <FormattedMessage
+          id="app.training"
+          defaultMessage="Training"
+        />
                   </span>
                   {activeKey === "2" && (
                     <>
@@ -181,7 +191,11 @@ class ProfileDetailTab extends Component {
                 <>
                   <span>
                   <AccountBalanceIcon className="mr-gap"/>
-                    Employment
+                    {/* Employment */}
+                    <FormattedMessage
+          id="app.employment"
+          defaultMessage="Employment"
+        />
                   </span>
                   {activeKey === "3" && (
                     <>
@@ -210,7 +224,11 @@ class ProfileDetailTab extends Component {
                 <>
                   <span>
                   <PhoneIcon  className="mr-gap"/>
-                    Emergency
+                    {/* Emergency */}
+                    <FormattedMessage
+          id="app.emergency"
+          defaultMessage="Emergency"
+        />
                   </span>
                   {activeKey === "4" && (
                     <>
@@ -239,7 +257,12 @@ class ProfileDetailTab extends Component {
               tab={
                 <>
                   <span>
-                    <i class="fa fa-credit-card"></i>&nbsp; Bank Details
+                    <i class="fa fa-credit-card"></i>&nbsp; 
+                    {/* Bank Details */}
+                    <FormattedMessage
+          id="app.bankDetails"
+          defaultMessage="Bank Details"
+        />
                   </span>
                   {activeKey === "5" && (
                     <>
@@ -267,7 +290,12 @@ class ProfileDetailTab extends Component {
               tab={
                 <>
                   <span>
-                    <i class="fa fa-id-card"></i>&nbsp; Personal Details
+                    <i class="fa fa-id-card"></i>&nbsp;
+                     {/* Personal Details */}
+                      <FormattedMessage
+          id="app.personaldetails"
+          defaultMessage="Personal Details"
+        />
                   </span>
                   {activeKey === "6" && (
                     <>
@@ -295,7 +323,12 @@ class ProfileDetailTab extends Component {
                 <>
                   <span>
                     <i className="fas fa-file-signature"></i>
-                    &nbsp; Signature
+                    &nbsp;
+                     {/* Signature */}
+                      <FormattedMessage
+          id="app.signature"
+          defaultMessage="Signature"
+        />
                   </span>
                 </>
               }
@@ -311,7 +344,11 @@ class ProfileDetailTab extends Component {
                 <>
                   <span>
                    <EmailIcon />
-                    Email
+                    {/* Email */}
+                     <FormattedMessage
+          id="app.email"
+          defaultMessage="Email"
+        />
                   </span>
                   {activeKey === "8" && (
                     <>

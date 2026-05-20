@@ -9,6 +9,7 @@ import {
 import { FlexContainer } from "../../../../Components/UI/Layout";
 import { ActionIcon } from "../../../../Components/Utils";
 import BorderColorIcon from '@mui/icons-material/BorderColor';
+import { FormattedMessage } from "react-intl";
 class OrganizationAboutView extends Component {
   render() {
     const {
@@ -31,9 +32,24 @@ class OrganizationAboutView extends Component {
           label="Fiscal"
           value={`${fiscalStartDate} ${fiscalStartMonth}`}
         /> */}
-        <OrganizationItemRow label="Reporting currency" value={tradeCurrency} />
-        <OrganizationItemRow label="Company Size" value={companySize} />
-        <OrganizationItemRow label="Industry type" value={industryType} />
+        <OrganizationItemRow //label="Reporting currency" 
+        label={<FormattedMessage
+                        id="app.reportingcurrency"
+                        defaultMessage="Reporting currency"
+                      />} 
+        value={tradeCurrency} />
+        <OrganizationItemRow //label="Company Size"
+          label={<FormattedMessage
+                        id="app.companysize"
+                        defaultMessage="Company Size"
+                      />} 
+         value={companySize} />
+        <OrganizationItemRow //label="Industry type" 
+          label={<FormattedMessage
+                        id="app.industrytype"
+                        defaultMessage="Industry type"
+                      />} 
+        value={industryType} />
       </>
     );
   }

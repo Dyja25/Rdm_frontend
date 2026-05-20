@@ -12,6 +12,7 @@ import { FlexContainer } from "../../../../Components/UI/Layout";
 import { ActionIcon } from "../../../../Components/Utils";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import dayjs from "dayjs";
+import { FormattedMessage } from "react-intl";
 const Panel = StyledCollapse.Panel;
 class PersonalView extends Component {
   render() {
@@ -44,10 +45,22 @@ class PersonalView extends Component {
   )}
 >
 
-          <Panel header={"Personal"} key="1" style={{}}>
-            <ProfileItemRow label="Blood Group" value={bloodGroup} />
+          <Panel header={<FormattedMessage
+          id="app.personal"
+          defaultMessage="Personal"
+        />} key="1" style={{}}>
+            <ProfileItemRow //label="Blood Group" 
+            label={<FormattedMessage
+          id="app.bloodgroup"
+          defaultMessage="Blood Group"
+        />}
+            value={bloodGroup} />
             <ProfileItemRow
-              label="Date Of Birth"
+              // label="Date Of Birth"
+               label={<FormattedMessage
+          id="app.dateofbirth"
+          defaultMessage="Date Of Birth"
+        />}
               value={dob ? dayjs(dob).format("YYYY-MM-DD") : ""}
             />
           </Panel>

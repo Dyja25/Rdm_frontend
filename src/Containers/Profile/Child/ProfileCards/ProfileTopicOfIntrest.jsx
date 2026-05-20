@@ -9,6 +9,7 @@ import {
   deleteTopicByUserId,
 } from "../../ProfileAction";
 import AddIcon from '@mui/icons-material/Add';
+import { FormattedMessage } from "react-intl";
 class ProfileTopicOfInterest extends React.Component {
   constructor(props) {
     super(props);
@@ -71,7 +72,12 @@ class ProfileTopicOfInterest extends React.Component {
                 fontSize="0.875em"
                 style={{ fontWeight: 600, marginBottom: "0.2rem" }}
               >
-                Skills of interest{" "}
+                {/* Skills of interest */}
+                <FormattedMessage
+          id="app.skillsOfInterest"
+          defaultMessage="Skills of interest "
+        />
+                {" "}
               </Title>
               {fetchingTopicsByUserId ? (
                 <p>fetching Skills ...</p>
@@ -124,7 +130,11 @@ class ProfileTopicOfInterest extends React.Component {
                   style={{ background: "#fff", borderStyle: "dashed" }}
                 >
                   <AddIcon/>
-                   Skill
+                   {/* Skill */}
+                    <FormattedMessage
+          id="app.skills"
+          defaultMessage="Skills "
+        />
                 </Tag>
               )}
             </div>

@@ -64,8 +64,8 @@ class BankDocumentForm extends Component {
                     //label="Account Number"
                     label={
                       <FormattedMessage
-                        id="app.accountName"
-                        defaultMessage="Account Holder Name"
+                        id="app.accountHolder"
+                        defaultMessage="Account Holder"
                       />
                     }
                     isColumn
@@ -102,7 +102,7 @@ class BankDocumentForm extends Component {
                       //label="IFSC CODE"
                       label={
                         <FormattedMessage
-                          id="app.ifscCode"
+                          id="app.ifsccode"
                           defaultMessage="SWIFT/IFSC Code"
                         />
                       }
@@ -120,7 +120,7 @@ class BankDocumentForm extends Component {
                       // label="Branch Name"
                       label={
                         <FormattedMessage
-                          id="app.branchName"
+                          id="app.branchname"
                           defaultMessage="Branch Name"
                         />
                       }
@@ -140,7 +140,7 @@ class BankDocumentForm extends Component {
                     //label="Bank Name"
                     label={
                       <FormattedMessage
-                        id="app.bankName"
+                        id="app.bankname"
                         defaultMessage="Bank Name"
                       />
                     }
@@ -160,7 +160,11 @@ class BankDocumentForm extends Component {
                   type="primary"
                   Loading={addingBankDetails}
                 >
-                  Submit
+                  {/* Submit */}
+                  <FormattedMessage
+                        id="app.submit"
+                        defaultMessage="Submit"
+                      />
                 </Button>
               </FlexContainer>
             </Form>

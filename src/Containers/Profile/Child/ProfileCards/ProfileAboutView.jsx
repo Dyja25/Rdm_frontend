@@ -8,6 +8,7 @@ import {
 } from "../../../../Components/UI/Elements";
 import { FlexContainer } from "../../../../Components/UI/Layout";
 import { ActionIcon } from "../../../../Components/Utils";
+import { FormattedMessage } from "react-intl";
 class ProfileAboutView extends Component {
   render() {
     const {
@@ -32,12 +33,36 @@ class ProfileAboutView extends Component {
             size="1em"
           /> */}
         </FlexContainer>
-        <ProfileItemRow label="Currency" value={currency} />
-        <ProfileItemRow label="Designation" value={designation} />
-        <ProfileItemRow label="Function" value={department} />
-        <ProfileItemRow label="Level" value={label} />
+        <ProfileItemRow //label="Currency" 
+         label={<FormattedMessage
+          id="app.currency"
+          defaultMessage="Currency"
+        />}
+        value={currency} />
+        <ProfileItemRow //label="Designation" 
+         label={<FormattedMessage
+          id="app.designation"
+          defaultMessage="Designation"
+        />}
+        value={designation} />
+        <ProfileItemRow //label="Function"
+          label={<FormattedMessage
+          id="app.function"
+          defaultMessage="Function"
+        />}
+         value={department} />
+        <ProfileItemRow //label="Level"
+        label={<FormattedMessage
+          id="app.level"
+          defaultMessage="Level"
+        />}
+         value={label} />
         <ProfileItemRow
-          label="Manager"
+          // label="Manager"
+          label={<FormattedMessage
+          id="app.manager"
+          defaultMessage="Manager"
+        />}
           // value={metaData.firstName  && metaData.lastName || ""}
           // value={`${metaData.firstName} ${metaData.lastName || ""}`}
         />

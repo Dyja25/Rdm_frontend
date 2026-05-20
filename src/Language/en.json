@@ -153,7 +153,7 @@
   "app.level": "Level",
   "app.manager": "Manager",
   "app.personal": "Personal",
-  "app.bloodgroup": "Bloog Group",
+  "app.bloodgroup": "BlooD Group",
   "app.dateofbirth": "Date Of Birth",
   "app.education": "Education",
   "app.coursename": "Course Name",
@@ -189,7 +189,7 @@
   "app.savepassword": "Save Password",
   "app.newpassword": "New Password",
   "app.oldpassword": "Old Password",
-  "app.itsagoodideatouseastrongpassword": "Its A Good Idea To Use A Strong Password",
+  "app.itsagoodideatouseastrongpassword": "Its A Good Idea To Use A Strong Password.",
   "app.required": "Required",
   "app.enterpassword": "Enter Password",
   "app.previous": "Previous",
@@ -208,7 +208,7 @@
   "app.public": "Public",
   "app.private": "Private",
   "app.typehere": "Type Here",
-  "app.mobile#": "Mobile#",
+  "app.mobile#": "Mobile #",
   "app.optional": "Optional",
   "app.mandatory": "Mandatory",
   "app.save": "Save",
@@ -324,6 +324,12 @@
     "app.sendEmail":"Send Email",
     "app.transfer":"Transfer",
     "app.doyouwanttoblacklist":"Do you want to blacklist?",
-    "app.doyouwanttoUnblock":"Do you want to Unblock?"
+    "app.doyouwanttoUnblock":"Do you want to Unblock?",
+    "app.educationtype":"Education Type",
+    "app.organizationInstitution":"Organization/Institution",
+    "app.makeDefault":"Make Default",
+    "app.hostName":"Host Name",
+    "app.publish":"Publish"
+    
 
 }

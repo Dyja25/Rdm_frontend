@@ -76,8 +76,14 @@ class ChangePassword extends Component {
             }}
           >
             <FormWrapper>
-              <Title>Change Password</Title>
-              <SubTitle>Its a good idea to use a strong password.</SubTitle>
+              <Title>
+                {/* Change Password */}
+                 <FormattedMessage id="app.changepassword" defaultMessage="Change Password" />
+                </Title>
+              <SubTitle>
+                {/* Its a good idea to use a strong password. */}
+                <FormattedMessage id="app.itsagoodideatouseastrongpassword" defaultMessage="Its a good idea to use a strong password." />
+                </SubTitle>
               <Spacer />
               <Formik
                 initialValues={{

@@ -310,7 +310,7 @@
   "app.tostart": "Beginnen",
   "app.proposalamount": "Voorstel bedraag",
   "app.currency": "Munteenheid",
-  "app.tagcontact": "Tag contact",
+  "app.tagcontact": "Contactpersoon taggen",
   "app.tagopportunity": "Tag",
   "app.enrich": "Verrijken",
   "app.share": "Delen",
@@ -473,7 +473,7 @@
   "app.billinghoursell": "Facturatie Uur Verkopen",
   "app.select": "Selecteer",
   "app.email": "Email",
-  "app.mobilenumber": "Mobielenummer",
+  "app.mobilenumber": "Mobiele nummer",
   "app.circulaion": "Circulatie",
   "app.loading": "Laden",
   "app.post": "Na",
@@ -559,12 +559,12 @@
   "app.acnumber": "AC nummer",
   "app.ifsccode": "SWIFT-code",
   "app.personaldetails": "Persoolijk Details",
-  "app.documentidnumber": "Document Id Nummer",
+  "app.documentidnumber": "Document-ID-nummer",
   "app.bank": "Bank",
   "app.savepassword": "Opslaan wachtwoord",
   "app.newpassword": "Nieuw wachtwoord",
   "app.oldpassword": "Oud wachtwoord",
-  "app.itsagoodideatouseastrongpassword": "Het is een goed idee om een sterke wachtwoordte gebruiken",
+  "app.itsagoodideatouseastrongpassword": "Het is een goed idee om een sterke wachtwoordte gebruiken.",
   "app.required": "Verplicht",
   "app.enterpassword": "Voer wachtwoord in",
   "app.previous": "Vorige",
@@ -579,7 +579,7 @@
   "app.public": "Openbaar",
   "app.private": "Privé",
   "app.typehere": "Type hier",
-  "app.mobile#": "Mobiele#",
+  "app.mobile#": "Mobiele #",
   "app.optional": "Optioneel",
   "app.mandatory": "Verplicht",
   "app.save": "Opslaan",
@@ -691,8 +691,12 @@
                "app.sendEmail":"E-mail verzenden",
                "app.transfer":"Overdracht",
                 "app.doyouwanttoblacklist":"Wil je iemand op de zwarte lijst zetten?",
-                "app.doyouwanttoUnblock":"Wil je de blokkering opheffen?"
-
+                "app.doyouwanttoUnblock":"Wil je de blokkering opheffen?",
+                "app.educationtype":"OnderwijsType",
+                "app.organizationInstitution":"Organisatie/Instelling",
+                "app.makeDefault":"Maak standaard",
+                "app.hostName":"Hostnaam",
+                "app.publish":"Publiceren"
 
 
 

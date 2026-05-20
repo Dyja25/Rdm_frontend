@@ -84,7 +84,7 @@ class TrainingDocumentForm extends Component {
                         //label="Course Name"
                         label={
                           <FormattedMessage
-                            id="app.courseName"
+                            id="app.coursename"
                             defaultMessage="Course Name"
                           />
                         }
@@ -111,7 +111,7 @@ class TrainingDocumentForm extends Component {
                         name="organization"
                         label={
                           <FormattedMessage
-                            id="app.organization/institution"
+                            id="app.organizationInstitution"
                             defaultMessage="Organization/Institution"
                           />
                         }
@@ -160,7 +160,7 @@ class TrainingDocumentForm extends Component {
                         //label="Start Date"
                         label={
                           <FormattedMessage
-                            id="app.startDate"
+                            id="app.startdate"
                             defaultMessage="Start Date"
                           />
                         }
@@ -185,7 +185,7 @@ class TrainingDocumentForm extends Component {
                         //label="End Date "
                         label={
                           <FormattedMessage
-                            id="app.endDate"
+                            id="app.enddate"
                             defaultMessage="End Date"
                           />
                         }
@@ -245,7 +245,7 @@ class TrainingDocumentForm extends Component {
                       //label="Name of Document"
                       label={
                         <FormattedMessage
-                          id="app.documentTitle"
+                          id="app.nameofdocument"
                           defaultMessage="Name of Document"
                         />
                       }
@@ -281,7 +281,7 @@ class TrainingDocumentForm extends Component {
                       //label="Description of Document"
                       label={
                         <FormattedMessage
-                          id="app.documentDescription"
+                          id="app.descriptionofdocument"
                           defaultMessage="Description of Document"
                         />
                       }

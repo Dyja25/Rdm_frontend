@@ -5,6 +5,7 @@ import { bindActionCreators } from "redux";
 import { StyledTable, StyledModal } from "../../../../Components/UI/Antd";
 import { BundleLoader } from "../../../../Components/Placeholder";
   import { getWebsiteCredentials } from "./WebsiteAction";
+import { FormattedMessage } from "react-intl";
 // import { handleBankModal } from "../../../../ProfileAction";
 // import AddBankModal from "./AddBankModal";
 // import UpdateBankModal from "../../ProfileBoost/Bank/UpdateBankModal";
@@ -38,16 +39,28 @@ class WebsiteTable extends Component {
     } = this.props;
     const columns = [
       {
-        title: "Website",
+        // title: "Website",
+        title:<FormattedMessage
+                        id="app.website"
+                        defaultMessage="Website"
+                      />,
         dataIndex: "website",
         // width: "35%"
       },
       {
-        title: "Port",
+        // title: "Port",
+        title:<FormattedMessage
+                        id="app.port"
+                        defaultMessage="Port"
+                      />,
         dataIndex: "port",
       },
       {
-        title: "Host Name",
+        // title: "Host Name",
+        title:<FormattedMessage
+                        id="app.hostName"
+                        defaultMessage="Host Name"
+                      />,
         dataIndex: "host",
       },
 

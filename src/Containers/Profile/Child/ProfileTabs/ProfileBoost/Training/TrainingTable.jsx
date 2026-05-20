@@ -40,7 +40,7 @@ class TrainingTable extends Component {
       {
         //title: " Course Name",
         title: (
-          <FormattedMessage id="app.courseName" defaultMessage=" Course Name" />
+          <FormattedMessage id="app.coursename" defaultMessage=" Course Name" />
         ),
         dataIndex: "courseName",
         // width: "35%"
@@ -48,7 +48,7 @@ class TrainingTable extends Component {
       {
         //title: "Start Date",
         title: (
-          <FormattedMessage id="app.startDate" defaultMessage="Start Date" />
+          <FormattedMessage id="app.startdate" defaultMessage="Start Date" />
         ),
         dataIndex: "startDate",
         render: (name, item, i) => {
@@ -57,7 +57,7 @@ class TrainingTable extends Component {
       },
       {
         //title: "End Date",
-        title: <FormattedMessage id="app.endDate" defaultMessage="End Date" />,
+        title: <FormattedMessage id="app.enddate" defaultMessage="End Date" />,
         dataIndex: "endDate",
         render: (name, item, i) => {
           return <span>{dayjs(item.endDate).format("LL")}</span>;
@@ -67,7 +67,7 @@ class TrainingTable extends Component {
         // title: "Organization/Institution",
         title: (
           <FormattedMessage
-            id="app.organization"
+            id="app.organizationInstitution"
             defaultMessage="Organization/Institution"
           />
         ),
