@@ -142,14 +142,22 @@ function handleSend (){
               size="small"
               style={{ width: 90 }}
             >
-              Search
+              {/* Search */}
+               <FormattedMessage
+                        id="app.search"
+                        defaultMessage="Search"
+                      />
             </Button>
             <Button
               onClick={() => handleReset(clearFilters)}
               size="small"
               style={{ width: 90 }}
             >
-              Reset
+              {/* Reset */}
+                <FormattedMessage
+                        id="app.reset"
+                        defaultMessage="Reset"
+                      />
             </Button>
             <Button
               type="link"
@@ -160,9 +168,12 @@ function handleSend (){
                 setSearchedColumn(dataIndex);
               }}
             >
-              Filter
+              {/* Filter */}
+               <FormattedMessage
+                        id="app.filter"
+                        defaultMessage="Filter"
+                      />
             </Button>
-          
         </div>
       ),
       filterIcon: (filtered) => (
@@ -583,7 +594,8 @@ console.log ("SlR",salelist,recruiterlist)
         //debugger
         return (
           <StyledPopconfirm
-          title="Do you want to Unblock?"
+          // title="Do you want to Unblock?"
+          title={ <FormattedMessage id="app.doyouwanttoUnblock" defaultMessage="Do you want to Unblock?" />}
           onConfirm={() =>  props.getUnbolckCandidate(item.candidateId)}
         >
         <UpCircleOutlined
@@ -651,7 +663,8 @@ console.log ("SlR",salelist,recruiterlist)
     <>
       {/* <Spin tip="Loading..." spinning={!fetchingContactsLazyLoading}> */}
       <Button type="primary" onClick={start} disabled={!hasSelected} loading={loading}>
-          Clear
+          {/* Clear */}
+           <FormattedMessage id="app.clear" defaultMessage="Clear" />
         </Button>
         <span
           style={{
@@ -661,7 +674,8 @@ console.log ("SlR",salelist,recruiterlist)
           {hasSelected ? `Selected ${selectedRowKeys.length} items` : ''}
         </span>
         <Button type="primary" onClick={handleTransferClick} disabled={!hasSelected}>
-          Select
+          {/* Select */}
+           <FormattedMessage id="app.select" defaultMessage="Select" />
         </Button>
       
         {visibleselect && hasSelected && (

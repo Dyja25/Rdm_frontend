@@ -11,11 +11,11 @@ const AddDonotCallModal = props => {
   return (
     <>
       <StyledModal
-     title="Call Scheduler"
-        // title={<FormattedMessage
-        //   id="app.updatecandidate"
-        //   defaultMessage="Candidate"
-        // />}
+    //  title="Call Scheduler"
+        title={<FormattedMessage
+          id="app.callScheduler"
+          defaultMessage="Call Scheduler"
+        />}
         width="45%"
         visible={addDonotCallModal}
         closable

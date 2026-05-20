@@ -22,6 +22,7 @@ import {
 
 import { FlexContainer } from "../../../../../../../../Components/UI/Layout";
 import { TextareaComponent } from "../../../../../../../../Components/Forms/Formik/TextareaComponent";
+import { FormattedMessage } from "react-intl";
 
 const ButtonGroup = Button.Group;
 
@@ -302,7 +303,10 @@ class CandidateCallForm extends Component {
                       </FlexContainer>
                     </div>
                     <div style={{ width: "55%" }}>
-                      <StyledLabel>Category</StyledLabel>
+                      <StyledLabel>
+                        {/* Category */}
+                        <FormattedMessage id="app.category" defaultMessage="Category" />
+                        </StyledLabel>
                       <Spacer />
                       <ButtonGroup>
                         <Button
@@ -318,7 +322,8 @@ class CandidateCallForm extends Component {
                                 : "black",
                           }}
                         >
-                          Follow up
+                          {/* Follow up */}
+                          <FormattedMessage id="app.followup" defaultMessage="Follow up " />
                         </Button>
 
                         <Button
@@ -332,7 +337,8 @@ class CandidateCallForm extends Component {
                               this.state.selected === "New" ? "white" : "black",
                           }}
                         >
-                          New
+                          {/* New */}
+                          <FormattedMessage id="app.new" defaultMessage="New" />
                         </Button>
                       </ButtonGroup>
                     </div>
@@ -341,7 +347,8 @@ class CandidateCallForm extends Component {
                   <Spacer />
                   <Field
                     name="callPurpose"
-                    label="Topic"
+                    // label="Topic"
+                    label={<FormattedMessage id="app.topic" defaultMessage="Topic" />}
                     component={InputComponent}
                     isColumn
                     width={"100%"}
@@ -350,7 +357,8 @@ class CandidateCallForm extends Component {
                   <Spacer />
                   <Field
                     name="callDate"
-                    label="Date"
+                    // label="Date"
+                    label={<FormattedMessage id="app.date" defaultMessage="Date" />}
                     component={DatePicker}
                     isColumn
                     width={"100%"}
@@ -366,7 +374,8 @@ class CandidateCallForm extends Component {
                     <div style={{ width: "47%" }}>
                       <Field
                         name="startTime"
-                        label="Start Time"
+                        // label="Start Time"
+                          label={<FormattedMessage id="app.starttime" defaultMessage="Start Time" />}
                         component={TimePicker}
                         isColumn
                         use12Hours
@@ -380,7 +389,8 @@ class CandidateCallForm extends Component {
                     <div style={{ width: "47%" }}>
                       <Field
                         name="endTime"
-                        label="End Time"
+                        // label="End Time"
+                        label={<FormattedMessage id="app.endtime" defaultMessage="End Time" />}
                         component={TimePicker}
                         use12Hours
                         isColumn
@@ -422,7 +432,8 @@ class CandidateCallForm extends Component {
                 >
                   <Field
                     name="callDescription"
-                    label="Description"
+                    // label="Description"
+                     label={<FormattedMessage id="app.description" defaultMessage="Description" />}
                     isColumn
                     width={"100%"}
                     component={TextareaComponent}
@@ -455,7 +466,8 @@ class CandidateCallForm extends Component {
                   htmlType="submit"
                   // loading={isEditing ? updatingCall : addingCandidateCall}
                 >
-                  Create
+                  {/* Create */}
+                  <FormattedMessage id="app.create" defaultMessage="Create" />
                   {/* {isEditing ? "Update" : "Create"} */}
                 </Button>
                 </FlexContainer>

@@ -174,14 +174,16 @@ function handleSend (){
               size="small"
               style={{ width: 90 }}
             >
-              Search
+              {/* Search */}
+              <FormattedMessage id="app.search" defaultMessage="Search" />
             </Button>
             <Button
               onClick={() => handleReset(clearFilters)}
               size="small"
               style={{ width: 90 }}
             >
-              Reset
+              {/* Reset */}
+               <FormattedMessage id="app.reset" defaultMessage="Reset" />
             </Button>
             <Button
               type="link"
@@ -192,7 +194,8 @@ function handleSend (){
                 setSearchedColumn(dataIndex);
               }}
             >
-              Filter
+              {/* Filter */}
+              <FormattedMessage id="app.filter" defaultMessage="Filter" />
             </Button>
           
         </div>
@@ -768,7 +771,8 @@ console.log ("SlR",salelist,recruiterlist)
         //debugger
         return (
           <StyledPopconfirm
-          title="Do you want to blacklist?"
+          // title="Do you want to blacklist?"
+          title={<FormattedMessage id="app.doyouwanttoblacklist" defaultMessage="Do you want to blacklist?" />}
           onConfirm={() =>  props.getBlackListCandidate(item.candidateId)}
         >
         <UpCircleOutlined
@@ -784,7 +788,8 @@ console.log ("SlR",salelist,recruiterlist)
       },
     },
     {
-        title: "Reinstate",
+        // title: "Reinstate",
+         title: <FormattedMessage id="app.reinstate" defaultMessage="Reinstate" />,
         margin: "10%",
         render: (name, item, i) => {
           return (
@@ -834,7 +839,8 @@ console.log ("SlR",salelist,recruiterlist)
     <>
       {/* <Spin tip="Loading..." spinning={!fetchingContactsLazyLoading}> */}
       <Button type="primary" onClick={start} disabled={!hasSelected} loading={loading}>
-          Clear
+          {/* Clear */}
+          <FormattedMessage id="app.clear" defaultMessage="Clear" />
         </Button>
         <span
           style={{
@@ -844,7 +850,8 @@ console.log ("SlR",salelist,recruiterlist)
           {hasSelected ? `Selected ${selectedRowKeys.length} items` : ''}
         </span>
         <Button type="primary" onClick={handleTransferClick} disabled={!hasSelected}>
-          Select
+          {/* Select */}
+           <FormattedMessage id="app.select" defaultMessage="Select" />
         </Button>
       
         {visibleselect && hasSelected && (
@@ -856,7 +863,8 @@ console.log ("SlR",salelist,recruiterlist)
           )}
     </Select>
     <Button type="primary" onClick={handleSend} >
-    Transfer
+    {/* Transfer */}
+     <FormattedMessage id="app.transfer" defaultMessage="Transfer" />
   </Button>
   <Button
         type="primary" 

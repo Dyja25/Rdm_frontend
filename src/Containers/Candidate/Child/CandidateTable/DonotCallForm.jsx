@@ -140,7 +140,13 @@ function DonotCallForm (props){
                      {selectType==="call in 1 week" &&( 
                      <Field
                     name="startDate"
-                    label="Date"
+                    // label="Date"
+                     label={
+                          <FormattedMessage
+                            id="app.date"
+                            defaultMessage="Date"
+                          />
+                        }
                    
                     component={DatePicker}
                     isColumn
@@ -220,8 +226,13 @@ function DonotCallForm (props){
                      {selectType==="call in 4 week" &&( 
                      <Field
                     name="startDate"
-                    label="Date"
-                   
+                    // label="Date"
+                    label={
+                          <FormattedMessage
+                            id="app.date"
+                            defaultMessage="Date"
+                          />
+                        }
                     component={DatePicker}
                     
                     isColumn

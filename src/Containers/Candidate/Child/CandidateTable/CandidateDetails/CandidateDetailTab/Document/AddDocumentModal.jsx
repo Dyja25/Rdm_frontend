@@ -256,7 +256,7 @@ class AddDocumentModal extends Component {
                         // label="Description"
                         label={
                           <FormattedMessage
-                            id="app.documentDescription"
+                            id="app.description"
                             defaultMessage="Description"
                           />
                         }

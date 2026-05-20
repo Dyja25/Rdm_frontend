@@ -153,7 +153,11 @@ class ResumeForm extends PureComponent {
         accept=".pdf,.doc,.docx"
       name="file" onChange={this.changeHandler} />
         <div style={{ fontSize: "12px", color: "#888" }}>
-    Only PDF, DOC, DOCX files are allowed
+    {/* Only PDF, DOC, DOCX files are allowed */}
+    <FormattedMessage
+         id="app.filesareallowed"
+         defaultMessage="Upload Selected File"
+                            />
   </div>
   </div>
       {/* <div>

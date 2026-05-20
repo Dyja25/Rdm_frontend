@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FormattedMessage } from "react-intl";
 
 const EmailSendForm = () => {
   const [emailData, setEmailData] = useState({
@@ -34,7 +35,13 @@ const EmailSendForm = () => {
       <h2 className="text-2xl font-semibold text-center mb-6">Compose Email</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">Recipient:</label>
+          <label className="block text-sm font-medium text-gray-700">
+            {/* Recipient: */}
+            <FormattedMessage
+          id="app.recipient"
+          defaultMessage="Recipient"
+        />:
+            </label>
           <input
             type="email"
             name="recipient"
@@ -46,7 +53,13 @@ const EmailSendForm = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">Subject:</label>
+          <label className="block text-sm font-medium text-gray-700">
+            {/* Subject: */}
+             <FormattedMessage
+          id="app.subject"
+          defaultMessage="Subject"
+        />:
+            </label>
           <input
             type="text"
             name="subject"
@@ -58,7 +71,13 @@ const EmailSendForm = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">Body:</label>
+          <label className="block text-sm font-medium text-gray-700">
+            {/* Body: */}
+             <FormattedMessage
+          id="app.body"
+          defaultMessage="Body"
+        />:
+            </label>
           <textarea
             name="body"
             value={emailData.body}
@@ -69,7 +88,13 @@ const EmailSendForm = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">Attachment:</label>
+          <label className="block text-sm font-medium text-gray-700">
+            {/* Attachment: */}
+            <FormattedMessage
+          id="app.attachment"
+          defaultMessage="Attachment"
+        />:
+            </label>
           <input
             type="file"
             onChange={handleFileChange}
@@ -82,7 +107,11 @@ const EmailSendForm = () => {
             type="submit"
             className="w-full py-2 px-4 bg-blue-500 text-white font-semibold rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            Send Email
+            {/* Send Email */}
+             <FormattedMessage
+          id="app.sendEmail"
+          defaultMessage="Send Email"
+        />
           </button>
         </div>
       </form>

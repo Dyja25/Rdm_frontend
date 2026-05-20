@@ -192,7 +192,7 @@ class UpdateOpportunityForm extends Component {
                         name="startDate"
                         //label="Start Date"
                         label={<FormattedMessage
-                          id="app.startDate"
+                          id="app.startdate"
                           defaultMessage="Start Date"
                         />}
                         component={DatePicker}
@@ -207,7 +207,7 @@ class UpdateOpportunityForm extends Component {
                         name="endDate"
                         // label="End Date"
                         label={<FormattedMessage
-                          id="app.endDate"
+                          id="app.enddate"
                           defaultMessage="End Date"
                         />}
                         isColumn
@@ -237,7 +237,7 @@ class UpdateOpportunityForm extends Component {
                         name="proposalAmount"
                         // label="Proposal Amount"
                         label={<FormattedMessage
-                          id="app.proposalAmount"
+                          id="app.proposalamount"
                           defaultMessage="Proposal Amount"
                         />}
                         isColumn
@@ -329,7 +329,7 @@ class UpdateOpportunityForm extends Component {
                     selectType="contactListFilter"
                     //label="Contact"
                     label={<FormattedMessage
-                      id="app.contactId"
+                      id="app.contact"
                       defaultMessage="Contact"
                     />}
                     // isRequired

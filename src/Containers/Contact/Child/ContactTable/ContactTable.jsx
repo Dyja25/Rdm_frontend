@@ -140,14 +140,22 @@ function handleSend (){
               size="small"
               style={{ width: 90 }}
             >
-              Search
+               {/* Search */}
+                          <FormattedMessage
+                                          id="app.search"
+                                          defaultMessage="Search"
+                                        />
             </Button>
             <Button
               onClick={() => handleReset(clearFilters)}
               size="small"
               style={{ width: 90 }}
             >
-              Reset
+              {/* Reset */}
+                                         <FormattedMessage
+                                                        id="app.reset"
+                                                        defaultMessage="Reset"
+                                                      />
             </Button>
             <Button
               type="link"
@@ -158,7 +166,11 @@ function handleSend (){
                 setSearchedColumn(dataIndex);
               }}
             >
-              Filter
+               {/* Filter */}
+                                         <FormattedMessage
+                                                        id="app.filter"
+                                                        defaultMessage="Filter"
+                                                      />
             </Button>
 
         </div>
@@ -454,7 +466,10 @@ function handleSend (){
               render: (name, item, i) => {
                 return (
                   <StyledPopconfirm
-                    title="Do you want to delete?"
+                    // title="Do you want to delete?"
+                    title={ <FormattedMessage
+                         id="app.doyouwanttodelete"
+                           defaultMessage="Do you want to delete?"/>}
                     onConfirm={() =>
                       props.deleteContactData(item.contactId,props.viewType
                      )
@@ -508,7 +523,11 @@ function handleSend (){
     <>
       {/* <Spin tip="Loading..." spinning={!fetchingContactsLazyLoading}> */}
       <Button type="primary" onClick={start} disabled={!hasSelected} loading={loading}>
-      Clear
+      {/* Clear */}
+        <FormattedMessage
+                       id="app.clear"
+                       defaultMessage="Clear"
+                                          />
         </Button>
         <span
           style={{
@@ -518,7 +537,11 @@ function handleSend (){
           {hasSelected ? `Selected ${selectedRowKeys.length} items` : ''}
         </span>
         <Button type="primary" onClick={handleTransferClick} disabled={!hasSelected}>
-          Select
+          {/* Select */}
+           <FormattedMessage
+                           id="app.select"
+                           defaultMessage="Select"
+                                              />
         </Button>
         {visibleselect && hasSelected && (
           <>
@@ -531,7 +554,11 @@ function handleSend (){
     <Button type="primary" 
     onClick={handleSend} 
     >
-    Transfer
+    {/* Transfer */}
+     <FormattedMessage
+                           id="app.transfer"
+                           defaultMessage="Transfer"
+                                              />
   </Button>
   </>
         )}
