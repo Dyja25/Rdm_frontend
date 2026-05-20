@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { FlexContainer } from "../../../../Components/UI/Layout";
 import { JumpStartBox } from "../../../../Components/UI/Elements";
+import { FormattedMessage } from "react-intl";
 
 class LeaveJumpstart extends React.Component {
   render() {
@@ -25,7 +26,8 @@ class LeaveJumpstart extends React.Component {
                 <div className="w-[17%] min-w-[220px]">
                 <JumpStartBox
                 bgColor="#005075"
-                title="Maximum Leaves"
+                // title="Maximum Leaves"
+                title={<FormattedMessage id="app.maximumleaves" defaultMessage="Maximum Leaves" />}
                 stringValue
                 noProgress
                 value={totalLeaves}
@@ -37,7 +39,8 @@ class LeaveJumpstart extends React.Component {
                 bgColor="#0073a8"
                 stringValue
                 noProgress
-                title="Total Leaves Applied"
+                // title="Total Leaves Applied"
+                 title={<FormattedMessage id="app.totalleavesapplied" defaultMessage="Total Leaves Applied" />}
                 value={totalAppliedLeaves}
                 />
                 </div>
@@ -45,7 +48,8 @@ class LeaveJumpstart extends React.Component {
                <div className="w-[17%] min-w-[220px]">
                 <JumpStartBox
                 bgColor="#0093d7"
-                title="Pending"
+                // title="Pending"
+                 title={<FormattedMessage id="app.pending" defaultMessage="Pending" />}
                 stringValue
                 noProgress
                 value={totalPendingLeaves}
@@ -55,7 +59,8 @@ class LeaveJumpstart extends React.Component {
                 <div className="w-[17%] min-w-[220px]">
                 <JumpStartBox   
                 bgColor="#24b9fe"
-                title="Leave Balance"
+                // title="Leave Balance"
+                 title={<FormattedMessage id="app.leavebalance" defaultMessage="Leave Balance" />}
                 stringValue
                 noProgress
                 value={leaveBalance}

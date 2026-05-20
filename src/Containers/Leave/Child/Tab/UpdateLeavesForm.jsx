@@ -188,7 +188,7 @@ class UpdateLeaveForm extends Component {
 
                         // label="Start Date"
                         label={<FormattedMessage
-                          id="app.startDate"
+                          id="app.startdate"
                           defaultMessage="Start Date"
                         />}
                         component={DatePicker}
@@ -214,7 +214,7 @@ class UpdateLeaveForm extends Component {
                         // label="End Date "
 
                         label={<FormattedMessage
-                          id="app.endDate"
+                          id="app.enddate"
                           defaultMessage="End Date"
                         />}
                         isColumn
@@ -249,7 +249,7 @@ class UpdateLeaveForm extends Component {
                     name="coverDetails"
                     //label="Cover"
                     label={<FormattedMessage
-                      id="app.coverDetails"
+                      id="app.cover"
                       defaultMessage="Cover"
                     />}
                     width={"100%"}
@@ -288,7 +288,8 @@ class UpdateLeaveForm extends Component {
                 &nbsp;
                 <Button htmlType="submit" type="primary"
                   Loading={updatingLeave}>
-                  Submit
+                  {/* Submit */}
+                   <FormattedMessage id="app.submit" defaultMessage="Submit" />
                 </Button>
               </FlexContainer>
             </Form>

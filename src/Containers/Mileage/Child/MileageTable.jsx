@@ -9,6 +9,7 @@ import { getMileageByUserId } from "../MileageAction";
 import { mileageReducer } from "../MileageReducer";
 import { CurrencySymbol } from "../../../Components/Common";
 import APIFailed from "../../../Helpers/ErrorBoundary/APIFailed";
+import { FormattedMessage } from "react-intl";
 const MileageTable2=lazy(()=>import("./MileageTable2"));
 
 class MileageTable extends React.Component {
@@ -88,8 +89,8 @@ class MileageTable extends React.Component {
         },
       },
       {
-        title: "Voucher ID",
-
+        // title: "Voucher ID",
+        title:<FormattedMessage id="app.voucherId" defaultMessage="Voucher ID" />,        
         dataIndex: "voucherId",
         render: (name, item, i) => {
           return (
@@ -116,13 +117,15 @@ class MileageTable extends React.Component {
         // },
       },
       {
-        title: "Voucher Date",
+        // title: "Voucher Date",
+        title:<FormattedMessage id="app.voucherDate" defaultMessage="Voucher Date" />,        
         render: (name, item, i) => {
           return <span>{dayjs(item.voucherDate).format("MMM Do YY")}</span>;
         },
       },
       {
-        title: "Amount",
+        // title: "Amount",
+        title:<FormattedMessage id="app.amount" defaultMessage="Amount" />,
         dataIndex: "amount",
         render: (name, item, i) => {
           return (

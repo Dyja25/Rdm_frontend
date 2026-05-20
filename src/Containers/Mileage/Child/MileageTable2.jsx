@@ -7,6 +7,7 @@ import { StyledTable } from "../../../Components/UI/Antd";
 import { Tooltip,Button,Input } from "antd";
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import { mileageReducer } from "../MileageReducer";
+import { FormattedMessage } from "react-intl";
 import dayjs from "dayjs";
 import { CurrencySymbol } from "../../../Components/Common";
 const UpdateMileageModal=lazy(()=>import("./UpdateMileageModal"));
@@ -32,39 +33,47 @@ class MileageTable2 extends React.Component {
         width: "2%",
       },
       {
-        title: "Mileage #",
+        // title: "Mileage #",
+          title: <FormattedMessage id="app.mileage#" defaultMessage="Mileage #" />,
         dataIndex: "mileageId",
       },
       {
-        title: "Attributed To",
+        // title: "Attributed To",
+         title: <FormattedMessage id="app.attributedto" defaultMessage="Attributed To" />,
         dataIndex: "clientName",
         key: "attribute",
       },
       {
-        title: "Date",
+        // title: "Date",
+         title: <FormattedMessage id="app.date" defaultMessage="Date" />,
         render: (name, item, i) => {
           return <span>{dayjs(item.mileageDate).format("ll")}</span>;
         },
       },
       {
-        title: "From",
+        // title: "From",
+        title: <FormattedMessage id="app.from" defaultMessage="From" />,
         dataIndex: "fromLocation",
       },
       {
-        title: "To",
+        // title: "To",
+        title:<FormattedMessage id="app.to" defaultMessage="To" />,
         dataIndex: "toLocation",
       },
 
       {
-        title: "Distance/Km",
+        // title: "Distance/Km",
+         title:<FormattedMessage id="app.distance" defaultMessage="Distance/Km" />,
         dataIndex: "distances",
       },
       {
-        title: "Remarks",
+        // title: "Remarks",
+        title:<FormattedMessage id="app.remarks" defaultMessage="Remarks" />,
         dataIndex: "remark",
       },
       {
-        title: "Mileage rate",
+        // title: "Mileage rate",
+        title: <FormattedMessage id="app.mileagerate" defaultMessage="Mileage Rate" />,
         dataIndex: "mileageRate",
         render: (name, item, i) => {
           return (

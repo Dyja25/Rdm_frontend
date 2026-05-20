@@ -6,6 +6,7 @@ import { ActionIcon } from "../../../../Components/Utils";
 import { connect } from "react-redux";
 import { handleLeavesModal } from "../../LeavesAction";
 import { bindActionCreators } from "redux";
+import { FormattedMessage } from "react-intl";
 import AddLeavesModal from "./AddLeavesModal";
 const LeaveTable=lazy(()=>import("./LeaveTable"));
 
@@ -35,7 +36,8 @@ class DetailTab extends Component {
                 <>
                   <span>
                     {/* <Icon type="bank" /> */}
-                    Leave Details
+                    {/* Leave Details */}
+             <FormattedMessage id="app.leavedetails" defaultMessage="Leave Details" />
                   </span>
                   {/* {activeKey === "1" && (
                     <>
@@ -66,7 +68,8 @@ class DetailTab extends Component {
                     type="primary"
                     onClick={() => handleLeavesModal(true)}
                   >
-                    Add
+                    {/* Add */}
+             <FormattedMessage id="app.add" defaultMessage="Add" />
                   </Button>
                 </Tooltip>
               }

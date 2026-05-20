@@ -7,6 +7,7 @@ import { Tooltip } from "antd";
 import { FlexContainer } from "../../../Components/UI/Layout";
 import { TextInput } from "../../../Components/UI/Elements";
 import { handleTaskModal, getTaskListRangeByUserId } from "../TaskAction";
+import { FormattedMessage } from "react-intl";
 
 const TaskActionRight = (props) => {
   function handleTaskRefresh() {
@@ -28,7 +29,8 @@ const TaskActionRight = (props) => {
           ghost
           onClick={() => props.handleTaskModal(true)}
         >
-          Add
+          {/* Add */}
+          <FormattedMessage id="app.add" defaultMessage="Add" />
         </Button>
       </Tooltip>
     </FlexContainer>

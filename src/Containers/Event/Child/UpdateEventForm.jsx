@@ -352,7 +352,7 @@ class UpdateEventForm extends Component {
                         //label="Start "
                         label={
                           <FormattedMessage
-                            id="app.startDate"
+                            id="app.startdate"
                             defaultMessage="Start Date"
                           />
                         }
@@ -375,7 +375,7 @@ class UpdateEventForm extends Component {
                         // label="Start Time"
                         label={
                           <FormattedMessage
-                            id="app.startTime"
+                            id="app.starttime"
                             defaultMessage="Start Time"
                           />
                         }
@@ -465,8 +465,8 @@ class UpdateEventForm extends Component {
                     //label="TimeZone "
                     label={
                       <FormattedMessage
-                        id="app.timeZone"
-                        defaultMessage="TimeZone"
+                        id="app.timezone"
+                        defaultMessage="Time Zone"
                       />
                     }
                     selectType="timeZone"
@@ -502,7 +502,13 @@ class UpdateEventForm extends Component {
                     <span>
                       {dayjs(startDate).isBefore(dayjs()) && (
                         <span style={{ marginLeft: 10 }}>
-                          <b>This Event occurs in the past !</b>
+                          <b>
+                            {/* This Event occurs in the past ! */}
+                            <FormattedMessage
+                        id="app.thiseventoccursinthepast!"
+                        defaultMessage="This Event occurs in the past"
+                      />
+                          </b>
                         </span>
                       )}
                     </span>
@@ -510,7 +516,13 @@ class UpdateEventForm extends Component {
                     <span>
                       {dayjs(values.startDate).isBefore(dayjs()) && (
                         <span style={{ marginLeft: 10 }}>
-                          <b>This Event occurs in the past !</b>
+                         <b>
+                            {/* This Event occurs in the past ! */}
+                            <FormattedMessage
+                        id="app.thiseventoccursinthepast!"
+                        defaultMessage="This Event occurs in the past"
+                      />
+                          </b>
                         </span>
                       )}
                     </span>

@@ -7,6 +7,7 @@ import { FlexContainer } from "../../../Components/UI/Layout";
 import { Spacer, TextInput } from "../../../Components/UI/Elements";
 import { StyledSelect } from "../../../Components/UI/Antd";
 import { handleMileageModal } from "../MileageAction";
+import { FormattedMessage } from "react-intl";
 // import { setAccountFilterText, setAccountFilterUser } from "../AccountAction";
 // import { getUsers } from "../../Team/TeamAction";
 
@@ -32,7 +33,8 @@ class MileageActionRight extends React.Component {
           onClick={() => this.handleClicked("import")}
           // onClick={() => this.props.history.push("/import/product")}
         >
-          Import
+          {/* Import */}
+           <FormattedMessage id="app.import" defaultMessage="Import" />
         </Button>
         &nbsp;
         <Spacer />
@@ -40,7 +42,8 @@ class MileageActionRight extends React.Component {
           type={this.state.isClicked === "export" ? "primary" : ""}
           onClick={() => this.handleClicked("export")}
         >
-          Export
+          {/* Export */}
+           <FormattedMessage id="app.export" defaultMessage="Export" />
         </Button>
         &nbsp;
         <Tooltip placement="left" title="Create">
@@ -49,8 +52,8 @@ class MileageActionRight extends React.Component {
             onClick={() => this.props.handleMileageModal(true)}
           >
             {/* <Icon type="plus" /> */}
-
-            Add
+            {/* Add */}
+             <FormattedMessage id="app.add" defaultMessage="Add" />
           </Button>
         </Tooltip>
       </FlexContainer>

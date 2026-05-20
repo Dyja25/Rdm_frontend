@@ -10,6 +10,7 @@ import { FlexContainer } from "../../../Components/UI/Layout";
 
 import { StyledSelect } from "../../../Components/UI/Antd";
 import { FileExcelOutlined } from "@ant-design/icons";
+import { FormattedMessage } from "react-intl";
 
 const CandidateShareForm =lazy(()=>import("./CandidateShareForm.jsx"));
 const Option = StyledSelect.Option;
@@ -92,7 +93,11 @@ class CandidateActionRight extends React.Component {
           default
           onClick={() => this.props.history.push("/import/account")}
         >
-          Import
+          {/* Import */}
+           <FormattedMessage
+                           id="app.import"
+                           defaultMessage="Import"
+                         />
         </Button>
         )}
         &nbsp;
@@ -103,8 +108,12 @@ class CandidateActionRight extends React.Component {
             type="primary"
             // ghost
             onClick={() => handleCandidateResumeModal(true)}
-          >Add
+          >
          {/* Add */}
+          <FormattedMessage
+                           id="app.add"
+                           defaultMessage="Add"
+                         />
           </Button>
         </Tooltip>
        )} 

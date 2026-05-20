@@ -9,6 +9,7 @@ import { getExpenses } from "../../../Settings/Expense/ExpenseAction";
 // import { getCurrency } from "../../Auth/AuthAction";
 import { updateExpense  } from "../../ExpenseAction";
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import { FormattedMessage } from "react-intl";
 const { Option } = Select;
 
 function UpdateExpenseForm(props) {
@@ -195,13 +196,31 @@ function UpdateExpenseForm(props) {
   return (
     <div>
       <table>
-        <th>Date</th>
-        <th>Assigned To</th>
+        <th>
+          {/* Date */}
+          <FormattedMessage id="app.date" defaultMessage="Date"/>
+          </th>
+        <th>
+          {/* Assigned To */}
+          <FormattedMessage id="app.assignedto" defaultMessage="Assigned To "/>
+          </th>
 
-        <th>Expense Type</th>
-        <th>More Information</th>
-        <th>Amount</th>
-        <th>Currency</th>
+        <th>
+          {/* Expense Type */}
+       <FormattedMessage id="app.expenseType" defaultMessage="Expense Type"/>
+          </th>
+        <th>
+          {/* More Information */}
+       <FormattedMessage id="app.moreInformation" defaultMessage="More Information"/>
+        </th>
+        <th>
+          {/* Amount */}
+        <FormattedMessage id="app.amount" defaultMessage="Amount"/>
+          </th>
+        <th>
+          {/* Currency */}
+           <FormattedMessage id="app.currency" defaultMessage="Currency"/>
+          </th>
         {row.map((item) => {
           return (
             <tr>
@@ -312,7 +331,8 @@ function UpdateExpenseForm(props) {
         onClick={handleSubmit}
         Loading={updateExpense}
       >
-        Submit
+        {/* Submit */}
+         <FormattedMessage id="app.submit" defaultMessage="Submit"/>
       </Button>
       {/* &nbsp; &nbsp; &nbsp;
       <Button

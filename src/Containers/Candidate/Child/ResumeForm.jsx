@@ -25,6 +25,7 @@ import { FlexContainer } from "../../../Components/UI/Layout";
 
 import dayjs from "dayjs";
 import { anyalytic_url, base_url } from "../../../Config/Auth";
+import { FormattedMessage } from "react-intl";
 
 
 /**
@@ -173,7 +174,11 @@ class ResumeForm extends PureComponent {
          
           
           >
-            Upload Selected File
+            {/* Upload Selected File */}
+             <FormattedMessage
+                              id="app.uploadSelectedFile"
+                              defaultMessage="Upload Selected File"
+                            />
             </button>
         </div> 
              
@@ -194,7 +199,11 @@ class ResumeForm extends PureComponent {
            
           }
           >
-             Don't have resume handy
+             {/* Don't have resume handy */}
+              <FormattedMessage
+                              id="app.donthaveresumehandy"
+                              defaultMessage="Don't have resume handy"
+                            />
           </Button>
         </div> 
      

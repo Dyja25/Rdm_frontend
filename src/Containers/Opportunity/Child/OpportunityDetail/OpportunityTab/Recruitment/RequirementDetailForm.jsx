@@ -275,7 +275,7 @@ function RequirementDetailForm(props) {
                       name="jobOrder"
                       //  label="Sponsor"
                       label={<FormattedMessage
-                        id="app.joborder"
+                        id="app.jobId"
                         defaultMessage="Job ID"
                       />}
                       isColumn
@@ -289,8 +289,10 @@ function RequirementDetailForm(props) {
                   <div style={{ width: "47%", }}>
                     <Field
                       name="requirementName"
-                      label="Name"
-
+                      label={<FormattedMessage
+                        id="app.name"
+                        defaultMessage="Name"
+                      />}
                       width={"100%"}
                       isRequired
                       isColumn
@@ -306,7 +308,7 @@ function RequirementDetailForm(props) {
                       name="experience"
                       //  label="Sponsor"
                       label={<FormattedMessage
-                        id="app.joborder"
+                        id="app.experienceInYear"
                         defaultMessage="Experience (in Years)"
                       />}
                       isColumn
@@ -342,7 +344,7 @@ function RequirementDetailForm(props) {
                         //label="Email"
                         label={
                           <FormattedMessage
-                            id="app.workpreference"
+                            id="app.workPreference"
                             defaultMessage="Work Preference"
                           />
                         }
@@ -362,11 +364,11 @@ function RequirementDetailForm(props) {
                       {" "}
                       <Field
                         name="closeByDate"
-                         label="Close By"
-                        // label={<FormattedMessage
-                        //   id="app.avilableDate"
-                        //   defaultMessage="Start Date"
-                        // />}
+                        //  label="Close By"
+                        label={<FormattedMessage
+                          id="app.closeBy"
+                          defaultMessage="Close By"
+                        />}
                         isRequired
                         component={DatePicker}
                         isColumn

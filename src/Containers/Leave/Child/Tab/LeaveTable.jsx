@@ -101,14 +101,16 @@ function LeaveTable(props) {
         },
       },
       {
-        title: "Start Date",
+        // title: "Start Date",
+        title:<FormattedMessage id="app.startdate" defaultMessage="Start Date" />,
         dataIndex: "startDate",
         render: (name, item, i) => {
           return <span>{dayjs(item.startDate).format("LL")}</span>;
         },
       },
       {
-        title: "End Date",
+        // title: "End Date",
+        title:<FormattedMessage id="app.enddate" defaultMessage="End Date" />,
         dataIndex: "endDate",
         render: (name, item, i) => {
           return <span>{dayjs(item.endDate).format("LL")}</span>;
@@ -116,6 +118,7 @@ function LeaveTable(props) {
       },
       {
         title: "Cover",
+         title:<FormattedMessage id="app.cover" defaultMessage="Cover" />,
         dataIndex: "coverDetails",
       },
 

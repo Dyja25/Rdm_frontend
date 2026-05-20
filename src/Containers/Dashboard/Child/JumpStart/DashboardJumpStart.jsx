@@ -4,6 +4,7 @@ import { bindActionCreators } from "redux";
 import { JumpStartBox, Spacer } from "../../../../Components/UI/Elements";
 import { FlexContainer } from "../../../../Components/UI/Layout";
 import {getDateWiseList} from "../../DashboardAction";
+import { FormattedMessage } from "react-intl";
 
 class DashboardJumpStart extends React.Component{
   constructor() {
@@ -46,7 +47,11 @@ render() {
         
           <JumpStartBox
             noProgress
-            title="Requirements"
+            // title="Requirements"
+            title={ <FormattedMessage
+          id="app.requirements"
+          defaultMessage="Requirements"
+        />}
             // bgColor="#da5432"
             bgColor="linear-gradient(89.69deg, #F18F01 34.92%, #FF2727 99.73%)"
             value={this.props.showDatelist.openRequirement}
@@ -55,19 +60,31 @@ render() {
        
           <JumpStartBox
             noProgress
-            title="Positions "
+            // title="Positions "
+              title={ <FormattedMessage
+          id="app.positions"
+          defaultMessage="Positions"
+        />}
             bgColor="linear-gradient(270deg, #3066BE 0%, #0EB1D2 100%);"
           />
           <JumpStartBox
             noProgress
-            title="Profiles Submitted"
+            // title="Profiles Submitted"
+              title={ <FormattedMessage
+          id="app.profilesSubmitted"
+          defaultMessage="Profiles Submitted"
+        />}
             bgColor="linear-gradient(270.23deg, #00A843 0.19%, #1FD071 99.8%)"
             value={this.props.showDatelist.taggedProfile}
             isLoading={this.props.fetchingDatewiseReport}
           />
           <JumpStartBox
             noProgress
-            title="Profiles Selected"
+            // title="Profiles Selected"
+              title={ <FormattedMessage
+          id="app.profielenSelected"
+          defaultMessage="Profiles Selected"
+        />}
             bgColor="linear-gradient(269.97deg, #FFFFFF 0.02%, #000000 0.03%)"
             value={this.props.showDatelist.selectted}
             isLoading={this.props.fetchingDatewiseReport}
@@ -75,7 +92,11 @@ render() {
           />
           <JumpStartBox
             noProgress
-            title="On Boarded"
+            // title="On Boarded"
+              title={ <FormattedMessage
+          id="app.onBoarded"
+          defaultMessage="On Boarded"
+        />}
             bgColor="linear-gradient(269.97deg, #FFFFFF 0.02%, #27175a 0.03%)"
             
             value={this.props.showDatelist.onboarded}

@@ -54,7 +54,7 @@ class RecruitProJumpStart extends Component {
             stringValue
             //title="Positions Filled"
             title={<FormattedMessage
-              id="app.#selected"
+              id="app.selected"
               defaultMessage="# Selected"
             />}
              isLoading={this.props.fetchingAllRecruitmentPositionFilledByOppId}
@@ -66,7 +66,7 @@ class RecruitProJumpStart extends Component {
             stringValue
             // title="Average Time"
             title={<FormattedMessage
-              id="app.onboarded"
+              id="app.onBoarded"
               defaultMessage="OnBoarded"
             />}
             isLoading={this.props.fetchingAllRecruitmentAvgTimeByOppId}

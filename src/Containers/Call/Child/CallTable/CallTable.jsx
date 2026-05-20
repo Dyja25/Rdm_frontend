@@ -215,7 +215,7 @@ class CallTable extends React.Component {
       {
         // title: "Start",
         title: (
-          <FormattedMessage id="app.datetime" defaultMessage="Date" />
+          <FormattedMessage id="app.date" defaultMessage="Date" />
         ),
         dataIndex: "startDate",
         defaultSortOrder: "descend",

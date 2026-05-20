@@ -227,7 +227,8 @@ class HolidayPage extends React.Component {
                           htmlType="submit"
                           onClick={this.toggleInput}
                         >
-                          Add Holiday
+                          {/* Add Holiday */}
+                             <FormattedMessage id="app.addholiday" defaultMessage="Add Holiday"/>
                     </Button>
                     &nbsp;
                       </div>

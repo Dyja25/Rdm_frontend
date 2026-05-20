@@ -78,7 +78,7 @@ class LinkedDocuments extends Component {
       {
         //title: "Uploaded By",
         title: <FormattedMessage
-          id="app.uploadedBy"
+          id="app.uploadedby"
           defaultMessage="Uploaded By"
         />,
         dataIndex: "uploadedBy",

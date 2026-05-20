@@ -255,7 +255,11 @@ class RecruitmentClosedTable extends Component {
         },
       },
       {
-        title: "Job ID",
+        // title: "Job ID",
+         title: <FormattedMessage
+          id="app.jobId"
+          defaultMessage="Job ID"
+        />,
         width: "9%",
         dataIndex: "jobOrder",
         render: (name, item, i) => {
@@ -303,7 +307,7 @@ class RecruitmentClosedTable extends Component {
       {
         //title: "Requirement",
         title: <FormattedMessage
-          id="app.requirementName"
+          id="app.requirement"
           defaultMessage="Requirement"
         />,
         dataIndex: "requirementName",
@@ -361,7 +365,11 @@ class RecruitmentClosedTable extends Component {
         },
       },
       {
-        title: "Category",
+        // title: "Category",
+          title: <FormattedMessage
+          id="app.category"
+          defaultMessage="Category"
+        />,
         dataIndex: "category",
         width: "9%",
         render: (name, item, i) => {
@@ -382,7 +390,11 @@ class RecruitmentClosedTable extends Component {
 
       },
       {
-        title: "Created",
+        // title: "Created",
+         title: <FormattedMessage
+          id="app.created"
+          defaultMessage="Created"
+        />,
         width: "7%",
         render: (name, item, i) => {
           return {
@@ -414,7 +426,11 @@ class RecruitmentClosedTable extends Component {
         },
       },
       {
-        title: "On",
+        // title: "On",
+         title: <FormattedMessage
+          id="app.on"
+          defaultMessage="On"
+        />,
         width: "10%",
         dataIndex: "creationDate",
         render: (text, item) => {
@@ -448,7 +464,7 @@ class RecruitmentClosedTable extends Component {
       {
         //title: "Start",
         title: <FormattedMessage
-          id="app.processName"
+          id="app.start"
           defaultMessage="Start"
         />,
         width: "9%",
@@ -788,7 +804,7 @@ class RecruitmentClosedTable extends Component {
       {
         //title: "Skill Set",
         title: <FormattedMessage
-          id="app.callType"
+          id="app.skillset"
           defaultMessage="Skill Set"
         />,
 
@@ -1105,7 +1121,7 @@ class RecruitmentClosedTable extends Component {
       {
         //title: "Sponsor",
         title: <FormattedMessage
-          id="app.callType"
+          id="app.sponsor"
           defaultMessage="Sponsor"
         />,
         dataIndex: "callType",

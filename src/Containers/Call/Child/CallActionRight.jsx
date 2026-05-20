@@ -4,6 +4,7 @@ import Button from "antd/lib/button";
 import { Tooltip } from "antd";
 import { FlexContainer } from "../../../Components/UI/Layout";
 import { handleCallModal } from "../CallAction";
+import { FormattedMessage } from "react-intl";
 
 const CallActionRight = (props) => {
   return (
@@ -14,7 +15,11 @@ const CallActionRight = (props) => {
           onClick={() => props.handleCallModal(true)}
         >
           {/* <Icon type="plus" /> */}
-          Add
+          {/* Add */}
+           <FormattedMessage
+                                        id="app.add"
+                                        defaultMessage="Add"
+                                      />
         </Button>
       </Tooltip>
     </FlexContainer>

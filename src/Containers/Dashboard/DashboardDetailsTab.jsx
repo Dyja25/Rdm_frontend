@@ -9,6 +9,7 @@ import {
   TabsWrapper,
 } from "../../Components/UI/Layout";
 import DashboardTable2 from "../Dashboard/Child/DashboardTable2.jsx";
+import { FormattedMessage } from "react-intl";
 
 
 
@@ -77,7 +78,13 @@ class DashboardDetailsTab extends Component {
                 <>
                   {/* <FontAwesomeIcon icon={solid('bars-progress')} /> */}
                   <BarChartIcon/>
-                    <span style={{ marginLeft: "0.25em" }}>Open Requirements</span>
+                    <span style={{ marginLeft: "0.25em" }}>
+                      {/* Open Requirements */}
+                          <FormattedMessage
+          id="app.openRequirements"
+          defaultMessage="Open Requirements"
+        />
+                    </span>
                   
                   {activeKey === "1" && (
                     <>

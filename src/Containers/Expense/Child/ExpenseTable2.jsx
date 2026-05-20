@@ -60,7 +60,7 @@ class ExpenseTable2 extends React.Component {
       {
         // title: "Expense #",
         title: <FormattedMessage
-          id="app.expenseId"
+          id="app.expense"
           defaultMessage="Expense #"
         />,
         dataIndex: "expenseId",
@@ -69,13 +69,17 @@ class ExpenseTable2 extends React.Component {
       {
         //title: "Expense Type",
         title: <FormattedMessage
-          id="app.expenseType"
+          id="app.type"
           defaultMessage="Type"
         />,
         dataIndex: "expenseType",
       },
       {
-        title: "Date",
+        // title: "Date",
+         title: <FormattedMessage
+          id="app.date"
+          defaultMessage="Date"
+        />,
         render: (name, item, i) => {
           return <span>{dayjs(item.voucherDate).format("ll")}</span>;
         },
@@ -84,7 +88,7 @@ class ExpenseTable2 extends React.Component {
       {
         // title: "Attributed To",
         title: <FormattedMessage
-          id="app.Attributed To"
+          id="app.customer"
           defaultMessage="Customer"
         />,
         dataIndex: "clientName",

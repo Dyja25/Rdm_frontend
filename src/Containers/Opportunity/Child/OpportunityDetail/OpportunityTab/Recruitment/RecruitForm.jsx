@@ -311,8 +311,8 @@ function RecruitForm(props) {
                         name="jobOrder"
                         //  label="Sponsor"
                         label={<FormattedMessage
-                          id="app.joborder"
-                          defaultMessage="Job ID"
+                          id="app.jobId"
+                          defaultMessage="Job Id"
                         />}
                         isColumn
                         width={"100%"}
@@ -346,7 +346,7 @@ function RecruitForm(props) {
                         name="experience"
                         //  label="Sponsor"
                         label={<FormattedMessage
-                          id="app.joborder"
+                          id="app.experienceInYear"
                           defaultMessage="Experience (in Years)"
                         />}
                         isColumn
@@ -384,7 +384,7 @@ function RecruitForm(props) {
                         //label="Email"
                         label={
                           <FormattedMessage
-                            id="app.workpreference"
+                            id="app.workPreference"
                             defaultMessage="Work Preference"
                           />
                         }
@@ -404,11 +404,11 @@ function RecruitForm(props) {
                       {" "}
                       <Field
                         name="closeByDate"
-                         label="Close By"
-                        // label={<FormattedMessage
-                        //   id="app.avilableDate"
-                        //   defaultMessage="Start Date"
-                        // />}
+                        //  label="Close By"
+                        label={<FormattedMessage
+                          id="app.closeBy"
+                          defaultMessage="Close By"
+                        />}
                         // isRequired
                         component={DatePicker}
                         isColumn
@@ -439,7 +439,7 @@ function RecruitForm(props) {
                         name="sponserId"
                         //  label="Sponsor"
                         label={<FormattedMessage
-                          id="app.customercontact"
+                          id="app.customerContact"
                           defaultMessage="Customer Contact"
                         />}
                         isColumn
@@ -479,7 +479,13 @@ function RecruitForm(props) {
                         selectType="departmentName"
                         isColumnWithoutNoCreate
                         //label="Mobile #"
-                        label="Department"
+                        // label="Department"
+                         label={
+                          <FormattedMessage
+                            id="app.department"
+                            defaultMessage="Department"
+                          />
+                        }
                         isColumn
                         // margintop={"0em"}
                        
@@ -552,7 +558,7 @@ function RecruitForm(props) {
                         name="number"
                         // label="# Positions"
                         label={<FormattedMessage
-                          id="app.number"
+                          id="app.positions"
                           defaultMessage="# Positions"
                         />}
                         width={"100%"}
@@ -584,8 +590,8 @@ function RecruitForm(props) {
                     name="recruitmentProcessId"
                     //label="Workflow"
                     label={<FormattedMessage
-                      id="app.recruitmentProcessId"
-                      defaultMessage="Workflow"
+                      id="app.workflow"
+                      defaultMessage="Work flow"
                     />}
                     isRequired
                     isColumn
@@ -653,7 +659,7 @@ function RecruitForm(props) {
                         name="avilableDate"
                         // label="Start Date"
                         label={<FormattedMessage
-                          id="app.avilableDate"
+                          id="app.startdate"
                           defaultMessage="Start Date"
                         />}
                         isRequired
@@ -684,7 +690,7 @@ function RecruitForm(props) {
                         name="endDate"
                         // label="Start Date"
                         label={<FormattedMessage
-                          id="app.endate"
+                          id="app.enddate"
                           defaultMessage="End Date"
                         />}
                         // isRequired
@@ -715,7 +721,13 @@ function RecruitForm(props) {
                   <Spacer style={{marginTop:"1.25em"}}/>
                 <FlexContainer style={{}}>
                  
-                 <StyledLabel style={{marginLeft:"0px"}}>Category</StyledLabel>
+                 <StyledLabel style={{marginLeft:"0px"}}>
+                  {/* Category */}
+                  {<FormattedMessage
+                                          id="app.category"
+                                          defaultMessage="Category"
+                                        />}
+                  </StyledLabel>
                  &nbsp;&nbsp;
                  <Switch
                    style={{

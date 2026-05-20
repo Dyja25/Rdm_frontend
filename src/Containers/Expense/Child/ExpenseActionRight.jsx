@@ -7,6 +7,7 @@ import { FlexContainer } from "../../../Components/UI/Layout";
 import { Spacer, TextInput } from "../../../Components/UI/Elements";
 import { StyledSelect } from "../../../Components/UI/Antd";
 import { handleExpenseModal } from "../ExpenseAction";
+import { FormattedMessage } from "react-intl";
 // import { setExpenseFilterText, setExpenseFilterUser } from "../ExpenseAction";
 // import { getUsers } from "../../Team/TeamAction";
 
@@ -62,7 +63,9 @@ class ExpenseActionRight extends React.Component {
           <Button
             type="primary"
             onClick={() => this.props.handleExpenseModal(true)}
-          >Add           
+          >
+            {/* Add */}
+            <FormattedMessage id="app.add" defaultMessage="Add" />
           </Button>
         </Tooltip>
       </FlexContainer>

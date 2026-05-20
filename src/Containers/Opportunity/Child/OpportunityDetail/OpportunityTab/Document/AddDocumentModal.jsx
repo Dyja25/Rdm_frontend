@@ -235,7 +235,7 @@ class AddDocumentModal extends Component {
                         //label="Name"
                         label={
                           <FormattedMessage
-                            id="app.documentName"
+                            id="app.name"
                             defaultMessage="Name"
                           />
                         }
@@ -250,7 +250,7 @@ class AddDocumentModal extends Component {
                         //label="Description"
                         label={
                           <FormattedMessage
-                            id="app.documentDescription"
+                            id="app.description"
                             defaultMessage="Description"
                           />
                         }
@@ -418,7 +418,11 @@ class AddDocumentModal extends Component {
                       type="primary"
                       Loading={addingDocumentByOpportunityId}
                     >
-                      Submit
+                      {/* Submit */}
+                      <FormattedMessage
+                                              id="app.submit"
+                                              defaultMessage="Submit"
+                                            />
                     </Button>
                   </FlexContainer>
                 </Form>

@@ -55,7 +55,7 @@ class LinkedContact extends Component {
       {
         // title: "Name",
         title: <FormattedMessage
-          id="app.firstName"
+          id="app.name"
           defaultMessage="Name"
         />,
         width: "25%",

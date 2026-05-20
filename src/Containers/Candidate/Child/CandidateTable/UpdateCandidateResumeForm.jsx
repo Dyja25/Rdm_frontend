@@ -166,7 +166,11 @@ class UpdateCandidateResumeForm extends PureComponent {
          
           
           >
-            Upload Selected File
+            {/* Upload Selected File */}
+           <FormattedMessage
+                                      id="app.uploadSelectedFile"
+                                      defaultMessage="Upload Selected File"
+                                    />
             </button>
         </div> 
              
@@ -189,7 +193,11 @@ class UpdateCandidateResumeForm extends PureComponent {
            
           }
           >
-             Update without resume
+             {/* Update without resume */}
+              <FormattedMessage
+                    id="app.updatewithoutresume"
+                    defaultMessage="Update without resume"
+               />
           </Button>
         </div> 
      

@@ -248,13 +248,34 @@ function UpdateMileageForm(props) {
   return (
     <div>
       <table>
-        <th>Date</th>
-        <th>Assigned To</th>
-        <th>From</th>
-        <th>To</th>
-        <th>Distance</th>
-        <th>Unit</th>
-        <th>Remarks</th>
+       <th> 
+                 {/* Date */}
+                 <FormattedMessage id="app.date" defaultMessage="Date" />
+               </th>
+               <th>
+                 {/* Assigned To */}
+                <FormattedMessage id="app.assignedto" defaultMessage="Assigned To" />
+               </th>
+               <th>
+                 {/* From */}
+                  <FormattedMessage id="app.from" defaultMessage="From" />
+               </th>
+               <th>
+                 {/* To */}
+                  <FormattedMessage id="app.to" defaultMessage="To" />
+               </th>
+               <th>
+                 {/* Distance */}
+                  <FormattedMessage id="app.distance" defaultMessage="Distance" />
+               </th>
+               <th>
+                 {/* Unit */}
+                  <FormattedMessage id="app.unit" defaultMessage="Unit" />
+               </th>
+               <th>
+                 {/* Remarks */}
+                  <FormattedMessage id="app.remarks" defaultMessage="Remarks" />
+               </th>
 
         {/* <th>Rate</th>
         <th>Currency</th> */}
@@ -374,7 +395,8 @@ function UpdateMileageForm(props) {
         onClick={handleSubmit}
         Loading={updatingMileage}
       >
-        Submit
+        {/* Submit */}
+           <FormattedMessage id="app.submit" defaultMessage="Submit" />
       </Button>
       {/* &nbsp; &nbsp; &nbsp;
       <Button

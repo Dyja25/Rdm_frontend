@@ -230,7 +230,11 @@ class SummaryTable extends Component {
         width: "2%",
       },
       {
-        title: "Job ID",
+        // title: "Job ID",
+        title:(<FormattedMessage
+                                id="app.jobId"
+                                defaultMessage="Job ID"
+                              />),
         width: "7%",
         dataIndex: "jobOrder",
       },
@@ -238,7 +242,7 @@ class SummaryTable extends Component {
         //title: "Requirement",
         title: (
           <FormattedMessage
-            id="app.requirementName"
+            id="app.requirement"
             defaultMessage="Requirement"
           />
         ),
@@ -249,7 +253,7 @@ class SummaryTable extends Component {
       {
         // title: "Sponsor",
         title: (
-          <FormattedMessage id="app.sponserName" defaultMessage="Sponsor" />
+          <FormattedMessage id="app.sponsor" defaultMessage="Sponsor" />
         ),
         dataIndex: "sponserName",
         width: "8%",
@@ -258,7 +262,7 @@ class SummaryTable extends Component {
       {
         //title: "# Positions",
         title: (
-          <FormattedMessage id="app.number" defaultMessage="# Positions" />
+          <FormattedMessage id="app.positions" defaultMessage="# Positions" />
         ),
         dataIndex: "number",
         width: "5%",
@@ -266,7 +270,7 @@ class SummaryTable extends Component {
 
       {
         //title: "Submitted",
-        title: <FormattedMessage id="app.offered" defaultMessage="Submitted" />,
+        title: <FormattedMessage id="app.submitted" defaultMessage="Submitted" />,
         dataIndex: "offered",
         width: "6%",
       },
@@ -278,7 +282,8 @@ class SummaryTable extends Component {
       },
 
       {
-        title: "OnBoarded",
+        // title: "OnBoarded",
+        title: <FormattedMessage id="app.onBoarded" defaultMessage="On Boarded" />,
         dataIndex: "onBoardNo",
         width: "5%",
       },

@@ -487,7 +487,11 @@ class CallForm extends Component {
                        // marginTop: "2px",
                       }}
                     >
-                    Mode
+                    {/* Mode */}
+                    <FormattedMessage
+                                        id="app.mode"
+                                        defaultMessage="Mode"
+                                      />
                       <Switch
                         style={{                      
                         marginLeft: "0.3125em"
@@ -503,7 +507,10 @@ class CallForm extends Component {
                        <div style={{ width: "34%" }}>
                       <FastField
                         name="modeType"
-                        label="Channel"
+                        label={<FormattedMessage
+                                        id="app.channel"
+                                        defaultMessage="Channel"
+                                      />}
                         isColumn
                         // margintop={"0em"}
                         options={[
@@ -804,7 +811,10 @@ class CallForm extends Component {
                     <div style={{ width: "47%", fontWeight: "bold" }}>
                       <FlexContainer justifyContent="space-between">
                         <div>
-                          <StyledLabel>Set Reminder</StyledLabel>
+                          <StyledLabel>
+                            {/* Set Reminder */}
+                             <FormattedMessage id="app.setReminder" defaultMessage="Set Reminder" />
+                            </StyledLabel>
                         </div>
                         <div>
 
@@ -824,7 +834,10 @@ class CallForm extends Component {
                           <Field
                             // isRequired
                             name="remindTime"
-                            label="Reminder"
+                            // label="Reminder"
+                            label={
+                              <FormattedMessage id="app.reminder" defaultMessage="Reminder" />
+                            }
                             width={"100%"}
                             component={SelectComponent}
                             options={[

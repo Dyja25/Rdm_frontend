@@ -345,7 +345,7 @@ class EventForm extends Component {
                           //label="Start "
                           label={
                             <FormattedMessage
-                              id="app.startDate"
+                              id="app.startdate"
                               defaultMessage="Start Date"
                             />
                           }
@@ -365,7 +365,7 @@ class EventForm extends Component {
                           // label="Start Time"
                           label={
                             <FormattedMessage
-                              id="app.startTime"
+                              id="app.starttime"
                               defaultMessage="Start Time"
                             />
                           }
@@ -450,7 +450,7 @@ class EventForm extends Component {
                     //label="TimeZone "
                     label={
                       <FormattedMessage
-                        id="app.timeZone"
+                        id="app.timezone"
                         defaultMessage="Time Zone"
                       />
                     }
@@ -480,7 +480,11 @@ class EventForm extends Component {
                     <span>
                       {dayjs(startDate).isBefore(dayjs()) && (
                         <span>
-                          <b>This Event occurs in the past !</b>
+                          <b>
+                            <FormattedMessage
+                        id="app.thiseventoccursinthepast!"
+                        defaultMessage="This Event occurs in the past"
+                      /></b>
                         </span>
                       )}
                     </span>
@@ -488,7 +492,13 @@ class EventForm extends Component {
                     <span>
                       {dayjs(values.startDate).isBefore(dayjs()) && (
                         <span >
-                          <b>This Event occurs in the past !</b>
+                          <b>
+                            {/* This Event occurs in the past ! */}
+                            <FormattedMessage
+                        id="app.thiseventoccursinthepast!"
+                        defaultMessage="This Event occurs in the past"
+                      />
+                          </b>
                         </span>
                       )}
                     </span>
@@ -576,7 +586,13 @@ class EventForm extends Component {
                     <div style={{ width: "47%", fontWeight: "bold" }}>
                       <FlexContainer justifyContent="space-between">
                         <div>
-                          <StyledLabel >Set Reminder </StyledLabel>
+                          <StyledLabel >
+                            {/* Set Reminder */}
+                            <FormattedMessage
+                          id="app.setReminder"
+                          defaultMessage="Set Reminder"
+                        />
+                             </StyledLabel>
                         </div>
                         <div>
                           {/* <FlexContainer justifyContent="space-between"> */}
@@ -596,7 +612,13 @@ class EventForm extends Component {
                           <Field
                             // isRequired
                             name="remindTime"
-                            label="Reminder"
+                            // label="Reminder"
+                            label={
+                              <FormattedMessage
+                          id="app.reminder"
+                          defaultMessage="Reminder"
+                        />
+                            }
                             width={"100%"}
                             component={SelectComponent}
                             options={[

@@ -377,7 +377,7 @@ class CandidateForm extends Component {
                             // label="First Name"
                             label={
                               <FormattedMessage
-                                id="app.firstName"
+                                id="app.firstname"
                                 defaultMessage="First Name"
                               />
                             }
@@ -432,7 +432,7 @@ class CandidateForm extends Component {
                             //label="Last Name"
                             label={
                               <FormattedMessage
-                                id="app.lastName"
+                                id="app.lastname"
                                 defaultMessage="Last Name"
                               />
                             }
@@ -479,7 +479,7 @@ class CandidateForm extends Component {
                         //label="Email"
                         label={
                           <FormattedMessage
-                            id="app.workpreference"
+                            id="app.workPreference"
                             defaultMessage="Work Preference"
                           />
                         }
@@ -545,7 +545,7 @@ class CandidateForm extends Component {
                         //label="Mobile #"
                         label={
                           <FormattedMessage
-                            id="app.countryDialCode"
+                            id="app.mobile#"
                             defaultMessage="Mobile #"
                           />
                         }
@@ -701,7 +701,7 @@ class CandidateForm extends Component {
                         name="dateOfBirth"
                         label={
                           <FormattedMessage
-                            id="app.dateOfBirth"
+                            id="app.dateofbirth"
                             defaultMessage="Date of Birth"
                           />
                         }
@@ -770,7 +770,13 @@ class CandidateForm extends Component {
                         isColumn
                         width="100%"
                       /> */}
-                        <StyledLabel >Country</StyledLabel> 
+                        <StyledLabel >
+                          {/* Country */}
+                           <FormattedMessage
+                            id="app.country"
+                            defaultMessage="Country"
+                          />
+                          </StyledLabel> 
                         <Select
                         name="country"
                         //mode="multiple"
@@ -816,7 +822,13 @@ class CandidateForm extends Component {
                 >
                   {this.props.responseData && (
                     <>
-                      <StyledLabel>Skill set</StyledLabel>
+                      <StyledLabel>
+                        {/* Skill set */}
+                        <FormattedMessage
+                            id="app.skillSet"
+                            defaultMessage="Skill set"
+                          />
+                        </StyledLabel>
                       <SkillsLoadMore
                         skillList={this.props.responseData.skills}
                       />
@@ -830,7 +842,13 @@ class CandidateForm extends Component {
                     name="skills"
                     //  selectType="contactList"
                     // isColumnWithoutNoCreate
-                    label="Skills"
+                    // label="Skills"
+                    label={
+                       <FormattedMessage
+                            id="app.skills"
+                            defaultMessage="Skills"
+                          />
+                    }
                   
                   mode
                     placeholder="Select"
@@ -867,7 +885,13 @@ class CandidateForm extends Component {
                         name="departmentId"
                          selectType="departmentListFilter"
                          isColumnWithoutNoCreate
-                        label="Department"
+                        // label="Department"
+                         label={
+                          <FormattedMessage
+                            id="app.department"
+                            defaultMessage="Department"
+                          />
+                        }     
                         component={SearchSelect}   
                         isColumn
                         //  component={SelectComponent}
@@ -939,7 +963,7 @@ class CandidateForm extends Component {
                           // label="Tag Company"
                           label={
                             <FormattedMessage
-                              id="currentemployer"
+                              id="app.currentemployer"
                               defaultMessage="Current Employer"
                             />
                           }
@@ -973,7 +997,13 @@ class CandidateForm extends Component {
                   <Spacer style={{ marginTop: "1em" }} />
                   <FlexContainer justifyContent="space-between">
                   <div>
-                  <StyledLabel >Category</StyledLabel>
+                  <StyledLabel >
+                    {/* Category */}
+                     <FormattedMessage
+                            id="app.category"
+                            defaultMessage="Category"
+                          />
+                    </StyledLabel>
                   </div>
                   <div style={{width:"26%"}}>
                   <Switch  
@@ -989,7 +1019,12 @@ class CandidateForm extends Component {
                     checked={this.state.checked}
                     onChange={() => this.handleChange()}
                     style={{ marginLeft: "auto" }}
-                    >Both
+                    >
+                      {/* Both */}
+                      <FormattedMessage
+                            id="app.both"
+                            defaultMessage="Both"
+                          />
                     </Checkbox>
                     </div>
                     <div>
@@ -1008,7 +1043,13 @@ class CandidateForm extends Component {
                   <FlexContainer justifyContent="space-between">
                   <div style={{ width: "47%" }}>
                   <FlexContainer justifyContent="space-between">
-                  <StyledLabel >Active</StyledLabel>                     
+                  <StyledLabel >
+                    {/* Active */}
+                     <FormattedMessage
+                            id="app.active"
+                            defaultMessage="Active"
+                          />
+                    </StyledLabel>                     
                   <Switch                                              
                   checked={this.state.availability}
                   onChange={this.handleAvailability}
@@ -1029,7 +1070,7 @@ class CandidateForm extends Component {
 
                             label={
                               <FormattedMessage
-                                id="app.availableDate"
+                                id="app.availablefrom"
                                 defaultMessage="Available from"
                               />
                             }
@@ -1062,7 +1103,7 @@ class CandidateForm extends Component {
                           //label="Email"
                           label={
                             <FormattedMessage
-                              id="app.experience"
+                              id="app.experienceInYear"
                               defaultMessage="Experience (in Years)"
                             />
                           }
@@ -1124,7 +1165,7 @@ onChange={this.NumericOnly}
                           //label="Email"
                           label={
                             <FormattedMessage
-                              id="app.cost"
+                              id="app.costType"
                               defaultMessage="Cost Type"
                             />
                           }
@@ -1207,7 +1248,7 @@ onChange={this.NumericOnly}
                         //label="State"
                         label={
                           <FormattedMessage
-                            id="benifit"
+                            id="app.benefits"
                             defaultMessage="Benefits"
                           />
                         }

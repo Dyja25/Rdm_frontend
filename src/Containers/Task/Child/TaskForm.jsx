@@ -792,7 +792,7 @@ class TaskForm extends Component {
                           //label="Start "
                           label={
                             <FormattedMessage
-                              id="app.startDate"
+                              id="app.startdate"
                               defaultMessage="Start Date"
                             />
                           }
@@ -813,7 +813,7 @@ class TaskForm extends Component {
                           // label="Start Time"
                           label={
                             <FormattedMessage
-                              id="app.startTime"
+                              id="app.starttime"
                               defaultMessage="Start Time"
                             />
                           }
@@ -837,7 +837,7 @@ class TaskForm extends Component {
                           // label="End "
                           label={
                             <FormattedMessage
-                              id="app.endDate"
+                              id="app.enddate"
                               defaultMessage="End Date"
                             />
                           }
@@ -871,7 +871,7 @@ class TaskForm extends Component {
                           //label="End Time"
                           label={
                             <FormattedMessage
-                              id="app.endTime"
+                              id="app.endtime"
                               defaultMessage="End Time"
                             />
                           }
@@ -988,7 +988,13 @@ class TaskForm extends Component {
                     <div style={{ width: "47%", fontWeight: "bold" }}>
                       <FlexContainer justifyContent="space-between">
                         <div>
-                          <StyledLabel>Set Reminder </StyledLabel>
+                          <StyledLabel>
+                            {/* Set Reminder  */}
+                            <FormattedMessage
+                              id="app.setReminder"
+                              defaultMessage="Set Reminder"
+                            />
+                          </StyledLabel>
                         </div>
                         <div>
                           {/* <FlexContainer justifyContent="space-between"> */}
@@ -1008,7 +1014,13 @@ class TaskForm extends Component {
                           <Field
                             // isRequired
                             name="remindTime"
-                            label="Reminder"
+                            // label="Reminder"
+                            label={
+                               <FormattedMessage
+                              id="app.reminder"
+                              defaultMessage="Reminder"
+                            />
+                            }
                             width={"100%"}
                             component={SelectComponent}
                             options={[

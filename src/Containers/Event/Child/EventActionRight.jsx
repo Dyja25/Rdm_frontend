@@ -7,6 +7,7 @@ import { Tooltip } from "antd";
 import { FlexContainer } from "../../../Components/UI/Layout";
 import { TextInput } from "../../../Components/UI/Elements";
 import { handleEventModal } from "../EventAction";
+import { FormattedMessage } from "react-intl";
 
 class EventActionRight extends React.Component {
   state = {
@@ -27,7 +28,8 @@ class EventActionRight extends React.Component {
         <Tooltip placement="left" title="Create">
           <Button type="primary"
            ghost onClick={() => handleEventModal(true)}>
-            Add
+            {/* Add */}
+            <FormattedMessage id="app.add" defaultMessage="Add" />
           </Button>
         </Tooltip>
       </FlexContainer>
