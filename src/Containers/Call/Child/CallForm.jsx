@@ -203,7 +203,7 @@ class CallForm extends Component {
                   defaultContacts && defaultContacts.length
                     ? defaultContacts[0].value
                     : "",
-                candidateId: "",
+            
 
               }
           }
@@ -291,7 +291,7 @@ class CallForm extends Component {
                 defaultContacts && defaultContacts.length
                   ? defaultContacts[0].value
                   : "",
-              candidateId: "",
+            
               // assignedTo: "",
 
               // ownerIds: userId === userId ? [userId] : [],
@@ -754,9 +754,10 @@ class CallForm extends Component {
                   />
                   <Spacer style={{ marginTop: "1.25em" }} />
                   <Field
-                    disabled="true"
-                    isRequired
+                  disabled={true}
+                 
                     name="candidateId"
+                        selectType="candidateList"
                    // type="text"
                     label="Talent"
                     placeholder="Start typing to search..."
@@ -765,7 +766,7 @@ class CallForm extends Component {
                     component={SearchSelect}
                     inlineLabel
                    
-                  />
+                  />  
                   {/* <Field
                     name="employeeId"
                     selectType="employee"

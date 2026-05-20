@@ -147,7 +147,7 @@ class EventForm extends Component {
                 note: "",
                 eventStatus: "",
                 allDayInd: true,
-                candidateId: "",
+              
                 repeatStartDate: "",
                 completionInd: "Incomplete",
                 repeatEndDate: "",
@@ -559,9 +559,10 @@ class EventForm extends Component {
                   )}
                   <Spacer />
                   <Field
-                    disabled="true"
-                    isRequired
+                    disabled={true}
+                 
                     name="candidateId"
+                        selectType="candidateList"
                    // type="text"
                     label="Talent"
                     placeholder="Start typing to search..."

@@ -189,7 +189,7 @@ class TaskForm extends Component {
                 startTime: startDate || null,
                 endTime: endDate || null,
                 employeesId: [],
-                candidateId: "",
+             
                 taskTypeId: "",
               }
           }
@@ -959,9 +959,10 @@ class TaskForm extends Component {
                   />
                   <Spacer />
                   <Field
-                    disabled="true"
-                    isRequired
+                    disabled={true}
+                 
                     name="candidateId"
+                        selectType="candidateList"
                     //type="text"
                     label="Talent"
                     placeholder="Start typing to search..."

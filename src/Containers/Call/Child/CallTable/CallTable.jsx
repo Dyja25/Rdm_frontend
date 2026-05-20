@@ -220,9 +220,14 @@ class CallTable extends React.Component {
         dataIndex: "startDate",
         defaultSortOrder: "descend",
         render: (text, item) => {
-          const startDate = dayjs(item.startDate).format("llll");
-          return <span>{startDate}</span>;
-        },
+  return (
+    <span>
+      {item?.startDate
+        ? dayjs(item.startDate).format("llll")
+        : "No Data"}
+    </span>
+  );
+},
         // render: (name, item, i) => {
         //   return <span>{` ${dayjs(item.startDate).format("llll")}`}</span>;
         // }
