@@ -132,7 +132,7 @@ class Sectors extends Component {
 
             <FlexContainer flexDirection="column">
               {/* <Title style={{ padding: 8 }}>Types Of Documents</Title> */}
-              <MainWrapper style={{ height: "30em", marginTop: "0.625em" }}>
+              <MainWrapper style={{ height: "38em", marginTop: "0.625em" }}>
                 {sectors.length &&
                   sectors.map((sector, i) => (
                     <SingleSectors

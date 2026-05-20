@@ -114,7 +114,7 @@ class Designation extends Component {
           >
             <FlexContainer flexDirection="column">
               {/* <Title style={{ padding: 8 }}>Designation</Title> */}
-              <MainWrapper style={{ height: "30em", marginTop: "0.625em" }}>
+              <MainWrapper style={{ height: "38em", marginTop: "0.625em" }}>
                 {designations.length &&
                   designations.map((designation, i) => (
                     <SingleDesignation

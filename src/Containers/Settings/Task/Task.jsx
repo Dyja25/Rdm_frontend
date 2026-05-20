@@ -124,7 +124,7 @@ class Task extends Component {
             }}
           >
             <FlexContainer flexDirection="column">
-              <MainWrapper style={{ height: "30em", marginTop: "0.625em" }}>
+              <MainWrapper style={{ height: "38em", marginTop: "0.625em" }}>
                 {tasks.length &&
                   tasks.map((task, i) => (
                     <SingleTasks

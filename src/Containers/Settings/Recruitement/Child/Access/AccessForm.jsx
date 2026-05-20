@@ -205,16 +205,16 @@ const AccessForm = (props) => {
       <Form className="form-background">
         <div style={{
           /* overflow-y: scroll; */
-          display: "flex",
-          justifyContent: "space-between",
-          height: "auto",
-          overflow: "scroll",
-          paddingRight: "0.6em"
+              height: "80vh",
+    display: "flex",
+    flexDirection: "column",
+    padding:"2px"
         }}>
           {props.fetchingDepartmentAccess ? (
             <BundleLoader />
           ) : (
-            <TabsWrapper>
+            
+            <TabsWrapper className='p-2'>
 
               {/* Vendor */}
               <FlexContainer justifyContent="space-between">

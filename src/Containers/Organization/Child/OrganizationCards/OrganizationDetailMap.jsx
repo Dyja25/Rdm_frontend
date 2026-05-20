@@ -27,7 +27,7 @@ class OrganizationDetailMap extends Component {
     ];
 
     return (
-      <MainWrapper style={{ padding: 0 }}>
+      <MainWrapper style={{ padding: 0, overflowX:"hidden" }}>
         <MapContainer
           center={[51.92301029999999, 4.470038700000032]}
           zoom={9}

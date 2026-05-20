@@ -26,7 +26,7 @@ const SkillsTab = (props) => {
     <>
       <FlexContainer flexWrap="nowrap">
         <div style={{ width: "100%" }}>
-          <TabsWrapper>
+          <TabsWrapper style={{height:"90vh"}}>
             <StyledTabs defaultActiveKey="0" onChange={handleTabChange}>
               <TabPane
                 tab={

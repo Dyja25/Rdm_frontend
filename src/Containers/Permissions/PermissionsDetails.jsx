@@ -11,7 +11,12 @@ class PermissionsDetails extends Component {
         <FlexContainer>
           <Suspense fallback={"Loading..."}>
             <FlexContainer flexWrap="no-wrap" style={{ width: "100%" }}>
-              <div style={{ width: "40%" }}>
+              <div
+  style={{
+    width: "40%",
+    margin: "0 auto",
+  }}
+>
                 <PermissionsDetailsLeft />
               </div>
             </FlexContainer>

@@ -351,19 +351,18 @@ function PermissionsDetailsLeft(props) {
    }
   return (
     <MainWrapper style={{ height: "446px", width:"", overflow: "auto" }}>
-      
-       <div>
+
       {/* <StyledLabel> 
            Click To Share                   
       </StyledLabel> */}
       {/* <PermissionForm /> */}
-      </div>
+     
       
       <Spacer />
       <div>
        <h1 style={{textAlign:"center"}}>Permission</h1>
        </div>
-       <FlexContainer style={{ width: "52%", justifyContent: "space-between" }}>
+       <FlexContainer style={{ width: "62%", justifyContent: "space-between" }}>
         <p>Talent</p>
         <div>
           <Popconfirm
@@ -374,7 +373,7 @@ function PermissionsDetailsLeft(props) {
             cancelText="Cancel"
           >
             <Switch
-              style={{ width: "5em" }}
+              style={{ width: "8em" }}
               checked={candidateInd || candidateShareInd}
               checkedChildren="Share"
               unCheckedChildren="Withhold"
@@ -383,7 +382,7 @@ function PermissionsDetailsLeft(props) {
         </div>
       </FlexContainer> 
 
-      <FlexContainer style={{ width: "52%", justifyContent: "space-between" }}>
+      <FlexContainer style={{ width: "62%", justifyContent: "space-between" }}>
         <p>Planner</p>
         <Popconfirm
           title="Do you wish to change Status ? "
@@ -397,14 +396,14 @@ function PermissionsDetailsLeft(props) {
           cancelText="Cancel"
         >
           <Switch
-            style={{ width: "5em" }}
+            style={{ width: "8em" }}
             checked={plannerInd || plannerShareInd}
             checkedChildren="Share"
             unCheckedChildren="Withhold"
           />
         </Popconfirm>
       </FlexContainer>
-      <FlexContainer style={{ width: "52%", justifyContent: "space-between" }}>
+      <FlexContainer style={{ width: "62%", justifyContent: "space-between" }}>
         <p>Contact</p>
         <Popconfirm
           title="Do you wish to change Status ? "
@@ -416,14 +415,14 @@ function PermissionsDetailsLeft(props) {
           cancelText="Cancel"
         >
           <Switch
-            style={{ width: "5em" }}
+            style={{ width: "8em", }}
             checked={contactToggleInd || contactInd}
             checkedChildren="Share"
             unCheckedChildren="Withhold"
           />
         </Popconfirm>
       </FlexContainer>
-      <FlexContainer style={{ width: "52%", justifyContent: "space-between" }}>
+      <FlexContainer style={{ width: "62%", justifyContent: "space-between" }}>
         <p>Partner</p>
         <Popconfirm
           title="Do you wish to change Status ? "
@@ -437,14 +436,14 @@ function PermissionsDetailsLeft(props) {
           cancelText="Cancel"
         >
           <Switch
-            style={{ width: "5em" }}
+            style={{ width: "8em" }}
             checked={partnerInd || partnerToggleInd}
             checkedChildren="Share"
             unCheckedChildren="Withhold"
           />
         </Popconfirm>
       </FlexContainer>
-      <FlexContainer style={{ width: "52%", justifyContent: "space-between" }}>
+      <FlexContainer style={{ width: "62%", justifyContent: "space-between" }}>
         <p>Partner Contact</p>
         <Popconfirm
           title="Do you wish to change Status ? "
@@ -458,14 +457,14 @@ function PermissionsDetailsLeft(props) {
           cancelText="Cancel"
         >
           <Switch
-            style={{ width: "5em" }}
+            style={{ width: "8em" }}
             checked={partnerContactInd || partnerContactToggleInd}
             checkedChildren="Share"
             unCheckedChildren="Withhold"
           />
         </Popconfirm>
       </FlexContainer>
-      <FlexContainer style={{ width: "52%", justifyContent: "space-between" }}>
+      <FlexContainer style={{ width: "62%", justifyContent: "space-between" }}>
 
         <p>Customer</p>
         <Popconfirm
@@ -479,14 +478,14 @@ function PermissionsDetailsLeft(props) {
           cancelText="Cancel"
         >
           <Switch
-            style={{ width: "5em" }}
+            style={{ width: "8em" }}
             checked={customerInd || customerToggleInd}
             checkedChildren="Share"
             unCheckedChildren="Withhold"
           />
         </Popconfirm>
       </FlexContainer>
-      <FlexContainer style={{ width: "52%", justifyContent: "space-between" }}>
+      <FlexContainer style={{ width: "62%", justifyContent: "space-between" }}>
         <p>Opportunity</p>
         <Popconfirm
           title="Do you wish to change Status ? "
@@ -500,14 +499,14 @@ function PermissionsDetailsLeft(props) {
         >
 
           <Switch
-            style={{ width: "5em" }}
+            style={{ width: "8em" }}
             checked={opportunityInd || opportunityToggleInd}
             checkedChildren="Share"
             unCheckedChildren="Withhold"
           />
         </Popconfirm>
       </FlexContainer>
-      <FlexContainer style={{ width: "52%", justifyContent: "space-between" }}>
+      <FlexContainer style={{ width: "62%", justifyContent: "space-between" }}>
         <p>Call</p>
         <Popconfirm
           title="Do you wish to change Status ? "
@@ -521,14 +520,14 @@ function PermissionsDetailsLeft(props) {
         >
 
           <Switch
-            style={{ width: "5em" }}
+            style={{ width: "8em" }}
             checked={callInd || callToggleInd}
             checkedChildren="Share"
             unCheckedChildren="Withhold"
           />
         </Popconfirm>
       </FlexContainer>
-      <FlexContainer style={{ width: "52%", justifyContent: "space-between" }}>
+      <FlexContainer style={{ width: "62%", justifyContent: "space-between" }}>
         <p>Events</p>
         <Popconfirm
           title="Do you wish to change Status ? "
@@ -542,14 +541,14 @@ function PermissionsDetailsLeft(props) {
         >
 
           <Switch
-            style={{ width: "5em" }}
+            style={{ width: "8em" }}
             checked={eventInd || eventToggleInd}
             checkedChildren="Share"
             unCheckedChildren="Withhold"
           />
         </Popconfirm>
       </FlexContainer>
-      <FlexContainer style={{ width: "52%", justifyContent: "space-between" }}>
+      <FlexContainer style={{ width: "62%", justifyContent: "space-between" }}>
         <p>Tasks</p>
         <Popconfirm
           title="Do you wish to change Status ? "
@@ -563,7 +562,7 @@ function PermissionsDetailsLeft(props) {
         >
 
           <Switch
-            style={{ width: "5em" }}
+            style={{ width: "8em" }}
             checked={taskInd || taskToggleInd}
             checkedChildren="Share"
             unCheckedChildren="Withhold"

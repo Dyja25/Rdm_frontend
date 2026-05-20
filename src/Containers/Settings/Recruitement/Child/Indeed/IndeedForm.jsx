@@ -74,7 +74,7 @@ function IndeedForm(props) {
                       type="primary"
                       htmlType="submit"
                     //   Loading={isSubmitting}
-                      
+                      className="mr-gap"
                       style={{ width: "7%", height: "2.5em" }}
                       // onClick={() => this.props.login('prabeen.strange@gmail.com', 'chicharito14')}
                     >

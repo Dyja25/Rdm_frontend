@@ -36,8 +36,8 @@ class Category extends Component {
       <>
 
         <FlexContainer flexWrap="nowrap">
-        <div style= {{width:"50%"}}>
-          <TabsWrapper>
+        <div style= {{width:"100%"}}>
+          <TabsWrapper style={{height:"90.3vh"}}>
             <StyledTabs defaultActiveKey="0" onChange={this.handleTabChange}>
               <TabPane
                 tab={

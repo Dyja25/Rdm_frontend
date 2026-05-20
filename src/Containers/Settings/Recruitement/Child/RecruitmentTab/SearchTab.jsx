@@ -76,7 +76,7 @@ function SeachTab(props) {
 
   return (
     <>
-    <TabsWrapper>
+    <TabsWrapper style={{height:"90.3vh"}}>
     <StyledTabs
            // defaultActiveKey="1"
            // onChange={this.handleTabChange}

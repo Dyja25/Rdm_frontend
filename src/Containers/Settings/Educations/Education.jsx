@@ -121,7 +121,7 @@ class Education extends Component {
             }}
           >
             <FlexContainer flexDirection="column">
-              <MainWrapper style={{ height: "30em", marginTop: "0.625em" }}>
+              <MainWrapper style={{ height: "38em", marginTop: "0.625em" }}>
                 {educations.length &&
                   educations.map((education, i) => (
                     <SingleEducations

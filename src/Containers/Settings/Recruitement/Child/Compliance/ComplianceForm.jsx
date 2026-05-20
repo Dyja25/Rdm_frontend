@@ -43,7 +43,7 @@ function ComplianceForm(props) {
 }
 
   return (
-    <MainWrapper style={{ height: "446px", width:"", overflow: "auto" }}>
+    <MainWrapper style={{ height: "90vh", width:"", overflow: "auto" }}>
       
        <div>
       {/* <StyledLabel> 

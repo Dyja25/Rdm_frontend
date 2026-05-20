@@ -5,25 +5,25 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Tooltip } from "antd";
+import { ActionIcon } from "../../../../../Components/Utils";
 
 function EmployeeDetailActionLeft () {
 
          const navigate = useNavigate();
     return (
       <FlexContainer alignItems="center">
-          <Tooltip
-  title={
-    <FormattedMessage
-      id="app.back"
-      defaultMessage="Back"
-    />
-  }
->
-  <ArrowBackIcon className="!cursor-pointer"
-    onClick={() => {navigate(-1) }}
-  />
-</Tooltip>
-      </FlexContainer>
+                  <ActionIcon
+                    style={{ marginRight: "0.3rem", color: "#1890ff" }}
+                    iconType="arrowBack"
+                    tooltipTitle={
+                      <FormattedMessage
+                        id="app.back"
+                        defaultMessage="Back"
+                      />
+                    }
+                    handleIconClick={() => navigate(-1)}
+                  />
+                </FlexContainer>
     );
   }
 

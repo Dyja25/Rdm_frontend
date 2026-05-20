@@ -8,7 +8,7 @@ const TabPane = StyledTabs.TabPane;
 function CattleFeedTab(props) {
     return (
         <>
-            <TabsWrapper>
+            <TabsWrapper style={{height:"90.3vh"}}>
                 <StyledTabs defaultActiveKey="1" type="card">
                     <TabPane tab={`Sales`} key="1">
                         <div style={{ marginTop: 10 }}>

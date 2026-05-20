@@ -139,6 +139,7 @@ import SearchSelect from "../../../../../../Components/Forms/Formik/SearchSelect
                       type="primary"
                       htmlType="submit"
                    Loading={props.addingPartner}
+                   className='mr-gap'
                     >Update                  
                     </Button>
                     </FlexContainer>

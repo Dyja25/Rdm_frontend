@@ -14,7 +14,7 @@ const TabPane = StyledTabs.TabPane;
 function IndeedTab(props) {
   return (
     <>
-      <TabsWrapper>
+      <TabsWrapper style={{height:"90.3vh"}}>
         <StyledTabs defaultActiveKey="1" type="card">
           <TabPane
            tab={`Website`}

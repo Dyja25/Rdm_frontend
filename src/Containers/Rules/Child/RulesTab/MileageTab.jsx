@@ -14,7 +14,7 @@ function MileageTab(props) {
   }, []);
   return (
     <>
-      <TabsWrapper>
+      <TabsWrapper style={{height:"90.3vh"}}>
         {/* <StyledTabs defaultActiveKey="1" type="card"> */}
         {/* <TabPane tab={`Distribution`} key="1"> */}
         <MileageForm mileageData={props.mileageData} />

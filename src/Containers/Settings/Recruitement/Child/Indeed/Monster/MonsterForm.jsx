@@ -88,7 +88,7 @@ function MonsterForm(props) {
                       type="primary"
                       htmlType="submit"
                       Loading={props.addingMonster}
-                      
+                      className="mr-gap"
                       style={{ width: "7%", height: "2.5em" }}
                       // onClick={() => this.props.login('prabeen.strange@gmail.com', 'chicharito14')}
                     >

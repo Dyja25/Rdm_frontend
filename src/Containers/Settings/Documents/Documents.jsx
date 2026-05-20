@@ -115,7 +115,7 @@ class Documents extends Component {
           >
             <FlexContainer flexDirection="column">
               {/* <Title style={{ padding: 8 }}>Types Of Documents</Title> */}
-              <MainWrapper style={{ height: "30em", marginTop: "0.62em" }}>
+              <MainWrapper style={{ height: "38em", marginTop: "0.62em" }}>
                 {documents.length &&
                   documents.map((document, i) => (
                     <SingleDocuments

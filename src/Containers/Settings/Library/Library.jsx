@@ -242,9 +242,10 @@ class Library extends Component {
             <FlexContainer
               style={{
                 border: "0.0625em solid #eee",
-                width: "100%",
+                width: "86%",
                 padding: "1.6rem",
                 marginRight: 70,
+                overflowX:"hidden"
               }}
             >
               <p style={{ color: "#035b9b", fontSize: "1rem" }}>
