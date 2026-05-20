@@ -273,7 +273,8 @@ class CandidateTaskForm extends Component {
                       <Field
                         isRequired
                         name="taskName"
-                        label="Name"
+                        // label="Name"
+                        label={ <FormattedMessage id="app.name" defaultMessage="Name" />}
                         component={InputComponent}
                         isColumn
                         width={"100%"}
@@ -289,6 +290,7 @@ class CandidateTaskForm extends Component {
                           <StatusIcon
                             color="blue"
                             type="To Start"
+                            // label={ <FormattedMessage id="app.tostart" defaultMessage="To Start" />}
                             iconType="fa-hourglass-start"
                             tooltip="To Start"
                             status={this.state.active}
@@ -329,7 +331,10 @@ class CandidateTaskForm extends Component {
                         style={{ width: "100%" }}
                       >
                         <div style={{ width: "100%" }}>
-                          <StyledLabel>Priority</StyledLabel>
+                          <StyledLabel>
+                            {/* Priority */}
+                             <FormattedMessage id="app.priority" defaultMessage="Priority" />
+                            </StyledLabel>
 
                           <FlexContainer>
                           <Tooltip
@@ -586,7 +591,8 @@ class CandidateTaskForm extends Component {
                       <Field
                         isRequired
                         name="startDate"
-                        label="Start "
+                        // label="Start "
+                         label={ <FormattedMessage id="app.start" defaultMessage="Start" />}
                         component={DatePicker}
                         // width="100%"
                         value={values.startDate}
@@ -600,7 +606,8 @@ class CandidateTaskForm extends Component {
                       <Field
                         isRequired
                         name="endDate"
-                        label="End "
+                        // label="End "
+                          label={ <FormattedMessage id="app.end" defaultMessage="End" />}
                         isColumn
                         component={DatePicker}
                         value={values.endDate || values.startDate}
@@ -664,7 +671,8 @@ class CandidateTaskForm extends Component {
                 >
                   <Field
                     name="notes"
-                    label="Description"
+                    // label="Description"
+                     label={ <FormattedMessage id="app.description" defaultMessage="Description" />}
                     width={"350px"}
                     isColumn
                     component={TextareaComponent}
@@ -710,7 +718,8 @@ class CandidateTaskForm extends Component {
                   htmlType="submit"
                 // loading={isEditing ? updatingTask : addingTask}
                 >
-                  Create
+                  {/* Create */}
+                  { <FormattedMessage id="app.create" defaultMessage="Create" />}
                   {/* {isEditing ? "Update" : "Create"} */}
                 </Button>
               </FlexContainer>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { FlexContainer } from "../../../../../Components/UI/Layout";
 import { SubTitle } from "../../../../../Components/UI/Elements";
+import { FormattedMessage } from "react-intl";
 
 class OpportunityReportDetails extends Component {
   render() {
@@ -16,7 +17,11 @@ class OpportunityReportDetails extends Component {
         <FlexContainer justifyContent="flex-end">
           
         </FlexContainer>
-        <OpportunityItemRow label="Customer"
+        <OpportunityItemRow //label="Customer"
+          label={ <FormattedMessage
+                        id="app.customer"
+                        defaultMessage="Customer"
+                      />}
          value={customer} 
         />
       

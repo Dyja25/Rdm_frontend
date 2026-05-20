@@ -6,6 +6,7 @@ import { bindActionCreators } from "redux";
 import { StyledModal } from "../../../../../../../Components/UI/Antd";
 import { FlexContainer } from "../../../../../../../Components/UI/Layout";
 import ActivityTab from "./ActivityTab.jsx";
+import { FormattedMessage } from "react-intl";
 
 class ActivityModal extends Component {
   render() {
@@ -18,7 +19,10 @@ class ActivityModal extends Component {
     return (
       <>
         <StyledModal
-          title="Activity"
+          // title="Activity"
+           title={
+            <FormattedMessage id="app.activity" defaultMessage="Activity" />
+          }
           visible={addCandidateActivityModal}
           width={"55vw"}
           bodyStyle={{ padding: 0 }}

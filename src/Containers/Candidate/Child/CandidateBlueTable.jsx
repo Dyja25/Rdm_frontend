@@ -104,14 +104,16 @@ const handleLoadMore = () => {
               size="small"
               style={{ width: 90 }}
             >
-              Search
+              {/* Search */}
+              <FormattedMessage id="app.search" defaultMessage="Search" />
             </Button>
             <Button
               onClick={() => handleReset(clearFilters)}
               size="small"
               style={{ width: 90 }}
             >
-              Reset
+              {/* Reset */}
+              <FormattedMessage id="app.reset" defaultMessage="Reset" />
             </Button>
             <Button
               type="link"
@@ -122,7 +124,8 @@ const handleLoadMore = () => {
                 setSearchedColumn(dataIndex);
               }}
             >
-              Filter
+              {/* Filter */}
+              <FormattedMessage id="app.filter" defaultMessage="Filter" />
             </Button>
           
         </div>

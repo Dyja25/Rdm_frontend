@@ -310,6 +310,20 @@
      "app.course":"Course",
      "app.accountHolder":"Account Holder",
      "app.defaultBank":"Default Bank?",
-     "app.clickordragfiletothisareatoupload":"Click or drag file to this area to upload."
+     "app.clickordragfiletothisareatoupload":"Click or drag file to this area to upload.",
+     "app.filesareallowed":"Only PDF, DOC, DOCX files are allowed",
+     "app.searchbyName&Email":"Search by Name & Email",
+     "app.filterTalent":"Filter Talent",
+     "app.parameter":"Parameter",
+     "app.and":"And",
+     "app.or":"Or",
+     "app.callScheduler":"Call Scheduler",
+     "app.recipient":"Recipient",
+     "app.body":"Body",
+     "app.attachment":"Attachment",
+    "app.sendEmail":"Send Email",
+    "app.transfer":"Transfer",
+    "app.doyouwanttoblacklist":"Do you want to blacklist?",
+    "app.doyouwanttoUnblock":"Do you want to Unblock?"
 
 }

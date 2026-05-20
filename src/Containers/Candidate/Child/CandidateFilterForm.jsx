@@ -176,7 +176,13 @@ function CandidateFilterForm(props){
                     width: "36%",
                   }}
                 >
-                     <StyledLabel>Parameter</StyledLabel> 
+                     <StyledLabel>
+                      {/* Parameter */}
+                      <FormattedMessage
+                                id="app.parameter"
+                                defaultMessage="Parameter"
+                              />
+                      </StyledLabel> 
   
   <Select
   
@@ -187,8 +193,20 @@ function CandidateFilterForm(props){
  >
 
    
-<Option value="Role">Role</Option>
-    <Option value="Cost">Cost</Option>
+<Option value="Role">
+  {/* Role */}
+  <FormattedMessage
+     id="app.role"
+      defaultMessage="Role"
+    />
+  </Option>
+    <Option value="Cost">
+      {/* Cost */}
+       <FormattedMessage
+     id="app.cost"
+      defaultMessage="Cost"
+    />
+      </Option>
     
    
  </Select> 
@@ -281,8 +299,14 @@ function CandidateFilterForm(props){
                    checked={selectParameter}
                   onChange={handleChange}
                    // disabled={this.state.availability}
-                   checkedChildren="And"
-                   unCheckedChildren="Or"
+                   checkedChildren={<FormattedMessage
+                          id="app.and"
+                          defaultMessage="And"
+                        />}
+                   unCheckedChildren={<FormattedMessage
+                          id="app.or"
+                          defaultMessage="Or"
+                        />}
                  />
                 </div>
                 <div
@@ -295,7 +319,11 @@ function CandidateFilterForm(props){
                      {/* <StyledLabel>Parameter</StyledLabel>  */}
                      {selectParameter && (
                          <StyledLabel>
-                          Parameter
+                          {/* Parameter */}
+                             <FormattedMessage
+                                id="app.parameter"
+                                defaultMessage="Parameter"
+                              />
   <Select
   // label="Parameter"
   
@@ -306,8 +334,20 @@ function CandidateFilterForm(props){
  >
 
    
-<Option value="Work Preference">Work Preference</Option>
-<Option value="Location">Location</Option>
+<Option value="Work Preference">
+  {/* Work Preference */}
+   <FormattedMessage
+                                id="app.workPreference"
+                                defaultMessage=" Work Preference"
+                              />
+</Option>
+<Option value="Location">
+  {/* Location */}
+    <FormattedMessage
+                                id="app.location"
+                                defaultMessage="Location"
+                              />
+  </Option>
     
     
    

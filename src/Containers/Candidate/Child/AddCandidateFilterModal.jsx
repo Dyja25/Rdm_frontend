@@ -9,11 +9,11 @@ const AddCandidateFilterModal = props => {
   return (
     <>
       <StyledModal
-        title="Filter Talent"
-        // title={<FormattedMessage
-        //   id="app.candidate"
-        //   defaultMessage="Candidate"
-        // />}
+        // title="Filter Talent"
+        title={<FormattedMessage
+          id="app.filterTalent"
+          defaultMessage="Filter Talent"
+        />}
         width="55%"
         visible={addCandidateFilterModal}
         closable

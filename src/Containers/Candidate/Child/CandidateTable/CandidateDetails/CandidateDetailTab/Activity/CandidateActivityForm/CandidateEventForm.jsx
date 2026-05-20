@@ -23,6 +23,7 @@ import {
 import { FlexContainer } from "../../../../../../../../Components/UI/Layout";
 import { TextareaComponent } from "../../../../../../../../Components/Forms/Formik/TextareaComponent";
 import { StyledPopconfirm } from "../../../../../../../../Components/UI/Antd";
+import { FormattedMessage } from "react-intl";
 
 
 class CandidateEventForm extends Component {
@@ -244,7 +245,8 @@ class CandidateEventForm extends Component {
                   <Field
                     isRequired
                     name="eventSubject"
-                    label="Topic"
+                    // label="Topic"
+                    label={ <FormattedMessage id="app.topic" defaultMessage="Topic" />}
                     isColumn
                     width={"100%"}
                     component={InputComponent}
@@ -256,7 +258,8 @@ class CandidateEventForm extends Component {
                       <Field
                         isRequired
                         name="startDate"
-                        label="Start "
+                        // label="Start"
+                        label={ <FormattedMessage id="app.start" defaultMessage="Start" />}
                         isColumn
                         component={DatePicker}
                         value={values.startDate}
@@ -267,7 +270,8 @@ class CandidateEventForm extends Component {
                       <Field
                         isRequired
                         name="startTime"
-                        label="Start Time"
+                        // label="Start Time"
+                        label={ <FormattedMessage id="app.starttime" defaultMessage="Start Time" />}
                         isColumn
                         component={TimePicker}
                         use12Hours
@@ -283,7 +287,8 @@ class CandidateEventForm extends Component {
                       <Field
                         isRequired
                         name="endDate"
-                        label="End "
+                        // label="End "
+                        label={ <FormattedMessage id="app.end" defaultMessage="End" />}
                         component={DatePicker}
                         isColumn
                         value={values.endDate || values.startDate}
@@ -308,7 +313,8 @@ class CandidateEventForm extends Component {
                       <Field
                         isRequired
                         name="endTime"
-                        label="End Time"
+                        // label="End Time"
+                        label={ <FormattedMessage id="app.endtime" defaultMessage="End Time" />}
                         isColumn
                         component={TimePicker}
                         use12Hours
@@ -408,7 +414,8 @@ class CandidateEventForm extends Component {
                   {/* <Spacer style={{ marginBottom: "45px" }} /> */}
                   <Field
                     name="eventDescription"
-                    label="Description"
+                    // label="Description"
+                    label={ <FormattedMessage id="app.description" defaultMessage="Description" />}
                     isColumn
                     width={"100%"}
                     component={TextareaComponent}
@@ -454,7 +461,8 @@ class CandidateEventForm extends Component {
                   htmlType="submit"
                 // loading={isEditing ? updatingEvent : addingCandidateevent}
                 >
-                  Create
+                  {/* Create */}
+                   <FormattedMessage id="app.create" defaultMessage="Create" />
                   {/* {isEditing ? "Update" : "Create"} */}
                 </Button>
               </FlexContainer>

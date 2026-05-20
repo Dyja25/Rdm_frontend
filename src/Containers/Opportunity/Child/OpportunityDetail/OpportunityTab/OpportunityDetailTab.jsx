@@ -189,7 +189,13 @@ return  <BundleLoader />
                 <>
                   <span onClick={this.handleRecruitClick}>
               <TeamOutlined />
-                    <span style={{ marginLeft: '0.25em' }}>RecruitPro</span>
+                    <span style={{ marginLeft: '0.25em' }}>
+                      {/* RecruitPro */}
+                      <FormattedMessage
+                            id="app.recruitpro"
+                            defaultMessage="RecruitPro"
+                          />
+                      </span>
                   </span>
                   {activeKey === "1" && (
                     <>
@@ -313,7 +319,7 @@ return  <BundleLoader />
                     <i class="far fa-address-card"></i>
                     <span style={{ marginLeft: '0.25em' }}>
                       <FormattedMessage
-                        id="app.contacts"
+                        id="app.contact"
                         defaultMessage="Contacts"
                       />
                       {/* Contacts */}

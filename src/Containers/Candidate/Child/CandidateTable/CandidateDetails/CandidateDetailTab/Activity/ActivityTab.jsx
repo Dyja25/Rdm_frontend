@@ -4,6 +4,7 @@ import { bindActionCreators } from "redux";
 
 import { StyledTabs } from "../../../../../../../Components/UI/Antd";
 import { TabsWrapper } from "../../../../../../../Components/UI/Layout";
+import { FormattedMessage } from "react-intl";
 
 const CandidateCallForm = lazy(() =>
   import("../Activity/CandidateActivityForm/CandidateCallForm.jsx")
@@ -33,7 +34,8 @@ export class DistributorActivityTab extends Component {
               tab={
                 <span>
                  <i class="fas fa-phone-square"></i>&nbsp;
-                  Calls
+                  {/* Calls */}
+                  <FormattedMessage id="app.calls" defaultMessage="Calls" />
                 </span>
               }
               key="1"
@@ -46,7 +48,8 @@ export class DistributorActivityTab extends Component {
               tab={
                 <span>
                   <i class="fas fa-tasks"></i>&nbsp;
-                  Events
+                  {/* Events */}
+                   <FormattedMessage id="app.event" defaultMessage="Events" />
                 </span>
               }
               key="2"
@@ -59,7 +62,8 @@ export class DistributorActivityTab extends Component {
               tab={
                 <span>
                   <i class="far fa-calendar-check"></i>&nbsp;
-                  Tasks
+                  {/* Tasks */}
+                  <FormattedMessage id="app.task" defaultMessage="task" />
                 </span>
               }
               key="3"

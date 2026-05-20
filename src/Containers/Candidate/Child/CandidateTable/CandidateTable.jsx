@@ -219,18 +219,26 @@ const rowSelection = {
             type="primary"
             onClick={() => handleSearch(selectedKeys, confirm, dataIndex)}
             // icon={<SearchOutlined />}
-            icon="search"
+            // icon="search"
             size="small"
             style={{ width: 90 }}
           >
-            Search
+            {/* Search */}
+            <FormattedMessage
+                            id="app.search"
+                            defaultMessage="Search"
+                          />
           </Button>
           <Button
             onClick={() => handleReset(clearFilters)}
             size="small"
             style={{ width: 90 }}
           >
-            Reset
+            {/* Reset */}
+             <FormattedMessage
+                            id="app.reset"
+                            defaultMessage="Reset"
+                          />
           </Button>
           <Button
             type="link"
@@ -241,7 +249,11 @@ const rowSelection = {
               setSearchedColumn(dataIndex);
             }}
           >
-            Filter
+            {/* Filter */}
+             <FormattedMessage
+                            id="app.filter"
+                            defaultMessage="Filter"
+                          />
           </Button>
         </div>
       ),
@@ -980,7 +992,11 @@ const rowSelection = {
         disabled={!hasSelected}
         loading={loading}
       >
-        Clear
+        {/* Clear */}
+          <FormattedMessage
+                 id="app.clear"
+                 defaultMessage="Clear"
+                                    />
       </Button>
       <span
         style={{
@@ -994,7 +1010,11 @@ const rowSelection = {
         onClick={handleTransferClick}
         disabled={!hasSelected}
       >
-        Select
+        {/* Select */}
+         <FormattedMessage
+                 id="app.select"
+                 defaultMessage="Select"
+                                    />
       </Button>
 
       {visibleselect && hasSelected && (

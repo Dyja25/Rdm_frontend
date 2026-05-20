@@ -62,7 +62,11 @@ function ContactTable(props) {
               size="small"
               style={{ width: 90 }}
             >
-              Search
+            {/* Search */}
+            <FormattedMessage
+                            id="app.search"
+                            defaultMessage="Search"
+                          />
             </Button>
             &nbsp;
             <Button
@@ -70,7 +74,11 @@ function ContactTable(props) {
               size="small"
               style={{ width: 90 }}
             >
-              Reset
+               {/* Reset */}
+                           <FormattedMessage
+                                          id="app.reset"
+                                          defaultMessage="Reset"
+                                        />
             </Button>
             &nbsp;
             <Button
@@ -82,7 +90,11 @@ function ContactTable(props) {
                 setSearchedColumn(dataIndex);
               }}
             >
-              Filter
+                {/* Filter */}
+                           <FormattedMessage
+                                          id="app.filter"
+                                          defaultMessage="Filter"
+                                        />
             </Button>
           
         </div>
@@ -352,7 +364,10 @@ function ContactTable(props) {
                   render: (name, item, i) => {
                     return (
                       <StyledPopconfirm
-                        title="Do you want to delete?"
+                        // title="Do you want to delete?"
+                        title={ <FormattedMessage
+                                         id="app.doyouwanttodelete"
+                                         defaultMessage="Do you want to delete?"/>}
                         onConfirm={() =>
                           props.deleteContactData(item.contactId,props.viewType
                          )

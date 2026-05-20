@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { FlexContainer } from "../../../../../Components/UI/Layout";
 import { SubTitle } from "../../../../../Components/UI/Elements";
+import { FormattedMessage } from "react-intl";
 
 class OpportunityRecruiterDetailsDetails extends Component {
   render() {
@@ -22,7 +23,11 @@ class OpportunityRecruiterDetailsDetails extends Component {
               />
             </Tooltip> */}
         </FlexContainer>
-        <OpportunityItemRow label="Assigned To"
+        <OpportunityItemRow //label="Assigned To"
+        label={ <FormattedMessage
+                        id="app.assignedto"
+                        defaultMessage="Assigned To"
+                      />}
         value={assignedTo} 
         />
           {/* <MultiAvatar
