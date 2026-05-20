@@ -9,6 +9,7 @@ import RemarksTable from "../../../../../../Opportunity/Child/OpportunityDetail/
  import { handleRemarksModal, } from "../../../../../../Opportunity/OpportunityAction";
 import AddRemarksModal from "../../../../../../Opportunity/Child/OpportunityDetail/OpportunityTab/Recruitment/Child/AddRemarksModal";
 import { PlusOutlined } from "@ant-design/icons";
+import { FormattedMessage } from "react-intl";
 
 
 
@@ -39,7 +40,10 @@ class PlacementDetailsTab extends Component {
             <TabPane
               tab={
                 <>
-                  <span>Remarks</span>
+                  <span><FormattedMessage
+          id="app.remarks"
+          defaultMessage="Remarks"
+        /></span>
                   {activeKey === "1" && (
                     <>
                      

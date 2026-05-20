@@ -25,7 +25,7 @@ class CandidateDetailView extends Component {
 
 <CandidateItemRow //label="Mobile Number" 
           label={<FormattedMessage
-            id="app.mobileNo"
+            id="app.mobile#"
             defaultMessage="Mobile #"
           />}
           value= {`${countryDialCode || ""} ${mobileNumber || ""}`}/>
@@ -103,7 +103,7 @@ class CandidateDetailView extends Component {
             
             <CandidateItemRow //label="Mobile Number" 
           label={<FormattedMessage
-            id="app.dateOfBirth"
+            id="app.dateofbirth"
             defaultMessage="Date Of Birth"
           />}
           value={this.props.candidate.dateOfBirth === null ? "No Data" :

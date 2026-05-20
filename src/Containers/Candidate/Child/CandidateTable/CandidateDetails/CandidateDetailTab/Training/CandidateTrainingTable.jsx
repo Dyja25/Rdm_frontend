@@ -46,7 +46,7 @@ class CandidateTrainingTable extends Component {
       {
         //title: " Course Name",
         title: (
-          <FormattedMessage id="app.courseName" defaultMessage=" Course Name" />
+          <FormattedMessage id="app.coursename" defaultMessage=" Course Name" />
         ),
         dataIndex: "courseName",
          width: "15%"
@@ -54,7 +54,7 @@ class CandidateTrainingTable extends Component {
       {
         //title: "Start Date",
         title: (
-          <FormattedMessage id="app.startDate" defaultMessage="Start Date" />
+          <FormattedMessage id="app.startdate" defaultMessage="Start Date" />
         ),
         dataIndex: "startDate",
         width: "15%",
@@ -64,7 +64,7 @@ class CandidateTrainingTable extends Component {
       },
       {
         //title: "End Date",
-        title: <FormattedMessage id="app.endDate" defaultMessage="End Date" />,
+        title: <FormattedMessage id="app.enddate" defaultMessage="End Date" />,
         dataIndex: "endDate",
         width: "15%"
       //   render: (name, item, i) => {

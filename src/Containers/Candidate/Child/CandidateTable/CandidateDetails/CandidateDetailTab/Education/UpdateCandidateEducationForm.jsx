@@ -148,7 +148,7 @@ class UpdateCandidateEducationForm extends Component {
                       //label="Course Name"
                       label={
                         <FormattedMessage
-                          id="app.courseName"
+                          id="app.coursename"
                           defaultMessage="Course Name"
                         />
                       }
@@ -163,7 +163,13 @@ class UpdateCandidateEducationForm extends Component {
                   </div>
                   <Spacer />
                   <div>
-                    <StyledLabel>Course Type</StyledLabel>
+                    <StyledLabel>
+                      {/* Course Type */}
+                       <FormattedMessage
+                          id="app.coursetype"
+                          defaultMessage="Course Type"
+                        />
+                      </StyledLabel>
                     <Spacer />
                     <ButtonGroup>
                       <StatusIcon
@@ -231,7 +237,7 @@ class UpdateCandidateEducationForm extends Component {
                       //label="University/Institute"
                       label={
                         <FormattedMessage
-                          id="app.university"
+                          id="app.universityinstitutename"
                           defaultMessage="University/Institute"
                         />
                       }
@@ -252,7 +258,7 @@ class UpdateCandidateEducationForm extends Component {
                         // label="Year of Passing"
                         label={
                           <FormattedMessage
-                            id="app.yearOfPassing"
+                            id="app.yearofpassing"
                             defaultMessage="Year of Passing"
                           />
                         }
@@ -276,7 +282,7 @@ class UpdateCandidateEducationForm extends Component {
                         //label="Marks Secured"
                         label={
                           <FormattedMessage
-                            id="app.marksSecured"
+                            id="app.markssecured"
                             defaultMessage="Marks Secured"
                           />
                         }
@@ -298,7 +304,7 @@ class UpdateCandidateEducationForm extends Component {
                         name="marksType"
                         label={
                           <FormattedMessage
-                            id="app.marksType"
+                            id="app.markstype"
                             defaultMessage="Marks Type"
                           />
                         }

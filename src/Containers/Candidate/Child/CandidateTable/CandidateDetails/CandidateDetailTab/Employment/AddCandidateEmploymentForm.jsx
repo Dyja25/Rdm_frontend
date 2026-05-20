@@ -99,7 +99,7 @@ class CandidateEmploymentForm extends Component {
                         // label="Organization Name"
                         label={
                           <FormattedMessage
-                            id="app.companyName"
+                            id="app.organization"
                             defaultMessage="Organization"
                           />
                     
@@ -216,7 +216,7 @@ class CandidateEmploymentForm extends Component {
                           //label="Salary Type"
                           label={
                             <FormattedMessage
-                              id="app.salaryType"
+                              id="app.salarytype"
                               defaultMessage="Salary Type"
                             />
                           }
@@ -288,7 +288,7 @@ class CandidateEmploymentForm extends Component {
                       // label="Name of Document"
                       label={
                         <FormattedMessage
-                          id="app.documentTitle"
+                          id="app.nameofdocument"
                           defaultMessage="Name of Document"
                         />
                       }
@@ -326,7 +326,7 @@ class CandidateEmploymentForm extends Component {
                       //label="Description of Document"
                       label={
                         <FormattedMessage
-                          id="app.documentDescription"
+                          id="app.descriptionofdocument"
                           defaultMessage="Description of Document"
                         />
                       }

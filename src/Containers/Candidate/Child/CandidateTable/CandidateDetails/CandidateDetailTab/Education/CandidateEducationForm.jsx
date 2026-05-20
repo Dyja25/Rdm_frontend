@@ -138,7 +138,7 @@ class CandidateEducationForm extends Component {
                       //label="Course Name"
                       label={
                         <FormattedMessage
-                          id="app.courseName"
+                          id="app.coursename"
                           defaultMessage="Course Name"
                         />
                       }
@@ -154,7 +154,15 @@ class CandidateEducationForm extends Component {
 
                 <FlexContainer justifyContent="space-between">
                 <div style={{width:"47%"}}>
-                    <StyledLabel>Course Type</StyledLabel>
+                    <StyledLabel>
+                      {/* Course Type */}
+                       
+                        <FormattedMessage
+                          id="app.coursetype"
+                          defaultMessage="Course Type"
+                        />
+                    
+                    </StyledLabel>
                     <Spacer />
                     <ButtonGroup>
                       <StatusIcon
@@ -198,7 +206,7 @@ class CandidateEducationForm extends Component {
                       //label="Specialization"
                       label={
                         <FormattedMessage
-                          id="app.Specialization"
+                          id="app.specialization"
                           defaultMessage="Specialization"
                         />
                       }
@@ -218,7 +226,7 @@ class CandidateEducationForm extends Component {
                       //label="University/Institute "
                       label={
                         <FormattedMessage
-                          id="app.university"
+                          id="app.universityinstitutename"
                           defaultMessage="University/Institute"
                         />
                       }
@@ -235,7 +243,7 @@ class CandidateEducationForm extends Component {
                         //label="Year of Passing"
                         label={
                           <FormattedMessage
-                            id="app.yearOfPassing"
+                            id="app.yearofpassing"
                             defaultMessage="Year of Passing"
                           />
                         }
@@ -254,7 +262,7 @@ class CandidateEducationForm extends Component {
                         //label="Marks Secured"
                         label={
                           <FormattedMessage
-                            id="app.marksSecured"
+                            id="app.markssecured"
                             defaultMessage="Marks Secured"
                           />
                         }
@@ -271,7 +279,7 @@ class CandidateEducationForm extends Component {
                         name="marksType"
                         label={
                           <FormattedMessage
-                            id="app.marksType"
+                            id="app.markstype"
                             defaultMessage="Marks Type"
                           />
                         }
@@ -313,7 +321,7 @@ class CandidateEducationForm extends Component {
                     //label="Name of Document"
                     label={
                       <FormattedMessage
-                        id="app.documentTitle"
+                        id="app.nameofdocument"
                         defaultMessage="Name of Document"
                       />
                     }
@@ -350,7 +358,7 @@ class CandidateEducationForm extends Component {
                     //label="Description of document"
                     label={
                       <FormattedMessage
-                        id="app.documentDescription"
+                        id="app.descriptionofdocument"
                         defaultMessage="Description of document"
                       />
                     }

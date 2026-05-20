@@ -9,6 +9,7 @@ import {
   deleteTopicByCandidateId,
 } from "../../../../CandidateAction";
 import { PlusOutlined } from "@ant-design/icons";
+import { FormattedMessage } from "react-intl";
 class CandidateTopicOfInterest extends React.Component {
   constructor(props) {
     super(props);
@@ -72,7 +73,7 @@ class CandidateTopicOfInterest extends React.Component {
                 fontSize="0.875em"
                 style={{ fontWeight: 600, marginBottom: "0.2rem" }}
               >
-                Skills of interest{" "}
+                <FormattedMessage id="app.skillsOfInterest" defaultMessage="Skills of interest" />{" "}
               </Title>
               {fetchingTopicsByCandidateId ? (
                 <p>fetching Skills ...</p>
@@ -126,7 +127,9 @@ class CandidateTopicOfInterest extends React.Component {
                   style={{ background: "#fff", borderStyle: "dashed" }}
                 >
                   <PlusOutlined
-                  type="plus" /> Skill
+                  type="plus" /> 
+                  {/* Skill */}
+                                  <FormattedMessage id="app.skills" defaultMessage="Skills" />{" "}
                 </Tag>
               )}
             </div>

@@ -95,7 +95,7 @@ function RemarkForm(props) {
                     name="stageId"
                     // label="Stage"
                     label={<FormattedMessage
-                      id="app.stageId"
+                      id="app.stage"
                       defaultMessage="Stage"
                     />}
                     isRequired

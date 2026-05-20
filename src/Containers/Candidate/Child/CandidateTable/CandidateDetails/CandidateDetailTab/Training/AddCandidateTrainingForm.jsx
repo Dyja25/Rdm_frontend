@@ -87,7 +87,7 @@ class AddCandidateTrainingForm extends Component {
                           name="courseName"                          
                           label={
                             <FormattedMessage
-                              id="app.courseName"
+                              id="app.coursename"
                               defaultMessage="Course Name"
                             />
                           }
@@ -214,7 +214,7 @@ class AddCandidateTrainingForm extends Component {
                         name="documentTitle"                        
                         label={
                           <FormattedMessage
-                            id="app.documentTitle"
+                            id="app.nameofdocument"
                             defaultMessage="Name of Document"
                           />
                         }
@@ -247,7 +247,7 @@ class AddCandidateTrainingForm extends Component {
                         name="documentDescription"                        
                         label={
                           <FormattedMessage
-                            id="app.documentDescription"
+                            id="app.descriptionofdocument"
                             defaultMessage="Description of Document"
                           />
                         }

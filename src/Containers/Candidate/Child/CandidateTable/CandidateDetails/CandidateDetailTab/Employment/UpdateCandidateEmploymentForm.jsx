@@ -146,7 +146,7 @@ class UpdateCandidateEmploymentForm extends Component {
                         //label="Start Date"
                         label={
                           <FormattedMessage
-                            id="app.startDate"
+                            id="app.startdate"
                             defaultMessage="Start Date"
                           />
                         }
@@ -170,7 +170,7 @@ class UpdateCandidateEmploymentForm extends Component {
                         // label="End Date "
                         label={
                           <FormattedMessage
-                            id="app.endDate"
+                            id="app.enddate"
                             defaultMessage="End Date"
                           />
                         }
@@ -239,7 +239,7 @@ class UpdateCandidateEmploymentForm extends Component {
                         //label="Salary Type"
                         label={
                           <FormattedMessage
-                            id="app.salaryType"
+                            id="app.salarytype"
                             defaultMessage="Salary Type"
                           />
                         }

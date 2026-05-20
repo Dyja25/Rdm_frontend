@@ -395,7 +395,7 @@ console.log ("SlR",salelist,recruiterlist)
     },
 
     {
-      title: <FormattedMessage id="app.mobileNumber" defaultMessage="Mobile #" />,
+      title: <FormattedMessage id="app.mobile#" defaultMessage="Mobile #" />,
       dataIndex: "mobileNumber",
       width: "10%",
       render: (name, item, i) => {

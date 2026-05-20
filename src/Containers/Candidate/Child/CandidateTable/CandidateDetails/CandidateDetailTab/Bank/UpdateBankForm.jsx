@@ -94,7 +94,7 @@ class UpdateBankForm extends Component {
                       //label="IFSC CODE"
                       label={
                         <FormattedMessage
-                          id="app.ifscCode"
+                          id="app.ifsccode"
                           defaultMessage="SWIFT CODE"
                         />
                       }
@@ -118,8 +118,8 @@ class UpdateBankForm extends Component {
                       //label="Branch Name"
                       label={
                         <FormattedMessage
-                          id="app.branch"
-                          defaultMessage="Branch "
+                          id="app.branchname"
+                          defaultMessage="Branch Name"
                         />
                       }
                       type="text"
@@ -139,12 +139,12 @@ class UpdateBankForm extends Component {
                 <div style={{ width: "100%" }}>
                   <FastField
                     isRequired
-                    name="bankName"
+                    name="bank"
                     //label="Bank Name"
                     label={
                       <FormattedMessage
-                        id="app.bank"
-                        defaultMessage="Bank"
+                        id="app.bankname"
+                        defaultMessage="Bank Name"
                       />
                     }
                     type="text"
@@ -160,13 +160,16 @@ class UpdateBankForm extends Component {
                   />
                 </div>
                 <Spacer style={{marginTop:"1.5625em"}}/>
-                <StyledLabel>Default Bank?</StyledLabel>&nbsp;&nbsp;
+                <StyledLabel>
+                  {/* Default Bank? */}
+                  <FormattedMessage id="app.defaultBank" defaultMessage="Default Bank?" />
+                  </StyledLabel>&nbsp;&nbsp;
                 <Switch
                   style={{ width: "5em" }}
                   checked={this.state.defaultBank}
                   onChange={this.handleDefaultbank}
-                  checkedChildren="Yes"
-                  unCheckedChildren="No"
+                  checkedChildren={<FormattedMessage id="app.yes" defaultMessage="Yes" />}
+                  unCheckedChildren={<FormattedMessage id="app.no" defaultMessage="No" />}
                 />
               </div>
 

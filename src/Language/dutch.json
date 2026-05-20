@@ -166,7 +166,7 @@
   "app.proposalvalue": "Aanbod waarde",
   "app.salesprocess": "Verkoopproces",
   "app.process": "Process",
-  "app.stage": "Stage",
+  "app.stage": "Fase",
   "app.winprobability": "Win proces",
   "app.partnerincluded": "Partner inbegrepen",
   "app.partners": "partners",
@@ -531,7 +531,7 @@
   "app.bloodgroup": "Bloedgroep",
   "app.dateofbirth": "Geboortedatum",
   "app.education": "Educatie",
-  "app.coursename": "Cursusnaam",
+  "app.coursename": "Cursus naam",
   "app.yearofpassing": "Jaar van voorbij gaan",
   "app.markstype": "Merken type",
   "app.universityinstitutename": "Uiversiteit Insituut Naam",
@@ -557,7 +557,7 @@
   "app.bankname": "Bank naam",
   "app.branchname": "Branche naam",
   "app.acnumber": "AC nummer",
-  "app.ifsccode": "SWIFT Code",
+  "app.ifsccode": "SWIFT-code",
   "app.personaldetails": "Persoolijk Details",
   "app.documentidnumber": "Document Id Nummer",
   "app.bank": "Bank",
@@ -663,7 +663,22 @@
              "app.idNumber":"ID-nummer",
              "app.updatewithoutresume":"Update zonder CV",
              "app.gender":"Geslacht",
-             "app.currentSalary":"Huidig ​​​​salaris"
+             "app.currentSalary":"Huidig ​​​​salaris",
+             "app.available":"Beschikbaar",
+             "app.expectation":"Verwachting",
+             "app.certification":"Verwachting",
+             "app.noticePeriod":"Opzegtermijn",
+             "app.experience":"Ervaring",
+             "app.bankDetails":"Bankgegevens",
+             "app.result":"Resultaat",
+             "app.reviewer":"Recensent",
+             "app.comments":"Opmerkingen",
+              "app.postedBy":"Geplaatst door",
+               "app.course":"cursus",
+                "app.accountHolder":"Rekeninghouder",
+                "app.defaultBank":"Standaardbank?",
+                  "app.clickordragfiletothisareatoupload":"Klik of sleep het bestand naar dit gebied om het te uploaden."
+
 
 
 

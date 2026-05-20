@@ -295,6 +295,21 @@
     "app.idNumber":"ID Number",
     "app.updatewithoutresume":"Update without resume",
     "app.gender":"Gender",
-    "app.currentSalary":"Current Salary"
+    "app.currentSalary":"Current Salary",
+    "app.available":"Available",
+    "app.expectation":"Expectation",
+    "app.certification":"Expectation",
+    "app.noticePeriod":"Notice Period",
+    "app.experience":"Experience",
+    "app.bankDetails":"Bank Details",
+     "app.result":"Result",
+     "app.stage":"Stage",
+     "app.reviewer":"Reviewer",
+     "app.comments":"Comments",
+     "app.postedBy":"Posted By",
+     "app.course":"Course",
+     "app.accountHolder":"Account Holder",
+     "app.defaultBank":"Default Bank?",
+     "app.clickordragfiletothisareatoupload":"Click or drag file to this area to upload."
 
 }

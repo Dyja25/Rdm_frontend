@@ -17,6 +17,7 @@ import {
 //import { getCertification } from "../../../../../Settings/Recruitement/Child/Certification/CertificationAction";
 import { Select } from "antd";
 import CertificationSelect from "./CertificationSelect.jsx";
+import { FormattedMessage } from "react-intl";
 
 const { Option } = Select;
 class certificationLibrary extends React.Component {
@@ -106,7 +107,8 @@ class certificationLibrary extends React.Component {
                 fontSize="0.875em"
                 style={{ fontWeight: 600, marginBottom: "0.2rem" }}
               >
-                Certification{" "}
+               <FormattedMessage id="app.certification" defaultMessage="Certification" />
+                {" "}
               </Title>
             
               <div>
@@ -167,7 +169,9 @@ class certificationLibrary extends React.Component {
                    visible={this.props.certificationByCandidateId.length===null?[]:this.props.certificationByCandidateId.length !== 30}
                   style={{ background: "#fff", borderStyle: "dashed" }}
                 >
-                  <PlusOutlined type="plus" /> Certification
+                  <PlusOutlined type="plus" /> 
+                  {/* Certification */}
+                   <FormattedMessage id="app.certification" defaultMessage="Certification" />{" "}
                 </Tag>
               )}
             </div>

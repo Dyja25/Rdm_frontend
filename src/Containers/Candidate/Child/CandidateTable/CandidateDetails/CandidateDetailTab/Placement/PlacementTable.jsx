@@ -122,7 +122,7 @@ class PlacementTable extends Component {
       {
        
         title: <FormattedMessage
-          id="app.callType"
+          id="app.stages"
           defaultMessage="Stages"
         />,
         dataIndex: "callType",
@@ -170,14 +170,22 @@ class PlacementTable extends Component {
         },
       },
       {
-        title: "Result",
+        // title: "Result",
+         title: <FormattedMessage
+            id="app.result"
+            defaultMessage="Result"
+          />,
         // dataIndex: "avilableDate",
         width: "10%",
         
         },
      
       {
-        title: "Start Date",
+        // title: "Start Date",
+         title: <FormattedMessage
+            id="app.startdate"
+            defaultMessage="Start Date"
+          />,
         dataIndex: "avilableDate",
         width: "10%",
         render: (name, item, i) => {

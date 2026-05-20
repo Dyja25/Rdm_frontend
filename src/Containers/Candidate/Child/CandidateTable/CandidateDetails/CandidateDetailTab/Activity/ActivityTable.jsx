@@ -12,6 +12,7 @@ import {
 import { getActivityListByCandidateId } from "../../../../../CandidateAction";
 import Highlighter from "react-highlight-words";
 import { CheckCircleOutlined, FileDoneOutlined, PhoneOutlined, ScheduleOutlined, SearchOutlined } from "@ant-design/icons";
+import { FormattedMessage } from "react-intl";
 
 const ButtonGroup = Button.Group;
 class LinkedCandidateActivity extends Component {
@@ -57,14 +58,22 @@ class LinkedCandidateActivity extends Component {
             size="small"
             style={{ width: 90 }}
           >
-            Search
+            {/* Search */}
+             <FormattedMessage
+                                  id="app.search"
+                                  defaultMessage="Search"
+                                />
           </Button>
           <Button
             onClick={() => this.handleReset(clearFilters)}
             size="small"
             style={{ width: 90 }}
           >
-            Reset
+            {/* Reset */}
+             <FormattedMessage
+                                  id="app.reset"
+                                  defaultMessage="Reset"
+                                />
           </Button>
           <Button
             type="link"
@@ -77,7 +86,11 @@ class LinkedCandidateActivity extends Component {
               });
             }}
           >
-            Filter
+            {/* Filter */}
+            <FormattedMessage
+                                  id="app.filter"
+                                  defaultMessage="Filter"
+                                />
           </Button>
         
       </div>
@@ -148,19 +161,31 @@ class LinkedCandidateActivity extends Component {
         },
       },
       {
-        title: "Type",
+        // title: "Type",
+        title: <FormattedMessage
+                                  id="app.type"
+                                  defaultMessage="Type"
+                                />,
         width: "12%",
         dataIndex: "type",
       },
       {
-        title: "Topic",
+        // title: "Topic",
+         title: <FormattedMessage
+                                  id="app.topic"
+                                  defaultMessage="Topic"
+                                />,
         width: "20%",
         dataIndex: "topic",
         ...this.getColumnSearchProps("topic"),
         
       },
       {
-        title: "Start",
+        // title: "Start",
+         title: <FormattedMessage
+                                  id="app.start"
+                                  defaultMessage="Start"
+                                />,
         width: "20%",
         dataIndex: "startDate",
         defaultSortOrder: "descend",
@@ -174,7 +199,11 @@ class LinkedCandidateActivity extends Component {
         },
       },
       {
-        title: "End",
+        // title: "End",
+        title: <FormattedMessage
+                                  id="app.end"
+                                  defaultMessage="End"
+                                />,
         width: "20%",
         dataIndex: "endDate",
         render: (name, item, i) => {
@@ -208,12 +237,20 @@ class LinkedCandidateActivity extends Component {
         },
       },
       {
-        title: "Status",
+        // title: "Status",
+title: <FormattedMessage
+                                  id="app.status"
+                                  defaultMessage="Status"
+                                />,
         dataIndex: "status",
         width: "8%",
       },
       {
-        title: "Priority",
+        // title: "Priority",
+        title: <FormattedMessage
+                                  id="app.priority"
+                                  defaultMessage="Priority"
+                                />,
         width: "6%",
         dataIndex: "priority",
       },

@@ -112,7 +112,7 @@ class BankDocumentForm extends Component {
                       //label="IFSC CODE"
                       label={
                         <FormattedMessage
-                          id="app.ifscCode"
+                          id="app.ifsccode"
                           defaultMessage="SWIFT Code"
                         />
                       }
@@ -130,8 +130,8 @@ class BankDocumentForm extends Component {
                       // label="Branch Name"
                       label={
                         <FormattedMessage
-                          id="app.branch"
-                          defaultMessage="Branch"
+                          id="app.branchname"
+                          defaultMessage="Branch Name"
                         />
                       }
                       type="text"
@@ -166,13 +166,25 @@ class BankDocumentForm extends Component {
                 
                 <div style={{width:"47%"}}>
                 <FlexContainer justifyContent="space-between"> 
-                <StyledLabel>Default Bank?</StyledLabel>
+                <StyledLabel>
+                  {/* Default Bank? */}
+                  <FormattedMessage
+                        id="app.defaultBank"
+                        defaultMessage="Default Bank?"
+                      />
+                  </StyledLabel>
                 <Switch
                  
                   checked={this.state.defaultBank}
                   onChange={this.handleDefaultbank}
-                  checkedChildren="Yes"
-                  unCheckedChildren="No"
+                  checkedChildren={<FormattedMessage
+                        id="app.yes"
+                        defaultMessage="Yes"
+                      />}
+                  unCheckedChildren={<FormattedMessage
+                        id="app.no"
+                        defaultMessage="No"
+                      />}
                 />
                 </FlexContainer>
               </div>
@@ -185,7 +197,11 @@ class BankDocumentForm extends Component {
                   type="primary"
                   Loading={addingBankDetails}
                 >
-                  Submit
+                  {/* Submit */}
+                   <FormattedMessage
+                        id="app.submit"
+                        defaultMessage="Submit"
+                      />
                 </Button>
               </FlexContainer>
               </div>

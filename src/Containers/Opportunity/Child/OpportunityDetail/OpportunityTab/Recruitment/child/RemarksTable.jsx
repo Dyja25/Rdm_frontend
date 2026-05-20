@@ -17,7 +17,11 @@ class RemarksTable extends Component {
   render() {
     const columns = [
       {
-        title:"Date",
+        // title:"Date",
+         title: <FormattedMessage
+                  id="app.date"
+                  defaultMessage="Date"
+                />,
         dataIndex: "creationDate",
         render: (text, item) => {
           const availableDate = dayjs(item.creationDate).format("ll");
@@ -33,7 +37,7 @@ class RemarksTable extends Component {
       {
         //title: "Stage",
         title: <FormattedMessage
-          id="app.stageName"
+          id="app.stage"
           defaultMessage="Stage"
         />,
         dataIndex: "stageName",
@@ -72,7 +76,7 @@ class RemarksTable extends Component {
       {
         //title: "Comments",
         title: <FormattedMessage
-          id="app.note"
+          id="app.comments"
           defaultMessage="Comments"
         />,
         dataIndex: "note",
@@ -90,7 +94,11 @@ class RemarksTable extends Component {
       },
 
       {
-        title: "Posted By",
+        // title: "Posted By",
+         title: <FormattedMessage
+          id="app.postedBy"
+          defaultMessage="Posted By"
+        />,
         dataIndex: "ownerName",
         width: "10%",
         

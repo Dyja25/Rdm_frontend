@@ -80,7 +80,7 @@ class UpdateCandidateTrainingForm extends Component {
                       name="courseName"                      
                       label={
                         <FormattedMessage
-                          id="app.courseName"
+                          id="app.coursename"
                           defaultMessage="Course Name"
                         />
                       }
@@ -150,7 +150,7 @@ class UpdateCandidateTrainingForm extends Component {
                       name="startDate"                      
                       label={
                         <FormattedMessage
-                          id="app.startDate"
+                          id="app.startdate"
                           defaultMessage="Start Date"
                         />
                       }
@@ -173,7 +173,7 @@ class UpdateCandidateTrainingForm extends Component {
                       name="endDate"                      
                       label={
                         <FormattedMessage
-                          id="app.endDate"
+                          id="app.enddate"
                           defaultMessage="End Date"
                         />
                       }

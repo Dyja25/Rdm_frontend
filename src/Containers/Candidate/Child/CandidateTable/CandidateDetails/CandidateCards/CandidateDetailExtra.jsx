@@ -17,9 +17,21 @@ class CandidateDetailExtra extends Component {
     // const extraData4=address&&address.length&&address[0].postalCode;
     return (
       <>
-        <CandidateItemRow label="Notice Period"  value={`${noticePeriod } months ${noticeDetail}`}/> 
+        <CandidateItemRow 
+        // label="Notice Period" 
+        label= {<FormattedMessage
+            id="app.noticePeriod"
+            defaultMessage="Notice Period"
+          />}
+         value={`${noticePeriod } months ${noticeDetail}`}/> 
         {/* <CandidateItemRow label="Notice Remarks" value={noticeDetail} /> */}
-        <CandidateItemRow label="Experience" value={experience} />
+        <CandidateItemRow 
+        // label="Experience"
+         label= {<FormattedMessage
+            id="app.experience"
+            defaultMessage="Experience"
+          />}
+         value={experience} />
         {/* <CandidateItemRow label="Location" value={location} /> */}
         {/* <CandidateItemRow label="Postal Code" value={extraData4||""} /> */}
        

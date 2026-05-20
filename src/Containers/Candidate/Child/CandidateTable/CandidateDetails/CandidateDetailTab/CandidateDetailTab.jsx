@@ -83,7 +83,13 @@ class CandidateDetailTab extends Component {
                 <>
                  
                <TeamOutlined />
-                    <span style={{ marginLeft: "0.25em" }}>RecruitPro</span>
+                    <span style={{ marginLeft: "0.25em" }}>
+                      {/* RecruitPro */}
+                      <FormattedMessage
+                                  id="app.recruitpro"
+                                  defaultMessage="RecruitPro"
+                                />
+                      </span>
                   
                   {activeKey === "1" && (
                     <>
@@ -125,7 +131,13 @@ class CandidateDetailTab extends Component {
                 <>
                   <span>
                     <i class="fab fa-connectdevelop"></i>
-                    <span style={{ marginLeft: "0.25em" }}>Activity</span>
+                    <span style={{ marginLeft: "0.25em" }}>
+                      {/* Activity */}
+                      <FormattedMessage
+                                  id="app.activity"
+                                  defaultMessage="Activity"
+                                />
+                      </span>
                   </span>
                   {activeKey === "2" && (
                     <>
@@ -157,7 +169,11 @@ class CandidateDetailTab extends Component {
                 <>
                  <i class="far fa-file-alt"></i>
                   <span style={{ marginLeft: "0.25em" }}>
-                    Documents
+                    {/* Documents */}
+                    <FormattedMessage
+                                  id="app.documents"
+                                  defaultMessage="Documents"
+                                />
                   </span>
                   {activeKey === "3" && (
                     <>
@@ -232,7 +248,11 @@ class CandidateDetailTab extends Component {
                 <>
                 <i class="fa fa-graduation-cap"></i>
                   <span style={{ marginLeft: "0.25em" }}>
-                    Education
+                    {/* Education */}
+                    <FormattedMessage
+                                  id="app.education"
+                                  defaultMessage="Education"
+                                />
                   </span>
                   {activeKey === "5" && (
                     <>
@@ -271,7 +291,11 @@ class CandidateDetailTab extends Component {
                 <>
              <BankOutlined />
                   <span style={{ }}>
-                    Employment
+                    {/* Employment */}
+                     <FormattedMessage
+                                  id="app.employment"
+                                  defaultMessage="Employment"
+                                />
                   </span>
                   {activeKey === "7" && (
                     <>
@@ -301,7 +325,11 @@ class CandidateDetailTab extends Component {
                 <>
                  <CustomerServiceOutlined />
                   <span style={{ marginLeft: "0.25em" }}>
-                    Training
+                    {/* Training */}
+                     <FormattedMessage
+                                  id="app.training"
+                                  defaultMessage="Training"
+                                />
                   </span>
                   {activeKey === "6" && (
                     <>
@@ -333,7 +361,11 @@ class CandidateDetailTab extends Component {
                 <>
                 <i class="fa fa-credit-card"></i>
                   <span style={{ marginLeft: "0.25em" }}>
-                     Bank Details
+                     {/* Bank Details */}
+                      <FormattedMessage
+                                  id="app.bankDetails"
+                                  defaultMessage="Bank Details"
+                                />
                   </span>
                   {activeKey === "8" && (
                     <>

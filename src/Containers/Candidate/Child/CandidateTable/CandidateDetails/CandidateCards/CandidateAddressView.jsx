@@ -19,12 +19,43 @@ class CandidateAddressView extends Component {
     const addressdata6=address&&address.length&&address[0].houseNo;
     return (
       <>
-       <CandidateItemRow label="House No" value={addressdata6||""} />
-        <CandidateItemRow label="Street" value={addressdata1||""} />
-        <CandidateItemRow label="City" value={addressdata2||""} />
-        <CandidateItemRow label="State" value={addressdata3||""} />
-        <CandidateItemRow label="Pin Code" value={addressdata4||""} />
-        <CandidateItemRow label="Country" value={addressdata5||""} />
+       <CandidateItemRow 
+      //  label="House No" 
+       label={<FormattedMessage
+            id="app.houseNo"
+            defaultMessage="House No"
+          />}
+       value={addressdata6||""} />
+        <CandidateItemRow //label="Street"
+        label={<FormattedMessage
+            id="app.street"
+            defaultMessage="Street"
+          />} 
+        value={addressdata1||""} />
+        <CandidateItemRow //label="City" 
+           label={<FormattedMessage
+            id="app.city"
+            defaultMessage="City"
+          />}
+        value={addressdata2||""} />
+        <CandidateItemRow //label="State" 
+        label={<FormattedMessage
+            id="app.state"
+            defaultMessage="State"
+          />}
+        value={addressdata3||""} />
+        <CandidateItemRow //label="Pin Code"
+            label={<FormattedMessage
+            id="app.pinCode"
+            defaultMessage="Pin Code"
+          />}
+         value={addressdata4||""} />
+        <CandidateItemRow //label="Country"
+        label={<FormattedMessage
+            id="app.country"
+            defaultMessage="Country"
+          />}
+         value={addressdata5||""} />
        
        
       </>

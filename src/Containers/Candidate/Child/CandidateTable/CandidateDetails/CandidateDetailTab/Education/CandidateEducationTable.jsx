@@ -56,7 +56,7 @@ class CandidateEducationTable extends Component {
         //title: "Education Type",
         title: (
           <FormattedMessage
-            id="app.Type"
+            id="app.type"
             defaultMessage="Type"
           />
         ),
@@ -79,7 +79,7 @@ class CandidateEducationTable extends Component {
         //title: "Year of Passing",
         title: (
           <FormattedMessage
-            id="app.yearOfPassing"
+            id="app.yearofpassing"
             defaultMessage="Year of Passing"
           />
         ),
@@ -93,7 +93,7 @@ class CandidateEducationTable extends Component {
         //title: "University/Institute Name",
         title: (
           <FormattedMessage
-            id="app.university"
+            id="app.universityinstitutename"
             defaultMessage="University/Institute"
           />
         ),
@@ -108,7 +108,7 @@ class CandidateEducationTable extends Component {
         //title: "Marks Secured",
         title: (
           <FormattedMessage
-            id="app.marksSecured"
+            id="app.markssecured"
             defaultMessage="Marks Secured"
           />
         ),

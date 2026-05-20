@@ -231,6 +231,7 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import InboxIcon from '@mui/icons-material/Inbox';
 import pako from "pako"; // For GZIP compression
 import imageCompression from "browser-image-compression"; // For image compression and WebP conversion
+import { FormattedMessage } from "react-intl";
 
 const { Dragger } = Upload;
 const token = sessionStorage.getItem("token");
@@ -321,7 +322,13 @@ class DragableUpload extends React.Component {
           <p className="ant-upload-drag-icon">
             <InboxIcon className="!text-icon" type="inbox" />
           </p>
-          <p className="ant-upload-text">Click or drag file to this area to upload.</p>
+          <p className="ant-upload-text">
+          
+        <FormattedMessage
+                              id="app.clickordragfiletothisareatoupload"
+                              defaultMessage="Click or drag file to this area to upload."
+                            />
+          </p>
         </Dragger>
         {uploadSuccess && (
           <div className="mt-2 flex">

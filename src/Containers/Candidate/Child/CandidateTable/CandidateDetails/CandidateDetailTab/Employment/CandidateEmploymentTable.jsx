@@ -70,7 +70,7 @@ class CandidateEmploymentTable extends Component {
       {
         //title: "Designation",
         title: (
-          <FormattedMessage id="app.designationType" defaultMessage="Designation" />
+          <FormattedMessage id="app.designation" defaultMessage="Designation" />
         ),
         dataIndex: "designationType",
         width: "12%"
@@ -97,7 +97,8 @@ class CandidateEmploymentTable extends Component {
       },
       //combine and show salary +curr+type
       {
-        title: "Salary",
+        // title: "Salary",
+         title: <FormattedMessage id="app.salary" defaultMessage="Salary" />,
          width:"12%",
         render: (name, item, i) => {
           return (
@@ -139,7 +140,8 @@ class CandidateEmploymentTable extends Component {
       // },
      
       {
-        title:"Document",
+        // title:"Document",
+        title: <FormattedMessage id="app.documents" defaultMessage="Document" />,
         dataIndex:"documentType",
         width:"12%",
 
