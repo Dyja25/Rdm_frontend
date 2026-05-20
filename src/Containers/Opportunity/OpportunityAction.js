@@ -1875,7 +1875,7 @@ export const getPublishProcessForRecruit = (orgId) => (dispatch) => {
 };
 
 
-export const deleteSubtableData = (profileId) => (dispatch, getState) => {
+export const deleteSubtableData = (profileId,opportunityId) => (dispatch, getState) => {
 //  const { candidateId } = getState().candidate.candidate;
   dispatch({
     type: types.DELETE_SUBTABLE_DATA_REQUEST,
@@ -1889,7 +1889,7 @@ export const deleteSubtableData = (profileId) => (dispatch, getState) => {
     })
     .then((res) => {
       console.log(res);
-      //dispatch(getCandidateEducationDetails(candidateId));
+      dispatch(getRecruitByOpportunityId(opportunityId));
       dispatch({
         type: types.DELETE_SUBTABLE_DATA_SUCCESS,
         payload: profileId,

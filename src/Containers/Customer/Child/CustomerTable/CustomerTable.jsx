@@ -267,12 +267,7 @@ function handleSend (){
           <span style={{ color: "#09477efa" }}><CustomerDetailView customerId={item.customerId} name={item.name} /></span>
           &nbsp;&nbsp;
             {date === currentdate ? (
-              <span
-                style={{
-                  color: "tomato",
-                  fontWeight: "bold",
-                }}
-              >
+              <span className="blink">
                 New
               </span>
             ) : null}

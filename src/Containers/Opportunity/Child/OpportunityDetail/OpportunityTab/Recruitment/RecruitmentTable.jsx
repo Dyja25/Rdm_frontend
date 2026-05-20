@@ -447,7 +447,7 @@ class RecruitmentTable extends Component {
                >
                   <div style={{ margin: "2px", borderRadius: "50%",cursor:"pointer" }}>
                 <MultiAvatar
-                 primaryTitle={item.fullName||""}
+                  primaryTitle={(item.fullName || "").trim()}
                   // imageId={item.imageId}
                   // imageURL={item.imageURL}
                   imgWidth={"2.1em"}

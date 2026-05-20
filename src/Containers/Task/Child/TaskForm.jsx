@@ -971,7 +971,8 @@ class TaskForm extends Component {
                     component={SearchSelect}
                     inlineLabel
                     isColumn
-                  />
+                  /> 
+                 
                   <Spacer style={{ marginTop: "1.25em" }} />
                   <Field
                     name="taskDescription"

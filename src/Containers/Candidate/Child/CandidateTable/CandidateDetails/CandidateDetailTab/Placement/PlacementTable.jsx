@@ -119,55 +119,65 @@ class PlacementTable extends Component {
         // sorter: (a, b) => a.taskType.length - b.taskType.length
       },
 
-      {
+      // {
        
+      //   title: <FormattedMessage
+      //     id="app.stages"
+      //     defaultMessage="Stages"
+      //   />,
+      //   dataIndex: "callType",
+      //   width: "7%",
+      //   render: (name, item, i) => {
+      //     var findProbability = 0;
+         
+      //     return (
+      //       <span>
+      //         <Dropdown
+      //           overlay={
+      //             <div>
+      //               <Menu mode="horizontal">
+      //                 <Menu.Item
+      //                   style={{
+      //                     paddingLeft: 5,
+      //                     paddingRight: 5,
+      //                     backgroundColor: "#F5F5F5",
+      //                   }}
+      //                 >
+      //                   <RecruitmentStages
+                       
+      //                   />{" "}
+      //                 </Menu.Item>
+      //               </Menu>
+      //             </div>
+      //           }
+      //           trigger={["click"]}
+      //         >
+      //           <Tooltip
+      //             // title={item.stageName}
+      //            >
+      //             {" "}
+      //             <Progress
+      //               type="circle"
+      //               style={{ cursor: "pointer" }}
+      //               // percent={findProbability}
+      //               width={40}
+      //               strokeColor={"#005075"}
+      //             />
+      //           </Tooltip>
+      //         </Dropdown>
+      //       </span>
+      //     );
+      //   },
+      // },
+      {
+        //title: "Uploaded By",
         title: <FormattedMessage
           id="app.stages"
           defaultMessage="Stages"
         />,
-        dataIndex: "callType",
-        width: "7%",
-        render: (name, item, i) => {
-          var findProbability = 0;
-         
-          return (
-            <span>
-              <Dropdown
-                overlay={
-                  <div>
-                    <Menu mode="horizontal">
-                      <Menu.Item
-                        style={{
-                          paddingLeft: 5,
-                          paddingRight: 5,
-                          backgroundColor: "#F5F5F5",
-                        }}
-                      >
-                        <RecruitmentStages
-                       
-                        />{" "}
-                      </Menu.Item>
-                    </Menu>
-                  </div>
-                }
-                trigger={["click"]}
-              >
-                <Tooltip
-                  // title={item.stageName}
-                 >
-                  {" "}
-                  <Progress
-                    type="circle"
-                    style={{ cursor: "pointer" }}
-                    // percent={findProbability}
-                    width={40}
-                    strokeColor={"#005075"}
-                  />
-                </Tooltip>
-              </Dropdown>
-            </span>
-          );
-        },
+        dataIndex: "stageName",
+        // onFilter: (value, record) => record.taskType.indexOf(value) === 0,
+        // sorter: (a, b) => a.taskType.length - b.taskType.length
       },
       {
         // title: "Result",
