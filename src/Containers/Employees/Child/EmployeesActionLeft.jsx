@@ -7,10 +7,13 @@ import { FlexContainer } from "../../../Components/UI/Layout";
 import { inputEmployeeDataSearch } from "../EmployeeAction";
 import { Button, Input, Tooltip } from "antd";
 import { FormattedMessage } from "react-intl";
+import { useIntl } from "react-intl";
+
 
 const { Search } = Input;
 
 const EmployeesActionLeft = (props) => {
+  const intl = useIntl();
   return (
     <FlexContainer alignItems="center">
       {/* <ActionIcon
@@ -39,8 +42,11 @@ const EmployeesActionLeft = (props) => {
       /> */}
 
       <div style={{ marginLeft: "30px" }}>
-        <Search
-          placeholder="Search By Name ,Email & Mobile No"
+       <Search
+          placeholder={intl.formatMessage({
+            id: "app.searchByNameEmailMobile",
+            defaultMessage: "Search By Name, Email & Mobile No",
+          })}
           onSearch={(value) => {
              props.inputEmployeeDataSearch(value);
              props.setCurrentData(value);

@@ -352,7 +352,10 @@ class RecruitmentTable extends Component {
                     fontWeight: "bold",
                   }}
                 >
-                  New
+                  <FormattedMessage
+          id="app.new"
+          defaultMessage="New"
+        />
                 </span>
               ) : null}
             </>

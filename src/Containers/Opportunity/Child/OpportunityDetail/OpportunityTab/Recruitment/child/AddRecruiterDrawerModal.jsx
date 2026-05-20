@@ -48,7 +48,7 @@ class AddRecruiterDrawerModal extends Component {
       <div>
  <StyledDrawer
           title={this.props.candidateName}
-          width={539}
+          width={"60%"}
           visible={this.props.addDrawerRecruiterModal}
         //   maskClosable={false}
           closable

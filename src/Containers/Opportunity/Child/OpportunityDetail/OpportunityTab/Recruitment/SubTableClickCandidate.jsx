@@ -145,11 +145,11 @@ class SubTableClickCandidate extends Component {
     dataIndex:"avilableDate",
   },
     {
-        title: "Stages",
-        // title: <FormattedMessage
-        //   id="app.callType"
-        //   defaultMessage="Stages"
-        // />,
+        // title: "Stages",
+        title: <FormattedMessage
+          id="app.stage"
+          defaultMessage="Stages"
+        />,
         dataIndex: "callType",
         width: "6%",
         render: (name, item, i) => {
@@ -500,7 +500,11 @@ class SubTableClickCandidate extends Component {
   },
 
     { 
-      title: "OnBoardDate" ,
+      // title: "OnBoardDate" ,
+       title: <FormattedMessage
+          id="app.OnBoardDate"
+          defaultMessage="OnBoardDate"
+        />,
       dataIndex:"onboardDate",
       render: (text, item) => {
         const onboardDate = dayjs(item.onboardDate).format("ll");

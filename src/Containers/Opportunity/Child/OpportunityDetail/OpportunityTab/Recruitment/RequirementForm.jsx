@@ -284,7 +284,7 @@ function RequirementForm(props) {
                         name="jobOrder"
                         //  label="Sponsor"
                         label={<FormattedMessage
-                          id="app.joborder"
+                          id="app.jobId"
                           defaultMessage="Job ID"
                         />}
                         isColumn
@@ -298,7 +298,10 @@ function RequirementForm(props) {
                     <div style={{ width: "47%", }}>
                       <Field
                         name="requirementName"
-                        label="Name"
+                        label={<FormattedMessage
+                          id="app.name"
+                          defaultMessage="Name"
+                        />}
   
                         width={"100%"}
                         isRequired
@@ -314,7 +317,7 @@ function RequirementForm(props) {
                         name="experience"
                         //  label="Sponsor"
                         label={<FormattedMessage
-                          id="app.joborder"
+                          id="app.experienceInYear"
                           defaultMessage="Experience (in Years)"
                         />}
                         isColumn
@@ -350,7 +353,7 @@ function RequirementForm(props) {
                         //label="Email"
                         label={
                           <FormattedMessage
-                            id="app.workpreference"
+                            id="app.workPreference"
                             defaultMessage="Work Preference"
                           />
                         }
@@ -370,11 +373,11 @@ function RequirementForm(props) {
                       {" "}
                       <Field
                         name="closeByDate"
-                         label="Close By"
-                        // label={<FormattedMessage
-                        //   id="app.avilableDate"
-                        //   defaultMessage="Start Date"
-                        // />}
+                        //  label="Close By"
+                        label={<FormattedMessage
+                          id="app.closeBy"
+                          defaultMessage="Close By"
+                        />}
                         isRequired
                         component={DatePicker}
                         isColumn
@@ -404,7 +407,7 @@ function RequirementForm(props) {
                         name="sponserId"
                         //  label="Sponsor"
                         label={<FormattedMessage
-                          id="app.sponserId"
+                          id="app.customerContact"
                           defaultMessage="Customer Contact"
                         />}
                         isColumn
@@ -417,7 +420,10 @@ function RequirementForm(props) {
                       />
                     </div>
                     <div style={{ width: "47%" }}>
-                       <StyledLabel>Vendor</StyledLabel> 
+                       <StyledLabel><FormattedMessage
+                          id="app.vendor"
+                          defaultMessage="Vendor"
+                        /></StyledLabel> 
   
                        <Select
                         name="partnerId"
@@ -445,7 +451,10 @@ function RequirementForm(props) {
                         selectType="departmentName"
                         isColumnWithoutNoCreate
                         //label="Mobile #"
-                        label="Department"
+                        label={<FormattedMessage
+                          id="app.department"
+                          defaultMessage="department"
+                        />}
                         isColumn 
                         component={SearchSelect}
                         inlineLabel
@@ -473,7 +482,11 @@ function RequirementForm(props) {
                   
                   <FlexContainer justifyContent="space-between">
                     <div style={{ width: "100%" }}>
-                       <StyledLabel>Recruiter</StyledLabel> 
+                       <StyledLabel> <FormattedMessage
+                            id="app.recruiter"
+                            defaultMessage="recruiter"
+                          />
+                        </StyledLabel> 
   
                       <Select
                         name="recruitersId"
@@ -502,11 +515,11 @@ function RequirementForm(props) {
                       {" "}
                       <Field
                         name="number"
-                        label="# Positions"
-                        // label={<FormattedMessage
-                        //   id="app.number"
-                        //   defaultMessage="# Positions"
-                        // />}
+                        // label="# Positions"
+                        label={<FormattedMessage
+                          id="app.positions"
+                          defaultMessage="# Positions"
+                        />}
                         width={"100%"}
                         isRequired
                         isColumn
@@ -514,7 +527,10 @@ function RequirementForm(props) {
                       />
                     </div>
                     <div style={{ width: "47%" }}>
-                      <StyledLabel>Type </StyledLabel> &nbsp;&nbsp;&nbsp;
+                      <StyledLabel><FormattedMessage
+                          id="app.type"
+                          defaultMessage="Type"
+                        /> </StyledLabel> &nbsp;&nbsp;&nbsp;
                       <br />
                       <Switch
                         checked={typeData}
@@ -532,11 +548,11 @@ function RequirementForm(props) {
                     <div style={{ width: "47%" }}>
                       <Field
                         name="recruitmentProcessId"
-                        label="Workflow"
-                        // label={<FormattedMessage
-                        //   id="app.recruitmentProcessId"
-                        //   defaultMessage="Workflow"
-                        // />}
+                        // label="Workflow"
+                        label={<FormattedMessage
+                          id="app.workflow"
+                          defaultMessage="Workflow"
+                        />}
                         isRequired
                         disabled
                         isColumn
@@ -611,7 +627,7 @@ function RequirementForm(props) {
                         name="avilableDate"
                         // label="Start Date"
                         label={<FormattedMessage
-                          id="app.avilableDate"
+                          id="app.startdate"
                           defaultMessage="Start Date"
                         />}
                         isRequired
@@ -641,7 +657,7 @@ function RequirementForm(props) {
                         name="endDate"
                         // label="Start Date"
                         label={<FormattedMessage
-                          id="app.endate"
+                          id="app.enddate"
                           defaultMessage="End Date"
                         />}
                         // isRequired
@@ -671,7 +687,10 @@ function RequirementForm(props) {
                   <Spacer style={{ marginTop: "1.25em" }} />
                   <FlexContainer style={{}}>
   
-                    <StyledLabel style={{ marginLeft: "0px" }}>Category</StyledLabel>
+                    <StyledLabel style={{ marginLeft: "0px" }}><FormattedMessage
+                          id="app.category"
+                          defaultMessage="Category"
+                        /></StyledLabel>
                     &nbsp;&nbsp;
                     <Switch
                       style={{
@@ -681,8 +700,14 @@ function RequirementForm(props) {
                       checked={typeData1}
                       onChange={handleWhiteBlue}
                       // disabled={this.state.availability}
-                      checkedChildren="White"
-                      unCheckedChildren="Blue"
+                      checkedChildren={<FormattedMessage
+                          id="app.white"
+                          defaultMessage="White"
+                        />}
+                      unCheckedChildren={<FormattedMessage
+                          id="app.blue"
+                          defaultMessage="Blue"
+                        />}
                     />
                   </FlexContainer>
                 </div>

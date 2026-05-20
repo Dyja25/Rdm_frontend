@@ -47,7 +47,7 @@ class ExpenseActionRight extends React.Component {
           type={this.state.isClicked === "import" ? "primary" : ""}
           onClick={() => this.handleClicked("import")}
         >
-          Import
+         <FormattedMessage id="app.import" defaultMessage="Import" />
         </Button>
         &nbsp;
         <Spacer />
@@ -56,7 +56,7 @@ class ExpenseActionRight extends React.Component {
           onClick={() => this.handleClicked("export")}
           // ghost
         >
-          Export
+          <FormattedMessage id="app.export" defaultMessage="Export" />
         </Button>
         &nbsp;
         <Tooltip placement="left" title="Create">

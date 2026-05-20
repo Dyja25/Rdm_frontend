@@ -329,7 +329,11 @@
     "app.organizationInstitution":"Organization/Institution",
     "app.makeDefault":"Make Default",
     "app.hostName":"Host Name",
-    "app.publish":"Publish"
-    
+    "app.publish":"Publish",
+    "app.white":"White",
+    "app.blue":"Blue",
+    "app.OnBoardDate":"OnBoardDate",
+  "app.searchByNameEmailMobile": "Search By Name, Email & Mobile No"
+
 
 }

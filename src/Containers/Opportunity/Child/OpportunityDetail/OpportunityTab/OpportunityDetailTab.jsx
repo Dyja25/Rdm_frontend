@@ -178,7 +178,7 @@ return  <BundleLoader />
     return (
       <>
         {/* <OpportunityStatsCard opportunity={opportunity} /> */}
-        <TabsWrapper style={{height:"81vh"}}>
+        <TabsWrapper style={{height:"80vh"}}>
           <StyledTabs
             defaultActiveKey="1"
             onChange={this.handleTabChange}

@@ -482,8 +482,8 @@
   "app.edit": "Aanpassen",
   "app.voucher": "Voucher",
   "app.amount": "Hoeveelheid",
-  "app.import": "Import",
-  "app.export": "Export",
+  "app.import": "Importeren",
+  "app.export": "Exporteren",
   "app.attributedto": "Toegeschrevenaan",
   "app.to": "Naar",
   "app.distance": "Afstand",
@@ -696,7 +696,12 @@
                 "app.organizationInstitution":"Organisatie/Instelling",
                 "app.makeDefault":"Maak standaard",
                 "app.hostName":"Hostnaam",
-                "app.publish":"Publiceren"
+                "app.publish":"Publiceren",
+                "app.white":"Wit",
+                "app.blue":"Blauw",
+                "app.OnBoardDate":"Datum van inscheping",
+  "app.searchByNameEmailMobile": "Zoeken op naam, e-mail en mobiel nummer"
+
 
 
 
