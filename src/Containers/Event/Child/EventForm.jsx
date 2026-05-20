@@ -601,8 +601,14 @@ class EventForm extends Component {
                           <Switch
                             onChange={this.handleReminderChange}
                             checked={this.state.reminder}
-                            checkedChildren="Yes"
-                            unCheckedChildren="No"
+                            checkedChildren={<FormattedMessage
+                                                                              id="app.yes"
+                                                                              defaultMessage="Yes"
+                                                                            />}
+                            unCheckedChildren={<FormattedMessage
+                                                                              id="app.no"
+                                                                              defaultMessage="No"
+                                                                            />}
                           />
                         </div>
                       </FlexContainer>

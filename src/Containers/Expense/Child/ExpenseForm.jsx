@@ -9,6 +9,7 @@ import { connect } from "react-redux";
 import { getCurrency } from "../../Auth/AuthAction";
 import { addExpense, getExpenseById } from "../ExpenseAction";
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import { FormattedMessage } from "react-intl";
 const { Option } = Select;
 
 function ExpenseForm(props) {
@@ -194,13 +195,25 @@ function ExpenseForm(props) {
   return (
     <div>
       <table>
-        <th>Date</th>
-        <th>Assigned To</th>
+        <th>
+          <FormattedMessage id="app.date" defaultMessage="Date"/>
+        </th>
+        <th>
+          <FormattedMessage id="app.assignedto" defaultMessage="Assigned To"/>
+        </th>
 
-        <th>Expense Type</th>
-        <th>More Information</th>
-        <th>Amount</th>
-        <th>Currency</th>
+        <th>
+          <FormattedMessage id="app.expenseType" defaultMessage="Expense Type"/>
+        </th>
+        <th>
+           <FormattedMessage id="app.moreInformation" defaultMessage="More Information"/>
+        </th>
+        <th>
+          <FormattedMessage id="app.amount" defaultMessage="Amount"/>
+        </th>
+        <th>
+              <FormattedMessage id="app.currency" defaultMessage="Currency"/>
+        </th>
         {row.map((item) => {
           return (
             <tr>
@@ -310,7 +323,8 @@ function ExpenseForm(props) {
         onClick={handleSubmit}
         Loading={addingExpense}
       >
-        Submit
+        {/* Submit */}
+         <FormattedMessage id="app.submit" defaultMessage="Submit"/>
       </Button>
       &nbsp; &nbsp; &nbsp;
       <Button
@@ -319,7 +333,8 @@ function ExpenseForm(props) {
         onClick={handleAddRowClick}
         Loading={addingExpense}
       >
-        Add more
+        {/* Add more */}
+         <FormattedMessage id="app.addmore" defaultMessage="Add more"/>
       </Button>
     </div>
   );

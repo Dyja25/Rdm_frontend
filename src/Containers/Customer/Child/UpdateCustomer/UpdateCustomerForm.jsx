@@ -178,7 +178,7 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
                       
                         label={
                           <FormattedMessage
-                            id="app.countryDialCode"
+                            id="app.phone#"
                             defaultMessage="Phone #"
                           />
                         }
@@ -308,7 +308,13 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
                   <FlexContainer justifyContent="space-between">
                   <div style={{ width: "65%" }}>
                   <FlexContainer justifyContent="space-between">                 
-                 <StyledLabel>Requirement Type</StyledLabel>
+                 <StyledLabel>
+                  {/* Requirement Type */}
+                  <FormattedMessage
+                            id="app.requirementType"
+                            defaultMessage="Requirement Type"
+                          />
+                  </StyledLabel>
                  <Switch                   
                    checked={this.state.whiteblue}
                     onChange={this.handleWhiteBlue}
@@ -324,7 +330,11 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
               onChange={() => this.handleChange()}
               style={{marginLeft:"auto"}}
             > 
-            Both
+            {/* Both */}
+            <FormattedMessage
+                            id="app.both"
+                            defaultMessage="Both"
+                          />
             </Checkbox>
             </div>
                   </FlexContainer>
@@ -344,7 +354,7 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
                     // label="Address"
                     label={
                       <FormattedMessage
-                        id="app.address[0].address1"
+                        id="app.address"
                         defaultMessage="Address"
                       />
                     }
@@ -355,7 +365,13 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
                 <FlexContainer justifyContent="space-between"> 
                   <div style={{ width: "47%" }}>  
                   <Field
-                   label="House No"
+                  //  label="House No"
+                   label={
+                      <FormattedMessage
+                        id="app.houseNo"
+                        defaultMessage="House No"
+                      />
+                    }
                    name="address[0].houseNo"
                   // placeholder="House No"
                   component={InputComponent}
@@ -388,7 +404,7 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
                         //label="City"
                         label={
                           <FormattedMessage
-                            id="app.ddress[0].city"
+                            id="app.city"
                             defaultMessage="City"
                           />
                         }
@@ -431,7 +447,7 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
 
                         label={
                           <FormattedMessage
-                            id="app.address[0].State"
+                            id="app.state"
                             defaultMessage="State"
                           />
                         }
@@ -447,7 +463,7 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
 
                         label={
                           <FormattedMessage
-                            id="app.address[0].postalCode"
+                            id="app.pinCode"
                             defaultMessage="Pin Code"
                           />
                         }

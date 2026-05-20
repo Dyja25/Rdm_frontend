@@ -64,18 +64,26 @@ class CallTable extends React.Component {
             type="primary"
             onClick={() => this.handleSearch(selectedKeys, confirm, dataIndex)}
             // icon={<SearchOutlined />}
-            icon="search"
+            // icon="search"
             size="small"
             style={{ width: 90 }}
           >
-            Search
+            {/* Search */}
+            <FormattedMessage
+                                          id="app.search"
+                                          defaultMessage="Search"
+                                        />
           </Button>
           <Button
             onClick={() => this.handleReset(clearFilters)}
             size="small"
             style={{ width: 90 }}
           >
-            Reset
+            {/* Reset */}
+            <FormattedMessage
+                                          id="app.reset"
+                                          defaultMessage="Reset"
+                                        />
           </Button>
           <Button
             type="link"
@@ -88,7 +96,11 @@ class CallTable extends React.Component {
               });
             }}
           >
-            Filter
+            {/* Filter */}
+             <FormattedMessage
+                                          id="app.filter"
+                                          defaultMessage="Filter"
+                                        />
           </Button>
         
       </div>
@@ -262,7 +274,7 @@ class CallTable extends React.Component {
               // title="Do you want to delete?"
               title={
                 <FormattedMessage
-                  id="app.doyouwanttodelete?"
+                  id="app.doyouwanttodelete"
                   defaultMessage="Do you want to delete?"
                 />
               }

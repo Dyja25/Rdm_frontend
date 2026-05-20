@@ -102,7 +102,7 @@ class ContactDetailTab extends Component {
                     <i class="far fa-address-card"></i>
                     <span style={{ marginLeft: "0.25em" }}>
                       <FormattedMessage
-                              id="app.contacts"
+                              id="app.contact"
                               defaultMessage="Contacts"
                             />
                       </span>
@@ -142,7 +142,11 @@ class ContactDetailTab extends Component {
                 <DollarOutlined/>
                   {/* <FontAwesomeIcon icon={solid('file-invoice-dollar')} />               */}
                   <span style={{ marginLeft: "0.25em" }}>                  
-                   Commercials
+                   {/* Commercials */}
+                   <FormattedMessage
+                              id="app.commercials"
+                              defaultMessage="Commercials"
+                            />
                   </span>                 
                 </>
               }

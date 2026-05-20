@@ -90,14 +90,22 @@ import OpportunityDetailView from "../../Opportunity/Child/OpportunityTable/Oppo
                size="small"
                style={{ width: 90 }}
              >
-               Search
+                 {/* Search */}
+                                                          <FormattedMessage
+                                                                                     id="app.search"
+                                                                                     defaultMessage="Search"
+                                                                                   />
              </Button>
              <Button
                onClick={() => handleReset(clearFilters)}
                size="small"
                style={{ width: 90 }}
              >
-               Reset
+                {/* Reset */}
+                                                                      <FormattedMessage
+                                                                                     id="app.reset"
+                                                                                     defaultMessage="Reset"
+                                                                                   />
              </Button>
              <Button
                type="link"
@@ -108,7 +116,11 @@ import OpportunityDetailView from "../../Opportunity/Child/OpportunityTable/Oppo
                  setSearchedColumn(dataIndex);
                }}
              >
-               Filter
+                              {/* Filter */}
+                                                                      <FormattedMessage
+                                                                                     id="app.filter"
+                                                                                     defaultMessage="Filter"
+                                                                                   />
              </Button>
            
          </div>

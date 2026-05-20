@@ -314,7 +314,7 @@ class UpdateTaskForm extends Component {
                         //label="Name"
                         label={
                           <FormattedMessage
-                            id="app.taskName"
+                            id="app.name"
                             defaultMessage="Name"
                           />
                         }
@@ -771,7 +771,7 @@ class UpdateTaskForm extends Component {
                           //label="Start "
                           label={
                             <FormattedMessage
-                              id="app.startDate"
+                              id="app.startdate"
                               defaultMessage="Start Date"
                             />
                           }
@@ -794,7 +794,7 @@ class UpdateTaskForm extends Component {
                           // label="Start Time"
                           label={
                             <FormattedMessage
-                              id="app.startTime"
+                              id="app.starttime"
                               defaultMessage="Start Time"
                             />
                           }
@@ -820,7 +820,7 @@ class UpdateTaskForm extends Component {
                           // label="End "
                           label={
                             <FormattedMessage
-                              id="app.endDate"
+                              id="app.enddate"
                               defaultMessage="End Date"
                             />
                           }
@@ -857,7 +857,7 @@ class UpdateTaskForm extends Component {
                           //label="End Time"
                           label={
                             <FormattedMessage
-                              id="app.endTime"
+                              id="app.endtime"
                               defaultMessage="End Time"
                             />
                           }
@@ -981,7 +981,11 @@ class UpdateTaskForm extends Component {
                     fontWeight: "bold",
                     marginTop: "1%"
                   }}>
-                    Set Reminder
+                    {/* Set Reminder */}
+                     <FormattedMessage
+                        id="app.setReminder"
+                        defaultMessage="Set Reminder"
+                      />
                   </StyledLabel>
                   <FlexContainer justifyContent="space-between">
 
@@ -1003,7 +1007,11 @@ class UpdateTaskForm extends Component {
                         <Field
                           isRequired
                           name="remindTime"
-                          label="Reminder"
+                          // label="Reminder"
+                            label={<FormattedMessage
+                        id="app.reminder"
+                        defaultMessage="Reminder"
+                      />}
                           width={"100%"}
                           component={SelectComponent}
                           options={[

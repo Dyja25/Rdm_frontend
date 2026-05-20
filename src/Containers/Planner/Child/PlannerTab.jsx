@@ -11,6 +11,7 @@ import ProjectForm from "../../Project/ProjectForm";
 import PhoneIcon from '@mui/icons-material/Phone';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import WorkIcon from '@mui/icons-material/Work';
+import { FormattedMessage } from "react-intl";
 
 
 const TabPane = StyledTabs.TabPane;
@@ -35,7 +36,11 @@ export class PlannerTab extends Component {
               tab={
                 <span>
                   <PhoneIcon  />
-                  Calls
+                  {/* Calls */}
+                  <FormattedMessage
+                              id="app.calls"
+                              defaultMessage="Calls"
+                            />
                 </span>
               }
               key="1"
@@ -54,7 +59,11 @@ export class PlannerTab extends Component {
               tab={
                 <span>
                   <CalendarMonthIcon />
-                  Events
+                  {/* Events */}
+                  <FormattedMessage
+                              id="app.event"
+                              defaultMessage="Events"
+                            />
                 </span>
               }
               key="2"
@@ -73,7 +82,11 @@ export class PlannerTab extends Component {
                 <span>
                   {/* <Icon type="edit" /> */}
                   <i class="fas fa-tasks"></i> &nbsp;
-                  Tasks
+                  {/* Tasks */}
+                    <FormattedMessage
+                              id="app.task"
+                              defaultMessage="Tasks"
+                            />
                 </span>
               }
               key="3"
@@ -89,7 +102,11 @@ export class PlannerTab extends Component {
               tab={
                 <span>
                   <i class="fas fa-luggage-cart"></i>&nbsp;
-                  Leaves
+                  {/* Leaves */}
+                  <FormattedMessage
+                              id="app.leaves"
+                              defaultMessage="Leaves"
+                            />
                 </span>
               }
               key="4"
@@ -127,7 +144,11 @@ export class PlannerTab extends Component {
               tab={
                 <span>
                   <WorkIcon />
-                  Projects
+                  {/* Projects */}
+                  <FormattedMessage
+                              id="app.project"
+                              defaultMessage="Projects"
+                            />
                 </span>
               }
               key="6"

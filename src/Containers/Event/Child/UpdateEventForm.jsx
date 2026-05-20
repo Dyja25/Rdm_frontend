@@ -616,7 +616,11 @@ class UpdateEventForm extends Component {
                     fontWeight: "bold",
                     marginTop: "1%"
                   }}>
-                    Set Reminder
+                    {/* Set Reminder */}
+                    <FormattedMessage
+                                            id="app.setReminder"
+                                            defaultMessage="Set Reminder"
+                                          />
                   </StyledLabel>
                   <FlexContainer justifyContent="space-between">
 
@@ -624,8 +628,14 @@ class UpdateEventForm extends Component {
                       style={{ width: "60px" }}
                       onChange={this.handleReminderChange}
                       checked={this.state.reminder}
-                      checkedChildren="Yes"
-                      unCheckedChildren="No"
+                      checkedChildren={<FormattedMessage
+                                                  id="app.yes"
+                                                  defaultMessage="Yes"
+                                                />}
+                      unCheckedChildren={<FormattedMessage
+                                                  id="app.no"
+                                                  defaultMessage="No"
+                                                />}
                     />
                     {this.state.reminder ? (
                       <div
@@ -638,7 +648,11 @@ class UpdateEventForm extends Component {
                         <Field
                           isRequired
                           name="remindTime"
-                          label="Reminder"
+                          // label="Reminder"
+                            label={<FormattedMessage
+                                                  id="app.reminder"
+                                                  defaultMessage="Reminder"
+                                                />}
                           width={"100%"}
                           component={SelectComponent}
                           options={[

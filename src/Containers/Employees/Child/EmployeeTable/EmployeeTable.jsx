@@ -88,7 +88,7 @@ function EmployeeTable(props) {
               type="primary"
               onClick={() => handleSearch(selectedKeys, confirm, dataIndex)}
               // icon={<SearchOutlined />}
-              icon="search"
+              // icon="search"
               size="small"
               style={{ width: 90 }}
             >

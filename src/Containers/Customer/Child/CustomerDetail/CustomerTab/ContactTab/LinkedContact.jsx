@@ -58,19 +58,26 @@ class LinkedContact extends Component {
             type="primary"
             onClick={() => this.handleSearch(selectedKeys, confirm, dataIndex)}
             // icon={<SearchOutlined />}
-            icon="search"
+            // icon="search"
             size="small"
             style={{ width: 90 }}
           >
-            Search
+                           {/* Search */}
+                                                       <FormattedMessage
+                                                                                  id="app.search"
+                                                                                  defaultMessage="Search"
+                                                                                />
           </Button>
           <Button
             onClick={() => this.handleReset(clearFilters)}
             size="small"
             style={{ width: 90 }}
           >
-            Reset
-          </Button>
+              {/* Reset */}
+                                                       <FormattedMessage
+                                                                      id="app.reset"
+                                                                      defaultMessage="Reset"
+                                                                    />          </Button>
           <Button
             type="link"
             size="small"
@@ -82,8 +89,11 @@ class LinkedContact extends Component {
               });
             }}
           >
-            Filter
-          </Button>
+               {/* Filter */}
+                                                       <FormattedMessage
+                                                                      id="app.filter"
+                                                                      defaultMessage="Filter"
+                                                                    />          </Button>
         
       </div>
     ),

@@ -192,7 +192,7 @@ class ContactForm extends Component {
                             // label="Salutation"
                             label={
                               <FormattedMessage
-                                id="app.salutations"
+                                id="app.salutation"
                                 defaultMessage="Salutations"
                               />
                             }
@@ -210,7 +210,7 @@ class ContactForm extends Component {
                             // label="First Name"
                             label={
                               <FormattedMessage
-                                id="app.firstName"
+                                id="app.firstname"
                                 defaultMessage="First Name"
                               />
                             }
@@ -247,7 +247,7 @@ class ContactForm extends Component {
                             //label="Last Name"
                             label={
                               <FormattedMessage
-                                id="app.lastName"
+                                id="app.lastname"
                                 defaultMessage="Last Name"
                               />
                             }
@@ -398,7 +398,7 @@ class ContactForm extends Component {
                           // label="Tag Company"
                           label={
                             <FormattedMessage
-                              id="app.tagCompany"
+                              id="app.tagcompany"
                               defaultMessage="Tag Company"
                             />
                           }

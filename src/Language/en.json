@@ -194,7 +194,7 @@
   "app.enterpassword": "Enter Password",
   "app.previous": "Previous",
   "app.schedule": "Schedule",
-  "app.project": "Project",
+  "app.project": "Projects",
   "app.category": "Category",
   "app.light": "Light",
   "app.dark": "Dark",
@@ -333,7 +333,11 @@
     "app.white":"White",
     "app.blue":"Blue",
     "app.OnBoardDate":"OnBoardDate",
-  "app.searchByNameEmailMobile": "Search By Name, Email & Mobile No"
+  "app.searchByNameEmailMobile": "Search By Name, Email & Mobile No",
+  "app.notApproved":"Not Approved",
+  "app.commercials":"Commercials",
+  "app.recruitOwner":"Recruit Owner",
+  "app.resume":"Resume"
 
 
 }

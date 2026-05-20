@@ -204,7 +204,7 @@ class RecruitmentTable extends Component {
       },
       {
         title: <FormattedMessage
-          id="app.requirementName"
+          id="app.requirement"
           defaultMessage="Requirement"
         />,
         dataIndex: "requirementName",
@@ -212,7 +212,11 @@ class RecruitmentTable extends Component {
         ...this.getColumnSearchProps('requirementName'),
       },
       {
-        title: "Opportunity",
+        // title: "Opportunity",
+         title: <FormattedMessage
+          id="app.opportunity"
+          defaultMessage="Opportunity"
+        />,
         dataIndex: "opprtunityName",
             width:"10%",
             ...this.getColumnSearchProps('opprtunityName'),
@@ -228,7 +232,11 @@ class RecruitmentTable extends Component {
           }
     },
     {
-      title: "Close By",
+      // title: "Close By",
+       title: <FormattedMessage
+          id="app.closeBy"
+          defaultMessage="Close By"
+        />,
       dataIndex: "closeByDate",
       width:"7%",
       sorter: (a, b) => {
@@ -311,7 +319,11 @@ class RecruitmentTable extends Component {
         ...this.getColumnSearchProps('skillName'),
       },
     {
-      title: "OnBoarded",
+      // title: "OnBoarded",
+      title: <FormattedMessage
+          id="app.onBoarded"
+          defaultMessage="OnBoarded"
+        />,
       dataIndex: "onBoardNo",
       width:"9%",
       sorter: (a, b) => {

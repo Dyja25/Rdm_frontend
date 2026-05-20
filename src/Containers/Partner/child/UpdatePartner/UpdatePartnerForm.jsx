@@ -214,8 +214,13 @@ class UpdatePartnerForm extends Component {
                         name="countryDialCode"
                         isColumnWithoutNoCreate
                         selectType="dialCode"
-                        label="Phone #"
-                       
+                        // label="Phone #"
+                     label={
+                          <FormattedMessage
+                            id="app.phone#"
+                            defaultMessage="Phone #"
+                          />
+                        }
                         isColumn
                         component={SearchSelect}
                         // value={values.countryDialCode1}
@@ -344,8 +349,12 @@ class UpdatePartnerForm extends Component {
                   
                   checked={this.state.documentStatus}
                   onChange={this.handleDocumentStatus}
-                  checkedChildren="Approved"
-                  unCheckedChildren="Not Approved"
+                  checkedChildren={
+                          <FormattedMessage id="app.approved" defaultMessage="Approved" />
+                        }
+                  unCheckedChildren={
+                          <FormattedMessage id="app.notApproved" defaultMessage="Not Approved" />
+                        }
                 />
                     <Spacer style={{ marginTop: "1.25em" }} />
                   <Field

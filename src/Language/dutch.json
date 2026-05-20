@@ -569,7 +569,7 @@
   "app.enterpassword": "Voer wachtwoord in",
   "app.previous": "Vorige",
   "app.schedule": "Schema",
-  "app.project": "Project",
+  "app.project": "Projecten",
   "app.light": "Licht",
   "app.dark": "Donker",
   "app.yesterday": "Gisteren",
@@ -700,7 +700,12 @@
                 "app.white":"Wit",
                 "app.blue":"Blauw",
                 "app.OnBoardDate":"Datum van inscheping",
-  "app.searchByNameEmailMobile": "Zoeken op naam, e-mail en mobiel nummer"
+  "app.searchByNameEmailMobile": "Zoeken op naam, e-mail en mobiel nummer",
+  "app.notApproved":"Niet goedgekeurd",
+  "app.commercials":"Reclames",
+  "app.recruitOwner":"Eigenaar rekruteren",
+  "app.resume":"Cv"
+
 
 
 

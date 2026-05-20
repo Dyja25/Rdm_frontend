@@ -255,7 +255,7 @@ class CustomerOpportunityForm extends Component {
 
                         label={
                           <FormattedMessage
-                            id="app.proposalAmount"
+                            id="app.proposalamt"
                             defaultMessage="Proposal Amount" 
                           />
                         }

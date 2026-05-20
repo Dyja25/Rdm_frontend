@@ -637,7 +637,7 @@ class CallForm extends Component {
                     //label="TimeZone "
                     label={
                       <FormattedMessage
-                        id="app.timeZone"
+                        id="app.timezone"
                         defaultMessage="Time Zone"
                       />
                     }

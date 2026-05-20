@@ -79,7 +79,11 @@ class TaskTable extends React.Component {
             size="small"
             style={{ width: 90 }}
           >
-            Reset
+            {/* Reset */}
+            <FormattedMessage
+                             id="app.reset"
+                             defaultMessage="Reset"
+                            />
           </Button>
           <Button
             type="link"
@@ -792,7 +796,7 @@ class TaskTable extends React.Component {
           return (
             <StyledPopconfirm
               // title="Do you want to delete?"
-              title={<FormattedMessage id="app.doyouwishtodelete?" defaultMessage="Do you wish to delete?" />}
+              title={<FormattedMessage id="app.doyouwanttodelete" defaultMessage="Do you want to delete?" />}
               onConfirm={() => deleteTask(item.taskId, employeeId)}
             >
               {/* <Icon type="delete" style={{ cursor: "pointer" }} /> */}

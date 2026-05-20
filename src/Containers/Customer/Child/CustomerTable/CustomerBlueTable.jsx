@@ -83,18 +83,26 @@ function CustomerBlueTable(props) {
               type="primary"
               onClick={() => handleSearch(selectedKeys, confirm, dataIndex)}
               // icon={<SearchOutlined />}
-              icon="search"
+              // icon="search"
               size="small"
               style={{ width: 90 }}
             >
-              Search
+               {/* Search */}
+                                           <FormattedMessage
+                                                                      id="app.search"
+                                                                      defaultMessage="Search"
+                                                                    />
             </Button>
             <Button
               onClick={() => handleReset(clearFilters)}
               size="small"
               style={{ width: 90 }}
             >
-              Reset
+              {/* Reset */}
+                                                       <FormattedMessage
+                                                                      id="app.reset"
+                                                                      defaultMessage="Reset"
+                                                                    />
             </Button>
             <Button
               type="link"
@@ -105,7 +113,11 @@ function CustomerBlueTable(props) {
                 setSearchedColumn(dataIndex);
               }}
             >
-              Filter
+               {/* Filter */}
+                                                       <FormattedMessage
+                                                                      id="app.filter"
+                                                                      defaultMessage="Filter"
+                                                                    />
             </Button>
           
         </div>
