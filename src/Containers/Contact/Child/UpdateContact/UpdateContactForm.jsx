@@ -191,7 +191,7 @@ class UpdateContactForm extends Component {
                     <FastField name="imageId" component={Upload} />
                     <div style={{ marginLeft: "16px" }}>
                       <FlexContainer justifyContent="space-between">
-                        <div style={{ width: "30%" }}>
+                        <div style={{ width: "41%" }}>
                           <FastField
                             name="salutation"
                             type="text"
@@ -205,11 +205,11 @@ class UpdateContactForm extends Component {
                             options={["Mr.", "Ms.", "None"]}
                             component={SelectComponent}
                             inlineLabel
-                            className="field"
+                            className="field w-[100px]"
                             isColumn
                           />
                         </div>
-                        <div style={{ width: "55%" }}>
+                         <div style={{ width: "54%" }}>
                           <FastField
                             isRequired
                             name="firstName"

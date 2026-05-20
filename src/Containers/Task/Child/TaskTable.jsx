@@ -65,11 +65,14 @@ class TaskTable extends React.Component {
             type="primary"
             onClick={() => this.handleSearch(selectedKeys, confirm, dataIndex)}
             // icon={<SearchOutlined />}
-            icon="search"
+            // icon="search"
             size="small"
             style={{ width: 90 }}
           >
-            Search
+             <FormattedMessage
+                             id="app.search"
+                             defaultMessage="Search"
+                            />
           </Button>
           <Button
             onClick={() => this.handleReset(clearFilters)}
