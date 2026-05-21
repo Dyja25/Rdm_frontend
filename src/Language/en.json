@@ -377,8 +377,10 @@
         "app.searchedSkill":"Searched Skill",
         "app.linkedin":"Linkedin",
         "app.remote":"Remote",
-                 "app.hybrid":"Hybrid",
-                   "app.office":"Office"
+        "app.hybrid":"Hybrid",
+         "app.office":"Office",
+         "app.updatetask":"Update Task",
+         "app.updateEvent":"Update Event"
    
 
 

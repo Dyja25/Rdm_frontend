@@ -243,7 +243,7 @@ class ProjectForm extends Component {
                         name="startTime"
                         // label="Start Time"
                         label={<FormattedMessage
-                          id="app.startTime"
+                          id="app.starttime"
                           defaultMessage="Start Time"
                         />}
                         isColumn
@@ -262,7 +262,7 @@ class ProjectForm extends Component {
                         name="endTime"
                         //label="End Time"
                         label={<FormattedMessage
-                          id="app.endTime"
+                          id="app.endtime"
                           defaultMessage="End Time"
                         />}
                         isColumn
@@ -369,7 +369,7 @@ class ProjectForm extends Component {
                     name="notesField"
                     //label="Notes"
                     label={<FormattedMessage
-                      id="app.eventDescription"
+                      id="app.notes"
                       defaultMessage="Notes"
                     />}
                     isColumn

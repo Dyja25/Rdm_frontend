@@ -314,7 +314,7 @@
   "app.tagopportunity": "Tag",
   "app.enrich": "Verrijken",
   "app.share": "Delen",
-  "app.schedulecall": "Bijlage bel",
+  "app.schedulecall": "Gesprek plannen",
   "app.assignedon": "Toegewezen op",
   "app.assignedby": "Toegewezen door",
   "app.emailid": "E-mailadres",
@@ -323,7 +323,7 @@
   "app.accessdetails": "Toegang details",
   "app.closedetails": "Dicht details",
   "app.opportunityregistered": "Overeenkomst geregisteerd",
-  "app.scheduletask": "Bijlage taak",
+  "app.scheduletask": "Taak plannen",
   "app.scheduleevent": "Bijlage evenement",
   "app.starttime": "Begintijd",
   "app.endtime": "Eindtijd",
@@ -408,7 +408,7 @@
   "app.planner": "Agenda",
   "app.activity": "Activiteit",
   "app.calls": "Oproepen",
-  "app.task": "Opdracht",
+  "app.task": "Taak",
   "app.event": "Evenement",
   "app.candidate": "Kandidaat",
   "app.opportunity": "Mogelijkheid",
@@ -745,7 +745,9 @@
                 "app.linkedin":"LinkedIn",
                  "app.remote":"Op afstand",
                  "app.hybrid":"Hybride",
-                   "app.office":"Op locatie"
+                   "app.office":"Op locatie",
+                   "app.updatetask":"Taak bijwerken",
+                   "app.updateEvent":"Evenement bijwerken"
 
 
 

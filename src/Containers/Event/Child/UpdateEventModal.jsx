@@ -10,7 +10,7 @@ const UpdateEventModal = (props) => {
       <StyledModal
         // title="Schedule Event"
         title={<FormattedMessage
-          id="app.updateevent"
+          id="app.updateEvent"
           defaultMessage="Update Event"
         />}
         width="55vw"
