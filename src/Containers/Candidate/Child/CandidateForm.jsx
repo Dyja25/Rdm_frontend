@@ -351,7 +351,7 @@ class CandidateForm extends Component {
                     <FastField name="imageId" component={Upload} />
                     <div style={{marginLeft:"16px"}}>
                       <FlexContainer justifyContent="space-between">
-                        <div style={{ width: "41%" }}>
+                        <div style={{ width: "41%",marginTop:"2px" }}>
                           <FastField
                             name="salutation"
                             type="text"
@@ -362,6 +362,12 @@ class CandidateForm extends Component {
                                 defaultMessage="Salutation"
                               />
                             }
+                            style={{
+                              width:"100%",
+                              height:"35px",
+                              border:"1px solid #d9d9d9",
+                              padding:"0 10px",
+                            }}
                             options={["Mr.", "Ms.", "None","Dr.","Mevr.","Dhr."]}
                             component={SelectComponent}
                             inlineLabel
@@ -370,7 +376,7 @@ class CandidateForm extends Component {
                           />
                         </div>
 
-                        <div style={{ width: "54%" }}>
+                        <div style={{ width: "50%" }}>
                           <FastField
                             isRequired
                             name="firstName"
@@ -386,6 +392,8 @@ class CandidateForm extends Component {
                             isColumn
                             component={InputComponent}
                             inlineLabel
+                            className="w-full"
+                            style={{width:"100%"}}
                           />
                         </div>
                       </FlexContainer>
@@ -408,7 +416,7 @@ class CandidateForm extends Component {
                             inlineLabel
                           />
                         </div> */}
-                        <div style={{ width: "46%" }}>
+                        <div style={{ width: "46%",marginTop:"2px"  }}>
                       <FastField
                         name="gender"
                         type="text"
@@ -424,6 +432,12 @@ class CandidateForm extends Component {
                         inlineLabel
                         className="field w-full"
                         isColumn
+                        style={{
+                              width:"100%",
+                              height:"35px",
+                              border:"1px solid #d9d9d9",
+                              padding:"0 10px",
+                            }}
                       />
                     </div>
                         <div style={{ width: "50%" }}>
@@ -441,6 +455,8 @@ class CandidateForm extends Component {
                             isColumn
                             component={InputComponent}
                             inlineLabel
+                            className="w-full"
+                            style={{width:"100%"}}
                           />
                         </div>
                       </FlexContainer>
@@ -1024,8 +1040,10 @@ class CandidateForm extends Component {
                     </div>                    
                   </FlexContainer>
                   <Spacer style={{ marginTop: "1em" }} />
-                  <FlexContainer justifyContent="space-between">
-                  <div>
+               <FlexContainer alignItems="center">
+                    <div className="flex items-center gap-3">
+    
+    <div className="flex flex-col">
                   <StyledLabel >
                     {/* Category */}
                      <FormattedMessage
@@ -1033,8 +1051,6 @@ class CandidateForm extends Component {
                             defaultMessage="Category"
                           />
                     </StyledLabel>
-                  </div>
-                  <div style={{width:"26%"}}>
                   <Switch  
                     checked={this.state.whiteblue}
                     onChange={this.handleWhiteBlue}
@@ -1043,11 +1059,10 @@ class CandidateForm extends Component {
                     unCheckedChildren="Blue collar"
                     />
                     </div>
-                    <div>
                     <Checkbox
                     checked={this.state.checked}
                     onChange={() => this.handleChange()}
-                    style={{ marginLeft: "auto" }}
+                    style={{ marginLeft: "18px" }}
                     >
                       {/* Both */}
                       <FormattedMessage
@@ -1056,10 +1071,9 @@ class CandidateForm extends Component {
                           />
                     </Checkbox>
                     </div>
-                    <div>
+                    <div style={{ width: "30px" }} />
+                   <div className="flex items-center gap-3">
                     <StyledLabel>Type</StyledLabel>
-                    </div>
-                    <div style={{width:"25%"}}>
                     <Switch                                           
                       checked={this.state.billing}
                       onChange={this.handlebilling}
@@ -1069,29 +1083,40 @@ class CandidateForm extends Component {
                     </div>
                   </FlexContainer>
                   <Spacer style={{ marginTop: "1em" }} />
-                  <FlexContainer justifyContent="space-between">
-                  <div style={{ width: "47%" }}>
-                  <FlexContainer justifyContent="space-between">
-                  <StyledLabel >
-                    {/* Active */}
-                     <FormattedMessage
-                            id="app.active"
-                            defaultMessage="Active"
-                          />
-                    </StyledLabel>                     
-                  <Switch                                              
+                 
+                
+<FlexContainer
+  alignItems="flex-start"
+  style={{
+    display: "flex",
+    gap: "12px",
+    width: "100%",
+  }}
+>
+  <div
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      gap: "4px",
+      minWidth: "70px",
+    }}
+  >
+                    <Switch                                              
                   checked={this.state.availability}
                   onChange={this.handleAvailability}
                    // disabled={this.state.availability}
                    checkedChildren="Yes"
                    unCheckedChildren="No"
                     />
-                  </FlexContainer>
-                  </div>    
-                  </FlexContainer>
-                    <FlexContainer justifyContent="space-between">
-                      <div style={{ width: "47%" }}>
-                        {" "}
+                  <StyledLabel >
+                    {/* Active */}
+                     <FormattedMessage
+                            id="app.active"
+                            defaultMessage="Active"
+                          />
+                    </StyledLabel>   
+                    </div>
+                    <div style={{ width:"124px" }}>
                         {this.state.availability && (
                           <Field
                             name="availableDate"
@@ -1106,7 +1131,8 @@ class CandidateForm extends Component {
                             // disabled={!this.state.availability}
                             component={DatePicker}
                             isColumn
-                            width={"100%"}
+                            // width={"100%"}
+                            style={{width:"112px"}}
                             value={values.availableDate}
                             inlineLabel                            
                             disabledDate={(currentDate) => {
@@ -1124,8 +1150,8 @@ class CandidateForm extends Component {
                             }}
                           />
                         )}
-                      </div>
-                      <div style={{ width: "47%" }}>
+                      </div>                       
+                     <div style={{ flex: 1 }}>
                         <FastField
                           name="experience"
                           type="number"
