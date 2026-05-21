@@ -545,7 +545,7 @@ const handleLoadMore = () => {
                       next={handleLoadMore}
                       hasMore={hasMore}
                       loader={props.fetchingCandidatesCategory?<div class="flex justify-center"><BundleLoader/></div>:null}
-                      height={652}
+                      height={626}
                       style={{scrollbarWidth:"thin"}}
                       endMessage={ <div class="flex text-center font-poppins font-bold text-xs text-red-500">End of the page</div>}
                     > 

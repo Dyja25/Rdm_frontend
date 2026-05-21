@@ -901,7 +901,10 @@ class UpdateTaskForm extends Component {
                           <>
                             {" "}
                             <span style={{ marginLeft: 10 }}>
-                              <b>This Task occurs in the past !</b>
+                              <b> <FormattedMessage
+                              id="app.thistask"
+                              defaultMessage="This Task occurs in the past !"
+                            /></b>
                             </span>
                           </>
                         )}
@@ -1024,6 +1027,8 @@ class UpdateTaskForm extends Component {
                           defaultValue='30 min'
                           isColumn
                           inlineLabel
+                          className="w-[120px]"
+    // style={{ width: "100%" }}
                         // style={{ flexBasis: "60%", width: "100%" }}
                         />
                       </div>

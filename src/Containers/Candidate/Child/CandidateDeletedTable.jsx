@@ -885,7 +885,7 @@ console.log ("SlR",salelist,recruiterlist)
                       next={handleLoadMore}
                       hasMore={hasMore}
                       loader={props.fetchingDeletedCandidate?<div class="flex justify-center"><BundleLoader/></div>:null}
-                      height={652}
+                      height={603}
                       style={{scrollbarWidth:"thin"}}
                       endMessage={ <div class="flex text-center font-poppins font-bold text-xs text-red-500">End of the page</div>}
                     > 

@@ -493,11 +493,11 @@ function RequirementDetailForm(props) {
                   <div style={{ width: "47%" }}>
                     <Field
                       name="recruitmentProcessId"
-                      label="Workflow"
-                      // label={<FormattedMessage
-                      //   id="app.recruitmentProcessId"
-                      //   defaultMessage="Workflow"
-                      // />}
+                      // label="Workflow"
+                      label={<FormattedMessage
+                        id="app.workflow"
+                        defaultMessage="Workflow"
+                      />}
                       isRequired
                       disabled
                       isColumn
@@ -572,7 +572,7 @@ function RequirementDetailForm(props) {
                       name="avilableDate"
                       // label="Start Date"
                       label={<FormattedMessage
-                        id="app.avilableDate"
+                        id="app.startdate"
                         defaultMessage="Start Date"
                       />}
                       isRequired
@@ -602,7 +602,7 @@ function RequirementDetailForm(props) {
                       name="endDate"
                       // label="Start Date"
                       label={<FormattedMessage
-                        id="app.endate"
+                        id="app.enddate"
                         defaultMessage="End Date"
                       />}
                       // isRequired
@@ -632,7 +632,13 @@ function RequirementDetailForm(props) {
                 <Spacer style={{ marginTop: "1.25em" }} />
                 <FlexContainer style={{}}>
 
-                  <StyledLabel style={{ marginLeft: "0px" }}>Category</StyledLabel>
+                  <StyledLabel style={{ marginLeft: "0px" }}>
+                    {/* Category */}
+                    <FormattedMessage
+                        id="app.category"
+                        defaultMessage="Category"
+                      />
+                    </StyledLabel>
                   &nbsp;&nbsp;
                   <Switch
                     style={{
@@ -642,8 +648,14 @@ function RequirementDetailForm(props) {
                     checked={typeData1}
                     onChange={handleWhiteBlue}
                     // disabled={this.state.availability}
-                    checkedChildren="White"
-                    unCheckedChildren="Blue"
+                    checkedChildren={ <FormattedMessage
+                        id="app.white"
+                        defaultMessage="White"
+                      />}
+                    unCheckedChildren={ <FormattedMessage
+                        id="app.blue"
+                        defaultMessage="Blue"
+                      />}
                   />
                 </FlexContainer>
               </div>

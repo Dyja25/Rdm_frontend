@@ -15,6 +15,7 @@ import {
 import axios from "axios";
 import { base_url } from "../../../../../Config/Auth";
 import dayjs from "dayjs";
+import { FormattedMessage } from "react-intl";
 
 class Certification extends Component {
   constructor(props) {
@@ -161,7 +162,11 @@ class Certification extends Component {
 
           }}
         >
-          Submit
+           {/* Submit */}
+                                                <FormattedMessage
+                                                  id="app.submit"
+                                                  defaultMessage="Submit"
+                                                />
         </Button>
         &nbsp;
         <Button
@@ -170,7 +175,11 @@ class Certification extends Component {
             this.handleClear();
           }}
         >
-          Clear
+          {/* Clear */}
+          <FormattedMessage
+                                                  id="app.clear"
+                                                  defaultMessage="Clear"
+                                                />
         </Button>
         </div>
             <FlexContainer flexDirection="column">
@@ -220,11 +229,19 @@ class Certification extends Component {
                   onClick={this.handleAddCertification}
                   style={{ marginRight: "0.125em" }}
                 >
-                  Save
+                  {/* Save */}
+                  <FormattedMessage
+                                                          id="app.save"
+                                                          defaultMessage="Save"
+                                                        />
                 </Button>
                 &nbsp;
                 <Button type="primary" ghost onClick={this.toggleInput}>
-                  Cancel
+                   {/* Cancel */}
+                                                        <FormattedMessage
+                                                          id="app.cancel"
+                                                          defaultMessage="Cancel"
+                                                        />
                 </Button>
               </FlexContainer>
             ) : (
@@ -238,7 +255,12 @@ class Certification extends Component {
                     Loading={addingCertifications}
                     onClick={this.toggleInput}
                   >
-                    Add Certification
+                    {/* Add Certification */}
+                     {/* Cancel */}
+                                                          <FormattedMessage
+                                                            id="app.addCertification"
+                                                            defaultMessage="Add Certification"
+                                                          />
                   </Button>
                 </FlexContainer>
               </>

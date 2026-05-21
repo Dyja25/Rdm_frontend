@@ -24,12 +24,17 @@ import Commission from "./Child/Commission/Commission";
 import Access from "./Child/Access/Access";
 import ComplianceForm from "./Child/Compliance/ComplianceForm";
 import SkillsTab from "../Library/SkillsTab";
+import { FormattedMessage } from "react-intl";
 const RecruitmentActionLeft = lazy(() => import("./RecruitmentActionLeft"));
 
 function Recruitment(props) {
   const name = [
     {
-      rulesName: "Workflow",
+      // rulesName: "Workflow",
+      rulesName: <FormattedMessage
+                 id="app.workflow"
+                defaultMessage="Workflow"
+              />,
       ruleId: "1",
       component: <RecruitmentTab />,
     },
@@ -44,17 +49,29 @@ function Recruitment(props) {
     //   component: <RecruitTab />,
     // },
     {
-      rulesName: "Search",
+      // rulesName: "Search",
+       rulesName: <FormattedMessage
+                 id="app.search"
+                defaultMessage="Search"
+              />,
       ruleId: "3",
       component: <SeachTab />,
     },
     {
-      rulesName: "Sourcing",
+      // rulesName: "Sourcing",
+       rulesName: <FormattedMessage
+                 id="app.sourcing"
+                defaultMessage="Sourcing"
+              />,
       ruleId: "5",
       component: <IndeedForm />,
     },
     {
-      rulesName: "Skills and Certifications",
+      // rulesName: "Skills and Certifications",
+       rulesName: <FormattedMessage
+                 id="app.skillsCertifications"
+                defaultMessage="Skills and Certifications"
+              />,
       ruleId: "6",
       component: <SkillsTab/>,
 
@@ -72,18 +89,30 @@ function Recruitment(props) {
     // },
    
     {
-      rulesName: "Access",
+      // rulesName: "Access",
+       rulesName: <FormattedMessage
+                 id="app.access"
+                defaultMessage="Access"
+              />,
       ruleId: "12",
       component: <Access />,
     },
 
     {
-      rulesName: "Compliance",
+      // rulesName: "Compliance",
+       rulesName: <FormattedMessage
+                 id="app.compliance"
+                defaultMessage="Compliance"
+              />,
       ruleId: "13",
       component: <ComplianceForm />,
     },
     {
-      rulesName: "Commission",
+      // rulesName: "Commission",
+      rulesName: <FormattedMessage
+                 id="app.commission"
+                defaultMessage="Commission"
+              />,
       ruleId: "7",
       component: <Commission/>,
     },

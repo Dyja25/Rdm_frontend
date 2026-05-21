@@ -298,7 +298,7 @@
     "app.currentSalary":"Current Salary",
     "app.available":"Available",
     "app.expectation":"Expectation",
-    "app.certification":"Expectation",
+    "app.certification":"Certifications",
     "app.noticePeriod":"Notice Period",
     "app.experience":"Experience",
     "app.bankDetails":"Bank Details",
@@ -347,7 +347,32 @@
     "app.permission":"Permission",
     "app.others":"Others",
     "app.roleInternal":"Role (Internal)",
-    "app.roleTalent":"Role (Talent)"
+    "app.roleTalent":"Role (Talent)",
+    "app.availabillity":"Availabillity",
+    "app.thistask":"This Task occurs in the past !",
+    "app.addtype":"Add Type",
+    "app.sourcing":"Sourcing",
+    "app.skillsCertifications":"Skills and Certifications",
+    "app.access":"Access",
+    "app.compliance":"Compliance",
+    "app.commission":"Commission",
+      "app.withhold":"Withhold",
+       "app.call":"Call",
+       "app.partnercontact":"Partner Contact",
+       "app.calculated":"Calculated",
+       " app.addSkill":"Add Skill",
+       "app.addCertification":"Add Certification",
+       "app.talentvisibleinternaluser":"Talent visible to internal user",
+       "app.internalusercansharetalent":"Internal user can share talent",
+       "app.talentvisibletoexternaluser":"Talent visible to external user",
+       "app.talentvisibleexternalusersearch":"Talent visible to external user on search",
+        "app.verifyemail":"Verify Email",
+        "app.signIn":"Sign In",
+        "app.talentFromThisChannel":"Talent From This Channel Will be Assigned to",
+        "app.vendorFromThisChannel":"Vendor From This Channel Will be Assigned to",
+        "app.indeed":"Indeed",
+        "app.matchedSkill":"Matched Skill"
+   
 
 
 }

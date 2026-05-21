@@ -13,6 +13,7 @@ import {
 } from "./IdProofAction";
 import axios from "axios";
 import { base_url } from "../../../Config/Auth";
+import { FormattedMessage } from "react-intl";
 
 class IdProofs extends Component {
   constructor(props) {
@@ -139,11 +140,19 @@ class IdProofs extends Component {
                   onClick={this.handleAddIdProofs}
                   style={{ marginRight: "0.125em" }}
                 >
-                  Save
+                  {/* Save */}
+                  <FormattedMessage
+                                                          id="app.save"
+                                                          defaultMessage="Save"
+                                                        />
                 </Button>
                 &nbsp;
                 <Button type="primary" ghost onClick={this.toggleInput}>
-                  Cancel
+                  {/* Cancel */}
+                   <FormattedMessage
+                                                          id="app.cancel"
+                                                          defaultMessage="Cancel"
+                                                        />
                 </Button>
               </FlexContainer>
             ) : (
@@ -157,7 +166,10 @@ class IdProofs extends Component {
                     Loading={addingIdProofs}
                     onClick={this.toggleInput}
                   >
-                    Add Type
+                  <FormattedMessage
+                      id="app.addtype"
+                      defaultMessage="Add Type"
+                    />
                   </Button>
                 </FlexContainer>
               </>

@@ -304,6 +304,8 @@ class UpdateOpportunityForm extends Component {
                     // }}
                     inlineLabel
                     style={{ flexBasis: "80%" }}
+                    className="w-full"
+    style={{ width: "100%" }}
                   />
                   <Spacer style={{ marginTop: "1.5625em" }} />
                   <Field

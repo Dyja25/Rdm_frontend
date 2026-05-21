@@ -11,6 +11,7 @@ import { MultiAvatar, SubTitle } from "../../../../../../Components/UI/Elements"
 import RecruiterSkillLoadMore from "./RecruiterSkillLoadMore.jsx";
 import { SearchOutlined } from "@ant-design/icons";
 import Title from "antd/lib/skeleton/Title";
+import { FormattedMessage } from "react-intl";
 
 const includesMulti = (elements, inArray) => {
   const unmatched = inArray.slice();
@@ -168,7 +169,8 @@ return item;
             size="small"
             style={{ width: 90 }}
           >
-            Search
+            {/* Search */}
+            <FormattedMessage id="app.search" defaultMessage="Search" />
           </Button>
           &nbsp;
           <Button
@@ -176,7 +178,8 @@ return item;
             size="small"
             style={{ width: 90 }}
           >
-            Reset
+            {/* Reset */}
+                        <FormattedMessage id="app.reset" defaultMessage="Reset" />
           </Button>
           &nbsp;
           <Button
@@ -188,7 +191,9 @@ return item;
               setSearchedColumn(dataIndex);
             }}
           >
-            Filter
+            {/* Filter */}
+                                    <FormattedMessage id="app.filter" defaultMessage="Filter" />
+
           </Button>
 
         </div>
@@ -296,8 +301,8 @@ return item;
     },
 
     {
-      title: "Name",
-      //   title: <FormattedMessage id="app.url" defaultMessage="URL" />,
+      // title: "Name",
+        title: <FormattedMessage id="app.name" defaultMessage="Name" />,
       dataIndex: "fullName",
       ...getColumnSearchProps('fullName'),
       width: "12%",
@@ -320,7 +325,8 @@ return item;
       },
     },
     {
-      title: "Skills",
+      // title: "Skills",
+       title: <FormattedMessage id="app.skills" defaultMessage="Skills" />,
       dataIndex: "skillList",
       ...getColumnSearchProps('skillList'),
       width: "15%",
@@ -345,7 +351,8 @@ return item;
 
     },
     {
-      title: "Matched Skill",
+      // title: "Matched Skill",
+       title: <FormattedMessage id="app.matchedSkill" defaultMessage="Matched Skill" />,
       dataIndex:"matchSkill",
       width: "15%",
       sorter: (a, b) => {
@@ -441,7 +448,8 @@ return item;
 },
 
     {
-      title: "Cost",
+      // title: "Cost",
+        title: <FormattedMessage id="app.cost" defaultMessage="Cost" />,
       dataIndex: "billing",
       width: "7%",
       sorter: (a, b) => {
@@ -468,16 +476,16 @@ return item;
 
     },
     {
-      title: "Partner",
-      //   title: <FormattedMessage id="app.url" defaultMessage="URL" />,
+      // title: "Partner",
+        title: <FormattedMessage id="app.partner" defaultMessage="Partner" />,
       dataIndex: "partnerName",
       ...getColumnSearchProps('partner'),
       width: "9%",
 
     },
     {
-      title: "Country",
-      //   title: <FormattedMessage id="app.url" defaultMessage="URL" />,
+      // title: "Country",
+        title: <FormattedMessage id="app.country" defaultMessage="Country" />,
       dataIndex: "country",
       // filters: countryTypeOption,
 
@@ -489,16 +497,16 @@ return item;
 
     },
     {
-      title: "Role",
-      //   title: <FormattedMessage id="app.url" defaultMessage="URL" />,
+      // title: "Role",
+        title: <FormattedMessage id="app.role" defaultMessage="Role" />,
       dataIndex: "roleType",
       ...getColumnSearchProps('role'),
       width: "7%",
 
     },
     {
-      title: "Availability",
-      //   title: <FormattedMessage id="app.url" defaultMessage="URL" />,
+      // title: "Availability",
+        title: <FormattedMessage id="app.availability" defaultMessage="Availability" />,
       dataIndex: "availableDate",
 
       width: "10%",
@@ -517,7 +525,8 @@ return item;
     },
  
     {
-      title: "Category",
+      // title: "Category",
+              title: <FormattedMessage id="app.category" defaultMessage="Category" />,
       dataIndex:"category",
       width:"7%"
     },
@@ -529,7 +538,9 @@ return item;
     },
 
     {
-      title: "Work Preference",
+      // title: "Work Preference",
+              title: <FormattedMessage id="app.workPreference" defaultMessage="Work Preference" />,
+
        dataIndex:"workPreference",
        width: "10%",
     },

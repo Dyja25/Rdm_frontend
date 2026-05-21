@@ -84,7 +84,7 @@ componentDidMount(){
     console.log("sos", this.props.singleEmployee.suspendInd)
     return (
       <>
-        <TabsWrapper>
+        <TabsWrapper style={{height:"85vh"}}>
           <StyledTabs defaultActiveKey="1" onChange={this.handleTabChange}>
             <TabPane
               tab={

@@ -25,12 +25,14 @@ import dayjs from "dayjs";
                 width: "5%",
             },
             {
-                title: "Names",
+                // title: "Names",
+                title:<FormattedMessage id="app.name" defaultMessage="Names" />,        
                 dataIndex: "comPersion",
                 // width: "13%",
             },
             {
-                title: "Amount",
+                // title: "Amount",
+               title:<FormattedMessage id="app.amount" defaultMessage="Amount" />, 
                 dataIndex: "commissionPrice",
                 // width: "13%",
                 render: (name, item, i) => {        
@@ -51,7 +53,8 @@ import dayjs from "dayjs";
             //     // width: "13%",
             // },
             {
-                title: "Calculated",
+                // title: "Calculated",
+                title:<FormattedMessage id="app.calculated" defaultMessage="Calculated" />, 
                 dataIndex: "calculatedOn",
                 // width: "13%",
             },

@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import Event from "../Event/Event";
 import Task from "../Task/Task";
 import Country from "./Country/Country";
+import { FormattedMessage } from "react-intl";
 const TabPane = StyledTabs.TabPane;
 
 class CategoryActivity extends Component {
@@ -36,7 +37,13 @@ class CategoryActivity extends Component {
                 tab={
                   <>
                    <i class="far fa-calendar-check"></i>
-                    <span style={{ marginLeft: "0.25em" }}>Event</span>
+                    <span style={{ marginLeft: "0.25em" }}>
+                      {/* Event */}
+                      <FormattedMessage
+                      id="app.event"
+                      defaultMessage="Event"
+                    />
+                      </span>
                   </>
                 }
                 key="1"
@@ -50,7 +57,13 @@ class CategoryActivity extends Component {
                 tab={
                   <>
                   <i class="fas fa-tasks"></i>
-                    <span style={{ marginLeft: "0.25em" }}>Task</span>
+                    <span style={{ marginLeft: "0.25em" }}>
+                      {/* Task */}
+                        <FormattedMessage
+                      id="app.task"
+                      defaultMessage="Task"
+                    />
+                      </span>
                   </>
                 }
                 key="2"
@@ -63,7 +76,13 @@ class CategoryActivity extends Component {
                 tab={
                   <>
                   <i class="fas fa-tasks"></i>
-                    <span style={{ marginLeft: "0.25em" }}>Country</span>
+                    <span style={{ marginLeft: "0.25em" }}>
+                      {/* Country */}
+                       <FormattedMessage
+                      id="app.country"
+                      defaultMessage="Country"
+                    />
+                      </span>
                   </>
                 }
                 key="3"

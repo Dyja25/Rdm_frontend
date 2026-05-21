@@ -6,6 +6,7 @@ import { Formik, Form, Field } from "formik";
 import { FlexContainer } from "../../../../../../Components/UI/Layout";
 import { Input } from "antd";
 import { addingUpWorkAccess,getUpWorkAccess } from "../../../../SettingsAction";
+import { FormattedMessage } from "react-intl";
 const { Search } = Input;
 
 function UpWorkForm(props) {
@@ -60,7 +61,10 @@ function UpWorkForm(props) {
               >
 
         <FlexContainer style={{ width: "52%", justifyContent: "space-between" }}>
-        <p>Enable</p>
+        <p>
+          {/* Enable */}
+<FormattedMessage id="app.enable" defaultMessage="Enable" />
+        </p>
         <div>
           <Popconfirm
             title="Do you wish to change Status ? "

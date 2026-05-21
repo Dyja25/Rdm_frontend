@@ -245,7 +245,7 @@ const CandidateActionLeft = (props) => {
       </Tooltip>
   
       {user.userType !== "USER" && user.department !== "Vendor" && (
-        <div>
+        <div className="ml-4">
           <Input
             // placeholder="Search by Name & Email"
              placeholder={intl.formatMessage({

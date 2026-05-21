@@ -666,7 +666,7 @@
              "app.currentSalary":"Huidig ​​​​salaris",
              "app.available":"Beschikbaar",
              "app.expectation":"Verwachting",
-             "app.certification":"Verwachting",
+             "app.certification":"Certificeringen",
              "app.noticePeriod":"Opzegtermijn",
              "app.experience":"Ervaring",
              "app.bankDetails":"Bankgegevens",
@@ -714,8 +714,31 @@
   "app.permission":"Toestemming",
   "app.others":"Anderen",
    "app.roleInternal":"Rol (intern)",
-   "app.roleTalent":"Rol (Talent)"
-
+   "app.roleTalent":"Rol (Talent)",
+     "app.availabillity":"Beschikbaarheid",
+     "app.thistask":"Deze taak speelt zich af in het verleden!",
+     "app.addtype":"Type toevoegen",
+     "app.sourcing":"Inkoop",
+       "app.skillsCertifications":"Vaardigheden en certificeringen",
+       "app.access":"Toegang",
+        "app.compliance":"Naleving",
+         "app.commission":"Commissie",
+         "app.withhold":"Achterhouden",
+         "app.call":"Telefoongesprek",
+         "app.partnercontact":"Partnercontact",
+         "app.calculated":"Berekend",
+         " app.addSkill":"Vaardigheid toevoegen",
+         "app.addCertification":"Certificering toevoegen",
+                "app.talentvisibleinternaluser":"Talent zichtbaar voor interne gebruikers",
+                 "app.internalusercansharetalent":"Interne gebruikers kunnen hun talent delen.",
+         "app.talentvisibletoexternaluser":"Talent zichtbaar voor externe gebruikers",
+                 "app.talentvisibleexternalusersearch":"Talent zichtbaar voor externe gebruikers in zoekresultaten",
+               "app.verifyemail":"E-mail verifiëren",
+              "app.signIn":"Inloggen",
+           "app.talentFromThisChannel":"Talent van dit kanaal wordt toegewezen aan",
+           "app.vendorFromThisChannel":"De leverancier uit dit kanaal wordt toegewezen aan",
+          "app.indeed":"Inderdaad",
+        "app.matchedSkill":"Matchende vaardigheden"
 
 
 

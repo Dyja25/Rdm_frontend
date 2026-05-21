@@ -38,7 +38,13 @@ class OthersTab extends Component {
                 tab={
                   <>
                     <i class="fas fa-vector-square"></i>
-                    <span style={{ marginLeft: "0.25em" }}>Documents</span>
+                    <span style={{ marginLeft: "0.25em" }}>
+                      {/* Documents */}
+                      <FormattedMessage
+                        id="app.documents"
+                        defaultMessage="Documents"
+                       />
+                      </span>
                   </>
                 }
                 key="1"
@@ -52,7 +58,13 @@ class OthersTab extends Component {
                 tab={
                   <>
                     <i class="fa fa-graduation-cap"></i>
-                    <span style={{ marginLeft: "0.25em" }}>Education</span>
+                    <span style={{ marginLeft: "0.25em" }}>
+                      {/* Education */}
+                       <FormattedMessage
+                        id="app.education"
+                        defaultMessage="Education"
+                       />
+                      </span>
                   </>
                 }
                 key="2"
@@ -69,7 +81,11 @@ class OthersTab extends Component {
                     <span 
                     // style={{ marginLeft: "0.25em" }}
                     >
-                    Expense
+                    {/* Expense */}
+                     <FormattedMessage
+                        id="app.expense"
+                        defaultMessage="Expense"
+                       />
                      </span>
                   </>
                 }
@@ -84,7 +100,13 @@ class OthersTab extends Component {
                 tab={
                   <>
                     {/* <FontAwesomeIcon icon={solid('id-card-clip')} /> */}
-                    <span style={{ marginLeft: "0.25em" }}>Id Proof</span>
+                    <span style={{ marginLeft: "0.25em" }}>
+                      {/* Id Proof */}
+                   <FormattedMessage
+                        id="app.idproof"
+                        defaultMessage="Id Proof"
+                       />
+                    </span>
                   </>
                 }
                 key="4"

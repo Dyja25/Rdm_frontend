@@ -5,6 +5,7 @@ import { Switch, Button, Popconfirm } from "antd";
 import { FlexContainer, MainWrapper } from "../../Components/UI/Layout";
 import { getPermissions, addingPermissions } from "./PermissionsAction";
 import { StyledLabel,Spacer } from "../../Components/UI/Elements";
+import { FormattedMessage } from "react-intl";
 // import PermissionForm from "./PermissionForm";
 
 function PermissionsDetailsLeft(props) {
@@ -360,10 +361,16 @@ function PermissionsDetailsLeft(props) {
       
       <Spacer />
       <div>
-       <h1 style={{textAlign:"center"}}>Permission</h1>
+       <h1 style={{textAlign:"center"}}><FormattedMessage
+                         id="app.permission"
+                         defaultMessage="Permission"
+                        /></h1>
        </div>
        <FlexContainer style={{ width: "62%", justifyContent: "space-between" }}>
-        <p>Talent</p>
+        <p> <FormattedMessage
+                         id="app.talent"
+                         defaultMessage="Talent"
+                        /></p>
         <div>
           <Popconfirm
             title="Do you wish to change Status ? "
@@ -373,17 +380,26 @@ function PermissionsDetailsLeft(props) {
             cancelText="Cancel"
           >
             <Switch
-              style={{ width: "8em" }}
+              style={{ width: "8em",marginBottom:"1em" }}
               checked={candidateInd || candidateShareInd}
-              checkedChildren="Share"
-              unCheckedChildren="Withhold"
+              checkedChildren={<FormattedMessage
+                         id="app.share"
+                         defaultMessage="Share"
+                        />}
+              unCheckedChildren={<FormattedMessage
+                         id="app.withhold"
+                         defaultMessage="Withhold"
+                        />}
             />
           </Popconfirm>
         </div>
       </FlexContainer> 
 
       <FlexContainer style={{ width: "62%", justifyContent: "space-between" }}>
-        <p>Planner</p>
+        <p><FormattedMessage
+                         id="app.planner"
+                         defaultMessage="Planner"
+                        /></p>
         <Popconfirm
           title="Do you wish to change Status ? "
 
@@ -396,15 +412,24 @@ function PermissionsDetailsLeft(props) {
           cancelText="Cancel"
         >
           <Switch
-            style={{ width: "8em" }}
+            style={{ width: "8em",marginBottom:"1em" }}
             checked={plannerInd || plannerShareInd}
-            checkedChildren="Share"
-            unCheckedChildren="Withhold"
+            checkedChildren={<FormattedMessage
+                         id="app.share"
+                         defaultMessage="Share"
+                        />}
+            unCheckedChildren={<FormattedMessage
+                         id="app.withhold"
+                         defaultMessage="Withhold"
+                        />}
           />
         </Popconfirm>
       </FlexContainer>
       <FlexContainer style={{ width: "62%", justifyContent: "space-between" }}>
-        <p>Contact</p>
+        <p><FormattedMessage
+                         id="app.contact"
+                         defaultMessage="Contact"
+                        /></p>
         <Popconfirm
           title="Do you wish to change Status ? "
           onConfirm={() => {
@@ -415,15 +440,24 @@ function PermissionsDetailsLeft(props) {
           cancelText="Cancel"
         >
           <Switch
-            style={{ width: "8em", }}
+            style={{ width: "8em",marginBottom:"1em", }}
             checked={contactToggleInd || contactInd}
-            checkedChildren="Share"
-            unCheckedChildren="Withhold"
+            checkedChildren={<FormattedMessage
+                         id="app.share"
+                         defaultMessage="Share"
+                        />}
+            unCheckedChildren={<FormattedMessage
+                         id="app.withhold"
+                         defaultMessage="Withhold"
+                        />}
           />
         </Popconfirm>
       </FlexContainer>
       <FlexContainer style={{ width: "62%", justifyContent: "space-between" }}>
-        <p>Partner</p>
+        <p><FormattedMessage
+                         id="app.partner"
+                         defaultMessage="Partner"
+                        /></p>
         <Popconfirm
           title="Do you wish to change Status ? "
 
@@ -436,15 +470,24 @@ function PermissionsDetailsLeft(props) {
           cancelText="Cancel"
         >
           <Switch
-            style={{ width: "8em" }}
+            style={{ width: "8em",marginBottom:"1em" }}
             checked={partnerInd || partnerToggleInd}
-            checkedChildren="Share"
-            unCheckedChildren="Withhold"
+            checkedChildren={<FormattedMessage
+                         id="app.share"
+                         defaultMessage="Share"
+                        />}
+            unCheckedChildren={<FormattedMessage
+                         id="app.withhold"
+                         defaultMessage="Withhold"
+                        />}
           />
         </Popconfirm>
       </FlexContainer>
       <FlexContainer style={{ width: "62%", justifyContent: "space-between" }}>
-        <p>Partner Contact</p>
+        <p><FormattedMessage
+                         id="app.partnercontact"
+                         defaultMessage="partnercontact"
+                        /></p>
         <Popconfirm
           title="Do you wish to change Status ? "
 
@@ -457,16 +500,25 @@ function PermissionsDetailsLeft(props) {
           cancelText="Cancel"
         >
           <Switch
-            style={{ width: "8em" }}
+            style={{ width: "8em",marginBottom:"1em" }}
             checked={partnerContactInd || partnerContactToggleInd}
-            checkedChildren="Share"
-            unCheckedChildren="Withhold"
+            checkedChildren={<FormattedMessage
+                         id="app.share"
+                         defaultMessage="Share"
+                        />}
+            unCheckedChildren={<FormattedMessage
+                         id="app.withhold"
+                         defaultMessage="Withhold"
+                        />}
           />
         </Popconfirm>
       </FlexContainer>
       <FlexContainer style={{ width: "62%", justifyContent: "space-between" }}>
 
-        <p>Customer</p>
+        <p><FormattedMessage
+                         id="app.customer"
+                         defaultMessage="Customer"
+                        /></p>
         <Popconfirm
           title="Do you wish to change Status ? "
 
@@ -478,15 +530,24 @@ function PermissionsDetailsLeft(props) {
           cancelText="Cancel"
         >
           <Switch
-            style={{ width: "8em" }}
+            style={{ width: "8em",marginBottom:"1em" }}
             checked={customerInd || customerToggleInd}
-            checkedChildren="Share"
-            unCheckedChildren="Withhold"
+            checkedChildren={<FormattedMessage
+                         id="app.share"
+                         defaultMessage="Share"
+                        />}
+            unCheckedChildren={<FormattedMessage
+                         id="app.withhold"
+                         defaultMessage="Withhold"
+                        />}
           />
         </Popconfirm>
       </FlexContainer>
       <FlexContainer style={{ width: "62%", justifyContent: "space-between" }}>
-        <p>Opportunity</p>
+        <p><FormattedMessage
+                         id="app.opportunity"
+                         defaultMessage="Opportunity"
+                        /></p>
         <Popconfirm
           title="Do you wish to change Status ? "
 
@@ -499,15 +560,24 @@ function PermissionsDetailsLeft(props) {
         >
 
           <Switch
-            style={{ width: "8em" }}
+            style={{ width: "8em",marginBottom:"1em" }}
             checked={opportunityInd || opportunityToggleInd}
-            checkedChildren="Share"
-            unCheckedChildren="Withhold"
+            checkedChildren={<FormattedMessage
+                         id="app.share"
+                         defaultMessage="Share"
+                        />}
+            unCheckedChildren={<FormattedMessage
+                         id="app.withhold"
+                         defaultMessage="Withhold"
+                        />}
           />
         </Popconfirm>
       </FlexContainer>
       <FlexContainer style={{ width: "62%", justifyContent: "space-between" }}>
-        <p>Call</p>
+        <p><FormattedMessage
+                         id="app.call"
+                         defaultMessage="Call"
+                        /></p>
         <Popconfirm
           title="Do you wish to change Status ? "
 
@@ -520,15 +590,24 @@ function PermissionsDetailsLeft(props) {
         >
 
           <Switch
-            style={{ width: "8em" }}
+            style={{ width: "8em",marginBottom:"1em" }}
             checked={callInd || callToggleInd}
-            checkedChildren="Share"
-            unCheckedChildren="Withhold"
+            checkedChildren={<FormattedMessage
+                         id="app.share"
+                         defaultMessage="Share"
+                        />}
+            unCheckedChildren={<FormattedMessage
+                         id="app.withhold"
+                         defaultMessage="Withhold"
+                        />}
           />
         </Popconfirm>
       </FlexContainer>
       <FlexContainer style={{ width: "62%", justifyContent: "space-between" }}>
-        <p>Events</p>
+        <p><FormattedMessage
+                         id="app.event"
+                         defaultMessage="event"
+                        /></p>
         <Popconfirm
           title="Do you wish to change Status ? "
 
@@ -541,15 +620,24 @@ function PermissionsDetailsLeft(props) {
         >
 
           <Switch
-            style={{ width: "8em" }}
+            style={{ width: "8em",marginBottom:"1em" }}
             checked={eventInd || eventToggleInd}
-            checkedChildren="Share"
-            unCheckedChildren="Withhold"
+            checkedChildren={<FormattedMessage
+                         id="app.share"
+                         defaultMessage="Share"
+                        />}
+            unCheckedChildren={<FormattedMessage
+                         id="app.withhold"
+                         defaultMessage="Withhold"
+                        />}
           />
         </Popconfirm>
       </FlexContainer>
       <FlexContainer style={{ width: "62%", justifyContent: "space-between" }}>
-        <p>Tasks</p>
+        <p><FormattedMessage
+                         id="app.task"
+                         defaultMessage="Task"
+                        /></p>
         <Popconfirm
           title="Do you wish to change Status ? "
 
@@ -562,10 +650,16 @@ function PermissionsDetailsLeft(props) {
         >
 
           <Switch
-            style={{ width: "8em" }}
+            style={{ width: "8em",marginBottom:"1em" }}
             checked={taskInd || taskToggleInd}
-            checkedChildren="Share"
-            unCheckedChildren="Withhold"
+            checkedChildren={<FormattedMessage
+                         id="app.share"
+                         defaultMessage="Share"
+                        />}
+            unCheckedChildren={<FormattedMessage
+                         id="app.withhold"
+                         defaultMessage="Withhold"
+                        />}
           />
         </Popconfirm>
       </FlexContainer>

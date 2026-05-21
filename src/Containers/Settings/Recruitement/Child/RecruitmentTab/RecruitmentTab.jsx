@@ -277,7 +277,11 @@ class RecruitmentTab extends Component {
                 onClick={() => this.props.handleProcessModal(true)}
                 type="primary"
               >
-                Add
+                {/* Add */}
+                <FormattedMessage
+                                                        id="app.add"
+                                                        defaultMessage="Add"
+                                                      />
               </Button>
             </FlexContainer>
 
