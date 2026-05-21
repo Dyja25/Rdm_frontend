@@ -370,7 +370,8 @@
         "app.signIn":"Sign In",
         "app.talentFromThisChannel":"Talent From This Channel Will be Assigned to",
         "app.vendorFromThisChannel":"Vendor From This Channel Will be Assigned to",
-        "app.indeed":"Indeed"
+        "app.indeed":"Indeed",
+        "app.matchedSkill":"Matched Skill"
    
 
 

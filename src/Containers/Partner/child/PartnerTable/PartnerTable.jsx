@@ -644,7 +644,10 @@ function handleSelected (value){
   render: (name, item, i) => {
     return (
         <StyledPopconfirm
-            title="Do you want to delete?"
+            // title="Do you want to delete?"
+            title={ <FormattedMessage
+                                                     id="app.doyouwanttodelete"
+                                                     defaultMessage="Do you want to delete?"/>}
             onConfirm={() => 
               props.deletePartnerData(
                 item.partnerId,

@@ -731,18 +731,14 @@
          "app.addCertification":"Certificering toevoegen",
                 "app.talentvisibleinternaluser":"Talent zichtbaar voor interne gebruikers",
                  "app.internalusercansharetalent":"Interne gebruikers kunnen hun talent delen.",
-                    "app.talentvisibletoexternaluser":"Talent zichtbaar voor externe gebruikers",
-                           "app.talentvisibleexternalusersearch":"Talent zichtbaar voor externe gebruikers in zoekresultaten",
-                           "app.verifyemail":"E-mail verifiëren",
-                               "app.signIn":"Inloggen",
+         "app.talentvisibletoexternaluser":"Talent zichtbaar voor externe gebruikers",
+                 "app.talentvisibleexternalusersearch":"Talent zichtbaar voor externe gebruikers in zoekresultaten",
+               "app.verifyemail":"E-mail verifiëren",
+              "app.signIn":"Inloggen",
            "app.talentFromThisChannel":"Talent van dit kanaal wordt toegewezen aan",
-                        "app.vendorFromThisChannel":"De leverancier uit dit kanaal wordt toegewezen aan",
-                        "app.indeed":"Inderdaad"
-
-                           
-
-
-
+           "app.vendorFromThisChannel":"De leverancier uit dit kanaal wordt toegewezen aan",
+          "app.indeed":"Inderdaad",
+        "app.matchedSkill":"Matchende vaardigheden"
 
 
 
