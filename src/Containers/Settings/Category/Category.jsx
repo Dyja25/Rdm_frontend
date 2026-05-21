@@ -106,7 +106,13 @@ class Category extends Component {
                 tab={
                   <>
                    <i class="fas fa-building"></i>
-                    <span style={{ marginLeft: "0.25em" }}>Department</span>
+                    <span style={{ marginLeft: "0.25em" }}>
+                      {/* Department */}
+                  <FormattedMessage
+                            id="app.department"
+                            defaultMessage="Department"
+                          />
+                    </span>
                   </>
                 }
                 key="4"
@@ -121,7 +127,13 @@ class Category extends Component {
                   <>
                   {/* <FontAwesomeIcon icon={solid('user-tie')} /> */}
 
-                    <span style={{ marginLeft: "0.25em" }}>Role (Internal)</span>
+                    <span style={{ marginLeft: "0.25em" }}>
+                      {/* Role (Internal) */}
+                      <FormattedMessage
+                            id="app.roleInternal"
+                            defaultMessage=" Role (Internal)"
+                          />
+                      </span>
                   </>
                 }
                 key="5"
@@ -135,7 +147,13 @@ class Category extends Component {
                   <>
                   {/* <FontAwesomeIcon icon={solid('user-tie')} /> */}
 
-                    <span style={{ marginLeft: "0.25em" }}>Role (Talent)</span>
+                    <span style={{ marginLeft: "0.25em" }}>
+                      {/* Role (Talent) */}
+                       <FormattedMessage
+                            id="app.roleTalent"
+                            defaultMessage=" Role (Talent)"
+                          />
+                      </span>
                   </>
                 }
                 key="6"
@@ -149,7 +167,13 @@ class Category extends Component {
                 tab={
                   <>
                     <i class="fab fa-artstation"></i>
-                    <span style={{ marginLeft: "0.25em" }}>Designation</span>
+                    <span style={{ marginLeft: "0.25em" }}>
+                      {/* Designation */}
+                      <FormattedMessage
+                            id="app.designation"
+                            defaultMessage="Designation"
+                          /> 
+                      </span>
                   </>
                 }
                 key="7"

@@ -13,6 +13,8 @@ import {
     //  getAllRecords,
   } from "../Requirement/RequirementAction";
 import { StyledSelect } from "../../Components/UI/Antd";
+import { useIntl } from "react-intl";
+
 
 import { Button,Tooltip } from "antd";
 const Option = StyledSelect.Option;
@@ -21,6 +23,7 @@ const { Search } = Input;
 
 const RequirementActionLeft = (props) => {
 
+  const intl = useIntl();
     useEffect(() => {
         // props.getRecords(props.userId);
         // if (transcript) {
@@ -35,6 +38,10 @@ return (
 <div >
           <Input
             placeholder="Search By Job ID"
+             placeholder={intl.formatMessage({
+            id: "app.searchByJobID",
+            defaultMessage: "Search By Job ID",
+          })}
             // enterButton="Search"
             // style={{marginLeft:"1rem",}}
            

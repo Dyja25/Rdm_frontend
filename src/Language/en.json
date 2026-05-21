@@ -129,7 +129,7 @@
   "app.industrytype": "Industry Type",
   "app.signature": "Signature",
   "app.rules": "Rules",
-  "app.maxleavesindays": "Max. Leaves in Days",
+  "app.maxleavesindays": "Max Leaves in Days",
   "app.carryforward%": "Carry forward%",
   "app.maxcarryforward%": "Max Carry Forward%",
   "app.templates": "Templates",
@@ -341,7 +341,13 @@
     "app.college":"College",
     "app.netSalary":"Net Salary",
     "app.grossSalary":"Gross Salary",
-    "app.contractType":"Contract Type"
+    "app.contractType":"Contract Type",
+    "app.searchbyNameRegNo":"Search by Name & RegNo",
+    "app.selectSkills":"Select Skills",
+    "app.permission":"Permission",
+    "app.others":"Others",
+    "app.roleInternal":"Role (Internal)",
+    "app.roleTalent":"Role (Talent)"
 
 
 }

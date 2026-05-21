@@ -29,17 +29,30 @@ const ProfileMenu = ({ onLogout }) => {
           </StyledMenuItem>
 
           <StyledMenuItem key="2">
-            <span onClick={() => navigate("/Permissions")}>Permission</span>
+            <span onClick={() => navigate("/Permissions")}>
+              {/* Permission */}
+               <FormattedMessage
+                                  id="app.permission"
+                                  defaultMessage="Permission"
+                                />
+              </span>
           </StyledMenuItem>
 
           <StyledMenuItem key="3">
             <span onClick={() => navigate("/change-password")}>
-              Change Password
+              {/* Change Password */}
+               <FormattedMessage
+                                  id="app.changepassword"
+                                  defaultMessage="Change Password"
+                                />
             </span>
           </StyledMenuItem>
 
           <StyledMenuItem key="4">
-            <span onClick={onLogout}>Logout</span>
+            <span onClick={onLogout}> <FormattedMessage
+                                  id="app.logout"
+                                  defaultMessage="Logout"
+                                /></span>
           </StyledMenuItem>
 
           <Menu.Divider />

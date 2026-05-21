@@ -708,8 +708,13 @@
   "app.college":"Middelbare school",
   "app.netSalary":"Netto salaris",
    "app.grossSalary":"Bruto salaris",
-   "app.contractType":"Contracttype"
- 
+   "app.contractType":"Contracttype",
+  "app.searchbyNameRegNo":"Zoeken op naam en registratienummer",
+  "app.selectSkills":"Selecteer Vaardigheden",
+  "app.permission":"Toestemming",
+  "app.others":"Anderen",
+   "app.roleInternal":"Rol (intern)",
+   "app.roleTalent":"Rol (Talent)"
 
 
 

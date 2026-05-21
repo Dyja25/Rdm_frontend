@@ -67,7 +67,7 @@ function MileageForm(props) {
                   name="mileageRate"
                   // label="Max leaves (in days)"
                   label={<FormattedMessage
-                    id="app.mileage rate in eurkm"
+                    id="app.mileagerate"
                     defaultMessage="Mileage rate in EUR/km"
                   />}
                   width={"10%"}

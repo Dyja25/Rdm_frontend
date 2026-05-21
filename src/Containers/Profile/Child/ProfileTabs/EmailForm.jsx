@@ -9,6 +9,7 @@ import { InputComponent } from "../../../../Components/Forms/Formik/InputCompone
 import { addEmailProfileCredentials } from "../../ProfileAction";
 // import { addEmailCredentialsForAdmin } from "../EmailAction";
 import { FlexContainer } from "../../../../Components/UI/Layout";
+import { FormattedMessage } from "react-intl";
 /**
  * yup validation scheme for creating a Team
  */
@@ -66,7 +67,8 @@ class EmailForm extends Component {
                   >
                     <Field
                       name="email"
-                      label="Email Id"
+                      // label="Email Id"
+                      label={<FormattedMessage id="app.email" defaultMessage="Email Id" />}
                       inlineLabel
                       isRequired
                       component={InputComponent}
@@ -78,7 +80,8 @@ class EmailForm extends Component {
                       type="password"
                       isRequired
                       name="password"
-                      label="Password"
+                      // label="Password"
+                      label={<FormattedMessage id="app.password" defaultMessage="Password" />}
                       inlineLabel
                       width={"100%"}
                       component={InputComponent}
@@ -98,6 +101,7 @@ class EmailForm extends Component {
                       isRequired
                       name="host"
                       label="Host Name"
+                       label={<FormattedMessage id="app.hostName" defaultMessage="Host Name" />}
                       component={InputComponent}
                       inlineLabel
                       width={"100%"}
@@ -125,7 +129,8 @@ class EmailForm extends Component {
                     <Spacer />
                     <Field
                       name="port"
-                      label="Port"
+                      // label="Port"
+                   label={<FormattedMessage id="app.port" defaultMessage="Port" />}
                       inlineLabel
                       isRequired
                       width={"100%"}
@@ -142,7 +147,8 @@ class EmailForm extends Component {
                     // style={{ float: "right" }}
                     Loading={addingEmailProfile}
                   >
-                    Create
+                    {/* Create */}
+                     {<FormattedMessage id="app.create" defaultMessage="Create" />}
                 </Button>
                 </FlexContainer>
               </Form>

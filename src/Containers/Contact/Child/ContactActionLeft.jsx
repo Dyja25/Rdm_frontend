@@ -15,12 +15,15 @@ import { inputContactDataSearch,getRecords,getCustomerRecords } from "../Contact
 import { BuildOutlined, ShakeOutlined } from "@ant-design/icons";
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import HandshakeIcon from "@mui/icons-material/Handshake";
+import { useIntl } from "react-intl";
 
 const Option = StyledSelect.Option;
 const item = [{ type: "Hot" }, { type: "Warm" }, { type: "Cold" }];
 const { Search } = Input;
+
 const ContactActionLeft = (props) => {
 
+   const intl = useIntl();
    const {
       transcript,
       listening,
@@ -111,7 +114,11 @@ const suffix = (
 
        <div style={{marginLeft:"26px"}}>
                 <Input
-                  placeholder="Search by Name & Email"
+                  // placeholder="Search by Name & Email"
+                    placeholder={intl.formatMessage({
+            id: "app.searchbyName&Email",
+            defaultMessage: "Search by Name & Email",
+          })}
                   // enterButton="Search"
                   width={"100%"}
                   suffix={suffix}

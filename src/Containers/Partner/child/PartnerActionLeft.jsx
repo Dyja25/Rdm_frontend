@@ -13,10 +13,13 @@ from "../PartnerAction";
 import { Button, Input,Badge,Tooltip } from "antd";
 import { FormattedMessage } from "react-intl";
 import { DeleteOutlined } from "@ant-design/icons";
+import { useIntl } from "react-intl";
 
 const { Search } = Input;
 
 const PartnerActionLeft = (props) => {
+  const intl = useIntl();
+
   const { user, setPartnerViewType, viewType, dateRangeList, setSelectedTimeInterval,
     setTimeRange, startDate,
     endDate, } = props;
@@ -69,7 +72,11 @@ const PartnerActionLeft = (props) => {
       &nbsp;&nbsp;
        <div style={{ width: "50%", marginLeft: "3px" }}>
           <Input
-            placeholder="Search by Name & RegNo "
+            // placeholder="Search by Name & RegNo "
+             placeholder={intl.formatMessage({
+            id: "app.searchbyNameRegNo",
+            defaultMessage: "Search by Name & RegNo ",
+          })}
             // enterButton="Search"
             width={"100%"}
             // suffix={suffix}

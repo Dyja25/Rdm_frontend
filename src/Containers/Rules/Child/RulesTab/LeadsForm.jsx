@@ -68,7 +68,7 @@ function LeadsForm(props) {
                   name="maximumLeaves"
                   // label="Max leaves (in days)"
                   label={<FormattedMessage
-                    id="app.maximumLeaves"
+                    id="app.maxleavesindays"
                     defaultMessage="Max leaves (in days)"
                   />}
                   width={"10%"}
@@ -86,7 +86,7 @@ function LeadsForm(props) {
                   name="carryForward"
                   //label="Carry Forward(%)"
                   label={<FormattedMessage
-                    id="app.carryForward"
+                    id="app.carryforward%"
                     defaultMessage="Carry Forward(%)"
                   />}
                   inlineLabel
@@ -104,7 +104,7 @@ function LeadsForm(props) {
                   name="maximumCarryForward"
                   //label="Max Carry Forward(%)"
                   label={<FormattedMessage
-                    id="app.maximumCarryForward"
+                    id="app.maxcarryforward%"
                     defaultMessage="Max Carry Forward(%)"
                   />}
                   inlineLabel
@@ -152,7 +152,11 @@ function LeadsForm(props) {
                     htmlType="submit"
                     Loading={props.addingLeaves}
                   >
-                    Submit
+                    {/* Submit */}
+                    <FormattedMessage
+                    id="app.submit"
+                    defaultMessage="Submit"
+                  />
                   </Button>
                 </FlexContainer>
 

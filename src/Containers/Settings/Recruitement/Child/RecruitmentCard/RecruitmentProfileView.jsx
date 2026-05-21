@@ -4,6 +4,7 @@ import { bindActionCreators } from "redux";
 import styled from "styled-components";
 import { ViewEditCard } from "../../../../../Components/UI/Elements";
 import { FlexContainer } from "../../../../../Components/UI/Layout";
+import { FormattedMessage } from "react-intl";
 
 function RecruitmentProfileView(props) {
   return (
@@ -18,7 +19,11 @@ function RecruitmentProfileView(props) {
             color: "#40A9FF",
           }}
         >
-          Category
+          {/* Category */}
+          <FormattedMessage
+              id="app.category"
+              defaultMessage="Category"
+            />
         </h1>
       </div>
      

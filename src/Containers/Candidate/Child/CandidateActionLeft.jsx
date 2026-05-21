@@ -27,12 +27,15 @@ import {
 } from "../CandidateAction";
 import { StyledSelect } from "../../../Components/UI/Antd";
 import { AudioOutlined, DeleteOutlined, FilterOutlined} from '@ant-design/icons';
+import { useIntl } from "react-intl";
+
 
 const Option = StyledSelect.Option;
 const item = [{ type: "Hot" }, { type: "Warm" }, { type: "Cold" }];
 const { Search } = Input;
 
 const CandidateActionLeft = (props) => {
+  const intl = useIntl();
   const[currentUser,setCurrentUser]=useState("");
   useEffect(() => {
     props.getLibrarys(props.orgId);
@@ -244,7 +247,11 @@ const CandidateActionLeft = (props) => {
       {user.userType !== "USER" && user.department !== "Vendor" && (
         <div>
           <Input
-            placeholder="Search by Name & Email"
+            // placeholder="Search by Name & Email"
+             placeholder={intl.formatMessage({
+            id: "app.searchbyName&Email",
+            defaultMessage: "Search by Name & Email",
+          })}
             // enterButton="Search"
             width={"100%"}
             suffix={suffix}
@@ -330,7 +337,11 @@ const CandidateActionLeft = (props) => {
         
         <div alignItems="centre">
                   <StyledSelect
-                    placeholder="Select Skills"
+                    // placeholder="Select Skills"
+                     placeholder={intl.formatMessage({
+            id: "app.selectSkills",
+            defaultMessage: "Select Skills",
+          })}
                     //  defaultValue={partners}
                     onChange={(e) => handleDropChange(e)}
                   >

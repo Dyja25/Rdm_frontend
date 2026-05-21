@@ -25,11 +25,19 @@ function CategoryTab (props) {
           },
             {
               rulesName: "Activity",
+            //  rulesName:  <FormattedMessage
+            //                 id="app.activity"
+            //                 defaultMessage="Activity"
+            //               />,
               ruleId: "2",
               component:   <CategoryActivity/>,
             },
             {
               rulesName: "Others",
+                // rulesName:  <FormattedMessage
+                //             id="app.others"
+                //             defaultMessage="Others"
+                //           />,
               ruleId: "3",
               component: <OthersTab />,
             },

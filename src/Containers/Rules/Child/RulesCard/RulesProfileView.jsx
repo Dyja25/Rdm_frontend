@@ -3,6 +3,7 @@ import { Title, ViewEditCard } from "../../../../Components/UI/Elements";
 import styled from "styled-components";
 import { FlexContainer } from "../../../../Components/UI/Layout";
 import RulesActionRight from "../../RulesActionRight";
+import { FormattedMessage } from "react-intl";
 
 function RulesProfileView(props) {
   console.log(props);
@@ -21,7 +22,8 @@ function RulesProfileView(props) {
           color: "#40A9FF",
         }}
       >
-        Rules
+        {/* Rules */}
+        <FormattedMessage id="app.rules" defaultMessage="Rules" />
       </h1>
 
       {props.rule.map((item) => {

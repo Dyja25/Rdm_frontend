@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, Component } from "react";
 import { BundleLoader } from "../../../../Components/Placeholder";
 import { StyledModal } from "../../../../Components/UI/Antd";
+import { FormattedMessage } from "react-intl";
 
 const EmailForm = lazy(() => import("./EmailForm.jsx"));
 
@@ -10,7 +11,8 @@ class AddEmailModal extends Component {
     return (
       <>
         <StyledModal
-          title="Configure"
+          // title="Configure"
+          title= {<FormattedMessage id="app.configure" defaultMessage="Configure" />}
           width="35%"
           visible={addEmailProfileModal}
           destroyOnClose

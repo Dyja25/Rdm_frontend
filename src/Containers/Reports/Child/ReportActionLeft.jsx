@@ -136,7 +136,10 @@ class ReportActionLeft extends React.Component {
                       borderColor: "orange",
                     }}
                     onClick={() => setReportViewType("ME")}
-                  >My View</Tag>
+                  >
+                    {/* My View */}
+                  <FormattedMessage id="app.myview" defaultMessage=" My View"/>
+                  </Tag>
                 </div>
                 <div style={{ width: "7%" }}>
                   <Tag

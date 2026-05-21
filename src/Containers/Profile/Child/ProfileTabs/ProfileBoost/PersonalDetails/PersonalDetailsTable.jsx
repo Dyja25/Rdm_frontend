@@ -50,7 +50,7 @@ class EducationTable extends Component {
       {
         //title: "Document ID number",
         title: (
-          <FormattedMessage id="app.idNo" defaultMessage="Document ID number" />
+          <FormattedMessage id="app.documentidnumber" defaultMessage="Document ID number" />
         ),
         dataIndex: "idNo",
       },

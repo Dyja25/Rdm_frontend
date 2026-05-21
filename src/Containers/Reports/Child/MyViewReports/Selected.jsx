@@ -17,6 +17,7 @@ import { BundleLoader } from "../../../../Components/Placeholder";
 // import { getAllLatestContacts } from "../../../Contact/ContactAction";
 import { myViewReport,getSalesReports } from "../../ReportAction";
 import styled from "styled-components";
+import { FormattedMessage } from "react-intl";
 
 class Selected extends React.Component {
   constructor() {
@@ -77,15 +78,20 @@ class Selected extends React.Component {
         width: "2%",
       },
       {
-        title: "Requirement",
+        // title: "Requirement",
+         title: <FormattedMessage id="app.requirement" defaultMessage="Requirement"/>,
         dataIndex: "requirementName",
       },
       {
-        title: "Job Id",
+        // title: "Job Id",
+                 title: <FormattedMessage id="app.jobId" defaultMessage="Job Id"/>,
+
         dataIndex: "jobOrder",
       },
       {
-        title: "Created On ",
+        // title: "Created On ",
+        title: <FormattedMessage id="app.createdon" defaultMessage="Created On"/>,
+
         dataIndex: "creationDate",
         render: (text, item) => {
           const endDate = dayjs(item.creationDate).format("ll");
@@ -93,7 +99,8 @@ class Selected extends React.Component {
         },
       },
       {
-        title: "Start Date",
+        // title: "Start Date",
+         title: <FormattedMessage id="app.startdate" defaultMessage="Start Date"/>,
         dataIndex: "avilableDate",
       },
       {
@@ -101,21 +108,25 @@ class Selected extends React.Component {
         dataIndex: "sponserName",
       },
       {
-        title: "Skill Set",
+        // title: "Skill Set",
+         title: <FormattedMessage id="app.skillSet" defaultMessage="Skill Set"/>,
         dataIndex: "skillName",
         //   defaultSortOrder: "descend",
         //   sorter: (a, b) => a.designation - b.designation,
       },
       {
-        title: "Submitted",
+        // title: "Submitted",
+         title: <FormattedMessage id="app.submitted" defaultMessage="Submitted"/>,
         dataIndex: "offered",
       },
       {
-        title: "Selected",
+        // title: "Selected",
+         title: <FormattedMessage id="app.selected" defaultMessage="Selected"/>,
         dataIndex: "closedPosition",
       },
       {
-        title: "Onboarded",
+        // title: "Onboarded",
+         title: <FormattedMessage id="app.onBoarded" defaultMessage="Onboarded"/>,
         dataIndex: "onBoardNo",
       },
     ];
