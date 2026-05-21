@@ -666,7 +666,7 @@
              "app.currentSalary":"Huidig ​​​​salaris",
              "app.available":"Beschikbaar",
              "app.expectation":"Verwachting",
-             "app.certification":"Verwachting",
+             "app.certification":"Certificeringen",
              "app.noticePeriod":"Opzegtermijn",
              "app.experience":"Ervaring",
              "app.bankDetails":"Bankgegevens",
@@ -725,7 +725,16 @@
          "app.commission":"Commissie",
          "app.withhold":"Achterhouden",
          "app.call":"Telefoongesprek",
-         "app.partnercontact":"Partnercontact"
+         "app.partnercontact":"Partnercontact",
+         "app.calculated":"Berekend",
+         " app.addSkill":"Vaardigheid toevoegen",
+         "app.addCertification":"Certificering toevoegen",
+                "app.talentvisibleinternaluser":"Talent zichtbaar voor interne gebruikers",
+                 "app.internalusercansharetalent":"Interne gebruikers kunnen hun talent delen.",
+                    "app.talentvisibletoexternaluser":"Talent zichtbaar voor externe gebruikers",
+                           "app.talentvisibleexternalusersearch":"Talent zichtbaar voor externe gebruikers in zoekresultaten"
+
+
 
 
 

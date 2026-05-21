@@ -8,6 +8,7 @@ import { SwitchComponent } from "../../../../../Components/Forms/Formik/SwitchCo
 import { FlexContainer } from "../../../../../Components/UI/Layout";
 import {StyledLabel,Spacer} from "../../../../../Components/UI/Elements";
 import {addingPermissionAccess,getPermissionAccess} from "../../../SettingsAction";
+import { FormattedMessage } from 'react-intl';
 function SearchForm(props) {
   useEffect(() => {
     props.getPermissionAccess(props.orgId);
@@ -166,7 +167,14 @@ function SearchForm(props) {
                 }}
               >
                  <FlexContainer justifyContent="space-between">
-              <div><StyledLabel>Talent visible to internal user</StyledLabel></div>
+              <div><StyledLabel>
+                {/* Talent visible to internal user */}
+                 {/* Cancel */}
+                                      <FormattedMessage
+                                        id="app.talentvisibleinternaluser"
+                                        defaultMessage="Talent visible to internal user"
+                                      />
+                </StyledLabel></div>
                
               <div>
               <Popconfirm
@@ -187,7 +195,13 @@ function SearchForm(props) {
                 </FlexContainer>
                 <Spacer style={{ marginTop: "1.25em" }} />
               <FlexContainer justifyContent="space-between">
-              <div><StyledLabel>Internal user can share talent</StyledLabel></div>
+              <div><StyledLabel>
+                {/* Internal user can share talent */}
+                 <FormattedMessage
+                                        id="app.internalusercansharetalent"
+                                        defaultMessage="Internal user can share talent"
+                                      />
+                </StyledLabel></div>
                 
               <div>
               <Popconfirm
@@ -208,7 +222,13 @@ function SearchForm(props) {
                  </FlexContainer>
                  <Spacer style={{ marginTop: "1.25em" }} /> 
             <FlexContainer justifyContent="space-between">
-            <div><StyledLabel>Talent visible to external user</StyledLabel></div>
+            <div><StyledLabel>
+              {/* Talent visible to external user */}
+                <FormattedMessage
+                                        id="app.talentvisibletoexternaluser"
+                                        defaultMessage="Talent visible to external user"
+                                      />
+              </StyledLabel></div>
                    <div>
                    <Popconfirm
             title="Do you wish to change Status ? "
@@ -228,7 +248,13 @@ function SearchForm(props) {
               </FlexContainer>
               <Spacer style={{ marginTop: "1.25em" }} />
               <FlexContainer justifyContent="space-between">
-              <div><StyledLabel>Talent visible to external user on search</StyledLabel></div>
+              <div><StyledLabel>
+                {/* Talent visible to external user on search */}
+                   <FormattedMessage
+                                        id="app.talentvisibleexternalusersearch"
+                                        defaultMessage="Talent visible to external user on search"
+                                      />
+                </StyledLabel></div>
                 
               <div>
 

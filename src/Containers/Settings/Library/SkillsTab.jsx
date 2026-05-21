@@ -8,6 +8,7 @@ import { Badge } from "antd";
 
 import Library from "./Library";
 import Certifications from "../Recruitement/Child/Certifications/Certifications";
+import { FormattedMessage } from "react-intl";
 const TabPane = StyledTabs.TabPane;
 
 const SkillsTab = (props) => {
@@ -33,7 +34,11 @@ const SkillsTab = (props) => {
                   <>
                     <span style={{ marginLeft: "0.25em" }}>
                     <Badge offset={[10]} style={{fontSize:"11px"}} count={props.skillsRecordData.skillCount} overflowCount={999}>
-                    Skills
+                    {/* Skills */}
+                     <FormattedMessage
+                                        id="app.skills"
+                                        defaultMessage="Skills"
+                                      />
                       </Badge>
                       
                       </span>
@@ -55,9 +60,12 @@ const SkillsTab = (props) => {
                     <span style={{ marginLeft: "0.25em" }}>
                     
                      
-                      Certifications
+                      {/* Certifications */}
                      
-                  
+                  <FormattedMessage
+                                        id="app.certification"
+                                        defaultMessage="Certification"
+                                      />
                       </span>
                   </>
                 }

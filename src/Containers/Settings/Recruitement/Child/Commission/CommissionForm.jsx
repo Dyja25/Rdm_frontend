@@ -93,7 +93,8 @@ console.log("orggg",props.organizationId)
                         <div style={{width: "40%"}}>
                             <Field
                                         name="commissionPrice"
-                                        label="Amount"
+                                        // label="Amount"
+                                        label={<FormattedMessage id="app.amount" defaultMessage="Amount" />}
                                         type="text"
                                         isColumn
                                         width={"100%"}
@@ -133,7 +134,8 @@ console.log("orggg",props.organizationId)
                          <div style={{width: "40%"}}>
                             <Field
                                         name="calculatedOn"
-                                        label="Calculated"
+                                        // label="Calculated"
+                                        label={<FormattedMessage id="app.calculated" defaultMessage="Calculated" />}                              
                                         type="text"
                                         isColumn
                                         width={"100%"}
@@ -157,7 +159,7 @@ console.log("orggg",props.organizationId)
                                         htmlType="submit"
                                         loading={props.addingCommission}
                                     >
-                                        Add
+                                        <FormattedMessage id="app.add" defaultMessage="Add" />
                                     </Button>
                                 </div>
                             </div>

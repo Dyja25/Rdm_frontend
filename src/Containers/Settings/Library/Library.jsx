@@ -15,6 +15,7 @@ import {
 } from "./LibraryAction";
 import axios from "axios";
 import { base_url } from "../../../Config/Auth";
+import { FormattedMessage } from "react-intl";
 const { Search } = Input;
 class Library extends Component {
   constructor(props) {
@@ -155,7 +156,11 @@ class Library extends Component {
 
           }}
         >
-          Submit
+          {/* Submit */}
+          <FormattedMessage
+                                        id="app.submit"
+                                        defaultMessage="Submit"
+                                      />
         </Button>
         &nbsp;
         <Button
@@ -164,7 +169,11 @@ class Library extends Component {
             this.handleClear();
           }}
         >
-          Clear
+          {/* Clear */}
+           <FormattedMessage
+                                        id="app.clear"
+                                        defaultMessage="Clear"
+                                      />
         </Button>
         </div>
             <FlexContainer flexDirection="column">
@@ -214,11 +223,19 @@ class Library extends Component {
                   onClick={this.handleAddLibrary}
                   style={{ marginRight: "0.125em" }}
                 >
-                  Save
+                  {/* Save */}
+                    <FormattedMessage
+                                                          id="app.save"
+                                                          defaultMessage="Save"
+                                                        />
                 </Button>
                 &nbsp;
                 <Button type="primary" ghost onClick={this.toggleInput}>
-                  Cancel
+                  {/* Cancel */}
+                  <FormattedMessage
+                                                          id="app.cancel"
+                                                          defaultMessage="Cancel"
+                                                        />
                 </Button>
               </FlexContainer>
             ) : (
@@ -232,7 +249,11 @@ class Library extends Component {
                     Loading={addingLibrarys}
                     onClick={this.toggleInput}
                   >
-                    Add Skill
+                    {/* Add Skill */}
+                    <FormattedMessage
+                                    id="app.addSkill"
+                                      defaultMessage=" Add Skill"
+                                                          />
                   </Button>
                 </FlexContainer>
               </>
