@@ -579,7 +579,8 @@ const finalFilteredRecruiters=button.length > 0 ? getIndexSkillData : recruiter
       <Button type="primary" 
        onClick={()=>setButton([])}
       >
-        Clear Search
+        {/* Clear Search */}
+        <FormattedMessage id="app.clearSearch" defaultMessage="Clear Search" />
       </Button>
       
       {/* <span
@@ -634,10 +635,15 @@ const finalFilteredRecruiters=button.length > 0 ? getIndexSkillData : recruiter
 <Button
 type="primary" 
 >
-          Check Interest
+          {/* Check Interest */}
+ <FormattedMessage id="app.checkInterest" defaultMessage="Check Interest" />
         </Button>
         &nbsp;
-        <span style={{color:"black",fontSize:"1rem"}}>Searched Skill-{props.linkSkills.skillName}</span>
+        <span style={{color:"black",fontSize:"1rem"}}>
+          {/* Searched Skill- */}
+           <FormattedMessage id="app.searchedSkill" defaultMessage="Searched Skill" />-
+          {props.linkSkills.skillName}
+          </span>
       
          
       <StyledTable
@@ -665,7 +671,10 @@ type="primary"
           props.opportunityId,
         );
 
-      }}>Select</Button>
+      }}>
+        {/* Select */}
+        <FormattedMessage id="app.select" defaultMessage="Select" />
+        </Button>
     </>
   );
 }

@@ -59,7 +59,7 @@
   "app.location": "Location",
   "app.addressinputisonlyallowedusinglocationfeature": "Address Input Is only Allowed Using Location Feature",
   "app.address": "Address",
-  "app.street": "Street",
+  "app.street": "Street name",
   "app.city": "City",
   "app.country": "Country",
   "app.stateprovince": "State Province",
@@ -245,7 +245,7 @@
    "app.requirementType":"Requirement Type",
    "app.both":"Both",
    "app.extraInput":"Extra Input",
-   "app.houseNo":"House No",
+   "app.houseNo":"House Number",
    "app.pinCode":"Pin code",
   "app.state":"state",
   "app.phone#":"Phone #",
@@ -288,7 +288,7 @@
      "app.costType":"Cost Type",
      "app.benefits":"Benefits",
      "app.noticeperiodinfo":"Notice Period Info",
-     "app.notice":"Notice (months)",
+     "app.notice":"Notice (in months)",
       "app.uploadSelectedFile":"Upload Selected File",
     "app.donthaveresumehandy":"Don't have resume handy",
     "app.idproof":"ID Proof",
@@ -371,7 +371,14 @@
         "app.talentFromThisChannel":"Talent From This Channel Will be Assigned to",
         "app.vendorFromThisChannel":"Vendor From This Channel Will be Assigned to",
         "app.indeed":"Indeed",
-        "app.matchedSkill":"Matched Skill"
+        "app.matchedSkill":"Matched Skill",
+        "app.checkInterest":"Check Interest",
+        "app.clearSearch":"Clear Search",
+        "app.searchedSkill":"Searched Skill",
+        "app.linkedin":"Linkedin",
+        "app.remote":"Remote",
+                 "app.hybrid":"Hybrid",
+                   "app.office":"Office"
    
 
 

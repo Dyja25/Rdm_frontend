@@ -455,7 +455,7 @@ class CandidateForm extends Component {
                         //label="Email"
                         label={
                           <FormattedMessage
-                            id="app.emailId"
+                            id="app.emailid"
                             defaultMessage="Email"
                           />
                         }
@@ -487,11 +487,40 @@ class CandidateForm extends Component {
                         isColumn
                         width={"100%"}
                         component={SelectComponent}
+                        // options={[
+                        //   "Remote",
+                        //   "Hybrid",
+                        //   "Office"
+                        // ]}
                         options={[
-                          "Remote",
-                          "Hybrid",
-                          "Office"
-                        ]}
+                            {
+                              label: (
+                                <FormattedMessage
+                                  id="app.remote"
+                                  defaultMessage="Remote"
+                                />
+                              ),
+                              value: "Remote",
+                            },
+                            {
+                              label: (
+                                <FormattedMessage
+                                  id="app.hybrid"
+                                  defaultMessage="Hybrid"
+                                />
+                              ),
+                              value: "Hybrid",
+                            },
+                            {
+                              label: (
+                                <FormattedMessage
+                                  id="app.office"
+                                  defaultMessage="Office"
+                                />
+                              ),
+                              value: "Office",
+                            },
+                          ]}
                         // defaultValue={'value'}
                         inlineLabel
                       />
@@ -1142,8 +1171,18 @@ onChange={this.NumericOnly}
                       <div style={{ width: "47%" }}>
                         <Field
                           name="billing"
-                          label={this.state.billing ? "Expectation" : "Billing"}
-
+                          // label={this.state.billing ? "Expectation" : "Billing"}
+                          label={this.state.billing ? (
+                            <FormattedMessage
+                              id="app.expectation"
+                              defaultMessage="Expectation"
+                            />
+                          ) : (
+                            <FormattedMessage
+                              id="app.billing"
+                              defaultMessage="Billing"
+                            />
+                          )}
                           // label={ 
                           //   <FormattedMessage
                           //     id="app.billing"
@@ -1183,7 +1222,13 @@ onChange={this.NumericOnly}
                       <div style={{ width: "47%" }}>
                         <Field
                           name="CostType"                         
-                          label="Cost Type"
+                          // label="Cost Type"
+                          // label="Cost Type"
+                           label={
+                            <FormattedMessage
+                              id="app.costType"
+                              defaultMessage="Cost Type"
+                            />}
                           // className="field"
                           isColumn
                           width={"100%"}
@@ -1209,7 +1254,7 @@ onChange={this.NumericOnly}
                         //label="Email"
                         label={
                           <FormattedMessage
-                            id="app.currentsalary"
+                            id="app.currentSalary"
                             defaultMessage="Current Salary"
                           />
                         }
