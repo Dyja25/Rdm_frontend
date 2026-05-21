@@ -11,6 +11,7 @@ import { InputComponent } from "../../../../../../Components/Forms/Formik/InputC
 import { Input } from "antd";
 import * as Yup from "yup";
 import {addMonster,getMonster} from "../../../../SettingsAction";
+import { FormattedMessage } from "react-intl";
 const { Search } = Input;
 
 const MonsterSchema = Yup.object().shape({
@@ -63,7 +64,8 @@ function MonsterForm(props) {
                 }}
               >
             <Field
-                  label="User Name"
+                  // label="User Name"
+                  label={<FormattedMessage id="app.username" defaultMessage="User Name" />}
                   name="userName"
                   type="email"
                   //   placeholder="Email"
@@ -72,7 +74,9 @@ function MonsterForm(props) {
                 />
 
                 <Field
-                  label="Password"
+                  // label="Password"
+                   label={<FormattedMessage id="app.password" defaultMessage="Password" />}
+                
                   name="password"
                   type="password"
                   //   placeholder="Email"

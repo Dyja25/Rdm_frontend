@@ -365,7 +365,12 @@
        "app.talentvisibleinternaluser":"Talent visible to internal user",
        "app.internalusercansharetalent":"Internal user can share talent",
        "app.talentvisibletoexternaluser":"Talent visible to external user",
-       "app.talentvisibleexternalusersearch":"Talent visible to external user on search"
+       "app.talentvisibleexternalusersearch":"Talent visible to external user on search",
+        "app.verifyemail":"Verify Email",
+        "app.signIn":"Sign In",
+        "app.talentFromThisChannel":"Talent From This Channel Will be Assigned to",
+        "app.vendorFromThisChannel":"Vendor From This Channel Will be Assigned to",
+        "app.indeed":"Indeed"
    
 
 

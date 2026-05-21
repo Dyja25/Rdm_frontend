@@ -105,7 +105,10 @@ import SearchSelect from "../../../../../../Components/Forms/Formik/SearchSelect
                       <FlexContainer justifyContent="space-between">
                       <div style={{ width: "65%" }}>
                       <FlexContainer justifyContent="space-between">                 
-                      <StyledLabel >Vendor From This Channel Will be Assigned to</StyledLabel>                  
+                      <StyledLabel >
+                        {/* Vendor From This Channel Will be Assigned to */}
+                        <FormattedMessage id="app.vendorFromThisChannel" defaultMessage=" Vendor From This Channel Will be Assigned to" />
+                        </StyledLabel>                  
                       <Switch                                              
                         // checked={this.state.availability}
                         // onChange={this.handleAvailability}

@@ -8,6 +8,7 @@ import WebsiteForm from "./Website/WebsiteForm";
 import UpWorkForm from "./Upwork/UpWorkForm";
 import PartnerForm from "./Partner/PartnerForm";
 import MonsterForm from "./Monster/MonsterForm";
+import { FormattedMessage } from "react-intl";
 
 const TabPane = StyledTabs.TabPane;
 
@@ -41,7 +42,8 @@ function IndeedTab(props) {
             </div>
           </TabPane>
           <TabPane
-           tab={`Indeed`}
+          //  tab={`Indeed`}
+          tab={<FormattedMessage id="app.indeed" defaultMessage="Indeed" />}
             key="4"
           >
             <div style={{ marginTop: 10 }}>

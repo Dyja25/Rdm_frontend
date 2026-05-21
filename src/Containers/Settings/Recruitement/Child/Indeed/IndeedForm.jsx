@@ -9,6 +9,7 @@ import { StyledLabel } from "../../../../../Components/UI/Elements";
 import { Spacer } from "../../../../../Components/UI/Elements";
 import { InputComponent } from "../../../../../Components/Forms/Formik/InputComponent";
 import { Input } from "antd";
+import { FormattedMessage } from "react-intl";
 const { Search } = Input;
 
 function IndeedForm(props) {
@@ -41,7 +42,8 @@ function IndeedForm(props) {
           enterButton
         />
                 <Field
-                  label="User Name"
+                  // label="User Name"
+                  label={<FormattedMessage id="app.username" defaultMessage="User Name" />}
                   name="userName"
                   type="email"
                   //   placeholder="Email"
@@ -59,7 +61,8 @@ function IndeedForm(props) {
                 />
 
                 <Field
-                  label="Verify Email"
+                  // label="Verify Email"
+                  label={<FormattedMessage id="app.verifyemail" defaultMessage="Verify Email"/>}
                   name="verifyemail"
                   type="email"
                   //   placeholder="Email"
@@ -78,7 +81,8 @@ function IndeedForm(props) {
                       style={{ width: "7%", height: "2.5em" }}
                       // onClick={() => this.props.login('prabeen.strange@gmail.com', 'chicharito14')}
                     >
-                      Sign In
+                      {/* Sign In */}
+                      <FormattedMessage id="app.signIn" defaultMessage="Sign In"/>
                     </Button>
                     </FlexContainer>
           </Form>
