@@ -84,7 +84,7 @@ class TrainingDocumentForm extends Component {
                           name="courseName"
                           //label="Course Name"
                           label={<FormattedMessage
-                            id="app.courseName"
+                            id="app.coursename"
                             defaultMessage="Course Name"
                           />}
                           type="text"
@@ -140,7 +140,7 @@ class TrainingDocumentForm extends Component {
                           name="startDate"
                           //label="Start Date"
                           label={<FormattedMessage
-                            id="app.startDate"
+                            id="app.startdate"
                             defaultMessage="Start Date"
                           />}
                           isRequired
@@ -157,7 +157,7 @@ class TrainingDocumentForm extends Component {
                           name="endDate"
                           //label="End Date "
                           label={<FormattedMessage
-                            id="app.endDate"
+                            id="app.enddate"
                             defaultMessage="End Date"
                           />}
                           isRequired
@@ -208,7 +208,7 @@ class TrainingDocumentForm extends Component {
                         name="documentTitle"
                         //label="Name of Document"
                         label={<FormattedMessage
-                          id="app.documentTitle"
+                          id="app.nameofdocument"
                           defaultMessage="Name of Document"
                         />}
                         width={"100%"}
@@ -220,7 +220,7 @@ class TrainingDocumentForm extends Component {
                         name="documentDescription"
                         //label="Description of Document"
                         label={<FormattedMessage
-                          id="app.documentDescription"
+                          id="app.descriptionofdocument"
                           defaultMessage="Description of Document"
                         />}
                         isRequired

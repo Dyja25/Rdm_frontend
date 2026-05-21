@@ -85,7 +85,7 @@ class LinkedDocuments extends Component {
       {
         //title: "Uploaded By",
         title: <FormattedMessage
-          id="app.uploadedBy"
+          id="app.uploadedby"
           defaultMessage="Uploaded By"
         />,
         dataIndex: "uploadedBy",
@@ -125,7 +125,11 @@ class LinkedDocuments extends Component {
         render: (name, item, i) => {
           return (
             <StyledPopconfirm
-              title="Do you want to delete?"
+              // title="Do you want to delete?"
+              title={<FormattedMessage
+          id="app.doyouwanttodelete"
+          defaultMessage="Do you want to delete?"
+        />}
               onConfirm={() => deleteDocument(item.documentId)}
             >
               <DeleteIcon type="delete" style={{ cursor: "pointer", color: "red" }} />

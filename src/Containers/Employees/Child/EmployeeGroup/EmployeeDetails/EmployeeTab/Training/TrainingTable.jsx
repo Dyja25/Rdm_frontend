@@ -43,7 +43,7 @@ class TrainingTable extends Component {
       {
         //title: " Course Name",
         title: <FormattedMessage
-          id="app.courseName"
+          id="app.coursename"
           defaultMessage=" Course Name"
         />,
         dataIndex: "courseName",
@@ -52,7 +52,7 @@ class TrainingTable extends Component {
       {
         //title: "Start Date",
         title: <FormattedMessage
-          id="app.startDate"
+          id="app.startdate"
           defaultMessage="Start Date"
         />,
         dataIndex: "startDate",
@@ -63,7 +63,7 @@ class TrainingTable extends Component {
       {
         //title: "End Date",
         title: <FormattedMessage
-          id="app.endDate"
+          id="app.enddate"
           defaultMessage="End Date"
         />,
         dataIndex: "endDate",

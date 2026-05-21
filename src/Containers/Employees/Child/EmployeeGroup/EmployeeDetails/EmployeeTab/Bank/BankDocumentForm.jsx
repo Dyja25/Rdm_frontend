@@ -67,7 +67,7 @@ class BankDocumentForm extends Component {
                     //label="Account Number"
                     label={
                       <FormattedMessage
-                        id="app.accountHolderName"
+                        id="app.accountHolder"
                         defaultMessage="Account Holder Name"
                       />
                     }
@@ -106,7 +106,7 @@ class BankDocumentForm extends Component {
                       //label="IFSC CODE"
                       label={
                         <FormattedMessage
-                          id="app.ifscCode"
+                          id="app.ifsccode"
                           defaultMessage="SWIFT Code"
                         />
                       }
@@ -125,7 +125,7 @@ class BankDocumentForm extends Component {
                       // label="Branch Name"
                       label={
                         <FormattedMessage
-                          id="app.branchName"
+                          id="app.branchname"
                           defaultMessage="Branch Name"
                         />
                       }
@@ -145,7 +145,7 @@ class BankDocumentForm extends Component {
                     //label="Bank Name"
                     label={
                       <FormattedMessage
-                        id="app.bankName"
+                        id="app.bankname"
                         defaultMessage="Bank Name"
                       />
                     }
@@ -165,7 +165,10 @@ class BankDocumentForm extends Component {
                   type="primary"
                   Loading={addingBankDetails}
                 >
-                  Submit
+                   <FormattedMessage
+                        id="app.submit"
+                        defaultMessage="submit"
+                      />
                 </Button>
               </FlexContainer>
             </Form>

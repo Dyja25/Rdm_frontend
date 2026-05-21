@@ -238,7 +238,7 @@ class AddDocumentModal extends Component {
                         //label="Name"
                         label={
                           <FormattedMessage
-                            id="app.documentTitle"
+                            id="app.name"
                             defaultMessage="Name"
                           />
                         }
@@ -253,7 +253,7 @@ class AddDocumentModal extends Component {
                         //label="Description"
                         label={
                           <FormattedMessage
-                            id="app.documentDescription"
+                            id="app.description"
                             defaultMessage="Description"
                           />
                         }

@@ -48,7 +48,7 @@ class EmployeeAboutView extends Component {
         </FlexContainer>
         <ProfileItemRow //label="Email" 
           label={<FormattedMessage
-            id="app.emailId"
+            id="app.email"
             defaultMessage="Email"
           />}
           value={emailId} />
@@ -97,12 +97,27 @@ class EmployeeAboutView extends Component {
             defaultMessage="Details"
           />}
           value={departmentDetails} /> */}
-            <ProfileItemRow label="Designation" value={designation} />
-        <ProfileItemRow label="Department" value={department} />
-        <ProfileItemRow label="Level" value={level || ""} />
+            <ProfileItemRow //label="Designation" 
+             label={<FormattedMessage
+            id="app.designation"
+            defaultMessage="Designation"
+          />}
+            value={designation} />
+        <ProfileItemRow //label="Department"
+         label={<FormattedMessage
+            id="app.department"
+            defaultMessage="Department"
+          />} 
+        value={department} />
+        <ProfileItemRow //label="Level" 
+        label={<FormattedMessage
+            id="app.level"
+            defaultMessage="Level"
+          />} 
+        value={level || ""} />
         <ProfileItemRow 
           label={<FormattedMessage
-            id="app.userType"
+            id="app.usertype"
             defaultMessage="User type"
           />}
           value={userType} />

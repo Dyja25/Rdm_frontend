@@ -77,17 +77,42 @@ class EmployeeStatusView extends Component {
           />}
           value={dayjs(dateOfJoining).format("YYYY-MM-DD")}
         /> */}
-        <ProfileItemRow label="Mobile #" value={mobile} />
+        <ProfileItemRow //label="Mobile #"
+          label={<FormattedMessage
+            id="app.mobile#"
+            defaultMessage="Mobile #"
+          />}
+         value={mobile} />
         <ProfileItemRow label="Linkedin" value={linkedinPublicUrl || ""} />
         <ProfileItemRow label="Twitter" value={twitter || ""} />
-        <ProfileItemRow label="Date of Joining" value={dayjs(dateOfJoining).format("YYYY-MM-DD")} />
-        <ProfileItemRow label="Currency" value={tradeCurrency} />
+        <ProfileItemRow //label="Date of Joining" 
+  label={<FormattedMessage
+            id="app.dateofjoining"
+            defaultMessage="Date of Joining"
+          />}
+        value={dayjs(dateOfJoining).format("YYYY-MM-DD")} />
+        <ProfileItemRow //label="Currency"
+        label={<FormattedMessage
+            id="app.currency"
+            defaultMessage="Currency"
+          />} 
+        value={tradeCurrency} />
         {/* <ProfileItemRow label="Designation" value={designation} />
         <ProfileItemRow label="Department" value={department} />
         <ProfileItemRow label="Level" value={level || ""} /> */}
         {/* <ProfileItemRow label="Details" value={departmentDetails} /> */}
-        <ProfileItemRow label="Reporting Manager"  />
-        <ProfileItemRow label="Time Zone" value={timeZone} />
+        <ProfileItemRow //label="Reporting Manager"
+         label={<FormattedMessage
+            id="app.reportingManager"
+            defaultMessage="Reporting Manager"
+          />} 
+        />
+        <ProfileItemRow //label="Time Zone"
+        label={<FormattedMessage
+            id="app.timezone"
+            defaultMessage="Time Zone"
+          />} 
+         value={timeZone} />
         {/* <ProfileItemRow label="Level" value={level || ""} /> */}
         {/* <ProfileItemRow label="TimeZone" value={timeZone} /> */}
         {/* <ProfileItemRow label="Reporting Manager" value={mataData.firstName} /> */}

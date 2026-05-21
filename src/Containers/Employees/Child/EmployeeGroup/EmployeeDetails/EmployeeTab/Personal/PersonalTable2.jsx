@@ -115,7 +115,7 @@ class PersonalTable2 extends Component {
       {
         //title: "Mobile No",
         title: <FormattedMessage
-          id="app.mobileNo"
+          id="app.mobilenumber"
           defaultMessage="Mobile No"
         />,
         dataIndex: "mobileNo",
@@ -123,7 +123,7 @@ class PersonalTable2 extends Component {
       {
         //title: "Phone No",
         title: <FormattedMessage
-          id="app.phoneNo"
+          id="app.phoneNumber"
           defaultMessage="Phone No"
         />,
         dataIndex: "phoneNo",

@@ -173,7 +173,7 @@ class UpdatePersonalForm extends Component {
                         //label="First Name"
                         label={
                           <FormattedMessage
-                            id="app.contactFirstName"
+                            id="app.firstname"
                             defaultMessage="First Name"
                           />
                         }
@@ -195,7 +195,7 @@ class UpdatePersonalForm extends Component {
                         // label="Last Name"
                         label={
                           <FormattedMessage
-                            id="app.contactLastName"
+                            id="app.lastname"
                             defaultMessage="Last Name"
                           />
                         }
@@ -212,7 +212,7 @@ class UpdatePersonalForm extends Component {
                         // label="Middle "
                         label={
                           <FormattedMessage
-                            id="app.contactMiddleName"
+                            id="app.middleName"
                             defaultMessage="Middle"
                           />
                         }
@@ -233,7 +233,7 @@ class UpdatePersonalForm extends Component {
                         // label="Mobile #"
                         label={
                           <FormattedMessage
-                            id="app.countryDialCode"
+                            id="app.mobile#"
                             defaultMessage="Mobile #"
                           />
                         }
@@ -250,7 +250,7 @@ class UpdatePersonalForm extends Component {
                         name="mobileNo"
                         label={
                           <FormattedMessage
-                            id="app.mobileNo"
+                            id="app.mobilenumber"
                             defaultMessage="Mobile No"
                           />
                         }
@@ -271,7 +271,7 @@ class UpdatePersonalForm extends Component {
                         //  label="Phone #"
                         label={
                           <FormattedMessage
-                            id="app.countryDialCode1"
+                            id="app.phone#"
                             defaultMessage="Phone #"
                           />
                         }
@@ -288,7 +288,7 @@ class UpdatePersonalForm extends Component {
                         name="phoneNo"
                         label={
                           <FormattedMessage
-                            id="app.phoneNo"
+                            id="app.phoneNumber"
                             defaultMessage="Phone No"
                           />
                         }

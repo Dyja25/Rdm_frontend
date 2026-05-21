@@ -76,7 +76,7 @@ class EmploymentTable extends Component {
       {
         //title: "Start Date",
         title: <FormattedMessage
-          id="app.startDate"
+          id="app.startdate"
           defaultMessage="Start Date"
         />,
         dataIndex: "startDate",
@@ -87,7 +87,7 @@ class EmploymentTable extends Component {
       {
         //title: "End Date",
         title: <FormattedMessage
-          id="app.endDate"
+          id="app.enddate"
           defaultMessage="End Date"
         />,
         dataIndex: "endDate",
@@ -97,7 +97,11 @@ class EmploymentTable extends Component {
       },
       //combine and show salary +curr+type
       {
-        title: "Salary",
+        // title: "Salary",
+         title: <FormattedMessage
+          id="app.salary"
+          defaultMessage="Salary"
+        />,
         render: (name, item, i) => {
           return (
             <span>{`${item.salary} ${item.currency} ${item.salaryType}`}</span>

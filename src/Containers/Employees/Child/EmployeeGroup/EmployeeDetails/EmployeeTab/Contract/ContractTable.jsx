@@ -40,7 +40,7 @@ class ContractTable extends Component {
 
       {
         title: <FormattedMessage
-          id="app.startDate"
+          id="app.startdate"
           defaultMessage="Start Date"
         />,
         dataIndex: "previous_start_date",
@@ -50,7 +50,7 @@ class ContractTable extends Component {
       },
       {
         title: <FormattedMessage
-          id="app.endDate"
+          id="app.enddate"
           defaultMessage="End Date"
         />,
         dataIndex: "previous_end_date",

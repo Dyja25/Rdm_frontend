@@ -704,7 +704,12 @@
   "app.notApproved":"Niet goedgekeurd",
   "app.commercials":"Reclames",
   "app.recruitOwner":"Eigenaar rekruteren",
-  "app.resume":"Cv"
+  "app.resume":"Cv",
+  "app.college":"Middelbare school",
+  "app.netSalary":"Netto salaris",
+   "app.grossSalary":"Bruto salaris",
+   "app.contractType":"Contracttype"
+ 
 
 
 

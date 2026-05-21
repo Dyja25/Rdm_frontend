@@ -8,6 +8,7 @@ import {
   getTopicsByUserId,
   deleteTopicByUserId,
 } from "../../../../../Profile/ProfileAction";
+import { FormattedMessage } from "react-intl";
 class EmployeeTopicOfInterest extends React.Component {
   constructor(props) {
     super(props);
@@ -72,7 +73,12 @@ class EmployeeTopicOfInterest extends React.Component {
                 fontSize="0.875em"
                 style={{ fontWeight: 600, marginBottom: "0.2rem" }}
               >
-                Skills of interest{" "}
+                {/* Skills of interest */}
+                <FormattedMessage
+            id="app.skillsOfInterest"
+            defaultMessage="Skills of interest"
+          />
+                {" "}
               </Title>
               {fetchingTopicsByUserId ? (
                 <p>fetching Skills ...</p>
@@ -126,7 +132,11 @@ class EmployeeTopicOfInterest extends React.Component {
                 >
                   {/* <Icon type="plus" /> */}
                   
-                   Skill
+                   {/* Skill */}
+                   <FormattedMessage
+            id="app.skills"
+            defaultMessage="Skills"
+          />
                 </Tag>
               )}
             </div>

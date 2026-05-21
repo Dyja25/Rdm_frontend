@@ -94,7 +94,7 @@ componentDidMount(){
                     
                     {/*&nbsp;{" "}*/}
                     <FormattedMessage
-                      id="app.Education"
+                      id="app.education"
                       defaultMessage="Education"
                     />
                   </span>
@@ -128,8 +128,12 @@ componentDidMount(){
                 <>
                   
                   {/* <FontAwesomeIcon icon={solid('headphones')}/> */}
-                  <span style={{ marginLeft: "0.25em" }}>Training
-                    
+                  <span style={{ marginLeft: "0.25em" }}>
+                    {/* Training */}
+                    <FormattedMessage
+                          id="app.training"
+                          defaultMessage="Training"
+                        />
                   </span>
                   {activeKey === "2" && (
                     <>
@@ -240,7 +244,12 @@ componentDidMount(){
               tab={
                 <>
                 <i class="fa fa-credit-card"></i>
-                  <span style={{ marginLeft: "0.25em" }}>Bank Details
+                  <span style={{ marginLeft: "0.25em" }}>
+                    {/* Bank Details */}
+                    <FormattedMessage
+                          id="app.bankDetails"
+                          defaultMessage="Bank Details"
+                        />
                    {/*  &nbsp;*/} 
                   </span>
                   {activeKey === "5" && (
@@ -274,7 +283,12 @@ componentDidMount(){
               tab={
                 <>
                 <i class="fa fa-id-card" aria-hidden="true"></i>
-                  <span style={{ marginLeft: "0.25em" }}>Personal Details
+                  <span style={{ marginLeft: "0.25em" }}>
+                    {/* Personal Details */}
+                    <FormattedMessage
+                          id="app.personaldetails"
+                          defaultMessage="Personal Details"
+                        />
                    {/*  &nbsp; */} 
                     {/* <i className="fa fa-sticky-note" aria-hidden="true"></i>
                     &nbsp;Notes */}
@@ -340,7 +354,12 @@ componentDidMount(){
               tab={
                 <>
                  <i class="fas fa-coins" aria-hidden="true"></i>
-                  <span style={{ marginLeft: "0.25em" }}>Salary
+                  <span style={{ marginLeft: "0.25em" }}>
+                    {/* Salary */}
+                     <FormattedMessage
+                          id="app.salary"
+                          defaultMessage="Salary"
+                        />
                    {/*&nbsp;*/} 
                   </span>
                   {activeKey === "8" && (

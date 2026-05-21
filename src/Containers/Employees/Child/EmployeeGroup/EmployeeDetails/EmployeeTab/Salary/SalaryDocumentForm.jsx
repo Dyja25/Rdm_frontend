@@ -91,8 +91,8 @@ class SalaryDocumentForm extends Component {
                       //label="Gross Amount"
                       label={
                         <FormattedMessage
-                          id="app.grossMonthlySalary"
-                          defaultMessage="Gross Amount"
+                          id="app.grossSalary"
+                          defaultMessage="Gross Salary"
                         />
                       }
                       component={InputComponent}
@@ -130,7 +130,7 @@ class SalaryDocumentForm extends Component {
                         // label="From"
                         label={
                           <FormattedMessage
-                            id="app.startingDate"
+                            id="app.from"
                             defaultMessage="From"
                           />
                         }

@@ -48,20 +48,23 @@ class EmployeePersonalView extends Component {
                     )}
                 >
                     <Panel
-                        header={"Personal"}
+                        header={<FormattedMessage
+                                id="app.personal"
+                                defaultMessage="Personal"
+                            />}
                         key="1"
                         style={{}}
                     >
                         <ProfileItemRow //label="Blood Group" 
                             label={<FormattedMessage
-                                id="app.bloodGroup"
+                                id="app.bloodgroup"
                                 defaultMessage="Blood Group"
                             />}
 
                             value={bloodGroup} />
                         <ProfileItemRow //label="Date Of Birth" 
                             label={<FormattedMessage
-                                id="app.dob"
+                                id="app.dateofbirth"
                                 defaultMessage="Date Of Birth"
                             />}
                             value={dayjs(dob).format("YYYY-MM-DD")} />

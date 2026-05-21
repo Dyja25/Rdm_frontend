@@ -95,7 +95,7 @@ class ContractDocumentForm extends Component {
                         //label="Start Date"
                         label={
                           <FormattedMessage
-                            id="app.startDate"
+                            id="app.startdate"
                             defaultMessage="Start Date"
                           />
                         }
@@ -119,7 +119,7 @@ class ContractDocumentForm extends Component {
                         // label="End Date "
                         label={
                           <FormattedMessage
-                            id="app.endDate"
+                            id="app.enddate"
                             defaultMessage="End Date"
                           />
                         }

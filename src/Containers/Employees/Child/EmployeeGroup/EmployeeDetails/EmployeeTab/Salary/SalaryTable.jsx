@@ -60,7 +60,7 @@ class SalaryTable extends Component {
       {
         //title: "Gross Salary",
         title: <FormattedMessage
-          id="app.grossMonthlySalary"
+          id="app.grossSalary"
           defaultMessage="Gross Salary"
         />,
         dataIndex: "grossMonthlySalary",
@@ -77,7 +77,7 @@ class SalaryTable extends Component {
       {
         // title: "Start Date",
         title: <FormattedMessage
-          id="app.startingDate"
+          id="app.startdate"
           defaultMessage="Start Date"
         />,
         dataIndex: "startingDate",
@@ -88,7 +88,7 @@ class SalaryTable extends Component {
       {
         //title: "End Date",
         title: <FormattedMessage
-          id="app.endDate"
+          id="app.enddate"
           defaultMessage="End Date"
         />,
         dataIndex: "endDate",

@@ -111,7 +111,7 @@ class PersonalDetailsDocumentForm extends Component {
                       //label="Document ID number"
                       label={
                         <FormattedMessage
-                          id="app.idNo"
+                          id="app.documentidnumber"
                           defaultMessage="Document ID number"
                         />
                       }
@@ -138,7 +138,7 @@ class PersonalDetailsDocumentForm extends Component {
                     //label="Name of Document"
                     label={
                       <FormattedMessage
-                        id="app.documentTitle"
+                        id="app.nameofdocument"
                         defaultMessage="Name of Document"
                       />
                     }
@@ -152,7 +152,7 @@ class PersonalDetailsDocumentForm extends Component {
                     //label="Description of Document"
                     label={
                       <FormattedMessage
-                        id="app.documentDescription"
+                        id="app.descriptionofdocument"
                         defaultMessage="Description of Document"
                       />
                     }

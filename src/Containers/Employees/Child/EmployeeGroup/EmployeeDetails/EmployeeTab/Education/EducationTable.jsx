@@ -59,7 +59,7 @@ class EducationTable extends Component {
       {
         //title: "Course Name",
         title: <FormattedMessage
-          id="app.courseName"
+          id="app.coursename"
           defaultMessage="Course Name"
         />,
         dataIndex: "courseName",
@@ -71,7 +71,7 @@ class EducationTable extends Component {
       {
         //title: "Year of Passing",
         title: <FormattedMessage
-          id="app.yearOfPassing"
+          id="app.yearofpassing"
           defaultMessage="Year of Passing"
         />,
         dataIndex: "yearOfPassing",
@@ -94,7 +94,7 @@ class EducationTable extends Component {
       {
         //title: "Marks Secured",
         title: <FormattedMessage
-          id="app.marksSecured"
+          id="app.markssecured"
           defaultMessage="Marks Secured"
         />,
         dataIndex: "marksSecured",
