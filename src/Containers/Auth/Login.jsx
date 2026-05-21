@@ -82,7 +82,7 @@ const Login = () => {
         <img
           className="big-logo"
           src={lib}
-          style={{ width: 100 }}
+          style={{ width: 200 }}
           alt="Libaxix Logo"
         />
         <br />

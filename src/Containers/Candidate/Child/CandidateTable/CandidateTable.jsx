@@ -407,7 +407,12 @@ const rowSelection = {
               candidateName={item.fullName}
             />
             &nbsp;&nbsp;
-            {date === currentdate ? <span className="blink">New</span> : null}
+            {date === currentdate ? <span
+                  style={{
+                    color: "tomato",
+                    fontWeight: "bold",
+                  }}
+                >New</span> : null}
           </>
         );
       },

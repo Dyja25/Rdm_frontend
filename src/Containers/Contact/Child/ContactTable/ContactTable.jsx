@@ -307,7 +307,12 @@ function handleSend (){
          </span>
           &nbsp;&nbsp;
           {date === currentdate ? (
-           <span className="blink">
+           <span
+                  style={{
+                    color: "tomato",
+                    fontWeight: "bold",
+                  }}
+                >
               New
             </span>
           ) : null}
