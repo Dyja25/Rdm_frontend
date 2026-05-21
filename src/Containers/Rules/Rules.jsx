@@ -10,18 +10,27 @@ import MileageTab from "./Child/RulesTab/MileageTab.jsx";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { getLeavesDetails } from "../Settings/SettingsAction";
+import { FormattedMessage } from "react-intl";
 
 const RulesActionLeft = lazy(() => import("./RulesActionLeft.jsx"));
 const RulesActionRight = lazy(() => import("./RulesActionRight.jsx"));
 
 const name = [
   {
-    rulesName: "Leaves",
+    // rulesName: "Leaves",
+     rulesName:  <FormattedMessage
+                            id="app.leaves"
+                            defaultMessage="Leaves"
+                          />,
     ruleId: "1",
     component: <LeadsTab />,
   },
   {
-    rulesName: "Mileage",
+    // rulesName: "Mileage",
+       rulesName:  <FormattedMessage
+                            id="app.mileage#"
+                            defaultMessage="Mileage"
+                          />,
     ruleId: "2",
     component: <MileageTab />,
   },

@@ -349,7 +349,17 @@
     "app.roleInternal":"Role (Internal)",
     "app.roleTalent":"Role (Talent)",
     "app.availabillity":"Availabillity",
-    "app.thistask":"This Task occurs in the past !"
+    "app.thistask":"This Task occurs in the past !",
+    "app.addtype":"Add Type",
+    "app.sourcing":"Sourcing",
+    "app.skillsCertifications":"Skills and Certifications",
+    "app.access":"Access",
+    "app.compliance":"Compliance",
+    "app.commission":"Commission",
+      "app.withhold":"Withhold",
+       "app.call":"Call",
+       "app.partnercontact":"Partner Contact"
+   
 
 
 }

@@ -716,7 +716,16 @@
    "app.roleInternal":"Rol (intern)",
    "app.roleTalent":"Rol (Talent)",
      "app.availabillity":"Beschikbaarheid",
-     "app.thistask":"Deze taak speelt zich af in het verleden!"
+     "app.thistask":"Deze taak speelt zich af in het verleden!",
+     "app.addtype":"Type toevoegen",
+     "app.sourcing":"Inkoop",
+       "app.skillsCertifications":"Vaardigheden en certificeringen",
+       "app.access":"Toegang",
+        "app.compliance":"Naleving",
+         "app.commission":"Commissie",
+         "app.withhold":"Achterhouden",
+         "app.call":"Telefoongesprek",
+         "app.partnercontact":"Partnercontact"
 
 
 

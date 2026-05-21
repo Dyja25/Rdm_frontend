@@ -13,6 +13,7 @@ import {
 } from "./EventAction";
 import axios from "axios";
 import { base_url } from "../../../Config/Auth";
+import { FormattedMessage } from "react-intl";
 
 class Event extends Component {
   constructor(props) {
@@ -155,11 +156,17 @@ class Event extends Component {
                   onClick={this.handleAddEvent}
                   style={{ marginRight: "0.125em" }}
                 >
-                  Save
+                 <FormattedMessage
+                                                         id="app.save"
+                                                         defaultMessage="Save"
+                                                       />
                 </Button>
                 &nbsp;
                 <Button type="primary" ghost onClick={this.toggleInput}>
-                  Cancel
+                    <FormattedMessage
+                                                          id="app.cancel"
+                                                          defaultMessage="Cancel"
+                                                        />
                 </Button>
               </FlexContainer>
             ) : (
@@ -173,7 +180,10 @@ class Event extends Component {
                     Loading={addingEvents}
                     onClick={this.toggleInput}
                   >
-                    Add Type
+                   <FormattedMessage
+                      id="app.addtype"
+                      defaultMessage="Add Type"
+                    />
                   </Button>
                 </FlexContainer>
               </>

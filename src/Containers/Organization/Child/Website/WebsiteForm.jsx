@@ -9,6 +9,7 @@ import { InputComponent } from "../../../../Components/Forms/Formik/InputCompone
 import { addWebsiteCredentials } from "./WebsiteAction";
 // import { addEmailCredentialsForAdmin } from "../EmailAction";
 import { FlexContainer } from "../../../../Components/UI/Layout";
+import { FormattedMessage } from "react-intl";
 /**
  * yup validation scheme for creating a Team
  */
@@ -142,7 +143,11 @@ class WebsiteForm extends Component {
                     // style={{ float: "right" }}
                     Loading={addingWebsite}
                   >
-                    Create
+                    {/* Create */}
+                    <FormattedMessage
+          id="app.create"
+          defaultMessage="Create"
+        />
                 </Button>
                 </FlexContainer>
               </Form>

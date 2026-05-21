@@ -18,6 +18,7 @@ import {
 import axios from "axios";
 // import { base_url } from "../../../Config/Auth";
 import { Select } from "../../../../Components/UI/Elements";
+import { FormattedMessage } from "react-intl";
 const { Option } = Select;
 
 class Department extends Component {
@@ -188,11 +189,19 @@ class Department extends Component {
                   onClick={this.handleAddRole}
                   style={{ marginRight: "0.125em" }}
                 >
-                  Save
+                  {/* Save */}
+                   <FormattedMessage
+                                                                            id="app.save"
+                                                                            defaultMessage="Save"
+                                                                          />
                 </Button>
                 &nbsp;
                 <Button type="primary" ghost onClick={this.toggleInput}>
-                  Cancel
+                  {/* Cancel */}
+                   <FormattedMessage
+                                                                            id="app.cancel"
+                                                                            defaultMessage="Cancel"
+                                                                          />
                 </Button>
               </FlexContainer>
             ) : (
@@ -206,7 +215,11 @@ class Department extends Component {
                      Loading={addingRoles}
                     onClick={this.toggleInput}
                   >
-                    Add Type
+                    {/* Add Type */}
+                    <FormattedMessage
+                                                              id="app.addtype"
+                                                              defaultMessage="Add Type"
+                                                            />
                   </Button>
                 </FlexContainer>
               </>

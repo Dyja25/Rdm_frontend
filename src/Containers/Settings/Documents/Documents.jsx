@@ -183,7 +183,10 @@ class Documents extends Component {
                     Loading={addingDocuments}
                     onClick={this.toggleInput}
                   >
-                    Add Type
+                    <FormattedMessage
+                                          id="app.addtype"
+                                          defaultMessage="Add Type"
+                                        />
                   </Button>
                 </FlexContainer>
               </>
