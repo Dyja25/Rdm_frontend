@@ -714,7 +714,9 @@
   "app.permission":"Toestemming",
   "app.others":"Anderen",
    "app.roleInternal":"Rol (intern)",
-   "app.roleTalent":"Rol (Talent)"
+   "app.roleTalent":"Rol (Talent)",
+     "app.availabillity":"Beschikbaarheid",
+     "app.thistask":"Deze taak speelt zich af in het verleden!"
 
 
 

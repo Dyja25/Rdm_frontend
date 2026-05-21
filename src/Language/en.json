@@ -347,7 +347,9 @@
     "app.permission":"Permission",
     "app.others":"Others",
     "app.roleInternal":"Role (Internal)",
-    "app.roleTalent":"Role (Talent)"
+    "app.roleTalent":"Role (Talent)",
+    "app.availabillity":"Availabillity",
+    "app.thistask":"This Task occurs in the past !"
 
 
 }

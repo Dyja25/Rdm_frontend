@@ -124,10 +124,19 @@ class SubTableClickCandidate extends Component {
       }
    },
    {
-     title:"Recruit Owner",
+    //  title:"Recruit Owner",
+    title:<FormattedMessage
+                  id="app.recruitOwner"
+                  defaultMessage="Recruit Owner"
+                />,
      dataIndex:"recruitOwner",
    },
-    { title: "Cost" ,
+    { 
+      // title: "Cost" ,
+       title:<FormattedMessage
+                  id="app.cost"
+                  defaultMessage="Cost"
+                />,
     dataIndex:"candidateBilling",
     render: (name, item, i) => {        
       return (
@@ -141,7 +150,11 @@ class SubTableClickCandidate extends Component {
   },
 
   {
-    title:"Availabillity",
+    // title:"Availabillity",
+      title:<FormattedMessage
+                  id="app.availabillity"
+                  defaultMessage="Availabillity"
+                />,
     dataIndex:"avilableDate",
   },
     {

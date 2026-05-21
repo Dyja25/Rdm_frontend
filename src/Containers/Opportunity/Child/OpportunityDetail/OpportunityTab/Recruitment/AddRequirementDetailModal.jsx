@@ -5,6 +5,7 @@ import { useState } from "react";
 import { BundleLoader } from "../../../../../../Components/Placeholder";
 
 import { StyledModal } from "../../../../../../Components/UI/Antd";
+import { FormattedMessage } from "react-intl";
 const RequirementDetailForm = lazy(() => import("./RequirementDetailForm.jsx"));
 
 const AddRequirementDetailModal = (props) => {
@@ -13,7 +14,10 @@ const AddRequirementDetailModal = (props) => {
   return (
     <>
       <StyledModal
-        title="Requirement"
+        title={ <FormattedMessage
+                        id="app.requirement"
+                        defaultMessage="Requirement"
+                      />}
         width="58%"
         visible={props.addRequirementDetailModal}
         maskClosable={false}
