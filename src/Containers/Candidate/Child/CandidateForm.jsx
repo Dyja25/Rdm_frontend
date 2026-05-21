@@ -849,13 +849,13 @@ class CandidateForm extends Component {
                             defaultMessage="Skills"
                           />
                     }
-                  
                   mode
                     placeholder="Select"
                     width={"100%"}
                    component={SelectComponent}
                     options={Array.isArray(libraryOption) ? libraryOption : []}
-                     
+                       className="w-full"
+    style={{ width: "100%" }}
                   />
                     </FlexContainer>
                     </FlexContainer>

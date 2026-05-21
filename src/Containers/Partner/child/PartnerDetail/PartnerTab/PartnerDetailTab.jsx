@@ -91,7 +91,7 @@ class ContactDetailTab extends Component {
     console.log(partnerId);
     return (
       <>
-        <TabsWrapper>
+        <TabsWrapper style={{height:"85vh"}}>
           <StyledTabs defaultActiveKey="1" onChange={this.handleTabChange}>
             
           <TabPane
