@@ -306,7 +306,7 @@ class UpdateContactForm extends Component {
                         //label="Email"
                         label={
                           <FormattedMessage
-                            id="app.emailId"
+                            id="app.emailid"
                             defaultMessage="Email"
                           />
                         }
@@ -346,13 +346,13 @@ class UpdateContactForm extends Component {
                       <FastField
                         type="text"
                         name="mobileNumber"
-                        label={
-                          <FormattedMessage
-                            id="app.mobile#"
-                            defaultMessage="Mobile #"
-                          />
-                        }
-                        //placeholder="Mobile #"
+                        // label={
+                        //   <FormattedMessage
+                        //     id="app.mobile#"
+                        //     defaultMessage="Mobile #"
+                        //   />
+                        // }
+                        placeholder="Mobile #"
                         component={InputComponent}
                         inlineLabel
                         width={"100%"}
@@ -387,13 +387,13 @@ class UpdateContactForm extends Component {
                       <FastField
                         type="text"
                         name="phoneNumber"
-                        //placeholder="Phone #"
-                        label={
-                          <FormattedMessage
-                            id="app.phoneNumber"
-                            defaultMessage="Phone #"
-                          />
-                        }
+                        placeholder="Phone #"
+                        // label={
+                        //   <FormattedMessage
+                        //     id="app.phoneNumber"
+                        //     defaultMessage="Phone #"
+                        //   />
+                        // }
                         isColumn
                         component={InputComponent}
                         inlineLabel
@@ -412,7 +412,7 @@ class UpdateContactForm extends Component {
                         //label="Linkedin "
                         label={
                           <FormattedMessage
-                            id="app.linkedinPublicUrl"
+                            id="app.linkedin"
                             defaultMessage="Linkedin"
                           />
                         }

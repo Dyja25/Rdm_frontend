@@ -33,20 +33,20 @@ import APIFailed from "../../../../Helpers/ErrorBoundary/APIFailed";
 import { DeleteOutlined } from "@ant-design/icons";
 
 const moduleOptions = [
-  "Bank",
-  "Educational",
-  "Training",
-  "Address",
-  "Contract",
-  "ContractAdress",
-  "EmployeeDocument",
-  "EmployeeId",
-  "EmployeeInfo",
-  "EmployeeNotes",
-  "EmploymentHistory",
-  "Keyskill",
-  "Personaldetails",
-  "Salarydetails",
+  <FormattedMessage id="app.bank" defaultMessage="Bank" />,
+  <FormattedMessage id="app.educational" defaultMessage="Educational" />,
+    <FormattedMessage id="app.training" defaultMessage="Training" />,
+  <FormattedMessage id="app.address" defaultMessage="Address" />,
+  <FormattedMessage id="app.contract" defaultMessage="Contract" />,
+   <FormattedMessage id="app.contractAdress" defaultMessage="ContractAdress" />,
+   <FormattedMessage id="app.employeeDocument" defaultMessage="EmployeeDocument" />,
+   <FormattedMessage id="app.employeeId" defaultMessage="EmployeeId" />,
+    <FormattedMessage id="app.employeeInfo" defaultMessage="EmployeeInfo" />,
+  <FormattedMessage id="app.employeeNotes" defaultMessage="EmployeeNotes" />,
+   <FormattedMessage id="app.employmentHistory" defaultMessage="EmploymentHistory" />,
+    <FormattedMessage id="app.keyskill" defaultMessage="Keyskill" />,
+  <FormattedMessage id="app.personaldetails" defaultMessage="Personal Details" />,
+ <FormattedMessage id="app.salarydetails" defaultMessage="Salarydetails" />,
 ];
 function EmployeeTable(props) {
   const [page, setPage] = useState(0);
@@ -214,7 +214,8 @@ function EmployeeTable(props) {
               handleCheckAll(record.employeeId, e)
             }
           >
-            Check All
+            {/* Check All */}
+            <FormattedMessage id="app.checkall" defaultMessage="Check All" />
           </Checkbox>
         </div>
 
@@ -457,7 +458,8 @@ function EmployeeTable(props) {
       title: "",
       render: (_, record) => (
               <Popconfirm
-          title="Select Delete Modules"
+          // title="Select Delete Modules"
+          title={<FormattedMessage id="app.selectDeleteModules" defaultMessage="Select Delete Modules" />}
           description={popupContent(record)}
           icon={null}
           okText="OK"

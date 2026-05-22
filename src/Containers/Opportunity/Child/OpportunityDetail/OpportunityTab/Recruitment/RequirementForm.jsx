@@ -361,11 +361,40 @@ function RequirementForm(props) {
                         isColumn
                         width={"100%"}
                         component={SelectComponent}
+                        // options={[
+                        //   "Remote",
+                        //   "Hybrid",
+                        //   "Office"
+                        // ]}
                         options={[
-                          "Remote",
-                          "Hybrid",
-                          "Office"
-                        ]}
+    {
+      label: (
+        <FormattedMessage
+          id="app.remote"
+          defaultMessage="Remote"
+        />
+      ),
+      value: "Remote",
+    },
+    {
+      label: (
+        <FormattedMessage
+          id="app.hybrid"
+          defaultMessage="Hybrid"
+        />
+      ),
+      value: "Hybrid",
+    },
+    {
+      label: (
+        <FormattedMessage
+          id="app.office"
+          defaultMessage="Office"
+        />
+      ),
+      value: "Office",
+    },
+  ]}
                         inlineLabel
                       />
                     </div>
@@ -567,7 +596,13 @@ function RequirementForm(props) {
                           {" "}
                           <Field
                             name="billing"
-                            label={typeData ? "Salary" : "Rate/hr"}
+                            label={typeData ? (<FormattedMessage
+                                                    id="app.salary"
+                                                    defaultMessage="Salary"
+                                                  />) : (<FormattedMessage
+                                                    id="app.rate/hr"
+                                                    defaultMessage="Rate/hr"
+                                                  />) }
                             // label={<FormattedMessage
                             //   id="app.billing"
                             //   defaultMessage="Billing/hour"

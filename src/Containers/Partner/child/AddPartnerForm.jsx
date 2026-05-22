@@ -154,7 +154,7 @@ class PartnerForm extends Component {
                     type="text"
                     // label="Email"
                     label={
-                      <FormattedMessage id="app.email" defaultMessage="Email" />
+                      <FormattedMessage id="app.emailid" defaultMessage="Email" />
                     }
                     //isRequired
                     isColumn
@@ -223,7 +223,7 @@ class PartnerForm extends Component {
                        
                         label={
                           <FormattedMessage
-                            id="app.phone"
+                            id="app.mobile#"
                             defaultMessage="Phone #"
                           />
                         }

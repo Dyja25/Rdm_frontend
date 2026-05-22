@@ -160,7 +160,7 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
                     type="text"
                    
                     label={
-                      <FormattedMessage id="app.email" defaultMessage="Email" />
+                      <FormattedMessage id="app.emailid" defaultMessage="Email" />
                     }
                     //isRequired
                     isColumn

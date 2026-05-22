@@ -553,12 +553,14 @@ class CandidateForm extends Component {
                           ]}
                         // defaultValue={'value'}
                         inlineLabel
+                        className="w-full"
+    style={{ width: "100%" }}
                       />
                     </div>
                   </FlexContainer>
                                     
                     <FlexContainer justifyContent="space-between">
-                    <div style={{ width: "47%" }}>
+                    <div style={{ width: "100%" }}>
                       <FastField
                         name="nationality"
                         isColumnWithoutNoCreate
@@ -596,8 +598,11 @@ class CandidateForm extends Component {
                     </div>                       */}
                       </FlexContainer>
                       <Spacer/>
-                  <FlexContainer justifyContent="space-between">
-                    <div style={{ width: "30%" }}>
+                  <FlexContainer
+                   justifyContent="space-between"
+                   style={{ display: "flex", gap: "12px", width: "100%" }}
+                 >
+                   <div style={{ flex: 0.7,marginTop:"3px" }}>
                       <FastField
                         name="countryDialCode"
                         isColumnWithoutNoCreate
@@ -618,14 +623,14 @@ class CandidateForm extends Component {
                         inlineLabel
                       />
                     </div>
-                    <div style={{ width: "40%", }}>
+                   <div style={{ flex: 1.3,marginTop:"3px" }}>
                       <FastField
                         type="text"
                         name="mobileNumber"                      
                         component={InputComponent}
                         inlineLabel
                         width={"100%"}
-                        style={{ flexBasis: "30%" }}
+                       style={{ height: "30px"}}
                         isColumn
                       />
                     </div>
@@ -768,6 +773,8 @@ class CandidateForm extends Component {
                         component={DatePicker}
                         value={values.dateOfBirth}
                       // defaultValue={dayjs("2020-01-01")}
+                      // className="w-full"
+    style={{ width: "100%" }}
                       />
                     </div>                 
 

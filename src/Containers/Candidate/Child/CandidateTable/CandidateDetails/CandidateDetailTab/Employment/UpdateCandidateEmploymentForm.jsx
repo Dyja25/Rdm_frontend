@@ -99,7 +99,7 @@ class UpdateCandidateEmploymentForm extends Component {
                       //label="Organization Name"
                       label={
                         <FormattedMessage
-                          id="app.companyName"
+                          id="app.organizationname"
                           defaultMessage="Organization Name"
                         />
                       }

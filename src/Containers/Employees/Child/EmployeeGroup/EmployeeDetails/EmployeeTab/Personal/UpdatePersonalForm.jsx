@@ -162,7 +162,7 @@ class UpdatePersonalForm extends Component {
                         // label="Salutation"
                         label={
                           <FormattedMessage
-                            id="app.contactSalutation"
+                            id="app.salutation"
                             defaultMessage="Salutation"
                           />
                         }

@@ -158,7 +158,7 @@ class RemarksTable extends Component {
         <StyledTable
           columns={columns}
            dataSource={this.props.remark}
-          scroll={{ y: 100 }}
+          // scroll={{ y: 100 }}
           // pagination={{
           //   defaultPageSize: 15,
           //   showSizeChanger: true,

@@ -238,7 +238,7 @@ class UpdatePartnerForm extends Component {
                         label={
                           <FormattedMessage
                             id="app.phoneNumber"
-                            defaultMessage="Phone #"
+                            defaultMessage="Phone Number"
                           />
                         }
                         isColumn
