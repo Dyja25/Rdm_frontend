@@ -319,7 +319,7 @@ function LinkedContact(props) {
              <StyledPopconfirm
               placement="bottom"
               // title="Do you wish to detach?"
-              title={<FormattedMessage id="app.doyouwishtodetach" defaultMessage="Do you wish to detach?" />}
+              title={<FormattedMessage id="app.doyouwishtodetach?" defaultMessage="Do you wish to detach?" />}
               //   onConfirm={() =>
               //     unlinkContactFromOpportunity(opportunityId, name)
               //   }

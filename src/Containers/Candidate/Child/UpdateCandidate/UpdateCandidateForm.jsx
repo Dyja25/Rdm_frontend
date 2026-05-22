@@ -190,11 +190,18 @@ class UpdateCandidateForm extends Component {
                     width: "45%",
                   }}
                 >
-                  <FlexContainer flexWrap="no-wrap">
+                  <FlexContainer flexWrap="nowrap" alignItems="flex-start">
                     <FastField name="imageId" component={Upload} />
-                    <div style={{marginLeft:"16px"}}>
-                      <FlexContainer justifyContent="space-between">
-                         <div style={{ width: "46%" }}>
+<div style={{ marginLeft: "14px", width: "100%" }}>
+                      <FlexContainer
+                                            style={{
+                                              width: "100%",
+                                              display: "flex",
+                                              flexDirection: "row",
+                                              alignItems: "flex-start",
+                                            }}
+                                          >
+                         <div style={{ width: "40%" }}>
                           <FastField
                             name="salutation"
                             type="text"
@@ -208,11 +215,18 @@ class UpdateCandidateForm extends Component {
                             options={["Mr.", "Ms.", "None","Dr.","Mevr.","Dhr."]}
                             component={SelectComponent}
                             inlineLabel
-                            className="field w-[100px]"
+                            className="w-full"
+                            style={{
+          width: "95%",
+          height: "38px",
+          border: "1px solid #d9d9d9",
+          outline: "none",
+          boxShadow: "none",
+        }}
                             isColumn
                             />
                         </div>
-                         <div style={{ width: "54%" }}>
+                         <div style={{ width: "60%" }}>
                           <FastField
                             isRequired
                             name="firstName"
@@ -224,7 +238,8 @@ class UpdateCandidateForm extends Component {
                               />
                             }
                             type="text"
-                            width={"100%"}
+                            className="w-full"
+                            style={{width:"100%"}}
                             isColumn
                             component={InputComponent}
                             inlineLabel
@@ -232,7 +247,14 @@ class UpdateCandidateForm extends Component {
                         </div>
                       </FlexContainer>
                       <Spacer />
-                      <FlexContainer justifyContent="space-between">
+                   <FlexContainer
+                                         style={{
+                                           width: "100%",
+                                           display: "flex",
+                                           flexDirection: "row",
+                                           alignItems: "flex-start",
+                                         }}
+                                       >
                         <div style={{ width: "40%" }}>
                           <FastField
                             name="middleName"
@@ -244,13 +266,20 @@ class UpdateCandidateForm extends Component {
                               />
                             }
                             type="text"
-                            width={"100%"}
+                             className="w-full "
+                            style={{
+           width: "95%",
+          // height: "38px",
+          // border: "1px solid #d9d9d9",
+          // outline: "none",
+          // boxShadow: "none",
+        }}
                             isColumn
                             component={InputComponent}
                             inlineLabel
                             />
                         </div>
-                        <div style={{ width: "55%" }}>
+                        <div style={{ width: "60%" }}>
                           <FastField
                             name="lastName"
                             // label="Last Name"
@@ -261,7 +290,8 @@ class UpdateCandidateForm extends Component {
                               />
                             }
                             type="text"
-                            width={"100%"}
+                            className="w-full"
+                            style={{width:"100%"}}
                             isColumn
                             component={InputComponent}
                             inlineLabel
@@ -280,7 +310,7 @@ class UpdateCandidateForm extends Component {
                         // label="Email"
                         label={
                           <FormattedMessage
-                            id="app.email"
+                            id="app.emailid"
                             defaultMessage="Email"
                           />
                         }
@@ -320,7 +350,7 @@ class UpdateCandidateForm extends Component {
                     </div>
                   </FlexContainer>             
                   <FlexContainer justifyContent="space-between">
-                    <div style={{ width: "47%" }}>
+                    <div style={{ width: "100%" }}>
                       <FastField
                         name="nationality"
                         isColumnWithoutNoCreate
@@ -356,8 +386,11 @@ class UpdateCandidateForm extends Component {
                       </div>
                     </div> */}
                   </FlexContainer>
-                  <FlexContainer justifyContent="space-between">
-                    <div style={{ width: "27%" }}>
+                  <FlexContainer
+  justifyContent="space-between"
+  style={{ display: "flex", gap: "12px", width: "100%" }}
+>
+  <div style={{ flex: 0.7,marginTop:"3px" }}>
                       <FastField
                         name="countryDialCode"
                         isColumnWithoutNoCreate
@@ -378,7 +411,7 @@ class UpdateCandidateForm extends Component {
                         inlineLabel
                         />
                     </div>
-                    <div style={{ width: "40%" }}>
+                    <div style={{ flex: 1.3,marginTop:"3px" }}>
                       <FastField
                         type="text"
                         // isRequired
@@ -388,6 +421,7 @@ class UpdateCandidateForm extends Component {
                         inlineLabel
                         width={"100%"}
                         isColumn
+                        style={{ height: "30px"}}
                         />
                     </div>
                     {/* <div
@@ -466,7 +500,7 @@ class UpdateCandidateForm extends Component {
                       </FlexContainer>
                      
                   <FlexContainer justifyContent="space-between">
-                  <div style={{ width: "100%" }}>
+                  <div style={{ width: "100%",marginTop:"3px" }}>
                       <FastField
                         type="text"
                         name="linkedin"
@@ -486,7 +520,7 @@ class UpdateCandidateForm extends Component {
                     </FlexContainer>
                      
                   <FlexContainer justifyContent="space-between">
-                    <div style={{ width: "47%" }}>
+                    <div style={{ width: "47%",marginTop:"3px" }}>
                     <FastField
                         name="idProof"
                         //label="Mobile #"
@@ -526,6 +560,7 @@ class UpdateCandidateForm extends Component {
                         component={InputComponent}
                         inlineLabel
                         width={"100%"}
+                        
                         isColumn
                         />
                     </div>
@@ -543,6 +578,8 @@ class UpdateCandidateForm extends Component {
                         isColumn
                         component={DatePicker}
                         value={values.dateOfBirth}
+                         className="w-full"
+    style={{ width: "100%" }}
                         // defaultValue={dayjs("2020-01-01")
                       />
                     </div>
@@ -562,8 +599,14 @@ class UpdateCandidateForm extends Component {
                         inlineLabel
                         className="field"
                         isColumn
-                        
-    style={{ width: "120px" }}
+                         width={"100%"}
+                          style={{
+          width: "95%",
+          height: "38px",
+          border: "1px solid #d9d9d9",
+          outline: "none",
+          boxShadow: "none",
+        }}
                         />
                     </div>
                   </FlexContainer> 
@@ -757,111 +800,75 @@ class UpdateCandidateForm extends Component {
                     </div> 
                   </FlexContainer>
                   <Spacer style={{ marginTop: "1em" }} />
-                  <FlexContainer justifyContent="space-between">
-                  <div>
-                  <StyledLabel >
-                    {/* Category */}
-                     <FormattedMessage
-                            id="app.category"
-                            defaultMessage="Category"
-                          />
-                    </StyledLabel>
-                  </div>
-                  <div style={{width:"26%"}}>
-                  <Switch                   
-                   checked={this.state.whiteblue}
-                    onChange={this.handleWhiteBlue}
-                    disabled={this.state.checked}
-                   checkedChildren="White collar"
-                   unCheckedChildren="Blue collar"
-                    />
-                    </div>
-                    <div>
-                    <Checkbox
-                      checked={this.state.checked}
-                      onChange={() => this.handleChange()}
-                      style={{marginLeft:"auto"}}
-                      >
-                        {/* Both */}
-                        <FormattedMessage
-                            id="app.both"
-                            defaultMessage="Both"
-                          />
-                    </Checkbox>
-                    </div>
-                    <div>
-                    <StyledLabel>Type</StyledLabel>
-                    </div>
-                    <div style={{width:"25%"}}>
-                    <Switch                                           
-                     checked={this.state.billing}
-                     onChange={this.handlebilling}
-                      checkedChildren="Permanent"
-                      unCheckedChildren="Contract"
-                      />
-                    </div>
-                  </FlexContainer>
-                  <Spacer style={{ marginTop: "1em" }} />                   
-                  <FlexContainer justifyContent="space-between">
-                    <div style={{ width: "47%" }}>
-                    <FlexContainer justifyContent="space-between">
-                      <StyledLabel >
-                        {/* Active */}
-                        <FormattedMessage
-                            id="app.active"
-                            defaultMessage="Active"
-                          />
-                        </StyledLabel> 
-                    <Switch                     
-                      checked={this.state.availability}
-                       onChange={this.handleAvailability}
-                      // disabled={this.state.availability}
-                      checkedChildren="Yes"
-                      unCheckedChildren="No"
-                    />
-                    </FlexContainer>
-                    </div>                    
-                    </FlexContainer>                    
-                    <FlexContainer justifyContent="space-between">
-                      <div style={{ width: "47%" }}>
-                        {" "}
-                        {this.state.availability && (
-                        <Field
-                          name="availableDate"
-                          // label="Available from"
-                          label={
-                            <FormattedMessage
-                              id="app.availablefrom"
-                              defaultMessage="Available from"
-                            />
-                          }
-                          // disabled={!this.state.availability}
-                          component={DatePicker}
-                          isColumn
-                          width={"100%"}
-                          value={values.availableDate}
-                          inlineLabel                          
-                        />
-                        )}
-                      </div>
-                      <div style={{ width: "47%",marginTop:"-1.9rem" }}>
-                        <FastField
-                          name="experience"
-                          //label="Email"
-                          label={
-                            <FormattedMessage
-                              id="app.experienceInYear"
-                              defaultMessage="Experience (Years)"
-                            />
-                          }
-                          // className="field"
-                          isColumn
-                          width={"100%"}
-                          component={InputComponent}
-                          inlineLabel
-                        />
-                      </div>
-                      </FlexContainer>
+                  <FlexContainer
+  alignItems="flex-start"
+  justifyContent="space-between"
+  style={{
+    width: "75%",
+    gap: "20px",
+  }}
+>
+  {/* Category Section */}
+  <div
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      gap: "6px",
+    }}
+  >
+    <StyledLabel>
+      <FormattedMessage
+        id="app.category"
+        defaultMessage="Category"
+      />
+    </StyledLabel>
+
+    <Switch
+      checked={this.state.whiteblue}
+      onChange={this.handleWhiteBlue}
+      disabled={this.state.checked}
+      checkedChildren="White collar"
+      unCheckedChildren="Blue collar"
+    />
+  </div>
+
+  {/* Checkbox */}
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      marginTop: "24px",
+    }}
+  >
+    <Checkbox
+      checked={this.state.checked}
+      onChange={() => this.handleChange()}
+    >
+      <FormattedMessage
+        id="app.both"
+        defaultMessage="Both"
+      />
+    </Checkbox>
+  </div>
+
+  {/* Type Section */}
+  <div
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      gap: "6px",
+    }}
+  >
+    <StyledLabel>Type</StyledLabel>
+
+    <Switch
+      checked={this.state.billing}
+      onChange={this.handlebilling}
+      checkedChildren="Permanent"
+      unCheckedChildren="Contract"
+    />
+  </div>
+</FlexContainer>
                       <Spacer style={{marginTop:"1.25em"}}/>
                       <FlexContainer justifyContent="space-between">
                       <div style={{ width: "47%" }}>

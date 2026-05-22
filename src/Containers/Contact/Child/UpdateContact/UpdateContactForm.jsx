@@ -187,11 +187,18 @@ class UpdateContactForm extends Component {
                     width: "45%",
                   }}
                 >
-                  <FlexContainer flexWrap="no-wrap">
+                 <FlexContainer flexWrap="nowrap" alignItems="flex-start">
                     <FastField name="imageId" component={Upload} />
-                    <div style={{ marginLeft: "16px" }}>
-                      <FlexContainer justifyContent="space-between">
-                        <div style={{ width: "41%" }}>
+                     <div style={{ marginLeft: "14px", width: "100%" }}>
+                      <FlexContainer
+                        style={{
+                          width: "100%",
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "flex-start",
+                        }}
+                      >
+                        <div style={{ width: "40%" }}>
                           <FastField
                             name="salutation"
                             type="text"
@@ -205,11 +212,18 @@ class UpdateContactForm extends Component {
                             options={["Mr.", "Ms.", "None"]}
                             component={SelectComponent}
                             inlineLabel
-                            className="field w-[100px]"
+                             className="w-full"
+        style={{
+          width: "95%",
+          height: "38px",
+          border: "1px solid #d9d9d9",
+          outline: "none",
+          boxShadow: "none",
+        }}
                             isColumn
                           />
                         </div>
-                         <div style={{ width: "54%" }}>
+                         <div style={{ width: "60%" }}>
                           <FastField
                             isRequired
                             name="firstName"
@@ -221,7 +235,8 @@ class UpdateContactForm extends Component {
                               />
                             }
                             type="text"
-                            width={"100%"}
+                           className="w-full"
+                            style={{width:"100%"}}
                             isColumn
                             component={InputComponent}
                             inlineLabel
@@ -229,8 +244,15 @@ class UpdateContactForm extends Component {
                         </div>
                       </FlexContainer>
                       <Spacer />
-                      <FlexContainer justifyContent="space-between">
-                        <div style={{ width: "40%" }}>
+                      <FlexContainer
+                       style={{
+                         width: "100%",
+                         display: "flex",
+                         flexDirection: "row",
+                         alignItems: "flex-start",
+                       }}
+                     >
+                      <div style={{ width: "40%" }}>
                           <FastField
                             name="middleName"
                             //label="Middle Name"
@@ -241,13 +263,20 @@ class UpdateContactForm extends Component {
                               />
                             }
                             type="text"
-                            width={"100%"}
+                            className="w-full "
+       style={{
+           width: "95%",
+          height: "38px",
+          border: "1px solid #d9d9d9",
+          outline: "none",
+          boxShadow: "none",
+        }}
                             isColumn
                             component={InputComponent}
                             inlineLabel
                           />
                         </div>
-                        <div style={{ width: "55%" }}>
+                       <div style={{ width: "60%" }}>
                           <FastField
                             name="lastName"
                             //label="Last Name"
@@ -258,7 +287,8 @@ class UpdateContactForm extends Component {
                               />
                             }
                             type="text"
-                            width={"100%"}
+                           className="w-full"
+                            style={{width:"100%"}}
                             isColumn
                             component={InputComponent}
                             inlineLabel
@@ -276,7 +306,7 @@ class UpdateContactForm extends Component {
                         //label="Email"
                         label={
                           <FormattedMessage
-                            id="app.emailId"
+                            id="app.emailid"
                             defaultMessage="Email"
                           />
                         }
@@ -316,13 +346,13 @@ class UpdateContactForm extends Component {
                       <FastField
                         type="text"
                         name="mobileNumber"
-                        label={
-                          <FormattedMessage
-                            id="app.mobile#"
-                            defaultMessage="Mobile #"
-                          />
-                        }
-                        //placeholder="Mobile #"
+                        // label={
+                        //   <FormattedMessage
+                        //     id="app.mobile#"
+                        //     defaultMessage="Mobile #"
+                        //   />
+                        // }
+                        placeholder="Mobile #"
                         component={InputComponent}
                         inlineLabel
                         width={"100%"}
@@ -357,13 +387,13 @@ class UpdateContactForm extends Component {
                       <FastField
                         type="text"
                         name="phoneNumber"
-                        //placeholder="Phone #"
-                        label={
-                          <FormattedMessage
-                            id="app.phoneNumber"
-                            defaultMessage="Phone #"
-                          />
-                        }
+                        placeholder="Phone #"
+                        // label={
+                        //   <FormattedMessage
+                        //     id="app.phoneNumber"
+                        //     defaultMessage="Phone #"
+                        //   />
+                        // }
                         isColumn
                         component={InputComponent}
                         inlineLabel
@@ -382,7 +412,7 @@ class UpdateContactForm extends Component {
                         //label="Linkedin "
                         label={
                           <FormattedMessage
-                            id="app.linkedinPublicUrl"
+                            id="app.linkedin"
                             defaultMessage="Linkedin"
                           />
                         }

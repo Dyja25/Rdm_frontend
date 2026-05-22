@@ -91,25 +91,24 @@ class PersonalDocumentForm extends Component {
             ...rest
           }) => (
             <Form className="form-background">
-              <div
-                style={{
-                  display: "flex",
-                  width: "100%",
-                  height: "100%",
-                  justifyContent: "space-between",
-                }}
-              >
-                <div
-                  style={{
-                    width: "45%",
-                     }}
-                >
-                  {/* <FlexContainer flexWrap="no-wrap"> */}
-
-                  <Spacer />
-
-                  <FlexContainer justifyContent="space-between">
-                    <div style={{ width: "25%" }}>
+                          <div style={{ display: "flex", justifyContent: "space-between",height: "70vh",paddingRight: "0.6em"  }}>
+                            <div
+                              style={{
+                                height: "100%",
+                                width: "45%",
+                              }}
+                            >
+                <FlexContainer flexWrap="nowrap" alignItems="flex-start">
+                                    <div style={{ padding:"2px",width: "100%" }}>
+                                                         <FlexContainer
+                                      style={{
+                                        width: "100%",
+                                        display: "flex",
+                                        flexDirection: "row",
+                                        alignItems: "flex-start",
+                                      }}
+                                    >
+               <div style={{ width: "40%" }}>
                       <FastField
                         name="contactSalutation"
                         type="text"
@@ -125,9 +124,17 @@ class PersonalDocumentForm extends Component {
                         inlineLabel
                         className="field"
                         isColumn
+                         style={{
+          width: "95%",
+          height: "38px",
+          border: "1px solid #d9d9d9",
+          outline: "none",
+          boxShadow: "none",
+        }}
+        className="w-full"
                          />
                     </div>
-                    <div style={{ width: "67%" }}>
+                     <div style={{ width: "60%" }}>
                       <FastField
                         isRequired
                         name="contactFirstName"
@@ -146,11 +153,41 @@ class PersonalDocumentForm extends Component {
                         />
                     </div>
                   </FlexContainer>
-
                   <Spacer />
-                  <Spacer />
-                  <FlexContainer justifyContent="space-between">
-                    <div style={{ width: "55%" }}>
+                 <FlexContainer
+                                        style={{
+                                          width: "100%",
+                                          display: "flex",
+                                          flexDirection: "row",
+                                          alignItems: "flex-start",
+                                        }}
+                                      >
+                   <div style={{ width: "40%" }}>
+                    <FastField
+                        name="contactMiddleName"
+                        //label="Middle "
+                        label={
+                          <FormattedMessage
+                            id="app.middleName"
+                            defaultMessage="Middle"
+                          />
+                        }
+                        type="text"
+                        style={{
+           width: "95%",
+          // height: "38px",
+          // border: "1px solid #d9d9d9",
+          // outline: "none",
+          // boxShadow: "none",
+        }}
+        className="wull"
+                        isColumn
+                        component={InputComponent}
+                        inlineLabel
+                       />
+                      
+                    </div>
+                    <div style={{ width: "60%" }}>
                       <FastField
                         name="contactLastName"
                         //label="Last Name"
@@ -161,31 +198,16 @@ class PersonalDocumentForm extends Component {
                           />
                         }
                         type="text"
-                        width={"100%"}
+                        className="w-full"
+                            style={{width:"100%"}}
                         isColumn
                         component={InputComponent}
                         inlineLabel
                          />
                     </div>
-                    <div style={{ width: "38%" }}>
-                      <FastField
-                        name="contactMiddleName"
-                        //label="Middle "
-                        label={
-                          <FormattedMessage
-                            id="app.middleName"
-                            defaultMessage="Middle"
-                          />
-                        }
-                        type="text"
-                        width={"100%"}
-                        isColumn
-                        component={InputComponent}
-                        inlineLabel
-                       />
-                    </div>
                   </FlexContainer>
-                  {/* </FlexContainer> */}
+                  </div>
+                  </FlexContainer>
                   <Spacer />
                   <FlexContainer justifyContent="space-between">
                     <div style={{ width: "47%" }}>

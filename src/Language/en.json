@@ -69,7 +69,7 @@
   "app.designation": "Designation",
   "app.update": "Update",
   "app.department": "Department",
-  "app.mobile": "Mobile",
+  "app.mobile": "Mobile #",
   "app.upload": "Upload",
   "app.salutation": "Salutation",
   "app.firstname": "First Name",
@@ -380,7 +380,22 @@
         "app.hybrid":"Hybrid",
          "app.office":"Office",
          "app.updatetask":"Update Task",
-         "app.updateEvent":"Update Event"
+         "app.updateEvent":"Update Event",
+         "app.confirmstatuschange":"Confirm status change?",
+         "app.sector/Skills":"Sector/Skills",
+         "app.deselectAll":"Deselect All",
+          "app.selectAll":"Select All",
+          "app.selectDeleteModules":"Select Delete Modules",
+          "app.educational":"Educational",
+          "app.contract":"Contract",
+          "app.contractAdress":"ContractAdress",
+          "app.employeeDocument":"EmployeeDocument",
+          "app.employeeId":"EmployeeId",
+           "app.employeeInfo":"EmployeeInfo",
+           "app.employeeNotes":"EmployeeNotes",
+           "app.employmentHistory":"EmploymentHistory",
+           "app.keyskill":"Keyskill",
+           "app.salarydetails":"Salarydetails"
    
 
 

@@ -108,7 +108,7 @@ class UpdatePersonalForm extends Component {
                     width: "100%",
                      }}
                 >
-                  {/* <FlexContainer flexWrap="no-wrap"> */}
+                 <FlexContainer flexWrap="nowrap" alignItems="flex-start">
 
                   {/* <FlexContainer justifyContent="space-between">
                                             <div style={{ width: "47%" }}>
@@ -143,30 +143,44 @@ class UpdatePersonalForm extends Component {
                                                 <DatePicker onChange={onChange} />
                                             </div>
                                         </FlexContainer> */}
-                  <Spacer />
 
-                  <Spacer />
 
-                  <FlexContainer justifyContent="space-between">
-                    <div style={{ width: "25%" }}>
+                  {/* <FlexContainer justifyContent="space-between"> */}
+                   <div style={{ padding: "2px", width: "100%" }}>
+                                                            <FlexContainer
+                                         style={{
+                                           width: "100%",
+                                           display: "flex",
+                                           flexDirection: "row",
+                                           alignItems: "flex-start",
+                                         }}
+                                       >
+                                         <div style={{ width: "20%" }}>
                       <FastField
                         name="contactSalutation"
                         type="text"
                         // label="Salutation"
                         label={
                           <FormattedMessage
-                            id="app.contactSalutation"
+                            id="app.salutation"
                             defaultMessage="Salutation"
                           />
                         }
                         options={["Mr.", "Ms.", "None"]}
                         component={SelectComponent}
                         inlineLabel
-                        className="field"
-                        isColumn
+                         className="w-full"
+                            isColumn
+                             style={{
+          width: "95%",
+          height: "38px",
+          border: "1px solid #d9d9d9",
+          outline: "none",
+          boxShadow: "none",
+        }}
                        />
                     </div>
-                    <div style={{ width: "67%" }}>
+                    <div style={{ width: "80%" }}>
                       <FastField
                         isRequired
                         name="contactFirstName"
@@ -178,35 +192,24 @@ class UpdatePersonalForm extends Component {
                           />
                         }
                         type="text"
-                        width={"100%"}
+                        className="w-full"
+                            style={{width:"100%"}}
                         isColumn
                         component={InputComponent}
                         inlineLabel
                         />
                     </div>
                   </FlexContainer>
-
                   <Spacer />
-                  <Spacer />
-                  <FlexContainer justifyContent="space-between">
-                    <div style={{ width: "55%" }}>
-                      <FastField
-                        name="contactLastName"
-                        // label="Last Name"
-                        label={
-                          <FormattedMessage
-                            id="app.lastname"
-                            defaultMessage="Last Name"
-                          />
-                        }
-                        type="text"
-                        width={"100%"}
-                        isColumn
-                        component={InputComponent}
-                        inlineLabel
-                       />
-                    </div>
-                    <div style={{ width: "38%" }}>
+                  <FlexContainer
+                                        style={{
+                                          width: "100%",
+                                          display: "flex",
+                                          flexDirection: "row",
+                                          alignItems: "flex-start",
+                                        }}
+                                      >
+                   <div style={{ width: "40%" }}>
                       <FastField
                         name="contactMiddleName"
                         // label="Middle "
@@ -216,18 +219,54 @@ class UpdatePersonalForm extends Component {
                             defaultMessage="Middle"
                           />
                         }
-                        type="text"
-                        width={"100%"}
+                        className="w-full"
                         isColumn
                         component={InputComponent}
                         inlineLabel
+                        style={{
+           width: "95%",
+          // height: "38px",
+          // border: "1px solid #d9d9d9",
+          // outline: "none",
+          // boxShadow: "none",
+        }}
                         />
                     </div>
-                  </FlexContainer>
-                  {/* </FlexContainer> */}
+                   <div style={{ width: "60%" }}>
+                     <FastField
+                        name="contactLastName"
+                        // label="Last Name"
+                        label={
+                          <FormattedMessage
+                            id="app.lastname"
+                            defaultMessage="Last Name"
+                          />
+                        }
+                        type="text"
+                        className="w-full"
+                            style={{width:"100%"}}
+                        isColumn
+                        component={InputComponent}
+                        inlineLabel
+                      
+                       />
+
+                       
+                     
+                    </div>
+                                         </FlexContainer>
+                                       </div>
+                                     </FlexContainer>
                   <Spacer />
-                  <FlexContainer justifyContent="space-between">
-                    <div style={{ width: "47%" }}>
+                 <FlexContainer
+  style={{
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-start",
+  }}
+>
+                    <div style={{ width: "40%", paddingRight: "12px",marginTop:"15px" }}>
                       <Field
                         name="countryDialCode"
                         // label="Mobile #"
@@ -240,11 +279,15 @@ class UpdatePersonalForm extends Component {
                         isColumn
                         selectType="dialCode"
                         component={SearchSelect}
-                        width={"100%"}
+                        className="w-full"
+      style={{
+        width: "95%",
+        height: "38px",
+      }}
                         inlineLabel
                         />
                     </div>
-                    <div style={{ width: "47%" }}>
+                    <div style={{ width: "60%" }}>
                       <Field
                         type="text"
                         name="mobileNo"
@@ -257,15 +300,23 @@ class UpdatePersonalForm extends Component {
                         placeholder="Mobile #"
                         component={InputComponent}
                         inlineLabel
-                        width={"100%"}
+                       className="w-full"
+      style={{ width: "100%" }}
                         isColumn
                         />
                     </div>
                   </FlexContainer>
                   <Spacer />
 
-                  <FlexContainer justifyContent="space-between">
-                    <div style={{ width: "47%" }}>
+                  <FlexContainer
+  style={{
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-start",
+  }}
+>
+                    <div style={{ width: "40%", paddingRight: "12px",marginTop:"15px" }}>
                       <Field
                         name="countryDialCode1"
                         //  label="Phone #"
@@ -279,10 +330,14 @@ class UpdatePersonalForm extends Component {
                         selectType="dialCode"
                         component={SearchSelect}
                         inlineLabel
-                        width={"100%"}
+                         className="w-full"
+      style={{
+        width: "95%",
+        height: "38px",
+      }}
                         />
                     </div>
-                    <div style={{ width: "47%" }}>
+                    <div style={{ width: "60%" }}>
                       <Field
                         type="text"
                         name="phoneNo"
@@ -295,7 +350,8 @@ class UpdatePersonalForm extends Component {
                         placeholder="Phone #"
                         component={InputComponent}
                         inlineLabel
-                        width={"100%"}
+                        className="w-full"
+      style={{ width: "100%" }}
                         isColumn
                         />
                     </div>

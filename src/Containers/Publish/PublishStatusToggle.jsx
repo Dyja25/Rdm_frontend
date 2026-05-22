@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { linkPublishStatus } from "../Publish/PublishAction";
 //import { putCustomerContactToggle } from "../../../../CustomerAction";
+import { FormattedMessage } from "react-intl";
 
 function PublishStatusToggle(props) {
 
@@ -51,7 +52,11 @@ function PublishStatusToggle(props) {
         {/* {props.thirdPartyAccessInd==="false"&& */}
              <div>
                 <Popconfirm
-                    title="Confirm status change?"
+                    // title={"Confirm status change?"}
+                    title={<FormattedMessage
+         id="app.confirmstatuschange"
+         defaultMessage="Confirm status change?"
+       />}
             onConfirm={() => handleTogglePublish()}
                    onCancel={handleCancel}
                     okText="Ok"

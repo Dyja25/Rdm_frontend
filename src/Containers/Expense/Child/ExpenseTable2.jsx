@@ -198,7 +198,13 @@ class ExpenseTable2 extends React.Component {
             <>
              {this.props.particularRowData.status === "Pending" && 
             <StyledPopconfirm
-              title="Do you want to delete?"
+              // title="Do you want to delete?"
+               title={
+                              <FormattedMessage
+                                id="app.doyouwanttodelete"
+                                defaultMessage="Do you want to delete?"
+                              />
+                            }
               onConfirm={() => deleteExpense(item.expenseId)}
             >
               <DeleteOutlineIcon type="delete" style={{ cursor: "pointer", color: "red" }} />

@@ -122,7 +122,13 @@ class Country extends Component {
   type="primary"
   // style={{backgroundColor:this.state.selected ?"red" :"green"}}
   onClick={this.handleSelectDeselect}>
-          {this.state.selected ? 'Deselect All' : 'Select All'}
+          {this.state.selected ? <FormattedMessage
+                    id="app.deselectAll"
+                    defaultMessage="Deselect All"
+                  /> : <FormattedMessage
+                    id="app.selectAll"
+                    defaultMessage="Select All"
+                  />}
         </Button>
       {/* </Popconfirm> */}
               {/* <label>

@@ -289,7 +289,7 @@ console.log ("SlR",salelist,recruiterlist)
     {
       title: "",
       dataIndex: "imageId",
-      width: "3%",
+      width: "2%",
     //   render: (name, item, i) => {
     //     return (
     //       <SubTitle>
@@ -708,7 +708,7 @@ console.log ("SlR",salelist,recruiterlist)
         columns={columns}
         //loading={fetchingCandidates || fetchingCandidatesError}
         scroll={{ y: tableHeight }}
-       
+       className="candidate-table"
         pagination={false}
         // loading={
         //   fetchingContactsLazyLoading ||

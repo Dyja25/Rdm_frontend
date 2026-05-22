@@ -19,7 +19,11 @@ function CategoryTab (props) {
         const name = [
 
           {
-            rulesName: "Sector/Skills",
+            // rulesName: "Sector/Skills",
+             rulesName:  <FormattedMessage
+                            id="app.sector/Skills"
+                            defaultMessage="Sector/Skills"
+                          />,
             ruleId: "1",
             component:<Category/>,
           },

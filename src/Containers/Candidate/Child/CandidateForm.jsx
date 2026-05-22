@@ -273,7 +273,8 @@ class CandidateForm extends Component {
             workType: this.state.billing ? "Permanent" : "Contract",
             whatsapp: this.state.whatsapp ? "Different" : "Same",
             share:this.state.share ? "true" : "false",
-            category: this.state.checked ? "Both" : this.state.whiteblue ? "White" : "Blue",
+            // category: this.state.checked ? "Both" : this.state.whiteblue ? "White" : "Blue",
+            category: "White",
             // startDate: dayjs(),
             dateOfBirth: dayjs(),
             gender: "",
@@ -319,7 +320,7 @@ class CandidateForm extends Component {
                 workType: this.state.billing ? "Permanent" : "Contract",
                 whatsapp: this.state.whatsapp ? "Different" : "Same",
                 // category: this.state.whiteblue ?"White" : "Blue",
-                category: this.state.checked ? "Both" : this.state.whiteblue ? "White" : "Blue",
+                // category: this.state.checked ? "Both" : this.state.whiteblue ? "White" : "Blue",
                 // availableDate: dayjs(values.availableDate).format(
                 //   "YYYY-MM-DD"
                 availableDate: dayjs(values.availableDate).toISOString(),
@@ -347,11 +348,18 @@ class CandidateForm extends Component {
                     width: "45%",
                   }}
                 >
-                  <FlexContainer flexWrap="no-wrap">
+                <FlexContainer flexWrap="nowrap" alignItems="flex-start">
                     <FastField name="imageId" component={Upload} />
-                    <div style={{marginLeft:"16px"}}>
-                      <FlexContainer justifyContent="space-between">
-                        <div style={{ width: "41%",marginTop:"2px" }}>
+                    <div style={{ marginLeft: "14px", width: "100%" }}>
+                     <FlexContainer
+  style={{
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-start",
+  }}
+>
+                        <div style={{ width: "40%", paddingRight: "12px" }}>
                           <FastField
                             name="salutation"
                             type="text"
@@ -362,21 +370,22 @@ class CandidateForm extends Component {
                                 defaultMessage="Salutation"
                               />
                             }
-                            style={{
-                              width:"100%",
-                              height:"35px",
-                              border:"1px solid #d9d9d9",
-                              padding:"0 10px",
-                            }}
                             options={["Mr.", "Ms.", "None","Dr.","Mevr.","Dhr."]}
                             component={SelectComponent}
                             inlineLabel
-                            className="field w-[100px]"
+                             className="w-full"
+        style={{
+          width: "95%",
+          height: "38px",
+          border: "1px solid #d9d9d9",
+          outline: "none",
+          boxShadow: "none",
+        }}
                             isColumn
                           />
                         </div>
 
-                        <div style={{ width: "50%" }}>
+                          <div style={{ width: "60%" }}>
                           <FastField
                             isRequired
                             name="firstName"
@@ -388,7 +397,6 @@ class CandidateForm extends Component {
                               />
                             }
                             type="text"
-                            width={"100%"}
                             isColumn
                             component={InputComponent}
                             inlineLabel
@@ -398,7 +406,14 @@ class CandidateForm extends Component {
                         </div>
                       </FlexContainer>
                             <Spacer />
-                      <FlexContainer justifyContent="space-between">
+                    <FlexContainer
+  style={{
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-start",
+  }}
+>
                         {/* <div style={{ width: "40%" }}>
                           <FastField
                             name="middleName"
@@ -416,11 +431,10 @@ class CandidateForm extends Component {
                             inlineLabel
                           />
                         </div> */}
-                        <div style={{ width: "46%",marginTop:"2px"  }}>
+                      <div style={{ width: "40%", paddingRight: "12px" }}>
                       <FastField
                         name="gender"
                         type="text"
-                        // label="Salutation"
                         label={
                           <FormattedMessage
                             id="app.gender"
@@ -430,17 +444,18 @@ class CandidateForm extends Component {
                         options={["Male", "Female", "Others"]}
                         component={SelectComponent}
                         inlineLabel
-                        className="field w-full"
                         isColumn
-                        style={{
-                              width:"100%",
-                              height:"35px",
-                              border:"1px solid #d9d9d9",
-                              padding:"0 10px",
-                            }}
+                        className="w-full "
+       style={{
+           width: "95%",
+          height: "38px",
+          border: "1px solid #d9d9d9",
+          outline: "none",
+          boxShadow: "none",
+        }}
                       />
                     </div>
-                        <div style={{ width: "50%" }}>
+                        <div style={{ width: "60%" }}>
                           <FastField
                             name="lastName"
                             //label="Last Name"
@@ -451,7 +466,6 @@ class CandidateForm extends Component {
                               />
                             }
                             type="text"
-                            width={"100%"}
                             isColumn
                             component={InputComponent}
                             inlineLabel
@@ -539,12 +553,14 @@ class CandidateForm extends Component {
                           ]}
                         // defaultValue={'value'}
                         inlineLabel
+                        className="w-full"
+    style={{ width: "100%" }}
                       />
                     </div>
                   </FlexContainer>
                                     
                     <FlexContainer justifyContent="space-between">
-                    <div style={{ width: "47%" }}>
+                    <div style={{ width: "100%" }}>
                       <FastField
                         name="nationality"
                         isColumnWithoutNoCreate
@@ -582,8 +598,11 @@ class CandidateForm extends Component {
                     </div>                       */}
                       </FlexContainer>
                       <Spacer/>
-                  <FlexContainer justifyContent="space-between">
-                    <div style={{ width: "30%" }}>
+                  <FlexContainer
+                   justifyContent="space-between"
+                   style={{ display: "flex", gap: "12px", width: "100%" }}
+                 >
+                   <div style={{ flex: 0.7,marginTop:"3px" }}>
                       <FastField
                         name="countryDialCode"
                         isColumnWithoutNoCreate
@@ -604,14 +623,14 @@ class CandidateForm extends Component {
                         inlineLabel
                       />
                     </div>
-                    <div style={{ width: "40%", }}>
+                   <div style={{ flex: 1.3,marginTop:"3px" }}>
                       <FastField
                         type="text"
                         name="mobileNumber"                      
                         component={InputComponent}
                         inlineLabel
                         width={"100%"}
-                        style={{ flexBasis: "30%" }}
+                       style={{ height: "30px"}}
                         isColumn
                       />
                     </div>
@@ -754,6 +773,8 @@ class CandidateForm extends Component {
                         component={DatePicker}
                         value={values.dateOfBirth}
                       // defaultValue={dayjs("2020-01-01")}
+                      // className="w-full"
+    style={{ width: "100%" }}
                       />
                     </div>                 
 
@@ -1040,48 +1061,44 @@ class CandidateForm extends Component {
                     </div>                    
                   </FlexContainer>
                   <Spacer style={{ marginTop: "1em" }} />
-               <FlexContainer alignItems="center">
-                    <div className="flex items-center gap-3">
-    
-    <div className="flex flex-col">
-                  <StyledLabel >
-                    {/* Category */}
-                     <FormattedMessage
-                            id="app.category"
-                            defaultMessage="Category"
-                          />
-                    </StyledLabel>
-                  <Switch  
-                    checked={this.state.whiteblue}
-                    onChange={this.handleWhiteBlue}
-                    disabled={this.state.checked}
-                    checkedChildren="White collar"
-                    unCheckedChildren="Blue collar"
-                    />
-                    </div>
-                    <Checkbox
-                    checked={this.state.checked}
-                    onChange={() => this.handleChange()}
-                    style={{ marginLeft: "18px" }}
-                    >
-                      {/* Both */}
-                      <FormattedMessage
-                            id="app.both"
-                            defaultMessage="Both"
-                          />
-                    </Checkbox>
-                    </div>
-                    <div style={{ width: "30px" }} />
-                   <div className="flex items-center gap-3">
-                    <StyledLabel>Type</StyledLabel>
-                    <Switch                                           
-                      checked={this.state.billing}
-                      onChange={this.handlebilling}
-                      checkedChildren="Permanent"
-                      unCheckedChildren="Contract"
-                      />
-                    </div>
-                  </FlexContainer>
+              <FlexContainer alignItems="center" justifyContent="space-between">
+
+  <div style={{ width: "47%" }}>
+    <FastField
+      name="category"
+      label={
+        <FormattedMessage
+          id="app.category"
+          defaultMessage="Category"
+        />
+      }
+      isColumn
+      component={SelectComponent}
+      options={[
+        "White",
+        "Blue",
+        "Grey",
+        "Pink",
+        "Green"
+      ]}
+      inlineLabel
+      className="w-full"
+      style={{ width: "100%" }}
+    />
+  </div>
+
+  <div className="flex items-center gap-3">
+    <StyledLabel>Type</StyledLabel>
+
+    <Switch
+      checked={this.state.billing}
+      onChange={this.handlebilling}
+      checkedChildren="Permanent"
+      unCheckedChildren="Contract"
+    />
+  </div>
+
+</FlexContainer>
                   <Spacer style={{ marginTop: "1em" }} />
                  
                 

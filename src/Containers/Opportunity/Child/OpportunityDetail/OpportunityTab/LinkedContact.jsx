@@ -231,7 +231,7 @@ class LinkedContact extends Component {
               placement="bottom"
               //title="Do you wish to detach?"
               title={<FormattedMessage
-                id="app.doyouwishtodetach"
+                id="app.doyouwishtodetach?"
                 defaultMessage="Do you wish to detach?"
               />}
             //   onConfirm={() =>

@@ -231,12 +231,12 @@ class PersonalDocumentForm extends Component {
                       <Field
                         type="text"
                         name="mobileNo"
-                        label={
-                          <FormattedMessage
-                            id="app.mobilenumber"
-                            defaultMessage="Mobile No"
-                          />
-                        }
+                        // label={
+                        //   <FormattedMessage
+                        //     id="app.mobilenumber"
+                        //     defaultMessage="Mobile No"
+                        //   />
+                        // }
                         placeholder="Mobile #"
                         component={InputComponent}
                         inlineLabel
@@ -276,12 +276,12 @@ class PersonalDocumentForm extends Component {
                       <Field
                         type="text"
                         name="phoneNo"
-                        label={
-                          <FormattedMessage
-                            id="app.phoneno#"
-                            defaultMessage="Phone No#"
-                          />
-                        }
+                        // label={
+                        //   <FormattedMessage
+                        //     id="app.phoneno#"
+                        //     defaultMessage="Phone No#"
+                        //   />
+                        // }
                         placeholder="Phone #"
                         component={InputComponent}
                         inlineLabel

@@ -97,8 +97,15 @@ class PersonalDetailsDocumentForm extends Component {
                     ]}
                     component={SelectComponent}
                     inlineLabel
-                    className="field"
+                    className="w-full"
                     isColumn
+                    style={{
+          width: "60%",
+          height: "38px",
+          border: "1px solid #d9d9d9",
+          outline: "none",
+          boxShadow: "none",
+        }}
                      />
                   <Spacer />
                   <div>

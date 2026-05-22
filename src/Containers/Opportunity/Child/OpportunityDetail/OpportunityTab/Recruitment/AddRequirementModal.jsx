@@ -17,7 +17,11 @@ const AddRequirementModal = (props) => {
   return (
     <>
       <StyledModal
-        title="Requirement"
+        // title="Requirement"
+        title={<FormattedMessage
+                  id="app.requirement"
+                  defaultMessage="Requirement"
+              />}
         width="58%"
         visible={props.addRequirementModal}
         maskClosable={false}
