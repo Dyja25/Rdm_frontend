@@ -22,6 +22,7 @@ import { FlexContainer } from "../../../Components/UI/Layout";
 import { TextareaComponent } from "../../../Components/Forms/Formik/TextareaComponent";
 import { InputComponent } from "../../../Components/Forms/Formik/InputComponent";
 import { SelectComponent } from "../../../Components/Forms/Formik/SelectComponent";
+import AddressFieldArray2 from "../../../Components/Forms/Formik/AddressFieldArray2.jsx";
 /**
  * yup validation scheme for creating a account
  */
@@ -80,6 +81,7 @@ class CustomerForm extends Component {
             // sector: "",
             sectorId: "",
             country: this.props.user.country,
+            country1: this.props.user.countryName,
             email: "",
             // sector: this.props.user.sectorName,
             countryDialCode: this.props.user.countryDialCode,
@@ -98,6 +100,18 @@ class CustomerForm extends Component {
                 postalCode: "",
                 houseNo:"",
                 country: this.props.user.countryName,
+              }, 
+            ],
+             billingAddress: [
+              {
+                address1: "",
+                address2: "",
+                street: "",
+                city: "",
+                state: "",
+                postalCode: "",
+                houseNo:"",
+                country1: this.props.user.countryName,
               }, 
             ],
             category: this.state.whiteblue ?"White" : "Blue"||"Both",
@@ -125,7 +139,7 @@ class CustomerForm extends Component {
             ...rest
           }) => (
             <Form className="form-background">
-              <div style={{ display: "flex", justifyContent: "space-between",height: "70vh",paddingRight: "0.6em" }}>
+              <div style={{ display: "flex", justifyContent: "space-between",height: "70vh",paddingRight: "0.6em",overflowX:"auto",scrollbarwidth:"thin" }}>
                 <div
                   style={{
                     height: "100%",
@@ -343,6 +357,20 @@ class CustomerForm extends Component {
                       />
                     </div>
                   </FlexContainer>
+                  <Spacer style={{marginTop:"1.25em"}}/>   
+                  <div className="text-base underline">Billing Address</div>
+                   <Spacer style={{marginTop:"1.25em"}}/>   
+                  <FieldArray
+                    name="billingAddress"
+                    label="Address"
+                    render={(arrayHelpers) => (
+                      <AddressFieldArray2
+                        arrayHelpers={arrayHelpers}
+                        values={values}
+                      />
+                    )}
+                  />
+                   
                   <Spacer />                  
                  
                 </div>              
