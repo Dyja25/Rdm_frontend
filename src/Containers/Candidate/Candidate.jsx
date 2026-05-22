@@ -4,10 +4,11 @@ import { bindActionCreators } from "redux";
 import CandidateBlackListTable from "../Candidate/CandidateBlackListTable.jsx"
 
 import { BundleLoader } from "../../Components/Placeholder";
+import CandidateGreenTable from "./Child/CandidateGreenTable.jsx"
  import AddCandidateResumeModal from "../Candidate/Child/AddCandidateResumeModal.jsx";
 import CandidateWhiteTable from "../Candidate/Child/CandidateWhiteTable.jsx";
 import CandidateBlueTable from "../Candidate/Child/CandidateBlueTable.jsx";
-
+import CandidateGreyTable from "./Child/CandidateGreyTable.jsx"
 import {
   handleCandidateModal,
   handleCandidateResumeModal,
@@ -22,7 +23,7 @@ import {
   
 } from "./CandidateAction";
 import AddCandidateFilterModal from "../Candidate/Child/AddCandidateFilterModal.jsx"
-
+import CandidatePinkTable from "../Candidate/Child/CandidatePinkTable.jsx"
 import CandidateDeletedTable from "../Candidate/Child/CandidateDeletedTable.jsx";
 const AddCandidateModal = lazy(() => import("./Child/AddCandidateModal.jsx"));
 const CandidateHeader = lazy(() => import("./Child/CandidateHeader.jsx"));
@@ -158,6 +159,18 @@ class Candidate extends Component {
          /> :
           this.props.viewType === "dashboard" ?
           <CandidateBlueTable
+          currentUser={this.state.currentUser}
+          /> :
+            this.props.viewType === "pink" ?
+          <CandidatePinkTable
+          currentUser={this.state.currentUser}
+          /> :
+            this.props.viewType === "grey" ?
+          <CandidateGreyTable
+          currentUser={this.state.currentUser}
+          /> :
+            this.props.viewType === "green" ?
+          <CandidateGreenTable
           currentUser={this.state.currentUser}
           /> :
           this.props.viewType==="black"?

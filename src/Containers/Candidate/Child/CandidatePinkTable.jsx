@@ -1,49 +1,59 @@
-import React, { useEffect, useState,useMemo,lazy } from "react";
+import React, { useEffect, useState,useMemo, lazy} from "react";
 import { connect } from "react-redux";
 import { FormattedMessage } from "react-intl";
 import { bindActionCreators } from "redux";
+import { CurrencySymbol } from "../../../Components/Common";
+import InfiniteScroll from "react-infinite-scroll-component";
 // import {getSectors} from "../../../Settings/Sectors/SectorsAction";
 import dayjs from "dayjs";
 import { StyledTable } from "../../../Components/UI/Antd";
 import { Tooltip,Button,Input } from "antd";
 import Highlighter from 'react-highlight-words';
+ //import OpportunityDetailView from "./OpportunityDetailView";
 import { MultiAvatar, SubTitle } from "../../../Components/UI/Elements";
 import {
-    getCandidateListByCategory,
-    handleUpdateCandidateModal,
-    setEditCandidate,
-    emptyWhiteCandidate,
+  getCandidateListByCategory,
+  handleUpdateCandidateModal,
+  setEditCandidate,
+  emptyblueCandidate,
 } from "../CandidateAction";
-import InfiniteScroll from "react-infinite-scroll-component";
-
+import { getAllSalesList} from "../../Opportunity/OpportunityAction";
 import { BundleLoader } from "../../../Components/Placeholder";
 
-import { CurrencySymbol } from "../../../Components/Common";
 import SkillsLoadMore from "./CandidateTable/SkillsLoadMore.jsx";
 import StatusToggle from "./CandidateTable/StatusToggle.jsx";
 import UpdateCandidateModal from "./UpdateCandidate/UpdateCandidateModal.jsx";
-import { getAllSalesList} from "../../Opportunity/OpportunityAction";
-import { EditOutlined, SearchOutlined } from "@ant-design/icons";
+import { EditOutlined,SearchOutlined  } from "@ant-design/icons";
 const CandidateDetailsView =lazy(()=>import("../Child/CandidateDetails/CandidateDetailsView.jsx"));
-
+// const UpdateCustomerModal=lazy(()=>import("../UpdateCustomer/UpdateCustomerModal"));
 
 function onChange(pagination, filters, sorter) {
   console.log("params", pagination, filters, sorter);
 }
 
-function CandidateWhiteTable(props) {
+function CandidatePinkTable(props) {
   const [page, setPage] = useState(0);
-    const [hasMore, setHasMore] = useState(true);
+   const [hasMore, setHasMore] = useState(true);
   useEffect(() => {
-    props.getCandidateListByCategory("white",page,props.userId);
+    //props.getCandidateListByCategory("blue");
+    props.getCandidateListByCategory("Pink",page,props.userId);
     setPage(page + 1);
-    // props.getRoles(props.organizationId); 
     props.getAllSalesList();
   }, []);
 
   useEffect(()=>{
-    props.emptyWhiteCandidate();
+    props.emptyblueCandidate();
   },[] );
+
+  const [currentCandidateId, setCurrentCandidateId] = useState("");
+  // const [isShown, setIsShown] = useState(false);
+
+  function handleSetCurrentCandidateId(candidateId) {
+    setCurrentCandidateId(candidateId);
+    console.log(candidateId);
+  }
+
+
 const handleLoadMore = () => {
     const PageMapd =
       props.candidateByCategory &&
@@ -53,7 +63,7 @@ const handleLoadMore = () => {
       if (props.candidateByCategory) {
         if (page < PageMapd) {
           setPage(page + 1);
-          props.getCandidateListByCategory("white",page,props.currentUser?props.currentUser:props.userId);
+          props.getCandidateListByCategory("Pink",page,props.currentUser?props.currentUser:props.userId);
         }
         if (page === PageMapd) {
           setHasMore(false);
@@ -61,16 +71,6 @@ const handleLoadMore = () => {
       }
     }, 100);
   };
- 
-
-  const [currentCandidateId, setCurrentCandidateId] = useState("");
-  // const [isShown, setIsShown] = useState(false);
-
-  function handleSetCurrentCandidateId(CandidateId) {
-    setCurrentCandidateId(CandidateId);
-    console.log(CandidateId);
-  }
-
   const [searchText, setSearchText] = useState("");
   const [searchedColumn, setSearchedColumn] = useState("");
 
@@ -104,16 +104,16 @@ const handleLoadMore = () => {
               size="small"
               style={{ width: 90 }}
             >
-             {/* Search */}
-                           <FormattedMessage id="app.search" defaultMessage="Search" />
+              {/* Search */}
+              <FormattedMessage id="app.search" defaultMessage="Search" />
             </Button>
             <Button
               onClick={() => handleReset(clearFilters)}
               size="small"
               style={{ width: 90 }}
             >
-                {/* Reset */}
-                            <FormattedMessage id="app.reset" defaultMessage="Reset" />
+              {/* Reset */}
+              <FormattedMessage id="app.reset" defaultMessage="Reset" />
             </Button>
             <Button
               type="link"
@@ -124,8 +124,8 @@ const handleLoadMore = () => {
                 setSearchedColumn(dataIndex);
               }}
             >
-               {/* Filter */}
-                            <FormattedMessage id="app.filter" defaultMessage="Filter" />
+              {/* Filter */}
+              <FormattedMessage id="app.filter" defaultMessage="Filter" />
             </Button>
           
         </div>
@@ -168,7 +168,6 @@ const handleLoadMore = () => {
     clearFilters();
     setSearchText("");
   }
-
   const ownerlistType = useMemo(() => {
     if (!props.sales) return [];
     return (
@@ -180,8 +179,7 @@ const handleLoadMore = () => {
         };
       })
     );
-  }, [props.sales]); 
-  
+  }, [props.sales]);
 
   const roleTypeOption = useMemo(() => {
     if (!props.roles) return [];
@@ -196,15 +194,13 @@ const handleLoadMore = () => {
     );
   }, [props.roles]);
 
- 
-
 
   const {
-    fetchingCandidates,
+    // fetchingCustomers,
     candidateByCategory,
     handleUpdateCandidateModal,
     updateCandidateModal,
-    fetchingCandidatesError,
+    // fetchingCustomersError,
   } = props;
   // if (fetchingCustomers) {
   //   return <BundleLoader />;
@@ -279,7 +275,7 @@ const handleLoadMore = () => {
       title: "",
       width: "2%",
       render: (name, item, i) => {
-        //  console.log(props.candidateByCategory.address&&props.candidateByCategory.address.length&&props.candidateByCategory.address[0].address1)
+        //  console.log(props.candidateByUserId.address&&props.candidateByUserId.address.length&&props.candidateByUserId.address[0].address1)
         const dataLoc =` Address : ${item.address &&item.address.length &&item.address[0].address1}  Street : ${item.address && item.address.length && item.address[0].street}   
         State : ${item.address && item.address.length && item.address[0].state} PostalCode : ${item.address && item.address.length && item.address[0].postalCode} `
         return (
@@ -305,9 +301,8 @@ const handleLoadMore = () => {
       },
     },
   
-   
     {
-      
+      // title: "Company",
       title: (
         <FormattedMessage id="app.vendor" defaultMessage="Vendor" />
       ),
@@ -316,7 +311,7 @@ const handleLoadMore = () => {
       ...getColumnSearchProps('partnerName'),
     },
      {
-     
+      // title: "Status",
       title: <FormattedMessage id="app.role" defaultMessage="Role" />,
        dataIndex: "roleType",
       width: "10%",
@@ -326,10 +321,11 @@ const handleLoadMore = () => {
         return record.roleType === value;
       },
     
-    },
 
+    },
+  
     {
-      // title: "Mobile #",
+    
       title: <FormattedMessage id="app.mobile#" defaultMessage="Mobile #" />,
       dataIndex: "mobileNumber",
       width: "10%",
@@ -342,7 +338,6 @@ const handleLoadMore = () => {
       },
     },
     {
-      // title: "Country",
       title: <FormattedMessage id="app.country" defaultMessage="Country" />,
       dataIndex: "country",
       align: "left",
@@ -359,33 +354,38 @@ const handleLoadMore = () => {
         return 0;
       },
       width: "7%",
-    
     },
-   {
-  title: <FormattedMessage id="app.skills" defaultMessage="Skills" />,
-  dataIndex: "skillList",
-  width: "20%",
-  ...getColumnSearchProps("skillList"),
-  render: (_, item) => {
-    const data = (item.skillList || []).filter(
-      skill => skill !== null && skill !== ""
-    );
-
-    if (data.length === 0) {
+    {
+      title: <FormattedMessage id="app.skills" defaultMessage="Skills" />,
+      dataIndex: "skillList",
+      width: "20%",
+      ...getColumnSearchProps('skillList'),
+      render: (name, item, i) => {
+        const data=item.skillList.filter((skill)=>{
+         return skill!==null&&skill!==""
+        }
+        );
+          if (data.length === 0) {
       return "No Data";
     }
-
-    return (
-      <span>
-        <SkillsLoadMore skillList={data} />
-      </span>
-    );
-  },
-},
-
+         return <>
+  
+          
+           <span>
+             <SkillsLoadMore
+             skillList={data}
+             />
+           </span>
+    
+           </>
+         
+       },
+    
+    },
+    
   
     {
-      // title: "Designation",
+
       title: <FormattedMessage id="app.cost" defaultMessage="Cost" />,
        dataIndex: "billing",
       align: "left",
@@ -419,8 +419,8 @@ const handleLoadMore = () => {
       },
     },
 {
-      // title: "Designation",
-      title: <FormattedMessage id="app.available" defaultMessage="Available" />,
+      
+  title: <FormattedMessage id="app.available" defaultMessage="Available" />,
        dataIndex: "availableDate",
       width: "7%",
       render: (text, item) => {
@@ -436,64 +436,37 @@ const handleLoadMore = () => {
       
     },
 
-    // {
-    //   title: "",
-    //   // title: <FormattedMessage id="app.owner" defaultMessage="Owner" />,
-    //   // dataIndex: "ownerName",
-    //   width: "3%",
-    //   ...getColumnSearchProps('ownerName'),
-    //   render: (name, item, i) => {
-    //     return (
-    //       <>
-    //        <Tooltip title={item.ownerName}>
-    //       <span>
-    //         <MultiAvatar
-    //           primaryTitle={item.ownerName}
-    //           imageId={item.ownerImageId}
-    //            imageURL={item.imageURL}
-    //           imgWidth={"2.1em"}
-    //           imgHeight={"2.1em"}
-    //           // style={{borderRadius:"13px" }}
-    //         />
-    //         </span>
-    //        </Tooltip>
+    {
+      //title: "",
+      title: <FormattedMessage id="app.owner" defaultMessage="Owner" />,
+      // dataIndex: "ownerName",
+      width: "8%",
+      // ...getColumnSearchProps('ownerName'),
+      filters:ownerlistType,
+      
+      onFilter: (value, record) => {
+        return record.fullName === value;
+      },
+      render: (name, item, i) => {
+        return (
+          <>
+           <Tooltip title={item.ownerName}>
+          <span>
+            <MultiAvatar
+              primaryTitle={item.ownerName}
+              imageId={item.ownerImageId}
+               imageURL={item.imageURL}
+              imgWidth={"2.1em"}
+              imgHeight={"2.1em"}
+              // style={{borderRadius:"13px" }}
+            />
+            </span>
+           </Tooltip>
           
-    //        </>
-    //     );
-    //   },
-    // },
-  {
-   //title: "",
-    title: <FormattedMessage id="app.owner" defaultMessage="Owner" />,
-   //dataIndex: "ownerName",
-   width: "8%",
-  //  ...getColumnSearchProps('ownerName'),
-  filters:ownerlistType,
-
-  onFilter: (value, record) => {
-    return record.fullName === value;
-  },
-
-   render: (name, item, i) => {
-     return (
-       <>
-        <Tooltip title={item.ownerName}>
-       <span>
-         <MultiAvatar
-           primaryTitle={item.ownerName}
-           imageId={item.ownerImageId}
-            imageURL={item.imageURL}
-           imgWidth={"2.1em"}
-           imgHeight={"2.1em"}
-           // style={{borderRadius:"13px" }}
-         />
-         </span>
-        </Tooltip>
-       
-        </>
-     );
-   },
- },
+           </>
+        );
+      },
+    },
     {
       // title: "Status",
       title: <FormattedMessage id="app.active" defaultMessage="Active" />,
@@ -519,7 +492,7 @@ const handleLoadMore = () => {
         //debugger
         return (
           <EditOutlined
-            
+         
             style={{ cursor: "pointer" }}
             onClick={() => {
               props.setEditCandidate(item);
@@ -531,6 +504,7 @@ const handleLoadMore = () => {
         );
       },
     },
+  
   ]
 //   if (fetchingCustomersError) {
 //     return <APIFailed />;
@@ -539,9 +513,9 @@ const handleLoadMore = () => {
   const tableHeight = tab && tab.offsetHeight * 0.75;
   return (
     <>
-   
-              <InfiniteScroll
-                      dataLength={props.candidateByCategory.length}
+
+ <InfiniteScroll
+                      dataLength={candidateByCategory.length}
                       next={handleLoadMore}
                       hasMore={hasMore}
                       loader={props.fetchingCandidatesCategory?<div class="flex justify-center"><BundleLoader/></div>:null}
@@ -553,13 +527,12 @@ const handleLoadMore = () => {
         rowKey="accountId"
         columns={columns}
         dataSource={candidateByCategory}
-       Loading={props.fetchingCandidatesCategory }
-        // scroll={{ y: 500 }}
-        // pagination={false
-        //scroll={{ y: tableHeight }}
+         //Loading={fetchingCustomers || fetchingCustomersError}
+         //scroll={{ y: 500 }}
+       // pagination={false
+        scroll={{ y: tableHeight }}
        
         pagination={false}
-        sticky={true}
           // defaultPageSize: 15,
           // showSizeChanger: true,
           // pageSizeOptions: ["15", "25", "40", "50"],
@@ -577,27 +550,26 @@ const handleLoadMore = () => {
   );
 }
 // }
-const mapStateToProps = ({candidate,role,opportunity,auth}) => ({
-  userId: auth.userDetails.userId,
+const mapStateToProps = ({candidate,opportunity,auth}) => ({
     candidateByCategory: candidate.candidateByCategory,
-    roles: role.roles,
-    sales: opportunity.sales,
-    recruiterName: opportunity.recruiterName,
+    userId: auth.userDetails.userId,
   fetchingCandidatesCategory: candidate.fetchingCandidatesCategory,
   fetchingCandidatesCategoryError: candidate.fetchingCandidatesCategoryError,
   updateCandidateModal: candidate.updateCandidateModal,
+  sales: opportunity.sales,
+  recruiterName: opportunity.recruiterName,
 });
 const mapDispatchToProps = (dispatch) =>
   bindActionCreators(
     {
       getCandidateListByCategory,
+      emptyblueCandidate,
       handleUpdateCandidateModal,
       setEditCandidate,
-    // getRoles, 
-      getAllSalesList,
-      emptyWhiteCandidate
-
+    
+      getAllSalesList
+ 
     },
     dispatch
   );
-export default connect(mapStateToProps, mapDispatchToProps)(CandidateWhiteTable);
+export default connect(mapStateToProps, mapDispatchToProps)(CandidatePinkTable);

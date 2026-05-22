@@ -208,6 +208,57 @@ const CandidateActionLeft = (props) => {
         </Badge>
       </Tooltip>
 
+       <Tooltip title="Pink">
+      <Badge size="small" count={props.viewType === "pink" && props.recordDataBlack.blocklist
+      || 0} overflowCount={999}>   
+          <span
+            onClick={() => props.setCandidateViewType("pink")}
+            style={{
+              marginRight: "0.5rem",
+              color:"#FF1493",
+              fontSize: "17px",
+              cursor: "pointer",
+            }}
+          >
+           <Brightness1Icon/>
+            </span>
+            </Badge>   
+      </Tooltip>
+
+       <Tooltip title="Grey">
+      <Badge size="small" count={props.viewType === "grey" && props.recordDataBlack.blocklist
+      || 0} overflowCount={999}>   
+          <span
+            onClick={() => props.setCandidateViewType("grey")}
+            style={{
+              marginRight: "0.5rem",
+              color:"#A9A9A9",
+              fontSize: "17px",
+              cursor: "pointer",
+            }}
+          >
+           <Brightness1Icon/>
+            </span>
+            </Badge>   
+      </Tooltip>
+
+       <Tooltip title="Green">
+      <Badge size="small" count={props.viewType === "green" && props.recordDataBlack.blocklist
+      || 0} overflowCount={999}>   
+          <span
+            onClick={() => props.setCandidateViewType("green")}
+            style={{
+              marginRight: "0.5rem",
+              color:"#008000",
+              fontSize: "17px",
+              cursor: "pointer",
+            }}
+          >
+           <Brightness1Icon/>
+            </span>
+            </Badge>   
+      </Tooltip>
+
       <Tooltip title="Black">
       <Badge size="small" count={props.viewType === "black" && props.recordDataBlack.blocklist
       || 0} overflowCount={999}>   

@@ -475,12 +475,18 @@ const rowSelection = {
                   borderRadius: "45%",
                   height: "1.1em",
                   width: "1.1em",
-                  backgroundColor:
-                    item.category === "White"
-                      ? "bisque"
-                      : item.category === "Blue"
-                      ? "#00afff"
-                      : item.category === "Both" && "grey",
+                 backgroundColor:
+  item.category === "Grey"
+    ? "#A9A9A9"
+    : item.category === "Pink"
+    ? "#FF1493"
+    : item.category === "Green"
+    ? "#008000"
+    : item.category === "White"
+    ? "bisque"
+    : item.category === "Blue"
+    ? "#1890FF"
+    : "#D9D9D9"
                 }}
               ></div>
             </Tooltip>

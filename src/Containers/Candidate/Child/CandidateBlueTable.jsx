@@ -42,7 +42,7 @@ function CandidateBlueTable(props) {
   }, []);
 
   useEffect(()=>{
-    return()=>props.emptyblueCandidate();
+    props.emptyblueCandidate();
   },[] );
 
   const [currentCandidateId, setCurrentCandidateId] = useState("");
