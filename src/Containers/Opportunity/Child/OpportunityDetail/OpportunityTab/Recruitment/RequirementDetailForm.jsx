@@ -263,62 +263,67 @@ function RequirementDetailForm(props) {
         }) => (
           <Form className="form-background">
             <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <div
-                style={{
-                  height: "100%",
-                  width: "45%",
-                }}
-              >
-                <FlexContainer justifyContent="space-between">
-                  <div style={{ width: "47%" }}>
-                    <Field
-                      name="jobOrder"
-                      //  label="Sponsor"
-                      label={<FormattedMessage
-                        id="app.jobId"
-                        defaultMessage="Job ID"
-                      />}
-                      isColumn
-                      width={"100%"}
-                      inlineLabel
-                      component={InputComponent}
-                    // options={Array.isArray(Sponsor) ? Sponsor : []}
-                    />
+             <div
+  style={{
+    height: "100%",
+    width: "45%",
+  }}
+>
+  <FlexContainer justifyContent="space-between" style={{ gap: "12px" }}>
+    <div style={{ width: "48%" }}>
+      <Field
+        name="jobOrder"
+        label={
+          <FormattedMessage
+            id="app.jobId"
+            defaultMessage="Job ID"
+          />
+        }
+        isColumn
+        width={"100%"}
+        inlineLabel
+        component={InputComponent}
+      />
+    </div>
 
-                  </div>
-                  <div style={{ width: "47%", }}>
-                    <Field
-                      name="requirementName"
-                      label={<FormattedMessage
-                        id="app.name"
-                        defaultMessage="Name"
-                      />}
-                      width={"100%"}
-                      isRequired
-                      isColumn
-                      inlineLabel
-                      component={InputComponent}
-                    />
-                  </div>
-                </FlexContainer>
-                <Spacer />
-                <FlexContainer justifyContent="space-between">
-                  <div style={{ width: "47%" }}>
-                    <Field
-                      name="experience"
-                      //  label="Sponsor"
-                      label={<FormattedMessage
-                        id="app.experienceInYear"
-                        defaultMessage="Experience (in Years)"
-                      />}
-                      isColumn
-                      width={"100%"}
-                      inlineLabel
-                      component={InputComponent}
-                    // options={Array.isArray(Sponsor) ? Sponsor : []}
-                    />
-                  </div>
-                  {/* <div style={{ width: "47%", }}>
+    <div style={{ width: "48%" }}>
+      <Field
+        name="requirementName"
+        label={
+          <FormattedMessage
+            id="app.name"
+            defaultMessage="Name"
+          />
+        }
+        width={"100%"}
+        isRequired
+        isColumn
+        inlineLabel
+        component={InputComponent}
+      />
+    </div>
+  </FlexContainer>
+
+  <Spacer />
+  <FlexContainer justifyContent="space-between" style={{ gap: "12px" }}>
+    <div style={{ width: "48%" }}>
+      <Field
+        name="experience"
+        label={
+          <FormattedMessage
+            id="app.experienceInYear"
+            defaultMessage="Experience (in Years)"
+          />
+        }
+        isColumn
+        width={"100%"}
+        inlineLabel
+        component={InputComponent}
+      />
+    </div>
+
+    <div style={{ width: "48%" }}>
+      {/* <div style={{ width: "47%", }}>
                     <Field
                       name="location"
                       //label="Name"
@@ -334,161 +339,134 @@ function RequirementDetailForm(props) {
                     />
 
                   </div> */}
-                </FlexContainer>
-                <FlexContainer justifyContent="space-between">
-                    <div style={{ width: "100%" }}>
-                      <Field
-                        // isRequired
-                        // type="email"
-                        name="workPreference"
-                        //label="Email"
-                        label={
-                          <FormattedMessage
-                            id="app.workPreference"
-                            defaultMessage="Work Preference"
-                          />
-                        }
-                        className="field"
-                        isColumn
-                        width={"100%"}
-                        component={SelectComponent}
-                        options={[
-                          "Remote",
-                          "Hybrid",
-                          "Office"
-                        ]}
-                        inlineLabel
-                      />
-                    </div>
-                    <div style={{ width: "47%" }}>
-                      {" "}
-                      <Field
-                        name="closeByDate"
-                        //  label="Close By"
-                        label={<FormattedMessage
-                          id="app.closeBy"
-                          defaultMessage="Close By"
-                        />}
-                        isRequired
-                        component={DatePicker}
-                        isColumn
-                        width={"100%"}
-                        value={values.closeByDate}
-                        inlineLabel
-                       
-                        // disabledDate={(currentDate) => {
-                        //   if (values.avilableDate) {
-                        //     if (
-                        //       dayjs(currentDate).isBefore(
-                        //         dayjs(values.avilableDate)
-                        //       )
-                        //     ) {
-                        //       return true;
-                        //     } else {
-                        //       return false;
-                        //     }
-                        //   }
-                        // }}
-                      />
-                    </div>
-                  </FlexContainer>
+      <Field
+        name="workPreference"
+        label={
+          <FormattedMessage
+            id="app.workPreference"
+            defaultMessage="Work Preference"
+          />
+        }
+        className="field"
+        isColumn
+        width={"100%"}
+        component={SelectComponent}
+        options={["Remote", "Hybrid", "Office"]}
+        inlineLabel
+      />
+    </div>
+  </FlexContainer>
 
-                <Spacer />
-                <FlexContainer justifyContent="space-between">
-                  <div style={{ width: "47%", }}>
-                    <Field
-                      name="sponserId"
-                      //  label="Sponsor"
-                      label={<FormattedMessage
-                        id="app.sponserId"
-                        defaultMessage="Customer Contact"
-                      />}
-                      isColumn
-                      className="w-full"
-                      style={{width:"100%"}}
-                      inlineLabel
-                      component={SelectComponent}
-                      options={Array.isArray(Sponsor) ? Sponsor : []}
-                    />
-                  </div>
-                  <div style={{ width: "47%" }}>
-                     <StyledLabel>Vendor</StyledLabel> 
+  <Spacer />
 
-                     <Select
-                      name="partnerId"
+  {/* Row 3 */}
+  <FlexContainer justifyContent="space-between" style={{ gap: "12px" }}>
+    <div style={{ width: "100%" }}>
+      <Field
+        name="closeByDate"
+        label={
+          <FormattedMessage
+            id="app.closeBy"
+            defaultMessage="Close By"
+          />
+        }
+        isRequired
+        component={DatePicker}
+        isColumn
+        // width={"100%"}
+        value={values.closeByDate}
+        inlineLabel
+        style={{
+          width:"100%"
+        }}
+      />
+    </div>
 
-                     // mode="multiple"
-                      style={{ width: '100%' }}
-                      placeholder="Select"
-                      defaultValue={partners}
-                      onChange={handleChangePartner}
-                    >
+    {/* <div style={{ width: "48%" }} /> */}
+  </FlexContainer>
 
-                      {props.allpartnerByUserId.map((item, i) => {
-                        return (
-                          <Option value={item.partnerId}>{item.partnerName}</Option>
-                        )
-                      })}
-                    </Select> 
+  <Spacer />
 
-                  </div>
-                </FlexContainer>                
-                <FlexContainer justifyContent="space-between">
-                  <div style={{ width: "100%" }}>
-                  <StyledLabel>Recruiter</StyledLabel> 
+  {/* Row 4 */}
+  <FlexContainer justifyContent="space-between" style={{ gap: "12px" }}>
+    <div style={{ width: "48%", marginTop:"5px" }}>
+      <Field
+        name="sponserId"
+        label={
+          <FormattedMessage
+            id="app.sponserId"
+            defaultMessage="Customer Contact"
+          />
+        }
+        isColumn
+        className="w-full"
+        style={{ width: "100%" }}
+        inlineLabel
+        component={SelectComponent}
+        options={Array.isArray(Sponsor) ? Sponsor : []}
+      />
+    </div>
 
-                    <Select
-                      name="recruitersId"
-                     // mode="multiple"
-                      style={{ width: '100%' }}
-                      placeholder="Select"
-                      defaultValue={recruiterNames}
-                      onChange={handleChangeRecruiter}
-                    >
+    <div style={{ width: "48%" }}>
+      <StyledLabel>Vendor</StyledLabel>
 
-                      {props.recruiterName.map((item, i) => {
-                        return (
-                          <Option value={item.employeeId}>{item.fullName}</Option>
-                        )
-                      })}
-                    </Select> 
+      <Select
+        name="partnerId"
+        style={{ width: "100%" }}
+        placeholder="Select"
+        defaultValue={partners}
+        onChange={handleChangePartner}
+      >
+        {props.allpartnerByUserId.map((item) => {
+          return (
+            <Option value={item.partnerId}>
+              {item.partnerName}
+            </Option>
+          );
+        })}
+      </Select>
+    </div>
+  </FlexContainer>
 
-                  </div>
+  <Spacer />
 
+  {/* Row 5 */}
+  <FlexContainer justifyContent="space-between" style={{ gap: "12px" }}>
+    <div style={{ width: "48%" }}>
+      <StyledLabel>Recruiter</StyledLabel>
 
-                </FlexContainer>
-                <Spacer />
+      <Select
+        name="recruitersId"
+        style={{ width: "100%" }}
+        placeholder="Select"
+        defaultValue={recruiterNames}
+        onChange={handleChangeRecruiter}
+      >
+        {props.recruiterName.map((item) => {
+          return (
+            <Option value={item.employeeId}>
+              {item.fullName}
+            </Option>
+          );
+        })}
+      </Select>
+    </div>
 
-                <FlexContainer justifyContent="space-between">
-                  <div style={{ width: "47%" }}>
-                    {" "}
-                    <Field
-                      name="number"
-                      label="# Positions"
-                      // label={<FormattedMessage
-                      //   id="app.number"
-                      //   defaultMessage="# Positions"
-                      // />}
-                      width={"100%"}
-                      isRequired
-                      isColumn
-                      component={InputComponent}
-                    />
-                  </div>
-                  <div style={{ width: "47%" }}>
-                    <StyledLabel>Type </StyledLabel> &nbsp;&nbsp;&nbsp;
-                    <br />
-                    <Switch
-                      checked={typeData}
-                      onChange={handleType}
-                      checkedChildren="Permanent"
-                      unCheckedChildren="Contractor"
-                    />
-                  </div>
-                </FlexContainer>
-                <Spacer />
+    <div style={{ width: "48%", marginTop:"5px" }}>
+      <Field
+        name="number"
+        label="# Positions"
+        width={"100%"}
+        isRequired
+        isColumn
+        component={InputComponent}
+      />
+    </div>
+  </FlexContainer>
 
+  <Spacer />
 
+<<<<<<< Updated upstream
                 <Spacer />
                 <FlexContainer justifyContent="space-between">
                   <div style={{ width: "47%" }}>
@@ -543,130 +521,145 @@ function RequirementDetailForm(props) {
                         // options={Array.isArray(currency) ? currency : []}
                         />
                       </div>
+=======
+  {/* Row 6 */}
+  <FlexContainer justifyContent="space-between" style={{ gap: "12px" }}>
+    <div style={{ width: "48%" }}>
+      <StyledLabel>Type</StyledLabel>
+      <br />
+>>>>>>> Stashed changes
 
-                    </FlexContainer>
-                  </div>
-                </FlexContainer>
+      <Switch
+        checked={typeData}
+        onChange={handleType}
+        checkedChildren="Permanent"
+        unCheckedChildren="Contractor"
+      />
+    </div>
 
-                {/* <Field
-                    name="recruiterId"
-                    //  selectType="contactList"
-                    // isColumnWithoutNoCreate
-                    // label="Contact"
-                    label={
-                      <FormattedMessage
-                        id="app.recruiter"
-                        defaultMessage="Recruiter"
-                      />
-                    }
-                    // isRequired
-                    component={SelectComponent}
-                    isColumn
-                    margintop={"4px"}
-                    options={Array.isArray(recruiterNameOption) ? recruiterNameOption : []}
-                    
-                    //  value={values.recruiterId}
-                    // defaultValue={{ label: firstName, value: documentId }}
-                    // isDisabled={defaultContacts}
-                    // defaultValue={defaultContacts ? defaultContacts : null}
-                    inlineLabel
-                    style={{ flexBasis: "80%" }}
-                  /> */}
-                <Spacer />
-                <FlexContainer justifyContent="space-between">
-                  <div style={{ width: "47%" }}>
-                    {" "}
-                    <Field
-                      name="avilableDate"
-                      // label="Start Date"
-                      label={<FormattedMessage
-                        id="app.startdate"
-                        defaultMessage="Start Date"
-                      />}
-                      isRequired
-                      component={DatePicker}
-                      isColumn
-                      width={"100%"}
-                      value={values.avilableDate}
-                      inlineLabel
-                      disabledDate={(currentDate) => {
-                        if (values.avilableDate) {
-                          if (
-                            dayjs(currentDate).isBefore(
-                              dayjs(values.avilableDate)
-                            )
-                          ) {
-                            return true;
-                          } else {
-                            return false;
-                          }
-                        }
-                      }}
-                    />
-                  </div>
-                  <div style={{ width: "47%", }}>
-                    {" "}
-                    <Field
-                      name="endDate"
-                      // label="Start Date"
-                      label={<FormattedMessage
-                        id="app.enddate"
-                        defaultMessage="End Date"
-                      />}
-                      // isRequired
-                      component={DatePicker}
-                      isColumn
-                      width={"100%"}
-                      value={values.endDate}
-                      inlineLabel
-                      disabledDate={(currentDate) => {
-                        if (values.avilableDate) {
-                          if (
-                            dayjs(currentDate).isBefore(
-                              dayjs(values.endDate)
-                            )
-                          ) {
-                            return true;
-                          } else {
-                            return false;
-                          }
-                        }
-                      }}
-                    />
-                  </div>
+    <div style={{ width: "48%" }}>
+      <Field
+        name="recruitmentProcessId"
+        label={
+          <FormattedMessage
+            id="app.workflow"
+            defaultMessage="Workflow"
+          />
+        }
+        isRequired
+        disabled
+        isColumn
+        component={SelectComponent}
+        options={
+          Array.isArray(processOption)
+            ? processOption
+            : []
+        }
+      />
+    </div>
+  </FlexContainer>
 
-                </FlexContainer>
-                {/* <Spacer /> */}
-                <Spacer style={{ marginTop: "1.25em" }} />
-                <FlexContainer style={{}}>
+  <Spacer />
 
-                  <StyledLabel style={{ marginLeft: "0px" }}>
-                    {/* Category */}
-                    <FormattedMessage
-                        id="app.category"
-                        defaultMessage="Category"
-                      />
-                    </StyledLabel>
-                  &nbsp;&nbsp;
-                  <Switch
-                    style={{
-                      width: "5em",
-                      marginLeft: "7px"
-                    }}
-                    checked={typeData1}
-                    onChange={handleWhiteBlue}
-                    // disabled={this.state.availability}
-                    checkedChildren={ <FormattedMessage
-                        id="app.white"
-                        defaultMessage="White"
-                      />}
-                    unCheckedChildren={ <FormattedMessage
-                        id="app.blue"
-                        defaultMessage="Blue"
-                      />}
-                  />
-                </FlexContainer>
-              </div>
+  {/* Row 7 */}
+  <FlexContainer justifyContent="space-between" style={{ gap: "12px" }}>
+    <div style={{ width: "48%" }}>
+      <Field
+        name="billing"
+        label={typeData ? "Salary" : "Rate/hr"}
+        width={"100%"}
+        isRequired
+        isColumn
+        component={InputComponent}
+      />
+    </div>
+
+    <div style={{ width: "48%", marginTop: "20px" }}>
+      <Field
+        name="currency"
+        placeholder="Curr"
+        noLabel
+        isRequired
+        selectType="currencyName"
+        component={SearchSelect}
+        flag={values.currency}
+      />
+    </div>
+  </FlexContainer>
+
+  <Spacer />
+
+  {/* Row 8 */}
+  <FlexContainer justifyContent="space-between" style={{ gap: "12px" }}>
+    <div style={{ width: "48%" }}>
+      <Field
+        name="avilableDate"
+        label={
+          <FormattedMessage
+            id="app.startdate"
+            defaultMessage="Start Date"
+          />
+        }
+        isRequired
+        component={DatePicker}
+        isColumn
+        width={"100%"}
+        value={values.avilableDate}
+        inlineLabel
+      />
+    </div>
+
+    <div style={{ width: "48%" }}>
+      <Field
+        name="endDate"
+        label={
+          <FormattedMessage
+            id="app.enddate"
+            defaultMessage="End Date"
+          />
+        }
+        component={DatePicker}
+        isColumn
+        width={"100%"}
+        value={values.endDate}
+        inlineLabel
+      />
+    </div>
+  </FlexContainer>
+
+  <Spacer />
+
+  {/* Row 9 */}
+  <FlexContainer alignItems="center">
+    <StyledLabel style={{ marginLeft: "0px" }}>
+      <FormattedMessage
+        id="app.category"
+        defaultMessage="Category"
+      />
+    </StyledLabel>
+
+    <Switch
+      style={{
+        width: "5em",
+        marginLeft: "12px",
+      }}
+      checked={typeData1}
+      onChange={handleWhiteBlue}
+      checkedChildren={
+        <FormattedMessage
+          id="app.white"
+          defaultMessage="White"
+        />
+      }
+      unCheckedChildren={
+        <FormattedMessage
+          id="app.blue"
+          defaultMessage="Blue"
+        />
+      }
+    />
+  </FlexContainer>
+</div>
               &nbsp;
               <div
                 style={{
