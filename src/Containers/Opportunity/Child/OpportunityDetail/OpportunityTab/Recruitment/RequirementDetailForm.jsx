@@ -261,7 +261,7 @@ function RequirementDetailForm(props) {
           values,
           ...rest
         }) => (
-          <Form className="form-background">
+          <Form className="form-background p-2">
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <div
                 style={{
@@ -321,7 +321,7 @@ function RequirementDetailForm(props) {
                     // options={Array.isArray(Sponsor) ? Sponsor : []}
                     />
                   </div>
-                   <div style={{ width: "47%" }}>
+                   <div style={{ width: "47%",marginTop:"5px" }}>
                       <Field
                         // isRequired
                         // type="email"
@@ -337,11 +337,40 @@ function RequirementDetailForm(props) {
                         isColumn
                         width={"100%"}
                         component={SelectComponent}
+                        // options={[
+                        //   "Remote",
+                        //   "Hybrid",
+                        //   "Office"
+                        // ]}
                         options={[
-                          "Remote",
-                          "Hybrid",
-                          "Office"
-                        ]}
+    {
+      label: (
+        <FormattedMessage
+          id="app.remote"
+          defaultMessage="Remote"
+        />
+      ),
+      value: "Remote",
+    },
+    {
+      label: (
+        <FormattedMessage
+          id="app.hybrid"
+          defaultMessage="Hybrid"
+        />
+      ),
+      value: "Hybrid",
+    },
+    {
+      label: (
+        <FormattedMessage
+          id="app.office"
+          defaultMessage="Office"
+        />
+      ),
+      value: "Office",
+    },
+  ]}
                         inlineLabel
                         // className="w-full"
                         style={{width:"100%"}}

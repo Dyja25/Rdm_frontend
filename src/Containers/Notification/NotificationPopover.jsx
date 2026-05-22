@@ -4,6 +4,7 @@ import { Badge, Tooltip, Popover } from "antd";
 // import { StyledPopover } from "../../Components/UI/Antd";
 import NotificationTab from "./NotificationTab";
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import { FormattedMessage } from "react-intl";
 
 
 class NotificationPopover extends Component {
@@ -21,7 +22,10 @@ class NotificationPopover extends Component {
   };
   render() {
     return (
-      <Tooltip title="Notifications">
+      <Tooltip title={<FormattedMessage
+                        id="app.notifications"
+                        defaultMessage="Notifications"
+                      />}>
         <Popover
           content={
             <div>

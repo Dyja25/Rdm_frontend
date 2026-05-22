@@ -262,7 +262,10 @@ const ProfileItemRow = ({ label, value, ex,onEdit  }) => {
       }}
     >
       {onEdit && (
-        <Tooltip title="Edit">
+        <Tooltip title={ <FormattedMessage
+      id="app.edit"
+      defaultMessage="Edit"
+    />}>
           <EditOutlined
             onClick={onEdit}
             style={{
