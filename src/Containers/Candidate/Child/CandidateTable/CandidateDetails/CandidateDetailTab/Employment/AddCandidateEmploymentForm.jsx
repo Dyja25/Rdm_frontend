@@ -224,6 +224,13 @@ class CandidateEmploymentForm extends Component {
                           options={["Daily", "Monthly", "Annual"]}
                           inlineLabel
                           className="w-full"
+                           style={{
+          //  width: "95%",
+          // height: "38px",
+          border: "1px solid #d9d9d9",
+          outline: "none",
+          boxShadow: "none",
+        }}
                           />
                       </div>
                     

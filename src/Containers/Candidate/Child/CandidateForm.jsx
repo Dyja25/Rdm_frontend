@@ -347,11 +347,18 @@ class CandidateForm extends Component {
                     width: "45%",
                   }}
                 >
-                  <FlexContainer flexWrap="no-wrap">
+                <FlexContainer flexWrap="nowrap" alignItems="flex-start">
                     <FastField name="imageId" component={Upload} />
-                    <div style={{marginLeft:"16px"}}>
-                      <FlexContainer justifyContent="space-between">
-                        <div style={{ width: "41%",marginTop:"2px" }}>
+                    <div style={{ marginLeft: "14px", width: "100%" }}>
+                     <FlexContainer
+  style={{
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-start",
+  }}
+>
+                        <div style={{ width: "40%", paddingRight: "12px" }}>
                           <FastField
                             name="salutation"
                             type="text"
@@ -362,21 +369,22 @@ class CandidateForm extends Component {
                                 defaultMessage="Salutation"
                               />
                             }
-                            style={{
-                              width:"100%",
-                              height:"35px",
-                              border:"1px solid #d9d9d9",
-                              padding:"0 10px",
-                            }}
                             options={["Mr.", "Ms.", "None","Dr.","Mevr.","Dhr."]}
                             component={SelectComponent}
                             inlineLabel
-                            className="field w-[100px]"
+                             className="w-full"
+        style={{
+          width: "95%",
+          height: "38px",
+          border: "1px solid #d9d9d9",
+          outline: "none",
+          boxShadow: "none",
+        }}
                             isColumn
                           />
                         </div>
 
-                        <div style={{ width: "50%" }}>
+                          <div style={{ width: "60%" }}>
                           <FastField
                             isRequired
                             name="firstName"
@@ -388,7 +396,6 @@ class CandidateForm extends Component {
                               />
                             }
                             type="text"
-                            width={"100%"}
                             isColumn
                             component={InputComponent}
                             inlineLabel
@@ -398,7 +405,14 @@ class CandidateForm extends Component {
                         </div>
                       </FlexContainer>
                             <Spacer />
-                      <FlexContainer justifyContent="space-between">
+                    <FlexContainer
+  style={{
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-start",
+  }}
+>
                         {/* <div style={{ width: "40%" }}>
                           <FastField
                             name="middleName"
@@ -416,11 +430,10 @@ class CandidateForm extends Component {
                             inlineLabel
                           />
                         </div> */}
-                        <div style={{ width: "46%",marginTop:"2px"  }}>
+                      <div style={{ width: "40%", paddingRight: "12px" }}>
                       <FastField
                         name="gender"
                         type="text"
-                        // label="Salutation"
                         label={
                           <FormattedMessage
                             id="app.gender"
@@ -430,17 +443,18 @@ class CandidateForm extends Component {
                         options={["Male", "Female", "Others"]}
                         component={SelectComponent}
                         inlineLabel
-                        className="field w-full"
                         isColumn
-                        style={{
-                              width:"100%",
-                              height:"35px",
-                              border:"1px solid #d9d9d9",
-                              padding:"0 10px",
-                            }}
+                        className="w-full "
+       style={{
+           width: "95%",
+          height: "38px",
+          border: "1px solid #d9d9d9",
+          outline: "none",
+          boxShadow: "none",
+        }}
                       />
                     </div>
-                        <div style={{ width: "50%" }}>
+                        <div style={{ width: "60%" }}>
                           <FastField
                             name="lastName"
                             //label="Last Name"
@@ -451,7 +465,6 @@ class CandidateForm extends Component {
                               />
                             }
                             type="text"
-                            width={"100%"}
                             isColumn
                             component={InputComponent}
                             inlineLabel

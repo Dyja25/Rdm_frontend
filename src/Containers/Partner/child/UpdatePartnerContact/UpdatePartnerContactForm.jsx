@@ -180,11 +180,16 @@ class UpdatePartnerContactForm extends Component {
                     width: "45%",
                   }}
                 >
-                  <FlexContainer flexWrap="no-wrap">
+                 <FlexContainer flexWrap="nowrap" alignItems="flex-start">
                     <FastField name="imageId" component={Upload} />
-                    <div style={{ marginLeft: "16px" }}>
-                      <FlexContainer justifyContent="space-between">
-                        <div style={{ width: "41%" }}>
+                    <div style={{ marginLeft: "14px", width: "100%" }}>
+                      <FlexContainer  style={{
+                         width: "100%",
+                         display: "flex",
+                         flexDirection: "row",
+                         alignItems: "flex-start",
+                       }}>
+                        <div style={{ width: "40%" }}>
                           <FastField
                             name="salutation"
                             type="text"
@@ -198,16 +203,18 @@ class UpdatePartnerContactForm extends Component {
                             options={["Mr.", "Ms.", "None"]}
                             component={SelectComponent}
                             inlineLabel
-                            className="field w-full"
+                            className="w-full"
                             isColumn
                             style={{
-                              flexBasis: "80%",
-                              height: "2.0625em",
-                              // marginTop: "0.25em",
-                            }}
+          width: "95%",
+          height: "38px",
+          border: "1px solid #d9d9d9",
+          outline: "none",
+          boxShadow: "none",
+        }}
                           />
                         </div>
-                        <div style={{ width: "50%" }}>
+                         <div style={{ width: "60%" }}>
                           <FastField
                             isRequired
                             name="firstName"
@@ -219,21 +226,22 @@ class UpdatePartnerContactForm extends Component {
                               />
                             }
                             type="text"
-                            width={"100%"}
                             isColumn
                             component={InputComponent}
                             inlineLabel
-                            style={{
-                              height: "2.0625em",
-                              flexBasis: "80%",
-                              // marginTop: "0.25em",
-                            }}
+                             className="w-full"
+                            style={{width:"100%"}}
                           />
                         </div>
                       </FlexContainer>
                       <Spacer />
-                      <FlexContainer justifyContent="space-between">
-                        <div style={{ width: "40%" }}>
+                      <FlexContainer  style={{
+                         width: "100%",
+                         display: "flex",
+                         flexDirection: "row",
+                         alignItems: "flex-start",
+                       }}>
+                       <div style={{ width: "40%" }}>
                           <FastField
                             name="middleName"
                             //label="Middle Name"
@@ -248,14 +256,16 @@ class UpdatePartnerContactForm extends Component {
                             isColumn
                             component={InputComponent}
                             inlineLabel
-                            style={{
-                              height: "2.0625em",
-                              flexBasis: "80%",
-                              // marginTop: "0.25em",
-                            }}
+                           style={{
+           width: "95%",
+          // height: "38px",
+          // border: "1px solid #d9d9d9",
+          // outline: "none",
+          // boxShadow: "none",
+        }}
                           />
                         </div>
-                        <div style={{ width: "55%" }}>
+                         <div style={{ width: "60%" }}>
                           <FastField
                             name="lastName"
                             //label="Last Name"
@@ -266,15 +276,12 @@ class UpdatePartnerContactForm extends Component {
                               />
                             }
                             type="text"
-                            width={"100%"}
+                            className="w-full"
+                            style={{width:"100%"}}
                             isColumn
                             component={InputComponent}
                             inlineLabel
-                            style={{
-                              height: "2.0625em",
-                              flexBasis: "80%",
-                              // marginTop: "0.25em",
-                            }}
+                           
                           />
                         </div>
                       </FlexContainer>

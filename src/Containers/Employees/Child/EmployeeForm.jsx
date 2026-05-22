@@ -109,24 +109,26 @@ class EmployeeForm extends Component {
             ...rest
           }) => (
             <Form className="form-background p-2">
-              <div
-                style={{
-                  display: "flex",
-                  width: "100%",
-                  height: "100%",
-                  justifyContent: "space-between",
-                }}
-              >
+             <div style={{ display: "flex", justifyContent: "space-between",height: "70vh",paddingRight: "0.6em"  }}>
                 <div
                   style={{
+                    height: "100%",
                     width: "45%",
-                    }}
+                  }}
                 >
+                   <FlexContainer flexWrap="nowrap" alignItems="flex-start">
                   <FastField name="imageId" component={Upload} />
-
-                  <FlexContainer>
-                      <div style={{ width: "41%" }}>
-                      <Field
+ <div style={{ marginLeft: "14px", width: "100%" }}>
+                  <FlexContainer
+                                        style={{
+                                          width: "100%",
+                                          display: "flex",
+                                          flexDirection: "row",
+                                          alignItems: "flex-start",
+                                        }}
+                                      >
+                     <div style={{ width: "50%" }}>
+                      <FastField
                         name="salutation"
                         placeholder="Select"
                         component={SelectComponent}
@@ -137,18 +139,24 @@ class EmployeeForm extends Component {
                           defaultMessage="Salutation"
                         />}
                         isColumn
-                         className="field w-[100px]"
+                         className="w-full"
+                          style={{
+          width: "95%",
+          height: "38px",
+          border: "1px solid #d9d9d9",
+          outline: "none",
+          boxShadow: "none",
+        }}
                         />
                     </div>
-                    &nbsp;&nbsp;
-                    <div style={{ width: "54%" }}>
-                      <Field
+                   <div style={{ width: "50%" }}>
+                      <FastField
                         isRequired
                         name="firstName"
                         type="text"
                         isColumn
-                        width={"100%"}
-                        // label="First Name"
+                        className="w-full"
+                            style={{width:"100%"}}
                         label={<FormattedMessage
                           id="app.firstname"
                           defaultMessage="First Name"
@@ -159,31 +167,27 @@ class EmployeeForm extends Component {
                        </div>
                   </FlexContainer>
                   <Spacer />
-                  <FlexContainer>
-                    <div style={{ width: "62%" }}>
-                      {" "}
-                      <Field
-                        name="lastName"
-                        type="text"
-                        isColumn
-                        width={"100%"}
-                        //label="Last Name"
-                        label={<FormattedMessage
-                          id="app.lastname"
-                          defaultMessage="Last Name"
-                        />}
-                        component={InputComponent}
-                        inlineLabel
-                        />
-                    </div>
-                    &nbsp;&nbsp;&nbsp;
-                    <div style={{ width: "35%" }}>
-                      {" "}
-                      <Field
+                  <FlexContainer
+                                        style={{
+                                          width: "100%",
+                                          display: "flex",
+                                          flexDirection: "row",
+                                          alignItems: "flex-start",
+                                        }}
+                                      >
+                   <div style={{ width: "50%" }}>
+                     <FastField
                         name="middleName"
                         type="text"
                         isColumn
-                        width={"100%"}
+                         className="w-full "
+                           style={{
+           width: "95%",
+          // height: "38px",
+          // border: "1px solid #d9d9d9",
+          // outline: "none",
+          // boxShadow: "none",
+        }}
                         //label="Middle Name"
                         label={<FormattedMessage
                           id="app.middleName"
@@ -192,7 +196,27 @@ class EmployeeForm extends Component {
                         component={InputComponent}
                         inlineLabel
                         />
+                     
                     </div>
+                   <div style={{ width: "50%" }}>
+                      <FastField
+                        name="lastName"
+                        type="text"
+                        isColumn
+                         className="w-full"
+                            style={{width:"100%"}}
+                        //label="Last Name"
+                        label={<FormattedMessage
+                          id="app.lastname"
+                          defaultMessage="Last Name"
+                        />}
+                         
+                        component={InputComponent}
+                        inlineLabel
+                        />
+                    </div>
+                  </FlexContainer>
+                  </div>
                   </FlexContainer>
                   <Spacer />
                   <div>

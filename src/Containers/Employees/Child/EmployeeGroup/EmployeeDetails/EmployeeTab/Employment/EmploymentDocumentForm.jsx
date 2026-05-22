@@ -277,7 +277,7 @@ class EmploymentDocumentForm extends Component {
                       />
                     </div>
                     &nbsp;&nbsp;&nbsp;
-                    <div style={{ width: "27%" }}>
+                    <div style={{ width: "27%",marginTop:"3px" }}>
                       <Field
                         isRequired
                         name="salaryType"
@@ -294,6 +294,14 @@ class EmploymentDocumentForm extends Component {
                         component={SelectComponent}
                         options={["Daily", "Monthly", "Annual"]}
                         inlineLabel
+                        className="w-full"
+                                                   style={{
+                                  //  width: "95%",
+                                  // height: "38px",
+                                  border: "1px solid #d9d9d9",
+                                  outline: "none",
+                                  boxShadow: "none",
+                                }}
                         />
                     </div>
                     &nbsp;&nbsp;&nbsp;

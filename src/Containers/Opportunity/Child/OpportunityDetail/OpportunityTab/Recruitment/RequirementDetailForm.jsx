@@ -404,7 +404,8 @@ function RequirementDetailForm(props) {
                         defaultMessage="Customer Contact"
                       />}
                       isColumn
-                      width={"100%"}
+                      className="w-full"
+                      style={{width:"100%"}}
                       inlineLabel
                       component={SelectComponent}
                       options={Array.isArray(Sponsor) ? Sponsor : []}

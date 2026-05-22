@@ -220,7 +220,7 @@ class CandidateEventForm extends Component {
             values,
             ...rest
           }) => (
-            <Form className="form-background">
+             <Form className="form-background p-2 w-[99%]">
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <div
                   style={{

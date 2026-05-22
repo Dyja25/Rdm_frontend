@@ -184,7 +184,7 @@ class PersonalTable2 extends Component {
       {
         title: "",
         dataIndex: "id",
-        width: "2%",
+        width: "4%",
         render: (name, item, i) => {
           return (
             <StyledPopconfirm
