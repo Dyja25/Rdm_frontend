@@ -273,7 +273,8 @@ class CandidateForm extends Component {
             workType: this.state.billing ? "Permanent" : "Contract",
             whatsapp: this.state.whatsapp ? "Different" : "Same",
             share:this.state.share ? "true" : "false",
-            category: this.state.checked ? "Both" : this.state.whiteblue ? "White" : "Blue",
+            // category: this.state.checked ? "Both" : this.state.whiteblue ? "White" : "Blue",
+            category: "White",
             // startDate: dayjs(),
             dateOfBirth: dayjs(),
             gender: "",
@@ -319,7 +320,7 @@ class CandidateForm extends Component {
                 workType: this.state.billing ? "Permanent" : "Contract",
                 whatsapp: this.state.whatsapp ? "Different" : "Same",
                 // category: this.state.whiteblue ?"White" : "Blue",
-                category: this.state.checked ? "Both" : this.state.whiteblue ? "White" : "Blue",
+                // category: this.state.checked ? "Both" : this.state.whiteblue ? "White" : "Blue",
                 // availableDate: dayjs(values.availableDate).format(
                 //   "YYYY-MM-DD"
                 availableDate: dayjs(values.availableDate).toISOString(),
@@ -1053,48 +1054,44 @@ class CandidateForm extends Component {
                     </div>                    
                   </FlexContainer>
                   <Spacer style={{ marginTop: "1em" }} />
-               <FlexContainer alignItems="center">
-                    <div className="flex items-center gap-3">
-    
-    <div className="flex flex-col">
-                  <StyledLabel >
-                    {/* Category */}
-                     <FormattedMessage
-                            id="app.category"
-                            defaultMessage="Category"
-                          />
-                    </StyledLabel>
-                  <Switch  
-                    checked={this.state.whiteblue}
-                    onChange={this.handleWhiteBlue}
-                    disabled={this.state.checked}
-                    checkedChildren="White collar"
-                    unCheckedChildren="Blue collar"
-                    />
-                    </div>
-                    <Checkbox
-                    checked={this.state.checked}
-                    onChange={() => this.handleChange()}
-                    style={{ marginLeft: "18px" }}
-                    >
-                      {/* Both */}
-                      <FormattedMessage
-                            id="app.both"
-                            defaultMessage="Both"
-                          />
-                    </Checkbox>
-                    </div>
-                    <div style={{ width: "30px" }} />
-                   <div className="flex items-center gap-3">
-                    <StyledLabel>Type</StyledLabel>
-                    <Switch                                           
-                      checked={this.state.billing}
-                      onChange={this.handlebilling}
-                      checkedChildren="Permanent"
-                      unCheckedChildren="Contract"
-                      />
-                    </div>
-                  </FlexContainer>
+              <FlexContainer alignItems="center" justifyContent="space-between">
+
+  <div style={{ width: "47%" }}>
+    <FastField
+      name="category"
+      label={
+        <FormattedMessage
+          id="app.category"
+          defaultMessage="Category"
+        />
+      }
+      isColumn
+      component={SelectComponent}
+      options={[
+        "White",
+        "Blue",
+        "Grey",
+        "Pink",
+        "Green"
+      ]}
+      inlineLabel
+      className="w-full"
+      style={{ width: "100%" }}
+    />
+  </div>
+
+  <div className="flex items-center gap-3">
+    <StyledLabel>Type</StyledLabel>
+
+    <Switch
+      checked={this.state.billing}
+      onChange={this.handlebilling}
+      checkedChildren="Permanent"
+      unCheckedChildren="Contract"
+    />
+  </div>
+
+</FlexContainer>
                   <Spacer style={{ marginTop: "1em" }} />
                  
                 
