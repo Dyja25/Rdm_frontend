@@ -325,7 +325,7 @@ class ContactForm extends Component {
                         //label="Email"
                         label={
                           <FormattedMessage
-                            id="app.emailId"
+                            id="app.emailid"
                             defaultMessage="Email"
                           />
                         }

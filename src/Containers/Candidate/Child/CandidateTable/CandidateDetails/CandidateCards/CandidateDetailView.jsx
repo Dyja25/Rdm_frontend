@@ -16,7 +16,7 @@ class CandidateDetailView extends Component {
 
 <CandidateItemRow //label="Mobile Number" 
           label={<FormattedMessage
-            id="app.emailId"
+            id="app.emailid"
             defaultMessage="Email ID"
           />}
           

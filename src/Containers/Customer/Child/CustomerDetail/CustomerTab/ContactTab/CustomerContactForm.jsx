@@ -318,13 +318,13 @@ class ContactForm extends Component {
                         <FastField
                           type="text"
                           name="mobileNumber"
-                          //placeholder="Mobile #"
-                          label={
-                            <FormattedMessage
-                              id="app.mobile#"
-                              defaultMessage="Mobile #"
-                            />
-                          }
+                          placeholder="Mobile #"
+                          // label={
+                          //   <FormattedMessage
+                          //     id="app.mobile#"
+                          //     defaultMessage="Mobile #"
+                          //   />
+                          // }
                           component={InputComponent}
                           inlineLabel
                           width={"100%"}
@@ -342,7 +342,7 @@ class ContactForm extends Component {
                           //label="Phone No #"
                           label={
                             <FormattedMessage
-                              id="app.phoneno#"
+                              id="app.phone#"
                               defaultMessage="Phone No"
                             />
                           }
@@ -359,13 +359,13 @@ class ContactForm extends Component {
                         <FastField
                           type="text"
                           name="phoneNumber"
-                          // placeholder="Phone #"
-                          label={
-                            <FormattedMessage
-                              id="app.phone#"
-                              defaultMessage="Phone #"
-                            />
-                          }
+                          placeholder="Phone #"
+                          // label={
+                          //   <FormattedMessage
+                          //     id="app.mobile#"
+                          //     defaultMessage="Phone #"
+                          //   />
+                          // }
                           isColumn
                           component={InputComponent}
                           inlineLabel
@@ -384,7 +384,7 @@ class ContactForm extends Component {
                           //label="Email"
                           label={
                             <FormattedMessage
-                              id="app.emailId"
+                              id="app.emailid"
                               defaultMessage="Email"
                             />
                           }

@@ -31,7 +31,10 @@ class AddEmployeeModal extends Component {
             <EmployeeForm />
           </Suspense> */}
           <StyledTabs defaultActiveKey="1">
-            <TabPane tab={`Employee`} key="1">
+            <TabPane tab={<FormattedMessage
+                                            id="app.employee"
+                                            defaultMessage="Employee"
+                                          />} key="1">
               <div style={{ marginTop: 20 }}>
                 <EmployeeForm />
               </div>

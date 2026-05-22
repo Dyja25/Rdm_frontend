@@ -222,13 +222,13 @@ class EmployeeForm extends Component {
                   <div>
                     <Field
                       isRequired
-                      name="emailId"
+                      name="emailid"
                       type="text"
                       isColumn
                       width={"100%"}
                       // label="Email"
                       label={<FormattedMessage
-                        id="app.emailId"
+                        id="app.emailid"
                         defaultMessage="Email"
                       />}
                       component={InputComponent}
@@ -322,8 +322,8 @@ class EmployeeForm extends Component {
                         isColumnWithoutNoCreate
                         //label="Work #"
                         label={<FormattedMessage
-                          id="app.work#"
-                          defaultMessage="Work #"
+                          id="app.phone#"
+                          defaultMessage="phone#"
                         />}
                         isColumn
                       
@@ -336,7 +336,7 @@ class EmployeeForm extends Component {
                       <Field
                         type="text"
                         name="phoneNo"
-                        placeholder="Mobile #"
+                        placeholder="Phone #"
                         // label={<FormattedMessage
                         //   id="app.phoneNo"
                         //   defaultMessage="Phone No"

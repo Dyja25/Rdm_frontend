@@ -513,7 +513,14 @@ function RequirementDetailForm(props) {
                         {" "}
                         <Field
                           name="billing"
-                          label={typeData ? "Salary" : "Rate/hr"}
+                          // label={typeData ? "Salary" : "Rate/hr"}
+                          label={typeData ?(<FormattedMessage
+                        id="app.salary"
+                        defaultMessage="Salary"
+                      />) : (<FormattedMessage
+                        id="app.rate/hr"
+                        defaultMessage="Rate/hr"
+                      />) }
                           // label={<FormattedMessage
                           //   id="app.billing"
                           //   defaultMessage="Billing/hour"
