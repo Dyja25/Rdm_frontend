@@ -366,7 +366,7 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
                     )}
                   /> */}
                   <Field
-                    name="address[0].address1"
+                   name="address[0].houseNo"
                     // label="Address"
                     label={
                       <FormattedMessage
@@ -388,7 +388,8 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
                         defaultMessage="House No"
                       />
                     }
-                   name="address[0].houseNo"
+                    name="address[0].address1"
+                   
                   // placeholder="House No"
                   component={InputComponent}
                   width={"100%"}
@@ -501,7 +502,7 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
                     )}
                   /> */}
                   <Field
-                    name="billingAddress[0].address1"
+                    name="billingAddress[0].houseNo"
                     // label="Address"
                     label={
                       <FormattedMessage
@@ -523,7 +524,8 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
                         defaultMessage="House No"
                       />
                     }
-                   name="billingAddress[0].houseNo"
+                     name="billingAddress[0].address1"
+                  
                   // placeholder="House No"
                   component={InputComponent}
                   width={"100%"}
