@@ -221,6 +221,7 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
                         component={InputComponent}
                         inlineLabel
                         width={"100%"}
+                        style={{height:"30px"}}
                         />                   
                          </div>
                   </FlexContainer>
@@ -261,6 +262,7 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
                         width={"100%"}
                         component={InputComponent}
                         inlineLabel
+                        style={{height:"30px"}}
                         />
                     </div>
                     <div style={{ width: "55%" }}>
@@ -365,13 +367,17 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
                       />
                     )}
                   /> */}
-                  <Field
-                   name="address[0].houseNo"
-                    // label="Address"
-                    label={
-                      <FormattedMessage
+                  <div className="text-base underline"> <FormattedMessage
                         id="app.address"
                         defaultMessage="Address"
+                      /></div>
+                  <Field
+                   name="address[0].houseNo"
+                    // label="Extra Input"
+                    label={
+                      <FormattedMessage
+                        id="app.extrainput"
+                        defaultMessage="extrainput"
                       />
                     }
                     component={InputComponent}
@@ -397,6 +403,7 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
                   inlineLabel
                 />
                 </div>
+                
                 <div style={{ width: "47%" }}>
                   <Field
                     name="address[0].street"
@@ -501,13 +508,18 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
                       />
                     )}
                   /> */}
+                 <div className="text-base underline"><FormattedMessage
+                            id="app.billingaddrees"
+                            defaultMessage="billingaddress"
+                          /></div>
+                  
                   <Field
                     name="billingAddress[0].houseNo"
-                    // label="Address"
+                    // label="Extra Input"
                     label={
                       <FormattedMessage
-                        id="app.address"
-                        defaultMessage="Address"
+                        id="app.extrainput"
+                        defaultMessage="extrainput"
                       />
                     }
                     component={InputComponent}
@@ -566,10 +578,6 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
                         width="100%"
                         />
                     </div>
-                   
-                  </FlexContainer>
-                  <Spacer />
-                  <FlexContainer justifyContent="space-between">
                     <div style={{ width: "47%" }}>
                       <Field
                         name="billingAddress[0].state"
@@ -586,6 +594,10 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
                         width="100%"
                         />
                     </div>
+                  </FlexContainer>
+                  <Spacer />
+                  <FlexContainer justifyContent="space-between">
+                   
                     <div style={{ width: "47%" }}>
                       <Field
                         name="billingAddress[0].postalCode"

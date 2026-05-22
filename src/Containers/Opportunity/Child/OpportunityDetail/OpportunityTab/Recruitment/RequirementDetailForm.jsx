@@ -281,6 +281,7 @@ function RequirementDetailForm(props) {
                       isColumn
                       width={"100%"}
                       inlineLabel
+                      style={{width:"100%"}}
                       component={InputComponent}
                     // options={Array.isArray(Sponsor) ? Sponsor : []}
                     />
@@ -295,6 +296,7 @@ function RequirementDetailForm(props) {
                       />}
                       width={"100%"}
                       isRequired
+                      style={{width:"100%"}}
                       isColumn
                       inlineLabel
                       component={InputComponent}
@@ -314,29 +316,12 @@ function RequirementDetailForm(props) {
                       isColumn
                       width={"100%"}
                       inlineLabel
+                      style={{width:"100%"}}
                       component={InputComponent}
                     // options={Array.isArray(Sponsor) ? Sponsor : []}
                     />
                   </div>
-                  {/* <div style={{ width: "47%", }}>
-                    <Field
-                      name="location"
-                      //label="Name"
-                      label={<FormattedMessage
-                        id="app.location"
-                        defaultMessage="Location"
-                      />}
-                      width={"100%"}
-                      // isRequired
-                      isColumn
-                      inlineLabel
-                      component={InputComponent}
-                    />
-
-                  </div> */}
-                </FlexContainer>
-                <FlexContainer justifyContent="space-between">
-                    <div style={{ width: "100%" }}>
+                   <div style={{ width: "47%" }}>
                       <Field
                         // isRequired
                         // type="email"
@@ -358,9 +343,30 @@ function RequirementDetailForm(props) {
                           "Office"
                         ]}
                         inlineLabel
+                        // className="w-full"
+                        style={{width:"100%"}}
                       />
                     </div>
-                    <div style={{ width: "47%" }}>
+                  {/* <div style={{ width: "47%", }}>
+                    <Field
+                      name="location"
+                      //label="Name"
+                      label={<FormattedMessage
+                        id="app.location"
+                        defaultMessage="Location"
+                      />}
+                      width={"100%"}
+                      // isRequired
+                      isColumn
+                      inlineLabel
+                      component={InputComponent}
+                    />
+
+                  </div> */}
+                </FlexContainer>
+                <FlexContainer justifyContent="space-between">
+                   
+                    <div style={{ width: "100%" }}>
                       {" "}
                       <Field
                         name="closeByDate"
@@ -375,6 +381,7 @@ function RequirementDetailForm(props) {
                         width={"100%"}
                         value={values.closeByDate}
                         inlineLabel
+                        style={{width:"100%"}}
                        
                         // disabledDate={(currentDate) => {
                         //   if (values.avilableDate) {
@@ -395,7 +402,7 @@ function RequirementDetailForm(props) {
 
                 <Spacer />
                 <FlexContainer justifyContent="space-between">
-                  <div style={{ width: "47%", }}>
+                  <div style={{ width: "47%",marginTop:"5px"}}>
                     <Field
                       name="sponserId"
                       //  label="Sponsor"
@@ -529,6 +536,7 @@ function RequirementDetailForm(props) {
                           isRequired
                           isColumn
                           component={InputComponent}
+                          style={{height:"30px"}}
                         />
                       </div>
                       <div style={{ width: "52%", marginTop: "20px", }}>
@@ -537,6 +545,7 @@ function RequirementDetailForm(props) {
                           placeholder="Curr"
                           noLabel
                           isRequired
+                          style={{width:"100%"}}
                           selectType="currencyName"
                           component={SearchSelect}
                           flag={values.currency}
@@ -589,6 +598,7 @@ function RequirementDetailForm(props) {
                       width={"100%"}
                       value={values.avilableDate}
                       inlineLabel
+                      style={{width:"100%"}}
                       disabledDate={(currentDate) => {
                         if (values.avilableDate) {
                           if (
@@ -616,7 +626,8 @@ function RequirementDetailForm(props) {
                       // isRequired
                       component={DatePicker}
                       isColumn
-                      width={"100%"}
+                      // width={"100%"}
+                      style={{width:"100%"}}
                       value={values.endDate}
                       inlineLabel
                       disabledDate={(currentDate) => {

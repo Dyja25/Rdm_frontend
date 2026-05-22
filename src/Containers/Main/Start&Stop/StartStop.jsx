@@ -4,6 +4,7 @@ import React, { useEffect,useState } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import {addAttendence} from "../../Customer/CustomerAction"
+import { FormattedMessage } from "react-intl";
 
 function StartStop(props) {
 
@@ -26,7 +27,13 @@ function StartStop(props) {
      style={{height:"1.75rem"}}
      htmlType="submit"
      onClick={toggle}>
-        {state ? "Stop" : "Start"}          
+        {state ? (<FormattedMessage
+                            id="app.stop"
+                            defaultMessage="Stop"
+                          />) : (<FormattedMessage
+                            id="app.start"
+                            defaultMessage="Start"
+                          />)}         
      </Button>
     
     </div>

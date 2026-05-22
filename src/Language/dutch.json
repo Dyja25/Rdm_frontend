@@ -430,7 +430,7 @@
   "app.time": "Tijd",
   "app.type": "Type",
   "app.topic": "Onderwerp",
-  "app.start": "Start",
+  "app.start": "Begin",
   "app.end": "Einde",
   "app.inbound": "inkomend",
   "app.create": "creër",
@@ -762,7 +762,10 @@
                      "app.employeeNotes":"Aantekeningen van medewerkers",
                       "app.employmentHistory":"WerkgelegenheidGeschiedenis",
                        "app.keyskill":"Sleutelvaardigheden",
-                        "app.salarydetails":"Salarisgegevens"
+                        "app.salarydetails":"Salarisgegevens",
+                        "app.billingaddrees":"Factuuradres",
+                        "app.extrainput":"Extra invoer",
+                        "app.stop":"Stop"
 
 
 

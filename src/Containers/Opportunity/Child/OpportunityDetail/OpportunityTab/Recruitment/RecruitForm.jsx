@@ -392,11 +392,40 @@ function RecruitForm(props) {
                         isColumn
                         width={"100%"}
                         component={SelectComponent}
+                        // options={[
+                        //   "Remote",
+                        //   "Hybrid",
+                        //   "Office"
+                        // ]}
                         options={[
-                          "Remote",
-                          "Hybrid",
-                          "Office"
-                        ]}
+    {
+      label: (
+        <FormattedMessage
+          id="app.remote"
+          defaultMessage="Remote"
+        />
+      ),
+      value: "Remote",
+    },
+    {
+      label: (
+        <FormattedMessage
+          id="app.hybrid"
+          defaultMessage="Hybrid"
+        />
+      ),
+      value: "Hybrid",
+    },
+    {
+      label: (
+        <FormattedMessage
+          id="app.office"
+          defaultMessage="Office"
+        />
+      ),
+      value: "Office",
+    },
+  ]}
                         inlineLabel
                       />
                     </div>

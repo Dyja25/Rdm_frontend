@@ -222,6 +222,7 @@ class CustomerForm extends Component {
                         component={InputComponent}
                         inlineLabel
                         width={"100%"}
+                        style={{height:"30px"}}
                         />
                     </div>
                   </FlexContainer>
@@ -262,6 +263,7 @@ class CustomerForm extends Component {
                         width={"100%"}
                         component={InputComponent}
                         inlineLabel
+                        style={{height:"30px"}}
                         />
                     </div>
                     <div style={{ width: "55%" }}>
@@ -358,7 +360,10 @@ class CustomerForm extends Component {
                     </div>
                   </FlexContainer>
                   <Spacer style={{marginTop:"1.25em"}}/>   
-                  <div className="text-base underline">Billing Address</div>
+                  <div className="text-base underline"> <FormattedMessage
+                            id="app.billingaddrees"
+                            defaultMessage="billingaddress"
+                          /></div>
                    <Spacer style={{marginTop:"1.25em"}}/>   
                   <FieldArray
                     name="billingAddress"

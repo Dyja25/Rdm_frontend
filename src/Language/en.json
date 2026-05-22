@@ -395,7 +395,10 @@
            "app.employeeNotes":"EmployeeNotes",
            "app.employmentHistory":"EmploymentHistory",
            "app.keyskill":"Keyskill",
-           "app.salarydetails":"Salarydetails"
+           "app.salarydetails":"Salarydetails",
+           "app.billingaddrees":"Billing Address",
+           "app.extrainput":"Extra Input",
+           "app.stop":"Stop"
    
 
 
