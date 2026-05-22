@@ -94,6 +94,22 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
              
               },
             ],
+             billingAddress: [
+              {
+                address1: this.props.setEditingCustomer.billingAddress.length ? this.props.setEditingCustomer.billingAddress[0].address1 : "",
+                address2:  this.props.setEditingCustomer.billingAddress.length ? this.props.setEditingCustomer.billingAddress[0].address2 : "",
+                street:  this.props.setEditingCustomer.billingAddress.length ? this.props.setEditingCustomer.billingAddress[0].street : "",
+                city:  this.props.setEditingCustomer.billingAddress.length ? this.props.setEditingCustomer.billingAddress[0].city : "",
+                state:  this.props.setEditingCustomer.billingAddress.length ? this.props.setEditingCustomer.billingAddress[0].state : "",
+                postalCode:  this.props.setEditingCustomer.billingAddress.length ? this.props.setEditingCustomer.billingAddress[0].postalCode : "",
+                houseNo:  this.props.setEditingCustomer.billingAddress.length ? this.props.setEditingCustomer.billingAddress[0].houseNo : "",
+                // countryDialCode:
+                // this.props.setEditingCustomer.countryDialCode
+                // country: this.props.setEditingCustomer.country || "",
+                // country:"",
+             
+              },
+            ],
             category: this.state.whiteblue ?"White" : "Blue"||"Both",
           }}
           validationSchema={UpdateCustomerSchema}
@@ -120,7 +136,7 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
             ...rest
           }) => (
             <Form className="form-background">
-              <div style={{ display: "flex", justifyContent: "space-between",height: "70vh",paddingRight: "0.6em" }}>
+              <div style={{ display: "flex", justifyContent: "space-between",height: "70vh",paddingRight: "0.6em" ,overflowX:"auto",scrollbarwidth:"thin" }}>
                 <div
                   style={{
                     height: "100%",
@@ -473,9 +489,123 @@ checked:this.props.setEditingCustomer.category==="White" || this.props.setEditin
                       />
                     </div>
                   </FlexContainer>
-      
+       <Spacer style={{marginTop:"1.25em"}}/>
+                  {/* <FieldArray
+                    name="address"
+                    label="searxh"
+                    render={(arrayHelpers) => (
+                      <AddressFieldArray
+                        arrayHelpers={arrayHelpers}
+                        values={values}
+                      />
+                    )}
+                  /> */}
+                  <Field
+                    name="billingAddress[0].address1"
+                    // label="Address"
+                    label={
+                      <FormattedMessage
+                        id="app.address"
+                        defaultMessage="Address"
+                      />
+                    }
+                    component={InputComponent}
+                    isColumn
+                    width="100%"
+                  />
+                <FlexContainer justifyContent="space-between"> 
+                  <div style={{ width: "47%" }}>  
+                  <Field
+                  //  label="House No"
+                   label={
+                      <FormattedMessage
+                        id="app.houseNo"
+                        defaultMessage="House No"
+                      />
+                    }
+                   name="billingAddress[0].houseNo"
+                  // placeholder="House No"
+                  component={InputComponent}
+                  width={"100%"}
+                  isColumn
+                  inlineLabel
+                />
+                </div>
+                <div style={{ width: "47%" }}>
+                  <Field
+                    name="billingAddress[0].street"
+                    //label="Street"
+
+                    label={
+                      <FormattedMessage
+                        id="app.street"
+                        defaultMessage="Street"
+                      />
+                    }
+                    component={InputComponent}
+                    isColumn
+                    width="100%"
+                    />
+                     </div>
+                     </FlexContainer>
+                  <FlexContainer justifyContent="space-between">
+                    <div style={{ width: "47%" }}>
+                      <Field
+                        name="billingAddress[0].city"
+                        //label="City"
+                        label={
+                          <FormattedMessage
+                            id="app.city"
+                            defaultMessage="City"
+                          />
+                        }
+                        component={InputComponent}
+                        isColumn
+                        width="100%"
+                        />
+                    </div>
+                   
+                  </FlexContainer>
+                  <Spacer />
+                  <FlexContainer justifyContent="space-between">
+                    <div style={{ width: "47%" }}>
+                      <Field
+                        name="billingAddress[0].state"
+                        //label="State"
+
+                        label={
+                          <FormattedMessage
+                            id="app.state"
+                            defaultMessage="State"
+                          />
+                        }
+                        component={InputComponent}
+                        isColumn
+                        width="100%"
+                        />
+                    </div>
+                    <div style={{ width: "47%" }}>
+                      <Field
+                        name="billingAddress[0].postalCode"
+                        //label="Zip Code"
+
+                        label={
+                          <FormattedMessage
+                            id="app.pinCode"
+                            defaultMessage="Pin Code"
+                          />
+                        }
+                        component={InputComponent}
+                        isColumn
+                        width="100%"
+                      />
+                    </div>
+                  </FlexContainer>
                 </div>
               </div>
+             
+      
+              
               <Spacer style={{marginTop:"1.25em"}}/>
               <FlexContainer justifyContent="flex-end">
                 <Button
