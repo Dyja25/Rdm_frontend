@@ -1381,7 +1381,87 @@ onChange={this.NumericOnly}
                           component={TextareaComponent}
                         />
                       </div>
-                      </FlexContainer>                  
+                      </FlexContainer> 
+
+                         <FlexContainer justifyContent="space-between">
+                           <div style={{ width: "47%", marginTop:"0.2rem" }}>
+                      <FastField
+                        name="DGR"
+                        label="DGR"
+                        // label={
+                        //   <FormattedMessage
+                        //     id="app.notice"
+                        //     defaultMessage="Notice (months)"
+                        //   />
+                        // }
+                        // className="field"
+                        isColumn
+                        width={"100%"}
+                        options={["Yes","No"]}
+                        component={SelectComponent}
+                        inlineLabel
+                      />
+                    </div>
+                    <div style={{ width: "47%" }}>
+                      <Field
+                        name="Uitkering"
+                        label="Uitkering"
+                        // label={
+                        //   <FormattedMessage
+                        //     id="app.benefits"
+                        //     defaultMessage="Benefits"
+                        //   />
+                        // }
+                       
+                        component={InputComponent}
+                        isColumn
+                        width="100%"
+                      />
+                    </div>                    
+                   
+                    </FlexContainer>  
+
+                           <FlexContainer justifyContent="space-between">
+                    
+                    <div style={{ width: "47%" }}>
+                      <Field
+                        name="Instrumenten"
+                        label="Instrumenten"
+                        // label={
+                        //   <FormattedMessage
+                        //     id="app.benefits"
+                        //     defaultMessage="Benefits"
+                        //   />
+                        // }
+                       
+                        component={InputComponent}
+                        isColumn
+                        width="100%"
+                      />
+                    </div>                    
+                   
+                    </FlexContainer> 
+
+                           <FlexContainer justifyContent="space-between">
+                    
+                    <div style={{ width: "47%" }}>
+                      <Field
+                        name="Interest"
+                        label="Interest"
+                        // label={
+                        //   <FormattedMessage
+                        //     id="app.benefits"
+                        //     defaultMessage="Benefits"
+                        //   />
+                        // }
+                       
+                        component={InputComponent}
+                        isColumn
+                        width="100%"
+                      />
+                    </div>                    
+                   
+                    </FlexContainer>                 
                   </div>
               </div>
 
