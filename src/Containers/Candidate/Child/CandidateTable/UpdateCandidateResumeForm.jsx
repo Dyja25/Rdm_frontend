@@ -163,6 +163,7 @@ class UpdateCandidateResumeForm extends PureComponent {
         }
 
         }
+         style={{backgroundColor:"tomato",color:"white"}}
          
           
           >

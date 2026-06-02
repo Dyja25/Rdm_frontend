@@ -133,7 +133,8 @@ class UpdateCandidateForm extends Component {
             workType: this.state.billing ? "Permanent" : "Contract",
             nationality: this.props.setEditingCandidate.nationality || "",
             country : this.props.setEditingCandidate.country || "",
-            category:this.state.checked?"Both": this.state.whiteblue ? "White" : "Blue",
+            // category:this.state.checked?"Both": this.state.whiteblue ? "White" : "Blue",
+             category: this.props.setEditingCandidate.category || "",
             whatsApp: this.state.whatsapp? "Same" : "Different",
             active: this.state.availability ? "Yes" : "No",
            // active: this.props.setEditingCandidate.active ? true : false,   
@@ -162,7 +163,7 @@ class UpdateCandidateForm extends Component {
                active: values.active === false ? false : true,
                  workType: this.state.billing ? "Permanent" : "Contract",
                  //category: this.state.whiteblue ? "White" : "Blue"||"Both",
-                 category: this.state.checked ? "Both" : this.state.whiteblue ? "White" : "Blue",
+                //  category: this.state.checked ? "Both" : this.state.whiteblue ? "White" : "Blue",
                  whatsApp: this.state.whatsapp? "Same" : "Different",
                  availableDate: dayjs(values.availableDate).toISOString(),
                  emailId:this.props.setEditingCandidate.emailId === values.emailId? null : values.emailId,
@@ -845,20 +846,29 @@ class UpdateCandidateForm extends Component {
       gap: "6px",
     }}
   >
-    <StyledLabel>
-      <FormattedMessage
-        id="app.category"
-        defaultMessage="Category"
-      />
-    </StyledLabel>
+    <FastField
+         name="category"
+         label={
+           <FormattedMessage
+             id="app.category"
+             defaultMessage="Category"
+           />
+         }
+         isColumn
+         component={SelectComponent}
+         options={[
+           "White",
+           "Blue",
+           "Grey",
+           "Pink",
+           "Green"
+         ]}
+         inlineLabel
+         className="w-full"
+         style={{ width: "100%" }}
+       />
 
-    <Switch
-      checked={this.state.whiteblue}
-      onChange={this.handleWhiteBlue}
-      disabled={this.state.checked}
-      checkedChildren="White collar"
-      unCheckedChildren="Blue collar"
-    />
+   
   </div>
 
   {/* Checkbox */}

@@ -175,7 +175,7 @@ class ResumeForm extends PureComponent {
         }
 
         }
-         
+         style={{backgroundColor:"tomato",color:"white"}}
           
           >
             {/* Upload Selected File */}
