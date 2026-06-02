@@ -10,6 +10,7 @@ import CandidateRowEmailModal from "../CandidateRowEmailModal.jsx";
 //   brands,
 // } from "@fortawesome/fontawesome-svg-core/import.macro";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import InfoIcon from '@mui/icons-material/Info';
 import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
 import SkillsLoadMore from "./SkillsLoadMore.jsx";
 import AccountBalanceWalletTwoToneIcon from '@mui/icons-material/AccountBalanceWalletTwoTone';
@@ -805,6 +806,8 @@ const rowSelection = {
       title: <FormattedMessage id="app.available" defaultMessage="Available" />,
       dataIndex: "availableDate",
       width: "7%",
+       sorter: (a, b) =>
+    dayjs(a.availableDate).valueOf() - dayjs(b.availableDate).valueOf(),
       render: (text, item) => {
         const availableDate = dayjs(item.availableDate).format("ll");
         return (
@@ -823,7 +826,7 @@ const rowSelection = {
       // title: "",
       title: <FormattedMessage id="app.owner" defaultMessage="Owner" />,
       // dataIndex: "ownerName",
-      width: "6%",
+      width: "8%",
       // ...getColumnSearchProps('ownerName'),
       filters: ownerlistType,
 
@@ -852,7 +855,8 @@ const rowSelection = {
     {
       title: <FormattedMessage id="app.active" defaultMessage="Active" />,
       // dataIndex: "active",
-      width: "12%",
+      width: "10%",
+      sorter: (a, b) => Number(a.active) - Number(b.active),
       render: (name, item, i) => {
         return (
           <StatusToggle
@@ -860,6 +864,26 @@ const rowSelection = {
             candidateId={item.candidateId}
             active={item.active}
           />
+        );
+      },
+    },
+    {
+      title: "",
+     // dataIndex: "documentId",
+      width: "3%",
+      render: (name, item, i) => {
+        //debugger
+
+        return (
+          <>
+            <Tooltip title={item.noticeDetail}>
+              <InfoIcon
+               
+                style={{ cursor: "pointer",width:"1rem" }}
+               
+              />
+          </Tooltip>
+          </>
         );
       },
     },
