@@ -229,6 +229,10 @@ class CandidateForm extends Component {
       <>
         <Formik
           initialValues={{
+            allowance:"",
+            dgr:"",
+            instrument:"",
+            interest:"",
             sectorId: "",
             roleTypeId: "",
             workpreference:"Remote",
@@ -1386,7 +1390,7 @@ onChange={this.NumericOnly}
                          <FlexContainer justifyContent="space-between">
                            <div style={{ width: "47%", marginTop:"0.2rem" }}>
                       <FastField
-                        name="DGR"
+                        name="dgr"
                         label="DGR"
                         // label={
                         //   <FormattedMessage
@@ -1404,7 +1408,7 @@ onChange={this.NumericOnly}
                     </div>
                     <div style={{ width: "47%" }}>
                       <Field
-                        name="Uitkering"
+                        name="allowance"
                         label="Uitkering"
                         // label={
                         //   <FormattedMessage
@@ -1425,7 +1429,7 @@ onChange={this.NumericOnly}
                     
                     <div style={{ width: "47%" }}>
                       <Field
-                        name="Instrumenten"
+                        name="instrument"
                         label="Instrumenten"
                         // label={
                         //   <FormattedMessage
@@ -1446,7 +1450,7 @@ onChange={this.NumericOnly}
                     
                     <div style={{ width: "47%" }}>
                       <Field
-                        name="Interest"
+                        name="interest"
                         label="Interest"
                         // label={
                         //   <FormattedMessage
