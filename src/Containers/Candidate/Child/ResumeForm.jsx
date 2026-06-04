@@ -103,6 +103,7 @@ class ResumeForm extends PureComponent {
        
         ////debugger;
         console.log(res);
+        
         this.props.handleResponseData(res.data);
       this.props.handleCandidateModal(true)
          this.props.handleCandidateResumeModal(false)

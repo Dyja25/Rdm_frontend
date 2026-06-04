@@ -876,7 +876,7 @@ const rowSelection = {
 
         return (
           <>
-            <Tooltip title={item.noticeDetail}>
+            <Tooltip title={`${item.noticeDetail} DGR-${item.dgr} Uitkering-${item.allowance} Instrumenten-${item.instrument} Interest-${item.interest}`}>
               <InfoIcon
                
                 style={{ cursor: "pointer",width:"1rem" }}
