@@ -3,6 +3,7 @@ import axios from "axios";
 import dayjs from "dayjs";
 import { base_url, } from "../../Config/Auth";
 import { message } from "antd";
+import Swal from "sweetalert2";
 
 /**
  * candidate modal action
@@ -1625,34 +1626,47 @@ export const handleCandidateActivityTableModal = (modalProps) => (
 };
 
 
-export const addResumeForm = (formData, cb) => (dispatch) => {
-  // const userId = getState().auth.userDetails.userId;
+export const addResumeForm = (formData) => (dispatch) => {
   dispatch({
     type: types.ADD_RESUME_FORM_REQUEST,
   });
+
   axios
     .post(`${base_url}/document/upload`, formData, {
       headers: {
-        // "Content-Type": "multipart/form-data",
-        Authorization: "Bearer " + sessionStorage.getItem("token") || "",
+        Authorization: "Bearer " + (sessionStorage.getItem("token") || ""),
       },
     })
     .then((res) => {
       console.log(res);
-      // this.props.handleResponseData(res.data);
-
 
       dispatch({
         type: types.ADD_RESUME_FORM_SUCCESS,
         payload: res.data,
       });
-      cb();
+
+      Swal.fire({
+        icon: "success",
+        title: "Success",
+        text: "Uploaded successfully",
+        timer: 1000,
+        showConfirmButton: false,
+      });
+
+      
     })
     .catch((err) => {
       console.log(err);
+
       dispatch({
         type: types.ADD_RESUME_FORM_FAILURE,
         payload: err,
+      });
+
+      Swal.fire({
+        icon: "error",
+        title: "Failed",
+        text: "Upload failed",
       });
     });
 };
