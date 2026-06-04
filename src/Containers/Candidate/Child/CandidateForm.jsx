@@ -1400,7 +1400,7 @@ onChange={this.NumericOnly}
                         // }
                         // className="field"
                         isColumn
-                        width={"100%"}
+                        style={{width:"12em"}}
                         options={["Yes","No"]}
                         component={SelectComponent}
                         inlineLabel

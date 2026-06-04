@@ -93,6 +93,10 @@ class UpdateCandidateForm extends Component {
       <>
         <Formik
           initialValues={{
+             allowance:this.props.setEditingCandidate.allowance || "",
+            dgr:this.props.setEditingCandidate.dgr || "",
+            instrument:this.props.setEditingCandidate.instrument || "",
+            interest:this.props.setEditingCandidate.interest || "",
             sectorId: this.props.setEditingCandidate.sectorId || "",
             partnerId:this.props.setEditingCandidate.partnerId || "",
             currentCtc:this.props.setEditingCandidate.currentCtc || "",
@@ -1047,6 +1051,84 @@ class UpdateCandidateForm extends Component {
                         />
                         </div>                       
                     </FlexContainer>
+                          <FlexContainer justifyContent="space-between">
+                                               <div style={{ width: "47%", marginTop:"0.2rem" }}>
+                                          <FastField
+                                            name="dgr"
+                                            label="DGR"
+                                            // label={
+                                            //   <FormattedMessage
+                                            //     id="app.notice"
+                                            //     defaultMessage="Notice (months)"
+                                            //   />
+                                            // }
+                                            // className="field"
+                                            isColumn
+                                            style={{width:"12em"}}
+                                            options={["Yes","No"]}
+                                            component={SelectComponent}
+                                            inlineLabel
+                                          />
+                                        </div>
+                                        <div style={{ width: "47%" }}>
+                                          <Field
+                                            name="allowance"
+                                            label="Uitkering"
+                                            // label={
+                                            //   <FormattedMessage
+                                            //     id="app.benefits"
+                                            //     defaultMessage="Benefits"
+                                            //   />
+                                            // }
+                                           
+                                            component={InputComponent}
+                                            isColumn
+                                            width="100%"
+                                          />
+                                        </div>                    
+                                       
+                                        </FlexContainer> 
+                                                                  <FlexContainer justifyContent="space-between">
+                                                            
+                                                            <div style={{ width: "47%" }}>
+                                                              <Field
+                                                                name="instrument"
+                                                                label="Instrumenten"
+                                                                // label={
+                                                                //   <FormattedMessage
+                                                                //     id="app.benefits"
+                                                                //     defaultMessage="Benefits"
+                                                                //   />
+                                                                // }
+                                                               
+                                                                component={InputComponent}
+                                                                isColumn
+                                                                width="100%"
+                                                              />
+                                                            </div>                    
+                                                           
+                                                            </FlexContainer> 
+                                        
+                                                                   <FlexContainer justifyContent="space-between">
+                                                            
+                                                            <div style={{ width: "47%" }}>
+                                                              <Field
+                                                                name="interest"
+                                                                label="Interest"
+                                                                // label={
+                                                                //   <FormattedMessage
+                                                                //     id="app.benefits"
+                                                                //     defaultMessage="Benefits"
+                                                                //   />
+                                                                // }
+                                                               
+                                                                component={InputComponent}
+                                                                isColumn
+                                                                width="100%"
+                                                              />
+                                                            </div>                    
+                                                           
+                                                            </FlexContainer> 
                 </div>
                 </div> 
               <Spacer style={{ marginTop: "1.25em" }} />
